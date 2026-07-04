@@ -22,7 +22,7 @@ CREATE TABLE Invest_Labuan (
     Department_ID               VARCHAR2(15) NOT NULL,
     Department_Code             VARCHAR2(10) NOT NULL,
     Department_Name             VARCHAR2(50) NOT NULL,
-    Office_Email                VARCHAR2(10) NOT NULL,
+    Office_Email                VARCHAR2(100) NOT NULL,
     Office_ContactNo            VARCHAR2(15) NOT NULL,
     Office_Address              VARCHAR2(255) NOT NULL,
     Department_Operation_Budget NUMBER(15,2) NOT NULL CHECK (Department_Operation_Budget >= 0.00),
@@ -94,8 +94,8 @@ CREATE TABLE Representative (
 );
 
 CREATE TABLE Job_Applicant (
-    Applicant_ID                VARCHAR2(15),
-    Applicant_Portal_Username   VARCHAR2(30),
+    Applicant_ID                VARCHAR2(15) NOT NULL,
+    Applicant_Portal_Username   VARCHAR2(30) NOT NULL,
     Highest_Education_Level     VARCHAR2(50) NOT NULL CHECK (Highest_Education_Level IN ('Diploma', 'Bachelor', 'Master', 'PhD')),
     Total_Years_Experience      NUMBER(2) DEFAULT 0 CHECK (Total_Years_Experience >= 0),
     Current_Employment_Status   VARCHAR2(30) NOT NULL CHECK (Current_Employment_Status IN ('Employed', 'Unemployed', 'Self-Employed')),
@@ -112,8 +112,8 @@ CREATE TABLE Job_Applicant (
 );
 
 CREATE TABLE Employee (
-    Employee_ID           VARCHAR2(15),
-    Employee_Contract_No  VARCHAR2(20),
+    Employee_ID           VARCHAR2(15) NOT NULL,
+    Employee_Contract_No  VARCHAR2(20) NOT NULL,
     Employee_Type         VARCHAR2(15) NOT NULL CHECK (Employee_Type IN ('Permanent', 'Contract', 'Intern')),
     Employee_Status       VARCHAR2(15) DEFAULT 'Active' CHECK (Employee_Status IN ('Active', 'Suspended', 'Resigned', 'Retired')),
     Employee_Hire_Date    DATE NOT NULL,
@@ -133,8 +133,8 @@ CREATE TABLE Employee (
 );
 
 CREATE TABLE Advertisement (
-    Advertisement_ID           VARCHAR2(15),
-    Advertisement_StartDate    DATE,
+    Advertisement_ID           VARCHAR2(15) NOT NULL,
+    Advertisement_StartDate    DATE NOT NULL,
     Advertisement_Type         VARCHAR2(30) NOT NULL CHECK (Advertisement_Type IN ('Digital', 'Billboard', 'Print', 'Social Media')),
     Advertisement_Title        VARCHAR2(100) NOT NULL,
     Advertisement_Duration     VARCHAR2(30) NOT NULL,
@@ -156,8 +156,8 @@ CREATE TABLE Advertisement (
 -- =====================================================================
 
 CREATE TABLE Company (
-    Company_ID                VARCHAR2(15),
-    Company_SSM_No            VARCHAR2(20),
+    Company_ID                VARCHAR2(15) NOT NULL,
+    Company_SSM_No            VARCHAR2(20) NOT NULL,
     Company_Name              VARCHAR2(100) NOT NULL,
     Company_Entity_Type       VARCHAR2(30) NOT NULL CHECK (Company_Entity_Type IN ('Sdn Bhd', 'Bhd', 'LLP', 'Sole Proprietorship')),
     Company_Origin            VARCHAR2(15) NOT NULL CHECK (Company_Origin IN ('Local', 'Foreign')),
@@ -176,8 +176,8 @@ CREATE TABLE Company (
 );
 
 CREATE TABLE Investment_Committee (
-    Committee_ID                 VARCHAR2(15),
-    Committee_TermSessionCode    VARCHAR2(20),
+    Committee_ID                 VARCHAR2(15) NOT NULL,
+    Committee_TermSessionCode    VARCHAR2(20) NOT NULL,
     Committee_Expertise          VARCHAR2(50) NOT NULL CHECK (Committee_Expertise IN ('Technical', 'Financial', 'Environmental', 'Legal', 'Socio-Economic')),
     Committe_StartDate           DATE NOT NULL,
     Committee_EndDate            DATE NOT NULL,
@@ -254,8 +254,8 @@ CREATE TABLE Investor (
 );
 
 CREATE TABLE Developer (
-    Developer_ID                VARCHAR2(20),
-    CIDB_Registration_No        VARCHAR2(20),
+    Developer_ID                VARCHAR2(20) NOT NULL,
+    CIDB_Registration_No        VARCHAR2(20) NOT NULL,
     Developer_DurationInBusiness VARCHAR2(30) NOT NULL,
     Developer_ProjectDone       NUMBER(3) DEFAULT 0 CHECK (Developer_ProjectDone >= 0),
     Developer_TotalProjectValue NUMBER(15,2) DEFAULT 0.00 CHECK (Developer_TotalProjectValue >= 0.00),
@@ -276,7 +276,7 @@ CREATE TABLE Developer (
 -- =====================================================================
 
 CREATE TABLE Investment_Application (
-    Application_ID               VARCHAR2(15),
+    Application_ID               VARCHAR2(15) NOT NULL,
     Application_Submission_Date  DATE NOT NULL,
     Application_Review_Date      DATE,
     Application_CurrentStatus    VARCHAR2(50) NOT NULL CHECK (Application_CurrentStatus IN ('Pending', 'Under Review', 'Approved', 'Rejected')),
@@ -340,8 +340,8 @@ CREATE TABLE Proposal_Content (
 -- =====================================================================
 
 CREATE TABLE Approval (
-    Approval_ID               VARCHAR2(15),
-    Approval_LetterID         VARCHAR2(20),
+    Approval_ID               VARCHAR2(15) NOT NULL,
+    Approval_LetterID         VARCHAR2(20) NOT NULL,
     Approval_Date             DATE NOT NULL,
     Approval_Condition        VARCHAR2(255),
     Approval_Status           VARCHAR2(20) DEFAULT 'Pending' CHECK (Approval_Status IN ('Approved', 'Conditional Approval', 'Rejected')),
@@ -381,8 +381,8 @@ CREATE TABLE Project_Timeline (
 );
 
 CREATE TABLE Infrastructure (
-    IS_ID                       VARCHAR2(15),
-    IS_SiteNo                   VARCHAR2(20),
+    IS_ID                       VARCHAR2(15) NOT NULL,
+    IS_SiteNo                   VARCHAR2(20) NOT NULL,
     IS_RoadAccessSpec           VARCHAR2(30) NOT NULL CHECK (IS_RoadAccessSpec IN ('Single Lane', 'Dual Carriageway', 'Heavy Haul', 'Unpaved')),
     IS_WaterSupplyVolReq        NUMBER(10,2) NOT NULL CHECK (IS_WaterSupplyVolReq >= 0.00),
     IS_ElectricityLoadCapacity  NUMBER(10,2) NOT NULL CHECK (IS_ElectricityLoadCapacity >= 0.00),
@@ -399,8 +399,8 @@ CREATE TABLE Infrastructure (
 );
 
 CREATE TABLE Digitalisation (
-    Digital_ID                 VARCHAR2(15),
-    MDEC_Approval_Ref          VARCHAR2(30),
+    Digital_ID                 VARCHAR2(15) NOT NULL,
+    MDEC_Approval_Ref          VARCHAR2(30) NOT NULL,
     Digital_Smart_Domain       VARCHAR2(100),
     Digital_AutomationLevel    VARCHAR2(15) NOT NULL CHECK (Digital_AutomationLevel IN ('Low', 'Medium', 'High', 'Fully Automated')),
     Digital_AI_Implementation  VARCHAR2(3) NOT NULL CHECK (Digital_AI_Implementation IN ('Yes', 'No')),
@@ -417,8 +417,8 @@ CREATE TABLE Digitalisation (
 );
 
 CREATE TABLE Business_Plan (
-    Plan_ID                    VARCHAR2(15),
-    Project_Title              VARCHAR2(100),
+    Plan_ID                    VARCHAR2(15) NOT NULL,
+    Project_Title              VARCHAR2(100) NOT NULL,
     Business_Start_Date        DATE NOT NULL,
     Business_End_Date          DATE NOT NULL,
     Business_Model_Description VARCHAR2(255) NOT NULL,
@@ -454,8 +454,8 @@ CREATE TABLE Method_Term (
 );
 
 CREATE TABLE Impact (
-    Assessment_ID          VARCHAR2(15),
-    Impact_Assessment_Date DATE,
+    Assessment_ID          VARCHAR2(15) NOT NULL,
+    Impact_Assessment_Date DATE NOT NULL,
     Impact_Level           VARCHAR2(15) NOT NULL CHECK (Impact_Level IN ('Low', 'Moderate', 'High', 'Severe')),
     Overall_Impact_Status  VARCHAR2(20) DEFAULT 'Pending' CHECK (Overall_Impact_Status IN ('Pass', 'Fail', 'Conditional', 'Pending')),
     Next_Review_Deadline   DATE NOT NULL,
@@ -499,8 +499,8 @@ CREATE TABLE Investment_Viability (
 -- =====================================================================
 
 CREATE TABLE Agreement (
-    Agreement_ID              VARCHAR2(15),
-    Agreement_StampDutyID     VARCHAR2(20),
+    Agreement_ID              VARCHAR2(15) NOT NULL,
+    Agreement_StampDutyID     VARCHAR2(20) NOT NULL,
     Agreement_Date            DATE NOT NULL,
     Agreement_Status          VARCHAR2(20) DEFAULT 'Draft' CHECK (Agreement_Status IN ('Draft', 'Active', 'Expired', 'Terminated')),
     Agreement_Venue           VARCHAR2(100) NOT NULL,
@@ -540,8 +540,8 @@ CREATE TABLE Social (
 );
 
 CREATE TABLE Economic (
-    Economic_ID              VARCHAR2(15),
-    MOF_Tracking_Code        VARCHAR2(30),
+    Economic_ID              VARCHAR2(15) NOT NULL,
+    MOF_Tracking_Code        VARCHAR2(30) NOT NULL,
     Economic_Impact_Score    NUMBER(3) NOT NULL CHECK (Economic_Impact_Score BETWEEN 0 AND 100),
     Job_Creation_Multiplier  NUMBER(3,1) NOT NULL CHECK (Job_Creation_Multiplier >= 1.0),
     Export_Potential_Value   NUMBER(15,2) DEFAULT 0.00 CHECK (Export_Potential_Value >= 0.00),
@@ -558,14 +558,14 @@ CREATE TABLE Economic (
 );
 
 CREATE TABLE Environmental (
-    Environmental_ID              VARCHAR2(15),
-    DOE_Reference_Number          VARCHAR2(30),
+    Environmental_ID              VARCHAR2(15) NOT NULL,
+    DOE_Reference_Number          VARCHAR2(30) NOT NULL,
     Carbon_Emission_Target        NUMBER(5,2) NOT NULL CHECK (Carbon_Emission_Target >= 0.00),
     Renewable_Energy_Ratio        NUMBER(5,2) DEFAULT 0.00 CHECK (Renewable_Energy_Ratio BETWEEN 0.00 AND 100.00),
     Environment_Score             NUMBER(3) NOT NULL CHECK (Environment_Score BETWEEN 0 AND 100),
     Environmental_Risk_Level      VARCHAR2(15) NOT NULL CHECK (Environmental_Risk_Level IN ('Low', 'Medium', 'High', 'Critical')),
     Waste_Reduction_Plan_Summary  VARCHAR2(255),
-    Energy_Efficiency_Level       VARCHAR2(5) NOT NULL CHECK (Energy_Efficiency_Level IN ('1-Star', '2-Star', '3-Star', '4-Star', '5-Star')),
+    Energy_Efficiency_Level       VARCHAR2(10) NOT NULL CHECK (Energy_Efficiency_Level IN ('1-Star', '2-Star', '3-Star', '4-Star', '5-Star')),
     Eco_Tourism_Potential_Flag    VARCHAR2(3) NOT NULL CHECK (Eco_Tourism_Potential_Flag IN ('Yes', 'No')),
     Environ_Compliance_Status     VARCHAR2(20) DEFAULT 'Pending' CHECK (Environ_Compliance_Status IN ('Compliant', 'Non-Compliant', 'Pending')),
     Assessment_ID                 VARCHAR2(15) NOT NULL,
@@ -721,8 +721,8 @@ CREATE TABLE Payment (
 );
 
 CREATE TABLE Document (
-    Doc_ID                     VARCHAR2(15),
-    Folder_ID                  VARCHAR2(15),
+    Doc_ID                     VARCHAR2(15) NOT NULL,
+    Folder_ID                  VARCHAR2(15) NOT NULL,
     Doc_Type                   VARCHAR2(15) NOT NULL CHECK (Doc_Type IN ('PDF', 'DOCX', 'XLSX', 'PNG', 'JPG', 'ZIP', 'Others')),
     File_Name                  VARCHAR2(100) NOT NULL,
     Storage_Directory_Path     VARCHAR2(255) NOT NULL,
