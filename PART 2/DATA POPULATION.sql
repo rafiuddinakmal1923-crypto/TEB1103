@@ -220,3 +220,286 @@ COMMIT;
 -- =====================================================================
 -- LEVEL 3: Depends on Level 2
 -- =====================================================================
+
+--INVESTOR
+INSERT INTO Investor VALUES ('MIDA/LBN/2026/INV-21', 'C00000000000021', 'Infrastructure', 'Institutional', 12500000.00, 3, 'Conservative', 12, 'Yes', 'AA', 'C00000000000021');
+INSERT INTO Investor VALUES ('MIDA/INT/2026/INV-22', 'C00000000000022', 'Digital Tech', 'Venture Capital', 45000000.00, 8, 'Aggressive', 7, 'No', 'A', 'C00000000000022');
+INSERT INTO Investor VALUES ('MIDA/LBN/2026/INV-23', 'C00000000000023', 'Manufacturing', 'Corporate', 5000000.00, 2, 'Moderate', 10, 'Yes', 'BBB', 'C00000000000023');
+INSERT INTO Investor VALUES ('MIDA/INT/2026/INV-24', 'C00000000000024', 'Services', 'Institutional', 18000000.00, 4, 'Conservative', 15, 'Yes', 'AA', 'C00000000000024');
+INSERT INTO Investor VALUES ('MIDA/LBN/2026/INV-25', 'C00000000000025', 'Primary', 'Corporate', 25000000.00, 5, 'Moderate', 8, 'Yes', 'A', 'C00000000000025');
+INSERT INTO Investor VALUES ('MIDA/LBN/2026/INV-26', 'C00000000000026', 'Digital Tech', 'Angel Investor', 250000.00, 1, 'Aggressive', 3, 'Yes', NULL, 'C00000000000026');
+INSERT INTO Investor VALUES ('MIDA/INT/2026/INV-27', 'C00000000000027', 'Infrastructure', 'Institutional', 60000000.00, 6, 'Conservative', 20, 'No', 'AAA', 'C00000000000027');
+INSERT INTO Investor VALUES ('MIDA/LBN/2026/INV-28', 'C00000000000028', 'Primary', 'Corporate', 3500000.00, 2, 'Moderate', 6, 'Yes', 'BB', 'C00000000000028');
+INSERT INTO Investor VALUES ('MIDA/LBN/2026/INV-29', 'C00000000000029', 'Digital Tech', 'Venture Capital', 15000000.00, 4, 'Aggressive', 5, 'No', 'BBB', 'C00000000000029');
+INSERT INTO Investor VALUES ('MIDA/SAB/2026/INV-30', 'C00000000000030', 'Primary', 'Corporate', 8000000.00, 0, 'Conservative', 10, 'Yes', NULL, 'C00000000000030');
+COMMIT;
+
+--DEVELOPER
+INSERT INTO Developer VALUES ('DEV000000000001', 'CIDB/LBN/A1/00234-20', '14 Years', 28, 142000000.00, 14, 'Excellent', 145, 'Marine Infrastructure & Harbor Reclamation', 4.8, 'C00000000000031');
+INSERT INTO Developer VALUES ('DEV000000000002', 'CIDB/KLA/B2/05611-16', '10 Years', 15, 89500000.00, 10, 'Good', 98, 'High-Rise Commercial Buildings & Office Complexes', 4.2, 'C00000000000032');
+INSERT INTO Developer VALUES ('DEV000000000003', 'CIDB/LBN/G7/08831-21', '5 Years', 8, 12400000.00, 5, 'Stable', 34, 'Eco-Friendly Modular Industrial Warehouses', 3.9, 'C00000000000033');
+INSERT INTO Developer VALUES ('DEV000000000004', 'CIDB/SAB/G3/11045-24', '2 Years', 3, 450000.00, 2, 'Audited', 12, 'Small-scale Civil Site Clearing & Earthworks', NULL, 'C00000000000034');
+INSERT INTO Developer VALUES ('DEV000000000005', 'CIDB/HQ/A1/00991-11', '15 Years', 42, 310000000.00, 15, 'Excellent', 280, 'Deep Sea Port Terminals & Marine Civil Works', 4.9, 'C00000000000035');
+INSERT INTO Developer VALUES ('DEV000000000006', 'CIDB/LBN/G5/04412-20', '6 Years', 11, 24500000.00, 6, 'Good', 45, 'Industrial Plant Piping & Structural Engineering', 4.0, 'C00000000000036');
+INSERT INTO Developer VALUES ('DEV000000000007', 'CIDB/INT/G7/00551-17', '9 Years', 19, 185000000.00, 9, 'Excellent', 110, 'Smart City Infrastructure & Sustainable Roads', 4.5, 'C00000000000037');
+INSERT INTO Developer VALUES ('DEV000000000008', 'CIDB/LBN/G6/02241-17', '9 Years', 22, 68000000.00, 9, 'Stable', 75, 'Coastal Erosion Walls & Dredging Engineering', 4.1, 'C00000000000038');
+INSERT INTO Developer VALUES ('DEV000000000009', 'CIDB/SAB/G7/03344-14', '12 Years', 31, 195000000.00, 12, 'Excellent', 160, 'Mixed-use Commercial Townships & Modern Retails', 4.7, 'C00000000000039');
+INSERT INTO Developer VALUES ('DEV000000000010', 'CIDB/SGP/G7/05561-23', '3 Years', 5, 45000000.00, 3, 'Audited', 28, 'Green Building Commercial Solar Farm Developments', 4.3, 'C00000000000040');
+COMMIT;
+
+-- =====================================================================
+-- LEVEL 4: Depends on Level 3
+-- =====================================================================
+
+--INVESTMENT_APPLICATION
+INSERT INTO Investment_Application VALUES ('APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'), TO_DATE('2026-01-08', 'YYYY-MM-DD'), 'Approved', 'Strong networking background.', '5 days', 0.00, 'C00000000000021', 'REP-001');
+INSERT INTO Investment_Application VALUES ('APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'), TO_DATE('2026-01-12', 'YYYY-MM-DD'), 'Rejected', 'Lacks required experience.', '6 days', 0.00, 'C00000000000022', 'REP-002');
+INSERT INTO Investment_Application VALUES ('APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'), TO_DATE('2026-01-18', 'YYYY-MM-DD'), 'Under Review', 'Expanding digital infrastructure.', '9 days', 1500.00, 'C00000000000023', 'REP-003');
+INSERT INTO Investment_Application VALUES ('APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'), TO_DATE('2026-01-25', 'YYYY-MM-DD'), 'Approved', 'Accepted offer on July 2nd.', '5 days', 0.00, 'C00000000000024', 'REP-004');
+INSERT INTO Investment_Application VALUES ('APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'), NULL, 'Pending', 'High paid-up capital verified.', '10 days', 5000.00, 'C00000000000025', 'REP-005');
+INSERT INTO Investment_Application VALUES ('APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'), TO_DATE('2026-02-05', 'YYYY-MM-DD'), 'Approved', 'Awaiting HR initial screen.', NULL, 0.00, 'C00000000000026', 'REP-006');
+INSERT INTO Investment_Application VALUES ('APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'), TO_DATE('2026-02-10', 'YYYY-MM-DD'), 'Rejected', 'Incomplete documentation.', '5 days', 0.00, 'C00000000000027', 'REP-007');
+INSERT INTO Investment_Application VALUES ('APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'), NULL, 'Pending', 'Pending financial audit.', NULL, 1500.00, 'C00000000000028', 'REP-008');
+INSERT INTO Investment_Application VALUES ('APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'), TO_DATE('2026-02-22', 'YYYY-MM-DD'), 'Under Review', 'Good portfolio.', '6 days', 0.00, 'C00000000000029', 'REP-009');
+INSERT INTO Investment_Application VALUES ('APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'), TO_DATE('2026-02-28', 'YYYY-MM-DD'), 'Approved', 'Met all strict conditions.', '5 days', 5000.00, 'C00000000000030', 'REP-010');
+COMMIT;
+
+--TERMINATION
+INSERT INTO Termination VALUES ('TERM-2026-101', TO_DATE('2026-10-01', 'YYYY-MM-DD'), 'Executed', 250000.00, 'Completed', TO_DATE('2026-09-01', 'YYYY-MM-DD'), TO_DATE('2026-10-02 08:30:00', 'YYYY-MM-DD HH24:MI:SS'), 'Not Required', 'BRCH-FIN-04', 14, 'C00000000000021');
+INSERT INTO Termination VALUES ('TERM-2026-102', TO_DATE('2026-10-05', 'YYYY-MM-DD'), 'Under Legal Review', 0.00, 'Pending', TO_DATE('2026-09-15', 'YYYY-MM-DD'), NULL, 'Notice Served', 'BRCH-DLAY-01', 30, 'C00000000000022');
+INSERT INTO Termination VALUES ('TERM-2026-103', TO_DATE('2026-10-12', 'YYYY-MM-DD'), 'Appealed', 50000.00, 'In Progress', TO_DATE('2026-09-12', 'YYYY-MM-DD'), NULL, 'Notice Served', 'BRCH-QUAL-02', 30, 'C00000000000023');
+INSERT INTO Termination VALUES ('TERM-2026-104', TO_DATE('2026-10-15', 'YYYY-MM-DD'), 'Executed', 1500000.00, 'Completed', TO_DATE('2026-09-01', 'YYYY-MM-DD'), TO_DATE('2026-10-16 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Evicted', 'BRCH-ABND-09', 7, 'C00000000000024');
+INSERT INTO Termination VALUES ('TERM-2026-105', TO_DATE('2026-10-20', 'YYYY-MM-DD'), 'Pending', 0.00, 'Pending', TO_DATE('2026-10-01', 'YYYY-MM-DD'), NULL, 'Not Required', 'BRCH-COMP-01', 60, 'C00000000000025');
+INSERT INTO Termination VALUES ('TERM-2026-106', TO_DATE('2026-10-22', 'YYYY-MM-DD'), 'Executed', 75000.00, 'Failed', TO_DATE('2026-09-20', 'YYYY-MM-DD'), TO_DATE('2026-10-23 14:15:00', 'YYYY-MM-DD HH24:MI:SS'), 'Resisting', 'BRCH-SAFE-03', 14, 'C00000000000026');
+INSERT INTO Termination VALUES ('TERM-2026-107', TO_DATE('2026-10-25', 'YYYY-MM-DD'), 'Under Legal Review', 0.00, 'Pending', TO_DATE('2026-09-25', 'YYYY-MM-DD'), NULL, 'Notice Served', 'BRCH-FIN-02', 30, 'C00000000000027');
+INSERT INTO Termination VALUES ('TERM-2026-108', TO_DATE('2026-11-02', 'YYYY-MM-DD'), 'Appealed', 120000.00, 'In Progress', TO_DATE('2026-10-02', 'YYYY-MM-DD'), NULL, 'Not Required', 'BRCH-DLAY-03', 45, 'C00000000000028');
+INSERT INTO Termination VALUES ('TERM-2026-109', TO_DATE('2026-11-05', 'YYYY-MM-DD'), 'Executed', 300000.00, 'Completed', TO_DATE('2026-10-05', 'YYYY-MM-DD'), TO_DATE('2026-11-06 09:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Evicted', 'BRCH-ABND-01', 14, 'C00000000000029');
+INSERT INTO Termination VALUES ('TERM-2026-110', TO_DATE('2026-11-10', 'YYYY-MM-DD'), 'Pending', 0.00, 'Pending', TO_DATE('2026-10-20', 'YYYY-MM-DD'), NULL, 'Not Required', 'BRCH-COMP-02', 90, 'C00000000000030');
+COMMIT;
+
+-- =====================================================================
+-- LEVEL 5: Proposal_Content (The Superclass)
+-- =====================================================================
+
+--PROPOSAL_CONTENT
+-- Economic Sub-Proposal Blocks
+INSERT INTO Proposal_Content VALUES ('PRP-ECO-001', 'ECO000000000001', TO_DATE('2026-03-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000001', 'REP-001', 'MEET-2026-001', 'APP-2026-8001');
+INSERT INTO Proposal_Content VALUES ('PRP-ECO-002', 'ECO000000000002', TO_DATE('2026-03-18', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000002', 'REP-002', 'MEET-2026-002', 'APP-2026-8002');
+INSERT INTO Proposal_Content VALUES ('PRP-ECO-003', 'ECO000000000003', TO_DATE('2026-04-02', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000003', 'REP-003', 'MEET-2026-003', 'APP-2026-8003');
+INSERT INTO Proposal_Content VALUES ('PRP-ECO-004', 'ECO000000000004', TO_DATE('2026-04-10', 'YYYY-MM-DD'), 'Requires Revision', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000004', 'REP-004', 'MEET-2026-004', 'APP-2026-8004');
+INSERT INTO Proposal_Content VALUES ('PRP-ECO-005', 'ECO000000000005', TO_DATE('2026-04-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000005', 'REP-005', 'MEET-2026-005', 'APP-2026-8005');
+INSERT INTO Proposal_Content VALUES ('PRP-ECO-006', 'ECO000000000006', TO_DATE('2026-04-22', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000006', 'REP-006', 'MEET-2026-006', 'APP-2026-8006');
+INSERT INTO Proposal_Content VALUES ('PRP-ECO-007', 'ECO000000000007', TO_DATE('2026-05-02', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000007', 'REP-007', 'MEET-2026-007', 'APP-2026-8007');
+INSERT INTO Proposal_Content VALUES ('PRP-ECO-008', 'ECO000000000008', TO_DATE('2026-05-05', 'YYYY-MM-DD'), 'Requires Revision', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000008', 'REP-008', 'MEET-2026-008', 'APP-2026-8008');
+INSERT INTO Proposal_Content VALUES ('PRP-ECO-009', 'ECO000000000009', TO_DATE('2026-05-12', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000009', 'REP-009', 'MEET-2026-009', 'APP-2026-8009');
+INSERT INTO Proposal_Content VALUES ('PRP-ECO-010', 'ECO000000000010', TO_DATE('2026-05-20', 'YYYY-MM-DD'), 'Requires Revision', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000010', 'REP-010', 'MEET-2026-010', 'APP-2026-8010');
+
+-- Environmental Sub-Proposal Blocks
+INSERT INTO Proposal_Content VALUES ('PRP-ENV-001', 'ENV000000000001', TO_DATE('2026-03-14', 'YYYY-MM-DD'), 'Approved', 'Verified', 'EIA Registered Consultant (Sabah DOE)', 'DEV000000000001', 'REP-001', 'MEET-2026-001', 'APP-2026-8001');
+INSERT INTO Proposal_Content VALUES ('PRP-ENV-002', 'ENV000000000002', TO_DATE('2026-03-19', 'YYYY-MM-DD'), 'Approved', 'Verified', 'EIA Registered Consultant (Sabah DOE)', 'DEV000000000002', 'REP-002', 'MEET-2026-002', 'APP-2026-8002');
+INSERT INTO Proposal_Content VALUES ('PRP-ENV-003', 'ENV000000000003', TO_DATE('2026-04-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'EIA Registered Consultant (Sabah DOE)', 'DEV000000000003', 'REP-003', 'MEET-2026-003', 'APP-2026-8003');
+INSERT INTO Proposal_Content VALUES ('PRP-ENV-004', 'ENV000000000004', TO_DATE('2026-04-11', 'YYYY-MM-DD'), 'Pending', 'Verified', 'EIA Registered Consultant (Sabah DOE)', 'DEV000000000004', 'REP-004', 'MEET-2026-004', 'APP-2026-8004');
+INSERT INTO Proposal_Content VALUES ('PRP-ENV-005', 'ENV000000000005', TO_DATE('2026-04-16', 'YYYY-MM-DD'), 'Approved', 'Verified', 'EIA Registered Consultant (Sabah DOE)', 'DEV000000000005', 'REP-005', 'MEET-2026-005', 'APP-2026-8005');
+INSERT INTO Proposal_Content VALUES ('PRP-ENV-006', 'ENV000000000006', TO_DATE('2026-04-25', 'YYYY-MM-DD'), 'Approved', 'Verified', 'EIA Registered Consultant (Sabah DOE)', 'DEV000000000006', 'REP-006', 'MEET-2026-006', 'APP-2026-8006');
+INSERT INTO Proposal_Content VALUES ('PRP-ENV-007', 'ENV000000000007', TO_DATE('2026-05-03', 'YYYY-MM-DD'), 'Pending', 'Verified', 'EIA Registered Consultant (Sabah DOE)', 'DEV000000000007', 'REP-007', 'MEET-2026-007', 'APP-2026-8007');
+INSERT INTO Proposal_Content VALUES ('PRP-ENV-008', 'ENV000000000008', TO_DATE('2026-05-06', 'YYYY-MM-DD'), 'Requires Revision', 'Verified', 'EIA Registered Consultant (Sabah DOE)', 'DEV000000000008', 'REP-008', 'MEET-2026-008', 'APP-2026-8008');
+INSERT INTO Proposal_Content VALUES ('PRP-ENV-009', 'ENV000000000009', TO_DATE('2026-05-14', 'YYYY-MM-DD'), 'Approved', 'Verified', 'EIA Registered Consultant (Sabah DOE)', 'DEV000000000009', 'REP-009', 'MEET-2026-009', 'APP-2026-8009');
+INSERT INTO Proposal_Content VALUES ('PRP-ENV-010', 'ENV000000000010', TO_DATE('2026-05-21', 'YYYY-MM-DD'), 'Approved', 'Verified', 'EIA Registered Consultant (Sabah DOE)', 'DEV000000000010', 'REP-010', 'MEET-2026-010', 'APP-2026-8010');
+
+-- Social Sub-Proposal Blocks
+INSERT INTO Proposal_Content VALUES ('PRP-SOC-001', 'SOC000000000001', TO_DATE('2026-03-16', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Social Impact Assessment (SIA) Specialist', 'DEV000000000001', 'REP-001', 'MEET-2026-001', 'APP-2026-8001');
+INSERT INTO Proposal_Content VALUES ('PRP-SOC-002', 'SOC000000000002', TO_DATE('2026-03-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Social Impact Assessment (SIA) Specialist', 'DEV000000000002', 'REP-002', 'MEET-2026-002', 'APP-2026-8002');
+INSERT INTO Proposal_Content VALUES ('PRP-SOC-003', 'SOC000000000003', TO_DATE('2026-04-03', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Social Impact Assessment (SIA) Specialist', 'DEV000000000003', 'REP-003', 'MEET-2026-003', 'APP-2026-8003');
+INSERT INTO Proposal_Content VALUES ('PRP-SOC-004', 'SOC000000000004', TO_DATE('2026-04-12', 'YYYY-MM-DD'), 'Pending', 'Verified', 'Social Impact Assessment (SIA) Specialist', 'DEV000000000004', 'REP-004', 'MEET-2026-004', 'APP-2026-8004');
+INSERT INTO Proposal_Content VALUES ('PRP-SOC-005', 'SOC000000000005', TO_DATE('2026-04-17', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Social Impact Assessment (SIA) Specialist', 'DEV000000000005', 'REP-005', 'MEET-2026-005', 'APP-2026-8005');
+INSERT INTO Proposal_Content VALUES ('PRP-SOC-006', 'SOC000000000006', TO_DATE('2026-04-26', 'YYYY-MM-DD'), 'Requires Revision', 'Verified', 'Social Impact Assessment (SIA) Specialist', 'DEV000000000006', 'REP-006', 'MEET-2026-006', 'APP-2026-8006');
+INSERT INTO Proposal_Content VALUES ('PRP-SOC-007', 'SOC000000000007', TO_DATE('2026-05-04', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Social Impact Assessment (SIA) Specialist', 'DEV000000000007', 'REP-007', 'MEET-2026-007', 'APP-2026-8007');
+INSERT INTO Proposal_Content VALUES ('PRP-SOC-008', 'SOC000000000008', TO_DATE('2026-05-07', 'YYYY-MM-DD'), 'Pending', 'Verified', 'Social Impact Assessment (SIA) Specialist', 'DEV000000000008', 'REP-008', 'MEET-2026-008', 'APP-2026-8008');
+INSERT INTO Proposal_Content VALUES ('PRP-SOC-009', 'SOC000000000009', TO_DATE('2026-05-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Social Impact Assessment (SIA) Specialist', 'DEV000000000009', 'REP-009', 'MEET-2026-009', 'APP-2026-8009');
+INSERT INTO Proposal_Content VALUES ('PRP-SOC-010', 'SOC000000000010', TO_DATE('2026-05-22', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Social Impact Assessment (SIA) Specialist', 'DEV000000000010', 'REP-010', 'MEET-2026-010', 'APP-2026-8010');
+
+-- Digital Sub-Proposal Blocks
+INSERT INTO Proposal_Content VALUES ('PRP-DIG-001', 'DIG000000000001', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'MDEC Tech Transformation Officer', 'DEV000000000001', 'REP-001', 'MEET-2026-001', 'APP-2026-8001');
+INSERT INTO Proposal_Content VALUES ('PRP-DIG-002', 'DIG000000000002', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'MDEC Tech Transformation Officer', 'DEV000000000002', 'REP-002', 'MEET-2026-002', 'APP-2026-8002');
+INSERT INTO Proposal_Content VALUES ('PRP-DIG-003', 'DIG000000000003', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Under Review', 'Verified', 'MDEC Tech Transformation Officer', 'DEV000000000003', 'REP-003', 'MEET-2026-003', 'APP-2026-8003');
+INSERT INTO Proposal_Content VALUES ('PRP-DIG-004', 'DIG000000000004', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'MDEC Tech Transformation Officer', 'DEV000000000004', 'REP-004', 'MEET-2026-004', 'APP-2026-8004');
+INSERT INTO Proposal_Content VALUES ('PRP-DIG-005', 'DIG000000000005', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'MDEC Tech Transformation Officer', 'DEV000000000005', 'REP-005', 'MEET-2026-005', 'APP-2026-8005');
+INSERT INTO Proposal_Content VALUES ('PRP-DIG-006', 'DIG000000000006', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Requires Revision', 'Verified', 'MDEC Tech Transformation Officer', 'DEV000000000006', 'REP-006', 'MEET-2026-006', 'APP-2026-8006');
+INSERT INTO Proposal_Content VALUES ('PRP-DIG-007', 'DIG000000000007', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Under Review', 'Verified', 'MDEC Tech Transformation Officer', 'DEV000000000007', 'REP-007', 'MEET-2026-007', 'APP-2026-8007');
+INSERT INTO Proposal_Content VALUES ('PRP-DIG-008', 'DIG000000000008', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'MDEC Tech Transformation Officer', 'DEV000000000008', 'REP-008', 'MEET-2026-008', 'APP-2026-8008');
+INSERT INTO Proposal_Content VALUES ('PRP-DIG-009', 'DIG000000000009', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Under Review', 'Verified', 'MDEC Tech Transformation Officer', 'DEV000000000009', 'REP-009', 'MEET-2026-009', 'APP-2026-8009');
+INSERT INTO Proposal_Content VALUES ('PRP-DIG-010', 'DIG000000000010', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'MDEC Tech Transformation Officer', 'DEV000000000010', 'REP-010', 'MEET-2026-010', 'APP-2026-8010');
+
+-- Infrastructure Sub-Proposal Blocks
+INSERT INTO Proposal_Content VALUES ('PRP-INF-001', 'INF000000000001', TO_DATE('2026-01-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Registered Professional Engineer (BEM)', 'DEV000000000001', 'REP-001', 'MEET-2026-001', 'APP-2026-8001');
+INSERT INTO Proposal_Content VALUES ('PRP-INF-002', 'INF000000000002', TO_DATE('2026-01-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Registered Professional Engineer (BEM)', 'DEV000000000002', 'REP-002', 'MEET-2026-002', 'APP-2026-8002');
+INSERT INTO Proposal_Content VALUES ('PRP-INF-003', 'INF000000000003', TO_DATE('2026-01-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Registered Professional Engineer (BEM)', 'DEV000000000003', 'REP-003', 'MEET-2026-003', 'APP-2026-8003');
+INSERT INTO Proposal_Content VALUES ('PRP-INF-004', 'INF000000000004', TO_DATE('2026-01-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Registered Professional Engineer (BEM)', 'DEV000000000004', 'REP-004', 'MEET-2026-004', 'APP-2026-8004');
+INSERT INTO Proposal_Content VALUES ('PRP-INF-005', 'INF000000000005', TO_DATE('2026-01-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Registered Professional Engineer (BEM)', 'DEV000000000005', 'REP-005', 'MEET-2026-005', 'APP-2026-8005');
+INSERT INTO Proposal_Content VALUES ('PRP-INF-006', 'INF000000000006', TO_DATE('2026-01-20', 'YYYY-MM-DD'), 'Requires Revision', 'Verified', 'Registered Professional Engineer (BEM)', 'DEV000000000006', 'REP-006', 'MEET-2026-006', 'APP-2026-8006');
+INSERT INTO Proposal_Content VALUES ('PRP-INF-007', 'INF000000000007', TO_DATE('2026-01-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Registered Professional Engineer (BEM)', 'DEV000000000007', 'REP-007', 'MEET-2026-007', 'APP-2026-8007');
+INSERT INTO Proposal_Content VALUES ('PRP-INF-008', 'INF000000000008', TO_DATE('2026-01-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Registered Professional Engineer (BEM)', 'DEV000000000008', 'REP-008', 'MEET-2026-008', 'APP-2026-8008');
+INSERT INTO Proposal_Content VALUES ('PRP-INF-009', 'INF000000000009', TO_DATE('2026-01-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Registered Professional Engineer (BEM)', 'DEV000000000009', 'REP-009', 'MEET-2026-009', 'APP-2026-8009');
+INSERT INTO Proposal_Content VALUES ('PRP-INF-010', 'INF000000000010', TO_DATE('2026-01-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Registered Professional Engineer (BEM)', 'DEV000000000010', 'REP-010', 'MEET-2026-010', 'APP-2026-8010');
+
+-- Viability Sub-Proposal Blocks
+INSERT INTO Proposal_Content VALUES ('PRP-IVB-001', 'IVB-2026-00001', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Requires Revision', 'Verified', 'Chartered Financial Analyst (CFA)', 'DEV000000000001', 'REP-001', 'MEET-2026-001', 'APP-2026-8001');
+INSERT INTO Proposal_Content VALUES ('PRP-IVB-002', 'IVB-2026-00001', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Chartered Financial Analyst (CFA)', 'DEV000000000002', 'REP-002', 'MEET-2026-002', 'APP-2026-8002');
+INSERT INTO Proposal_Content VALUES ('PRP-IVB-003', 'IVB-2026-00002', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Chartered Financial Analyst (CFA)', 'DEV000000000003', 'REP-003', 'MEET-2026-003', 'APP-2026-8003');
+INSERT INTO Proposal_Content VALUES ('PRP-IVB-004', 'IVB-2026-00003', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Chartered Financial Analyst (CFA)', 'DEV000000000004', 'REP-004', 'MEET-2026-004', 'APP-2026-8004');
+INSERT INTO Proposal_Content VALUES ('PRP-IVB-005', 'IVB-2026-00004', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Chartered Financial Analyst (CFA)', 'DEV000000000005', 'REP-005', 'MEET-2026-005', 'APP-2026-8005');
+INSERT INTO Proposal_Content VALUES ('PRP-IVB-006', 'IVB-2026-00005', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Under Review', 'Verified', 'Chartered Financial Analyst (CFA)', 'DEV000000000006', 'REP-006', 'MEET-2026-006', 'APP-2026-8006');
+INSERT INTO Proposal_Content VALUES ('PRP-IVB-007', 'IVB-2026-00006', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Requires Revision', 'Verified', 'Chartered Financial Analyst (CFA)', 'DEV000000000007', 'REP-007', 'MEET-2026-007', 'APP-2026-8007');
+INSERT INTO Proposal_Content VALUES ('PRP-IVB-008', 'IVB-2026-00006', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Chartered Financial Analyst (CFA)', 'DEV000000000008', 'REP-008', 'MEET-2026-008', 'APP-2026-8008');
+INSERT INTO Proposal_Content VALUES ('PRP-IVB-009', 'IVB-2026-00007', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Chartered Financial Analyst (CFA)', 'DEV000000000009', 'REP-009', 'MEET-2026-009', 'APP-2026-8009');
+INSERT INTO Proposal_Content VALUES ('PRP-IVB-010', 'IVB-2026-00008', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Chartered Financial Analyst (CFA)', 'DEV000000000010', 'REP-010', 'MEET-2026-010', 'APP-2026-8010');
+
+-- Business Plan Sub-Proposal Blocks
+INSERT INTO Proposal_Content VALUES ('PRP-PLN-001', 'PLN001', TO_DATE('2026-01-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Corporate Strategy Lead Advisor', 'DEV000000000001', 'REP-001', 'MEET-2026-001', 'APP-2026-8001');
+INSERT INTO Proposal_Content VALUES ('PRP-PLN-002', 'PLN002', TO_DATE('2026-03-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Corporate Strategy Lead Advisor', 'DEV000000000002', 'REP-002', 'MEET-2026-002', 'APP-2026-8002');
+INSERT INTO Proposal_Content VALUES ('PRP-PLN-003', 'PLN003', TO_DATE('2026-05-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Corporate Strategy Lead Advisor', 'DEV000000000003', 'REP-003', 'MEET-2026-003', 'APP-2026-8003');
+INSERT INTO Proposal_Content VALUES ('PRP-PLN-004', 'PLN004', TO_DATE('2026-08-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Corporate Strategy Lead Advisor', 'DEV000000000004', 'REP-004', 'MEET-2026-004', 'APP-2026-8004');
+INSERT INTO Proposal_Content VALUES ('PRP-PLN-005', 'PLN005', TO_DATE('2026-02-10', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Corporate Strategy Lead Advisor', 'DEV000000000005', 'REP-005', 'MEET-2026-005', 'APP-2026-8005');
+INSERT INTO Proposal_Content VALUES ('PRP-PLN-006', 'PLN006', TO_DATE('2027-01-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Corporate Strategy Lead Advisor', 'DEV000000000006', 'REP-006', 'MEET-2026-006', 'APP-2026-8006');
+INSERT INTO Proposal_Content VALUES ('PRP-PLN-007', 'PLN007', TO_DATE('2026-04-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Corporate Strategy Lead Advisor', 'DEV000000000007', 'REP-007', 'MEET-2026-007', 'APP-2026-8007');
+INSERT INTO Proposal_Content VALUES ('PRP-PLN-008', 'PLN008', TO_DATE('2026-09-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Corporate Strategy Lead Advisor', 'DEV000000000008', 'REP-008', 'MEET-2026-008', 'APP-2026-8008');
+INSERT INTO Proposal_Content VALUES ('PRP-PLN-009', 'PLN009', TO_DATE('2026-11-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Corporate Strategy Lead Advisor', 'DEV000000000009', 'REP-009', 'MEET-2026-009', 'APP-2026-8009');
+INSERT INTO Proposal_Content VALUES ('PRP-PLN-010', 'PLN010', TO_DATE('2027-03-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Corporate Strategy Lead Advisor', 'DEV000000000010', 'REP-010', 'MEET-2026-010', 'APP-2026-8010');
+
+-- Legal Commercial Terms Sub-Proposal Blocks
+INSERT INTO Proposal_Content VALUES ('PRP-MTM-001', 'MTM001', TO_DATE('2026-01-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Senior Legal Counsel (Commercial Law)', 'DEV000000000001', 'REP-001', 'MEET-2026-001', 'APP-2026-8001');
+INSERT INTO Proposal_Content VALUES ('PRP-MTM-002', 'MTM002', TO_DATE('2026-03-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Senior Legal Counsel (Commercial Law)', 'DEV000000000002', 'REP-002', 'MEET-2026-002', 'APP-2026-8002');
+INSERT INTO Proposal_Content VALUES ('PRP-MTM-003', 'MTM003', TO_DATE('2026-05-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Senior Legal Counsel (Commercial Law)', 'DEV000000000003', 'REP-003', 'MEET-2026-003', 'APP-2026-8003');
+INSERT INTO Proposal_Content VALUES ('PRP-MTM-004', 'MTM004', TO_DATE('2026-08-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Senior Legal Counsel (Commercial Law)', 'DEV000000000004', 'REP-004', 'MEET-2026-004', 'APP-2026-8004');
+INSERT INTO Proposal_Content VALUES ('PRP-MTM-005', 'MTM005', TO_DATE('2026-02-10', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Senior Legal Counsel (Commercial Law)', 'DEV000000000005', 'REP-005', 'MEET-2026-005', 'APP-2026-8005');
+INSERT INTO Proposal_Content VALUES ('PRP-MTM-006', 'MTM006', TO_DATE('2027-01-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Senior Legal Counsel (Commercial Law)', 'DEV000000000006', 'REP-006', 'MEET-2026-006', 'APP-2026-8006');
+INSERT INTO Proposal_Content VALUES ('PRP-MTM-007', 'MTM007', TO_DATE('2026-04-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Senior Legal Counsel (Commercial Law)', 'DEV000000000007', 'REP-007', 'MEET-2026-007', 'APP-2026-8007');
+INSERT INTO Proposal_Content VALUES ('PRP-MTM-008', 'MTM008', TO_DATE('2026-09-20', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Senior Legal Counsel (Commercial Law)', 'DEV000000000008', 'REP-008', 'MEET-2026-008', 'APP-2026-8008');
+INSERT INTO Proposal_Content VALUES ('PRP-MTM-009', 'MTM009', TO_DATE('2026-11-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Senior Legal Counsel (Commercial Law)', 'DEV000000000009', 'REP-009', 'MEET-2026-009', 'APP-2026-8009');
+INSERT INTO Proposal_Content VALUES ('PRP-MTM-010', 'MTM010', TO_DATE('2027-03-01', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Senior Legal Counsel (Commercial Law)', 'DEV000000000010', 'REP-010', 'MEET-2026-010', 'APP-2026-8010');
+
+-- Milestone Project Management Sub-Proposal Blocks
+INSERT INTO Proposal_Content VALUES ('PRP-TL-001', 'MLS-001', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Approved', 'Not Applicable', 'Internal Project Management Office', 'DEV000000000001', 'REP-001', 'MEET-2026-001', 'APP-2026-8001');
+INSERT INTO Proposal_Content VALUES ('PRP-TL-002', 'MLS-002', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Approved', 'Not Applicable', 'Internal Project Management Office', 'DEV000000000002', 'REP-002', 'MEET-2026-002', 'APP-2026-8002');
+INSERT INTO Proposal_Content VALUES ('PRP-TL-003', 'MLS-003', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Approved', 'Not Applicable', 'Internal Project Management Office', 'DEV000000000003', 'REP-003', 'MEET-2026-003', 'APP-2026-8003');
+INSERT INTO Proposal_Content VALUES ('PRP-TL-004', 'MLS-004', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Approved', 'Not Applicable', 'Internal Project Management Office', 'DEV000000000004', 'REP-004', 'MEET-2026-004', 'APP-2026-8004');
+INSERT INTO Proposal_Content VALUES ('PRP-TL-005', 'MLS-005', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Approved', 'Not Applicable', 'Internal Project Management Office', 'DEV000000000005', 'REP-005', 'MEET-2026-005', 'APP-2026-8005');
+INSERT INTO Proposal_Content VALUES ('PRP-TL-006', 'MLS-006', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Approved', 'Not Applicable', 'Internal Project Management Office', 'DEV000000000006', 'REP-006', 'MEET-2026-006', 'APP-2026-8006');
+INSERT INTO Proposal_Content VALUES ('PRP-TL-007', 'MLS-007', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Approved', 'Not Applicable', 'Internal Project Management Office', 'DEV000000000007', 'REP-007', 'MEET-2026-007', 'APP-2026-8007');
+INSERT INTO Proposal_Content VALUES ('PRP-TL-008', 'MLS-008', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Approved', 'Not Applicable', 'Internal Project Management Office', 'DEV000000000008', 'REP-008', 'MEET-2026-008', 'APP-2026-8008');
+INSERT INTO Proposal_Content VALUES ('PRP-TL-009', 'MLS-009', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Approved', 'Not Applicable', 'Internal Project Management Office', 'DEV000000000009', 'REP-009', 'MEET-2026-009', 'APP-2026-8009');
+INSERT INTO Proposal_Content VALUES ('PRP-TL-010', 'MLS-010', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Approved', 'Not Applicable', 'Internal Project Management Office', 'DEV000000000010', 'REP-010', 'MEET-2026-010', 'APP-2026-8010');
+COMMIT;
+
+-- =====================================================================
+-- LEVEL 6: Depends on Proposal_Content
+-- =====================================================================
+
+--APPROVAL
+INSERT INTO Approval VALUES ('APV-2026-9001', 'LC/INV/APP-2026-001', TO_DATE('2026-08-01', 'YYYY-MM-DD'), 'None', 'Approved', '30 days', 'Strategic alignment with Labuan tourism.', TO_DATE('2026-08-31', 'YYYY-MM-DD'), 'No', 'Unanimous (7-0)', 'PRP-ECO-001', 'MEET-2026-001', 'C00000000000021');
+INSERT INTO Approval VALUES ('APV-2026-9002', 'LC/INV/APP-2026-002', TO_DATE('2026-08-05', 'YYYY-MM-DD'), 'Subject to RM50,000 security deposit clearance', 'Conditional Approval', '60 days', 'Good financials, but missing initial deposit.', TO_DATE('2026-10-04', 'YYYY-MM-DD'), 'Yes', 'Majority (5-2)', 'PRP-ECO-002', 'MEET-2026-002', 'C00000000000022');
+INSERT INTO Approval VALUES ('APV-2026-9003', 'LC/INV/APP-2026-003', TO_DATE('2026-08-10', 'YYYY-MM-DD'), 'None', 'Rejected', '30 days', 'Failed financial viability risk assessment.', TO_DATE('2026-09-09', 'YYYY-MM-DD'), 'Yes', 'Majority (4-3)', 'PRP-ECO-003', 'MEET-2026-003', 'C00000000000023');
+INSERT INTO Approval VALUES ('APV-2026-9004', 'LC/INV/APP-2026-004', TO_DATE('2026-08-12', 'YYYY-MM-DD'), 'Must submit official medical checkup', 'Approved', '14 days', 'Strong candidate for IT infrastructure role.', TO_DATE('2026-08-26', 'YYYY-MM-DD'), 'No', 'Unanimous (HR Dir)', 'PRP-ECO-004', 'MEET-2026-004', 'C00000000000024');
+INSERT INTO Approval VALUES ('APV-2026-9005', 'LC/INV/APP-2026-005', TO_DATE('2026-08-15', 'YYYY-MM-DD'), 'Pending Federal MIDA policy clearance', 'Rejected', '90 days', 'Awaiting federal policy update on Halal Hubs.', TO_DATE('2026-11-13', 'YYYY-MM-DD'), 'Yes', 'Tie (3-3, KIV)', 'PRP-ECO-005', 'MEET-2026-005', 'C00000000000025');
+INSERT INTO Approval VALUES ('APV-2026-9006', 'LC/INV/APP-2026-006', TO_DATE('2026-08-20', 'YYYY-MM-DD'), 'Must submit revised Environmental Impact (EIA) report', 'Conditional Approval', '60 days', 'High carbon emission concerns on plot B.', TO_DATE('2026-10-19', 'YYYY-MM-DD'), 'Yes', 'Majority (6-1)', 'PRP-ECO-006', 'MEET-2026-006', 'C00000000000026');
+INSERT INTO Approval VALUES ('APV-2026-9007', 'LC/INV/APP-2026-007', TO_DATE('2026-08-22', 'YYYY-MM-DD'), 'None', 'Rejected', '30 days', 'Developer currently blacklisted in Sabah.', TO_DATE('2026-09-21', 'YYYY-MM-DD'), 'No', 'Unanimous (0-7)', 'PRP-ECO-007', 'MEET-2026-007', 'C00000000000027');
+INSERT INTO Approval VALUES ('APV-2026-9008', 'LC/INV/APP-2026-008', TO_DATE('2026-08-25', 'YYYY-MM-DD'), 'Subject to 1-month rental advance', 'Approved', '30 days', 'Standard retail lease agreement.', TO_DATE('2026-09-24', 'YYYY-MM-DD'), 'No', 'Unanimous (5-0)', 'PRP-ECO-008', 'MEET-2026-008', 'C00000000000028');
+INSERT INTO Approval VALUES ('APV-2026-9009', 'LC/INV/APP-2026-009', TO_DATE('2026-08-28', 'YYYY-MM-DD'), 'None', 'Approved', '14 days', 'Excellent interview performance.', TO_DATE('2026-09-11', 'YYYY-MM-DD'), 'No', 'Unanimous (HR Dir)', 'PRP-ECO-009', 'MEET-2026-009', 'C00000000000029');
+INSERT INTO Approval VALUES ('APV-2026-9010', 'LC/INV/APP-2026-010', TO_DATE('2026-09-01', 'YYYY-MM-DD'), 'Provide proof of heavy machinery ownership', 'Conditional Approval', '45 days', 'Capable contractor but lacks equipment proof.', TO_DATE('2026-10-16', 'YYYY-MM-DD'), 'Yes', 'Majority (4-1)', 'PRP-ECO-010', 'MEET-2026-010', 'C00000000000030');
+COMMIT;
+
+--PROJECT_TIMELINE
+INSERT INTO Project_Timeline VALUES ('MLS-001', 'TL-2026-001', 'Phase 1: Project Initiation & Mapping', TO_DATE('2026-06-30', 'YYYY-MM-DD'), 1, 'Initial site clearing, zoning boundaries verification, and architectural drafting approvals.', 45, 'Initiation', 'Initiation Phase', 100.00, 'PRP-ECO-001');
+INSERT INTO Project_Timeline VALUES ('MLS-002', 'TL-2026-002', 'Phase 1: Structural Foundation Design', TO_DATE('2026-07-15', 'YYYY-MM-DD'), 1, 'Soil stability testing and underground piling reinforcement works.', 60, 'Initiation', 'Initiation Phase', 85.00, 'PRP-ECO-002');
+INSERT INTO Project_Timeline VALUES ('MLS-003', 'TL-2026-003', 'Phase 1: Environment Baseline Setup', TO_DATE('2026-06-15', 'YYYY-MM-DD'), 1, 'EIA equipment setup and environmental monitoring post installation.', 30, 'Initiation', 'Initiation Phase', 100.00, 'PRP-ENV-001');
+INSERT INTO Project_Timeline VALUES ('MLS-004', 'TL-2026-004', 'Phase 1: Tech Architecture Blueprint', TO_DATE('2026-05-20', 'YYYY-MM-DD'), 1, 'Cloud host provisioning and core application server stack design configuration.', 45, 'Initiation', 'Initiation Phase', 100.00, 'PRP-DIG-001');
+INSERT INTO Project_Timeline VALUES ('MLS-005', 'TL-2026-005', 'Phase 1: Structural Engineering Draft', TO_DATE('2026-04-30', 'YYYY-MM-DD'), 1, 'Civil structure blue print submission to BEM for official validation.', 90, 'Initiation', 'Initiation Phase', 100.00, 'PRP-INF-001');
+INSERT INTO Project_Timeline VALUES ('MLS-006', 'TL-2026-006', 'Phase 1: Financial Viability Model', TO_DATE('2026-05-01', 'YYYY-MM-DD'), 1, 'Capital asset valuation review and micro-economic risk tracking setup.', 30, 'Initiation', 'Initiation Phase', 90.00, 'PRP-IVB-001');
+INSERT INTO Project_Timeline VALUES ('MLS-007', 'TL-2026-007', 'Phase 1: Strategic Stakeholder Scoping', TO_DATE('2026-03-15', 'YYYY-MM-DD'), 1, 'Corporate partnership draft negotiations and master timeline signing.', 40, 'Initiation', 'Initiation Phase', 100.00, 'PRP-PLN-001');
+INSERT INTO Project_Timeline VALUES ('MLS-008', 'TL-2026-008', 'Phase 1: Commercial Lease Audit', TO_DATE('2026-04-10', 'YYYY-MM-DD'), 1, 'Corporate asset review and initial tenant background validations.', 30, 'Initiation', 'Initiation Phase', 100.00, 'PRP-MTM-001');
+INSERT INTO Project_Timeline VALUES ('MLS-009', 'TL-2026-009', 'Phase 2: Project Resource Deployment', TO_DATE('2026-08-30', 'YYYY-MM-DD'), 2, 'Procurement of heavy machinery and mobilization of localized work staff.', 60, 'Planning', 'Planning Phase', 25.00, 'PRP-ECO-003');
+INSERT INTO Project_Timeline VALUES ('MLS-010', 'TL-2026-010', 'Phase 2: Core Network Cable Routing', TO_DATE('2026-07-20', 'YYYY-MM-DD'), 2, 'Fiber-optic ground cabling installation across inner sector pathways.', 45, 'Planning', 'Planning Phase', 40.00, 'PRP-DIG-002');
+COMMIT;
+
+--INFRASTRUCTURE
+INSERT INTO Infrastructure VALUES ('INF-2026-001', 'SITE-LBN-A1', 'Heavy Haul', 15000.50, 2500.00, 'Dedicated Leased Line', 'Private Developer', 4500000.00, 50, 'No', 'PRP-INF-001');
+INSERT INTO Infrastructure VALUES ('INF-2026-002', 'SITE-LBN-A2', 'Dual Carriageway', 8500.00, 1200.00, 'High-Speed Fiber', 'Joint Sharing', 2100000.00, 30, 'Yes', 'PRP-INF-002');
+INSERT INTO Infrastructure VALUES ('INF-2026-003', 'SITE-LBN-B1', 'Heavy Haul', 35000.00, 5000.00, 'Dedicated Leased Line', 'Private Developer', 8900000.00, 60, 'No', 'PRP-INF-003');
+INSERT INTO Infrastructure VALUES ('INF-2026-004', 'SITE-LBN-B2', 'Single Lane', 3000.25, 500.00, 'Basic Voice/Data', 'Labuan Corp', 650000.00, 15, 'No', 'PRP-INF-004');
+INSERT INTO Infrastructure VALUES ('INF-2026-005', 'SITE-LBN-C1', 'Dual Carriageway', 12000.00, 2000.00, 'High-Speed Fiber', 'Labuan Corp', 3200000.00, 40, 'Yes', 'PRP-INF-005');
+INSERT INTO Infrastructure VALUES ('INF-2026-006', 'SITE-LBN-C2', 'Heavy Haul', 18500.00, 3000.00, 'Dedicated Leased Line', 'Joint Sharing', 5100000.00, 50, 'No', 'PRP-INF-006');
+INSERT INTO Infrastructure VALUES ('INF-2026-007', 'SITE-LBN-D1', 'Unpaved', 1500.00, 250.00, 'Basic Voice/Data', 'Private Developer', 350000.00, 10, 'No', 'PRP-INF-007');
+INSERT INTO Infrastructure VALUES ('INF-2026-008', 'SITE-LBN-D2', 'Dual Carriageway', 9000.00, 1500.00, 'High-Speed Fiber', 'Labuan Corp', 1800000.00, 35, 'No', 'PRP-INF-008');
+INSERT INTO Infrastructure VALUES ('INF-2026-009', 'SITE-LBN-E1', 'Heavy Haul', 40000.00, 6000.00, 'Dedicated Leased Line', 'Private Developer', 9500000.00, 75, 'Yes', 'PRP-INF-009');
+INSERT INTO Infrastructure VALUES ('INF-2026-010', 'SITE-LBN-E2', 'Single Lane', 4500.50, 750.00, 'High-Speed Fiber', 'Joint Sharing', 950000.00, 20, 'No', 'PRP-INF-010');
+COMMIT;
+
+--DIGITALISATION
+INSERT INTO Digitalisation VALUES ('DIG-2026-001', 'MDEC/APV/2026/01', 'smartport.labuan.my', 'High', 'Yes', 'Yes', 'AWS', 'Compliant', 88, 'Ready', 'PRP-DIG-001');
+INSERT INTO Digitalisation VALUES ('DIG-2026-002', 'MDEC/APV/2026/02', 'logistics.io.my', 'Fully Automated', 'Yes', 'Yes', 'Azure', 'Compliant', 95, 'Ready', 'PRP-DIG-002');
+INSERT INTO Digitalisation VALUES ('DIG-2026-003', 'MDEC/APV/2026/03', 'ecocloud.platform.net', 'Medium', 'No', 'Yes', 'Google Cloud', 'Pending', 72, 'In Progress', 'PRP-DIG-003');
+INSERT INTO Digitalisation VALUES ('DIG-2026-004', 'MDEC/APV/2026/04', 'retailconnect.com', 'Low', 'No', 'No', 'Private Cloud', 'Compliant', 60, 'Ready', 'PRP-DIG-004');
+INSERT INTO Digitalisation VALUES ('DIG-2026-005', 'MDEC/APV/2026/05', 'agritech.system.org', 'High', 'Yes', 'Yes', 'Alibaba Cloud', 'Compliant', 84, 'Ready', 'PRP-DIG-005');
+INSERT INTO Digitalisation VALUES ('DIG-2026-006', 'MDEC/APV/2026/06', 'securitymesh.gov.my', 'Fully Automated', 'Yes', 'Yes', 'AWS', 'Non-Compliant', 91, 'In Progress', 'PRP-DIG-006');
+INSERT INTO Digitalisation VALUES ('DIG-2026-007', 'MDEC/APV/2026/07', 'fintech.hub.labuan', 'High', 'Yes', 'No', 'Azure', 'Pending', 79, 'Not Ready', 'PRP-DIG-007');
+INSERT INTO Digitalisation VALUES ('DIG-2026-008', 'MDEC/APV/2026/08', 'marinasensor.net', 'Medium', 'No', 'Yes', 'Google Cloud', 'Compliant', 68, 'Ready', 'PRP-DIG-008');
+INSERT INTO Digitalisation VALUES ('DIG-2026-009', 'MDEC/APV/2026/09', 'datamining.core.co', 'Fully Automated', 'Yes', 'Yes', 'Private Cloud', 'Pending', 93, 'In Progress', 'PRP-DIG-009');
+INSERT INTO Digitalisation VALUES ('DIG-2026-010', 'MDEC/APV/2026/10', 'smartgrid.energy.my', 'High', 'Yes', 'Yes', 'Others', 'Compliant', 86, 'Ready', 'PRP-DIG-010');
+COMMIT;
+
+--BUSINESS_PLAN
+INSERT INTO Business_Plan VALUES ('PLAN-LBN-001', 'Papan Island Luxury Eco-Resort Blueprint', TO_DATE('2026-09-01', 'YYYY-MM-DD'), TO_DATE('2036-08-31', 'YYYY-MM-DD'), 'Premium hospitality concept specializing in carbon-neutral accommodation and marine tour modules.', 'Hospitality & Leisure', 'International Tourists & High-Net-Worth Individuals', 'Secured', 'Direct Sales', 'High', 'PRP-PLN-001');
+INSERT INTO Business_Plan VALUES ('PLAN-LBN-002', 'Labuan Integrated Deepsea Logistics Hub', TO_DATE('2027-01-01', 'YYYY-MM-DD'), TO_DATE('2042-12-31', 'YYYY-MM-DD'), 'Automated cross-docking distribution operations scaling multi-tier maritime cargo storage.', 'Logistics & Shipping', 'Asia-Pacific Cargo Operators & Trade Conglomerates', 'Secured', 'Transaction Commissions', 'Moderate', 'PRP-PLN-002');
+INSERT INTO Business_Plan VALUES ('PLAN-LBN-003', 'Halal Hub Commercial Cold-Chain Warehousing', TO_DATE('2026-06-01', 'YYYY-MM-DD'), TO_DATE('2031-05-31', 'YYYY-MM-DD'), 'Temperature-controlled modular storage solutions optimized for local hypermarket redistribution channels.', 'Storage & Agriculture', 'East Malaysian Food Processing SMEs', 'Negotiating', 'Subscription Fees', 'Low', 'PRP-PLN-003');
+INSERT INTO Business_Plan VALUES ('PLAN-LBN-004', 'Financial Park Block B Corporate Upgrades', TO_DATE('2026-11-01', 'YYYY-MM-DD'), TO_DATE('2036-10-31', 'YYYY-MM-DD'), 'Modernizing Grade-A smart workspaces equipped with integrated fiber backbones for offshore institutions.', 'Commercial Real Estate', 'Offshore Banking Entities & International Law Practices', 'Secured', 'Licensing/Royalties', 'High', 'PRP-PLN-004');
+INSERT INTO Business_Plan VALUES ('PLAN-LBN-005', 'Rancha-Rancha Green Bio-Diesel Depot', TO_DATE('2027-03-01', 'YYYY-MM-DD'), TO_DATE('2037-02-28', 'YYYY-MM-DD'), 'Refining and distributing standardized low-emission marine fuel vectors for regional cargo fleets.', 'Energy & Utilities', 'Industrial Vessel Fleets & Marine Freight Transit Providers', 'None Required', 'Direct Sales', 'Moderate', 'PRP-PLN-005');
+INSERT INTO Business_Plan VALUES ('PLAN-LBN-006', 'Labuan Sentral High-Density Retail Strip', TO_DATE('2026-08-15', 'YYYY-MM-DD'), TO_DATE('2031-08-14', 'YYYY-MM-DD'), 'Multi-tenant open layout lifestyle strip bridging food beverage chains with hyper-localized boutique concepts.', 'Retail & Commercial', 'Labuan Domestic Residents & Weekend Commuters', 'Negotiating', 'Subscription Fees', 'High', 'PRP-PLN-006');
+INSERT INTO Business_Plan VALUES ('PLAN-LBN-007', 'Saguking Marine Structural Maintenance Dock', TO_DATE('2026-10-01', 'YYYY-MM-DD'), TO_DATE('2036-09-30', 'YYYY-MM-DD'), 'Dry-dock servicing, predictive maintenance analytics, and protective hull coating operations.', 'Marine Engineering', 'Regional Tugboat Owners & Salvage Fleet Operations', 'Secured', 'Direct Sales', 'Low', 'PRP-PLN-007');
+INSERT INTO Business_Plan VALUES ('PLAN-LBN-008', 'Kiansam Industrial Modular Tech Foundry', TO_DATE('2027-02-15', 'YYYY-MM-DD'), TO_DATE('2032-02-14', 'YYYY-MM-DD'), 'Prefabrication assembly facilities focusing on lightweight eco-friendly building materials.', 'Manufacturing', 'Sabah Regional Infrastructure Contractors', 'Secured', 'Direct Sales', 'Moderate', 'PRP-PLN-008');
+INSERT INTO Business_Plan VALUES ('PLAN-LBN-009', 'Lazenda Tech Transformation Incubator Hub', TO_DATE('2026-07-01', 'YYYY-MM-DD'), TO_DATE('2029-06-30', 'YYYY-MM-DD'), 'Co-working infrastructure paired with accelerator resources tailored for cloud startup portfolios.', 'Digital Infrastructure', 'Tech Entrepreneurs & Academic Spin-off Teams', 'Negotiating', 'Transaction Commissions', 'Low', 'PRP-PLN-009');
+INSERT INTO Business_Plan VALUES ('PLAN-LBN-010', 'Bumi Bedaun Solar Farm Grid Connectivity Plan', TO_DATE('2026-09-15', 'YYYY-MM-DD'), TO_DATE('2046-09-14', 'YYYY-MM-DD'), 'Photovoltaic clean energy capture and storage farm feed setup matching utility load requests.', 'Renewable Energy', 'Labuan Municipal Power Grid Operators', 'Secured', 'Direct Sales', 'Low', 'PRP-PLN-010');
+COMMIT;
+
+--METHOD_TERM
+INSERT INTO Method_Term VALUES ('MTH-2026-001', 'Build-Operate-Transfer (BOT)', 'Annually', 12, 3.50, 500000.00, TO_DATE('2026-09-01', 'YYYY-MM-DD'), '24 Months Notice', 12.50, 'Transfer ownership to Labuan Corp upon completion of 20-year operational lease period.', 'PRP-PLN-001');
+INSERT INTO Method_Term VALUES ('MTH-2026-002', 'Joint Venture', 'Quarterly', 6, 0.00, 1500000.00, TO_DATE('2027-01-01', 'YYYY-MM-DD'), '12 Months Notice', 40.00, 'Profits and assets distributed according to equity shareholdings upon venture expiration.', 'PRP-PLN-002');
+INSERT INTO Method_Term VALUES ('MTH-2026-003', 'Lease', 'Monthly', 3, 5.00, 75000.00, TO_DATE('2026-06-01', 'YYYY-MM-DD'), '6 Months Notice', 0.00, 'Standard commercial lease return; structures remain property of lessor unless renewed.', 'PRP-PLN-003');
+INSERT INTO Method_Term VALUES ('MTH-2026-004', 'Revenue Sharing', 'Semi-Annually', 0, 2.25, 250000.00, TO_DATE('2026-11-01', 'YYYY-MM-DD'), '18 Months Notice', 8.00, 'Audited gross revenue splits processed through designated Labuan escrow account framework.', 'PRP-PLN-004');
+INSERT INTO Method_Term VALUES ('MTH-2026-005', 'Concession', 'Annually', 24, 4.00, 1000000.00, TO_DATE('2027-03-01', 'YYYY-MM-DD'), '36 Months Notice', 15.00, 'Environmental baseline checks required before final asset handback is officially signed.', 'PRP-PLN-005');
+INSERT INTO Method_Term VALUES ('MTH-2026-006', 'Lease', 'Monthly', 2, 6.00, 120000.00, TO_DATE('2026-08-15', 'YYYY-MM-DD'), '6 Months Notice', 0.00, 'Renewal options restricted if local vendor engagement target rates drop below compliance.', 'PRP-PLN-006');
+INSERT INTO Method_Term VALUES ('MTH-2026-007', 'Joint Venture', 'Quarterly', 6, 0.00, 450000.00, TO_DATE('2026-10-01', 'YYYY-MM-DD'), '12 Months Notice', 30.00, 'Technical liaison team to audit operational structural safety parameters semi-annually.', 'PRP-PLN-007');
+INSERT INTO Method_Term VALUES ('MTH-2026-008', 'Build-Operate-Transfer (BOT)', 'Annually', 12, 1.75, 300000.00, TO_DATE('2027-02-15', 'YYYY-MM-DD'), '24 Months Notice', 5.00, 'All manufacturing machinery must be certified operational before transfer protocols execute.', 'PRP-PLN-008');
+INSERT INTO Method_Term VALUES ('MTH-2026-009', 'Revenue Sharing', 'Monthly', 1, 0.00, 25000.00, TO_DATE('2026-07-01', 'YYYY-MM-DD'), '3 Months Notice', 10.00, 'Digital transactions log must sync directly to server repository for cloud transparency.', 'PRP-PLN-009');
+INSERT INTO Method_Term VALUES ('MTH-2026-010', 'Concession', 'Annually', 18, 3.00, 800000.00, TO_DATE('2026-09-15', 'YYYY-MM-DD'), '24 Months Notice', 7.50, 'Solar grid components transferred to local municipal grid control upon term ending.', 'PRP-PLN-010');
+COMMIT;
+
+--IMPACT
+INSERT INTO Impact VALUES ('IMP-2026-001', TO_DATE('2026-03-20', 'YYYY-MM-DD'), 'Low', 'Pass', TO_DATE('2026-09-20', 'YYYY-MM-DD'), 'Initial socio-economic score meets minimum development threshold parameters.', 'Yes', 'PRP-ECO-001');
+INSERT INTO Impact VALUES ('IMP-2026-002', TO_DATE('2026-03-25', 'YYYY-MM-DD'), 'Moderate', 'Pass', TO_DATE('2026-09-25', 'YYYY-MM-DD'), 'Logistics trade volume multiplier checks show resilient localized spin-offs.', 'Yes', 'PRP-ECO-002');
+INSERT INTO Impact VALUES ('IMP-2026-003', TO_DATE('2026-04-10', 'YYYY-MM-DD'), 'High', 'Conditional', TO_DATE('2026-10-10', 'YYYY-MM-DD'), 'Requires updated water pollution treatment run blueprints before next review phase.', 'Yes', 'PRP-ENV-001');
+INSERT INTO Impact VALUES ('IMP-2026-004', TO_DATE('2026-02-22', 'YYYY-MM-DD'), 'Low', 'Pass', TO_DATE('2026-08-22', 'YYYY-MM-DD'), 'High tech migration strategy minimizes physical environmental impact risk scores.', 'Yes', 'PRP-DIG-001');
+INSERT INTO Impact VALUES ('IMP-2026-005', TO_DATE('2026-01-28', 'YYYY-MM-DD'), 'Moderate', 'Pass', TO_DATE('2026-07-28', 'YYYY-MM-DD'), 'Civil safety road structures verified up to standard heavy tonnage specifications.', 'Yes', 'PRP-INF-001');
+INSERT INTO Impact VALUES ('IMP-2026-006', TO_DATE('2026-03-10', 'YYYY-MM-DD'), 'High', 'Conditional', TO_DATE('2026-09-10', 'YYYY-MM-DD'), 'Escrow financial audit parameters are under revision by legal council advisors.', 'Yes', 'PRP-IVB-001');
+INSERT INTO Impact VALUES ('IMP-2026-007', TO_DATE('2026-03-22', 'YYYY-MM-DD'), 'Moderate', 'Pass', TO_DATE('2026-09-22', 'YYYY-MM-DD'), 'Tourism spin-off matrix displays long term commercial sustainability markers.', 'Yes', 'PRP-PLN-001');
+INSERT INTO Impact VALUES ('IMP-2026-008', TO_DATE('2026-04-18', 'YYYY-MM-DD'), 'Low', 'Pass', TO_DATE('2026-10-18', 'YYYY-MM-DD'), 'Commercial tenancy structure complies completely with legal land restrictions.', 'Yes', 'PRP-MTM-001');
+INSERT INTO Impact VALUES ('IMP-2026-009', TO_DATE('2026-05-18', 'YYYY-MM-DD'), 'Low', 'Pass', TO_DATE('2026-11-18', 'YYYY-MM-DD'), 'Local workforce absorption forecasts match state priority investment targets.', 'Yes', 'PRP-ECO-003');
+INSERT INTO Impact VALUES ('IMP-2026-010', TO_DATE('2026-02-28', 'YYYY-MM-DD'), 'Low', 'Pass', TO_DATE('2026-08-28', 'YYYY-MM-DD'), 'Cyber security status verified as fully compliant with regulatory tech bodies.', 'Yes', 'PRP-DIG-002');
+COMMIT;
+
+--INVESTMENT_VIABILITY
+INSERT INTO Investment_Viability VALUES ('VIA-2026-001', 1, 4500000.00, 650000.00, 200000.00, 14.44, 'Private Capital', 'Moderate', 5000000.00, 3500000.00, 1000000.00, 'Commercial Lease', 82, 'Direct Equity Funding Pool', 4700000.00, '10 Years', 45000.00, 'PRP-IVB-001');
+INSERT INTO Investment_Viability VALUES ('VIA-2026-002', 1, 12500000.00, 2100000.00, 850000.00, 16.80, 'Joint Venture', 'Low', 13000000.00, 9000000.00, 3500000.00, 'Infrastructure', 90, 'Consortium Bank Escrow Guarantee', 13200000.00, '20 Years', 0.00, 'PRP-IVB-002');
+INSERT INTO Investment_Viability VALUES ('VIA-2026-003', 1, 2200000.00, 350000.00, 95000.00, 15.90, 'Private Capital', 'Low', 2500000.00, 1800000.00, 400000.00, 'Industrial Hub', 76, 'Internal Corporate Retained Earnings', 2350000.00, '5 Years', 18000.00, 'PRP-IVB-003');
+INSERT INTO Investment_Viability VALUES ('VIA-2026-004', 1, 18000000.00, 3200000.00, 1400000.00, 17.77, 'Foreign Direct Investment', 'High', 20000000.00, 14500000.00, 3500000.00, 'Commercial Lease', 88, 'Offshore Venture Placement Allocations', 19100000.00, '10 Years', 150000.00, 'PRP-IVB-004');
+INSERT INTO Investment_Viability VALUES ('VIA-2026-005', 1, 25000000.00, 4100000.00, 1950000.00, 16.40, 'Private Capital', 'Low', 27000000.00, 19000000.00, 6000000.00, 'Industrial Hub', 85, 'Institutional Trust Underwriter Capital', 26500000.00, '10 Years', 0.00, 'PRP-IVB-005');
+INSERT INTO Investment_Viability VALUES ('VIA-2026-006', 1, 650000.00, 120000.00, 35000.00, 18.46, 'Private Capital', 'Speculative', 700000.00, 500000.00, 150000.00, 'Digital Tech Upgrade', 64, 'Angel Investor Structured Seed Round', 680000.00, '3 Years', 5000.00, 'PRP-IVB-006');
+INSERT INTO Investment_Viability VALUES ('VIA-2026-007', 1, 55000000.00, 8900000.00, 4100000.00, 16.18, 'Foreign Direct Investment', 'Moderate', 60000000.00, 42000000.00, 13000000.00, 'Infrastructure', 89, 'International Infrastructure Syndicated Loan', 57500000.00, '20 Years', 0.00, 'PRP-IVB-007');
+INSERT INTO Investment_Viability VALUES ('VIA-2026-008', 1, 3200000.00, 480000.00, 110000.00, 15.00, 'Government Grant', 'Low', 3500000.00, 2400000.00, 800000.00, 'Industrial Hub', 79, 'SME Bio-Development Incentive Grant Plan', 3400000.00, '5 Years', 12000.00, 'PRP-IVB-008');
+INSERT INTO Investment_Viability VALUES ('VIA-2026-009', 1, 14500000.00, 2800000.00, 950000.00, 19.31, 'Private Capital', 'High', 15000000.00, 11000000.00, 3500000.00, 'Digital Tech Upgrade', 91, 'Venture Capital Round-A Financed Facility', 15200000.00, '5 Years', 0.00, 'PRP-IVB-009');
+INSERT INTO Investment_Viability VALUES ('VIA-2026-010', 1, 9500000.00, 1800000.00, 650000.00, 18.94, 'Joint Venture', 'Low', 11000000.00, 7500000.00, 2000000.00, 'Infrastructure', 87, 'Public-Private Sustainable Power Bond Pool', 10200000.00, '20 Years', 0.00, 'PRP-IVB-010');
+COMMIT;
+
+
+-- =====================================================================
+-- LEVEL 7: Depends on Level 6
+-- =====================================================================
