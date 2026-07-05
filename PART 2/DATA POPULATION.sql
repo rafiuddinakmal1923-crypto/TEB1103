@@ -501,5 +501,163 @@ COMMIT;
 
 
 -- =====================================================================
--- LEVEL 7: Depends on Level 6
+-- LEVEL 7
 -- =====================================================================
+
+-- AGREEMENT
+INSERT INTO Agreement VALUES ('AGR-2026-001', 'SD-2026-8801', TO_DATE('2026-01-10', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Labuan Port Commercial Land Lease', 'Tan Sri Datuk Hamid', TO_DATE('2026-01-15', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890112A', 'PRP-ECO-001', 'DEPT-LBN-001', 'APV-2026-9001');
+INSERT INTO Agreement VALUES ('AGR-2026-002', 'SD-2026-8802', TO_DATE('2026-01-18', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Victoria Bay Agro-Tech Plot Permit', 'Datuk Richard Yong', TO_DATE('2026-01-18', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890113B', 'PRP-ECO-002', 'DEPT-LBN-002', 'APV-2026-9002');
+INSERT INTO Agreement VALUES ('AGR-2026-003', 'SD-2026-8803', TO_DATE('2026-02-02', 'YYYY-MM-DD'), 'Draft', 'Menara Kinabalu, Kota Kinabalu', 'Kimanis Solar Farm Development Proposal', 'Puan Sri Siti Zainab', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Sabah Land Ordinance', 'REC-8890114C', 'PRP-ECO-003', 'DEPT-LBN-003', 'APV-2026-9003');
+INSERT INTO Agreement VALUES ('AGR-2026-004', 'SD-2026-8804', TO_DATE('2026-02-14', 'YYYY-MM-DD'), 'Active', 'Menara Kinabalu, Kota Kinabalu', 'Rancha-Rancha Industrial Park Site C', 'Datuk Richard Yong', TO_DATE('2026-02-20', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890115D', 'PRP-ECO-004', 'DEPT-LBN-004', 'APV-2026-9004');
+INSERT INTO Agreement VALUES ('AGR-2026-005', 'SD-2026-8805', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Expired', 'Financial Park Labuan, HQ Office', 'Temporary Eco-Tourism Hub Permit (Reno)', 'Tan Sri Datuk Hamid', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Contracts Act 1950', 'REC-8890116E', 'PRP-ECO-005', 'DEPT-LBN-005', 'APV-2026-9005');
+INSERT INTO Agreement VALUES ('AGR-2026-006', 'SD-2026-8806', TO_DATE('2026-03-12', 'YYYY-MM-DD'), 'Active', 'Menara Kinabalu, Kota Kinabalu', 'Sandakan Biomass Plant Land Lease Agreement', 'Puan Sri Siti Zainab', TO_DATE('2026-03-15', 'YYYY-MM-DD'), 'Sabah Land Ordinance', 'REC-8890117F', 'PRP-ECO-006', 'DEPT-LBN-006', 'APV-2026-9006');
+INSERT INTO Agreement VALUES ('AGR-2026-007', 'SD-2026-8807', TO_DATE('2026-04-05', 'YYYY-MM-DD'), 'Terminated', 'Financial Park Labuan, HQ Office', 'Kansai Logistics Warehousing Site Deed', 'Datuk Richard Yong', TO_DATE('2026-04-10', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890118G', 'PRP-ECO-007', 'DEPT-LBN-007', 'APV-2026-9007');
+INSERT INTO Agreement VALUES ('AGR-2026-008', 'SD-2026-8808', TO_DATE('2026-04-15', 'YYYY-MM-DD'), 'Draft', 'Menara Kinabalu, Kota Kinabalu', 'Tawau Deep Sea Port Access Agreement', 'Puan Sri Siti Zainab', TO_DATE('2026-04-20', 'YYYY-MM-DD'), 'Sabah Land Ordinance', 'REC-8890119H', 'PRP-ECO-008', 'DEPT-LBN-008', 'APV-2026-9008');
+INSERT INTO Agreement VALUES ('AGR-2026-009', 'SD-2026-8809', TO_DATE('2026-05-02', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Digital Tech Hub Main Site Lease', 'Tan Sri Datuk Hamid', TO_DATE('2026-05-05', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890120I', 'PRP-ECO-009', 'DEPT-LBN-009', 'APV-2026-9009');
+INSERT INTO Agreement VALUES ('AGR-2026-010', 'SD-2026-8810', TO_DATE('2026-05-18', 'YYYY-MM-DD'), 'Active', 'Menara Kinabalu, Kota Kinabalu', 'Papar Mixed Commercial Land Agreement', 'Datuk Richard Yong', TO_DATE('2026-05-20', 'YYYY-MM-DD'), 'Sabah Land Ordinance', 'REC-8890121J', 'PRP-ECO-010', 'DEPT-LBN-010', 'APV-2026-9010');
+COMMIT;
+
+-- SOCIAL
+INSERT INTO Social VALUES ('SOC000000000001', 'REF/LBN/COM/2026/01', 85, 90, 'Creates over 200 local construction jobs and establishes community clinic.', 'Urban', 45.50, 'Compliant', 4.5, 'Medium', 'ECO000000000001');
+INSERT INTO Social VALUES ('SOC000000000002', 'REF/LBN/COM/2026/02', 92, 88, 'Funds primary school expansion and public park rejuvenation project.', 'Suburban', 60.00, 'Compliant', 4.8, 'Low', 'ECO000000000002');
+INSERT INTO Social VALUES ('SOC000000000003', 'REF/SAB/COM/2026/11', 65, 70, 'Provides localized micro-retail kiosks for indigenous Sabahan craft vendors.', 'Rural', 35.00, 'Compliant', 3.8, 'Low', 'ECO000000000003');
+INSERT INTO Social VALUES ('SOC000000000004', 'REF/LBN/COM/2026/04', 45, 52, NULL, 'Highly Urbanized', 15.00, 'Pending', NULL, 'High', 'ECO000000000004');
+INSERT INTO Social VALUES ('SOC000000000005', 'REF/LBN/COM/2026/05', 78, 80, 'Sponsors regional vocational training programs in maritime and logistics.', 'Urban', 50.00, 'Compliant', 4.2, 'Medium', 'ECO000000000005');
+INSERT INTO Social VALUES ('SOC000000000006', 'REF/SAB/COM/2026/06', 82, 85, 'Builds public recreational facilities and coastal cleanup initiatives.', 'Suburban', 40.00, 'Compliant', 4.6, 'Low', 'ECO000000000006');
+INSERT INTO Social VALUES ('SOC000000000007', 'REF/LBN/COM/2026/07', 55, 60, 'Upgrades local drainage systems for residential areas nearby.', 'Urban', 20.00, 'Pending', 3.2, 'High', 'ECO000000000007');
+INSERT INTO Social VALUES ('SOC000000000008', 'REF/SAB/COM/2026/08', 95, 94, 'Major hospital annex and rural healthcare mobilization.', 'Rural', 75.00, 'Compliant', 4.9, 'Low', 'ECO000000000008');
+INSERT INTO Social VALUES ('SOC000000000009', 'REF/LBN/COM/2026/09', 70, 75, 'Youth digital literacy center development and IT setup.', 'Suburban', 30.00, 'Compliant', 4.0, 'Medium', 'ECO000000000009');
+INSERT INTO Social VALUES ('SOC000000000010', 'REF/SAB/COM/2026/10', 42, 50, 'Road expansion project to aid remote indigenous connectivity.', 'Rural', 10.00, 'Non-Compliant', 2.8, 'High', 'ECO000000000010');
+COMMIT;
+
+-- ECONOMIC
+INSERT INTO Economic VALUES ('ECO000000000001', 'MOF/LBN/2026/A01-99', 85, 2.4, 15000000.00, 'Regional', 'Yes', 1200000.00, 78, 'High', 'ECO000000000001');
+INSERT INTO Economic VALUES ('ECO000000000002', 'MOF/LBN/2026/B12-45', 92, 3.1, 45000000.00, 'National', 'Yes', 3500000.00, 90, 'High', 'ECO000000000002');
+INSERT INTO Economic VALUES ('ECO000000000003', 'MOF/SAB/2026/C03-11', 64, 1.8, 0.00, 'State', 'Yes', 450000.00, 45, 'Medium', 'ECO000000000003');
+INSERT INTO Economic VALUES ('ECO000000000004', 'MOF/LBN/2026/D04-88', 45, 1.2, 0.00, 'Local', 'No', 120000.00, 20, 'Low', 'ECO000000000004');
+INSERT INTO Economic VALUES ('ECO000000000005', 'MOF/SAB/2026/E05-22', 88, 2.9, 25000000.00, 'Regional', 'Yes', 2200000.00, 82, 'High', 'ECO000000000005');
+INSERT INTO Economic VALUES ('ECO000000000006', 'MOF/LBN/2026/F06-33', 75, 2.0, 5000000.00, 'State', 'Yes', 850000.00, 60, 'Medium', 'ECO000000000006');
+INSERT INTO Economic VALUES ('ECO000000000007', 'MOF/SAB/2026/G07-44', 35, 1.1, 0.00, 'Local', 'No', 50000.00, 15, 'Low', 'ECO000000000007');
+INSERT INTO Economic VALUES ('ECO000000000008', 'MOF/LBN/2026/H08-55', 98, 3.5, 80000000.00, 'National', 'Yes', 6500000.00, 95, 'Critical', 'ECO000000000008');
+INSERT INTO Economic VALUES ('ECO000000000009', 'MOF/SAB/2026/I09-66', 72, 1.9, 8000000.00, 'State', 'Yes', 600000.00, 55, 'Medium', 'ECO000000000009');
+INSERT INTO Economic VALUES ('ECO000000000010', 'MOF/LBN/2026/J10-77', 55, 1.4, 1000000.00, 'Local', 'Yes', 250000.00, 35, 'Low', 'ECO000000000010');
+COMMIT;
+
+-- ENVIRONMENTAL
+INSERT INTO Environmental VALUES ('ENV000000000001', 'DOE/LBN/EIA/2026/001', 15.50, 45.00, 88, 'Low', 'Comprehensive recycling and organic compost strategy.', '5-Star', 'Yes', 'Compliant', 'ECO000000000001');
+INSERT INTO Environmental VALUES ('ENV000000000002', 'DOE/LBN/EIA/2026/002', 8.25, 65.50, 92, 'Low', 'Zero single-use plastic policy across proposed infrastructure resort.', '5-Star', 'Yes', 'Compliant', 'ECO000000000002');
+INSERT INTO Environmental VALUES ('ENV000000000003', 'DOE/LBN/EIA/2026/003', 45.00, 12.00, 74, 'Medium', 'Standard hazardous waste containment with localized runoff safety drains.', '3-Star', 'No', 'Compliant', 'ECO000000000003');
+INSERT INTO Environmental VALUES ('ENV000000000004', 'DOE/LBN/EIA/2026/004', 120.00, 0.00, 42, 'High', NULL, '2-Star', 'No', 'Pending', 'ECO000000000004');
+INSERT INTO Environmental VALUES ('ENV000000000005', 'DOE/LBN/EIA/2026/005', 25.30, 30.00, 81, 'Medium', 'Closed-loop graywater treatment system for eco-industrial warehouse.', '4-Star', 'No', 'Compliant', 'ECO000000000005');
+INSERT INTO Environmental VALUES ('ENV000000000006', 'DOE/LBN/EIA/2026/006', 5.00, 85.00, 96, 'Low', 'Fully self-sustaining solar grid and atmospheric water generation.', '5-Star', 'Yes', 'Compliant', 'ECO000000000006');
+INSERT INTO Environmental VALUES ('ENV000000000007', 'DOE/LBN/EIA/2026/007', 85.00, 5.00, 55, 'Medium', 'Standard municipal waste alignment, requires secondary review.', '2-Star', 'No', 'Pending', 'ECO000000000007');
+INSERT INTO Environmental VALUES ('ENV000000000008', 'DOE/LBN/EIA/2026/008', 210.00, 0.00, 20, 'Critical', 'Heavy chemical runoff detected without proper filtration units.', '1-Star', 'No', 'Non-Compliant', 'ECO000000000008');
+INSERT INTO Environmental VALUES ('ENV000000000009', 'DOE/LBN/EIA/2026/009', 35.00, 20.00, 78, 'Low', 'Sedimentation control and active replanting of indigenous trees.', '3-Star', 'Yes', 'Compliant', 'ECO000000000009');
+INSERT INTO Environmental VALUES ('ENV000000000010', 'DOE/LBN/EIA/2026/010', 12.00, 60.00, 90, 'Low', 'Mangrove preservation zone with strict zero-waste construction protocols.', '4-Star', 'Yes', 'Compliant', 'ECO000000000010');
+COMMIT;
+
+
+-- =====================================================================
+-- LEVEL 8
+-- =====================================================================
+
+-- LAND
+INSERT INTO Land VALUES ('LND-001', 'MSP-LBN-2026-001', 'Financial Park Block C Annex', 2500.50, 1, 'Available', 'Jalan Merdeka, Labuan Town', 'Bare Land', 'Commercial', 'State-Owned', NULL);
+INSERT INTO Land VALUES ('LND-002', 'MSP-LBN-2026-005', 'Kiamsam Industrial Lot 4', 45000.00, 5, 'Leased', 'Kiamsam Industrial Estate', 'Hilly/Sloped', 'Industrial', 'Leasehold', 'ENC-2025-881');
+INSERT INTO Land VALUES ('LND-003', 'MSP-LBN-2026-012', 'Papan Island Resort Plot A', 120000.00, 12, 'Reserved', 'Papan Island', 'Forested', 'Special Economic', 'State-Owned', NULL);
+INSERT INTO Land VALUES ('LND-004', 'MSP-LBN-2026-018', 'Rancha-Rancha Expansion Zone', 85000.75, 8, 'Disputed', 'Rancha-Rancha', 'Bare Land', 'Industrial', 'Freehold', 'LGL-DISP-404');
+INSERT INTO Land VALUES ('LND-005', 'MSP-LBN-2026-022', 'Bebuloh Agricultural Tract', 30000.00, 3, 'Available', 'Kampung Bebuloh', 'Swampland', 'Agricultural', 'State-Owned', NULL);
+INSERT INTO Land VALUES ('LND-006', 'MSP-LBN-2026-030', 'Victoria Bay Waterfront Strip', 15000.25, 2, 'Available', 'Victoria Bay', 'Bare Land', 'Commercial', 'State-Owned', NULL);
+INSERT INTO Land VALUES ('LND-007', 'MSP-LBN-2026-035', 'Layang-Layangan Eco-Park', 60000.00, 6, 'Reserved', 'Layang-Layangan', 'Forested', 'Special Economic', 'Leasehold', NULL);
+INSERT INTO Land VALUES ('LND-008', 'MSP-LBN-2026-042', 'Bukit Kalam Tech Hub Zone', 42500.50, 4, 'Available', 'Bukit Kalam', 'Hilly/Sloped', 'Commercial', 'Freehold', 'ENC-2026-112');
+INSERT INTO Land VALUES ('LND-009', 'MSP-LBN-2026-050', 'Pohon Batu Logistics Plot', 75000.00, 7, 'Leased', 'Pohon Batu', 'Bare Land', 'Industrial', 'State-Owned', NULL);
+INSERT INTO Land VALUES ('LND-010', 'MSP-LBN-2026-061', 'Sungai Bedaun Farm Tract', 22000.75, 2, 'Disputed', 'Sungai Bedaun', 'Swampland', 'Agricultural', 'Leasehold', 'LGL-DISP-511');
+COMMIT;
+
+-- QUALITY_RECORD
+INSERT INTO Quality_Record VALUES ('INSP-2026-001', TO_DATE('2026-07-01', 'YYYY-MM-DD'), 'Site clear, concrete cured properly.', 'Foundation', 'Pass', 15.00, 'Low', 0, NULL, 'No', 'C00000000000021', 'TL-ECO-101', 'INF000000000001', 'DIG000000000001', 'AGR-2026-001');
+INSERT INTO Quality_Record VALUES ('INSP-2026-002', TO_DATE('2026-07-05', 'YYYY-MM-DD'), 'Minor hairline cracks on column C4.', 'Structural', 'Conditional Pass', 35.50, 'Medium', 2, 'Patching required on column C4 surface.', 'Yes', 'C00000000000022', 'TL-ECO-101', 'INF000000000002', 'DIG000000000002', 'AGR-2026-002');
+INSERT INTO Quality_Record VALUES ('INSP-2026-003', TO_DATE('2026-07-12', 'YYYY-MM-DD'), 'Major structural misalignment on beam B2.', 'Structural', 'Fail', 35.50, 'Critical', 5, 'Beam B2 off-center by 3cm; requires immediate reconstruction.', 'Yes', 'C00000000000023', 'TL-HYD-202', 'INF000000000003', 'DIG000000000003', 'AGR-2026-003');
+INSERT INTO Quality_Record VALUES ('INSP-2026-004', TO_DATE('2026-07-15', 'YYYY-MM-DD'), 'HVAC ducting installed correctly.', 'M and E', 'Pass', 60.00, 'Low', 0, NULL, 'No', 'C00000000000024', 'TL-HYD-202', 'INF000000000004', 'DIG000000000004', 'AGR-2026-004');
+INSERT INTO Quality_Record VALUES ('INSP-2026-005', TO_DATE('2026-07-22', 'YYYY-MM-DD'), 'Exposed live wiring in corridor.', 'M and E', 'Fail', 65.00, 'High', 3, 'Corridor wires lack insulation and proper conduit routing.', 'Yes', 'C00000000000025', 'TL-PRT-303', 'INF000000000005', 'DIG000000000005', 'AGR-2026-005');
+INSERT INTO Quality_Record VALUES ('INSP-2026-006', TO_DATE('2026-08-05', 'YYYY-MM-DD'), 'Painting completed with even coat.', 'Finishing', 'Pass', 85.00, 'Low', 0, NULL, 'No', 'C00000000000026', 'TL-FIN-404', 'INF000000000001', 'DIG000000000006', 'AGR-2026-006');
+INSERT INTO Quality_Record VALUES ('INSP-2026-007', TO_DATE('2026-08-10', 'YYYY-MM-DD'), 'Tiles lifting in lobby area.', 'Finishing', 'Conditional Pass', 88.00, 'Medium', 4, 'Re-grouting and setting of 15 tiles required.', 'Yes', 'C00000000000027', 'TL-AGR-505', 'INF000000000002', 'DIG000000000001', 'AGR-2026-007');
+INSERT INTO Quality_Record VALUES ('INSP-2026-008', TO_DATE('2026-08-18', 'YYYY-MM-DD'), 'All systems operational.', 'Final Handover', 'Pass', 100.00, 'Low', 0, NULL, 'No', 'C00000000000028', 'TL-RTL-606', 'INF000000000003', 'DIG000000000002', 'AGR-2026-008');
+INSERT INTO Quality_Record VALUES ('INSP-2026-009', TO_DATE('2026-08-25', 'YYYY-MM-DD'), 'Plumbing pressure test failed.', 'M and E', 'Fail', 70.00, 'High', 2, 'Main valve leak detected during pressurization.', 'Yes', 'C00000000000029', 'TL-PRT-303', 'INF000000000004', 'DIG000000000003', 'AGR-2026-009');
+INSERT INTO Quality_Record VALUES ('INSP-2026-010', TO_DATE('2026-09-02', 'YYYY-MM-DD'), 'Foundation excavation perfectly leveled.', 'Foundation', 'Pass', 20.00, 'Low', 0, NULL, 'No', 'C00000000000030', 'TL-ECO-101', 'INF000000000005', 'DIG000000000004', 'AGR-2026-010');
+COMMIT;
+
+
+-- =====================================================================
+-- LEVEL 9
+-- =====================================================================
+
+-- LOT
+INSERT INTO Lot VALUES ('LOT-001', 'TL-LBN-26-801', 'Financial Park Block A', 'No', 'Developed', 'Leasehold', 1500.00, 85.50, 4, 0.00, 'LND-001');
+INSERT INTO Lot VALUES ('LOT-002', 'TL-LBN-26-802', 'Rancha-Rancha Industrial Lot 5', 'Yes', 'Under Construction', 'Leasehold', 8500.50, 92.75, 6, 2.50, 'LND-002');
+INSERT INTO Lot VALUES ('LOT-003', 'TL-LBN-26-803', 'Papan Island Resort Plot 1', 'No', 'Vacant', 'State Land', 45000.00, 105.00, 12, 15.00, 'LND-003');
+INSERT INTO Lot VALUES ('LOT-004', 'TL-LBN-26-804', 'Layang-Layangan Beachfront', 'No', 'On Hold', 'State Land', 12000.25, 118.25, 8, 5.00, 'LND-004');
+INSERT INTO Lot VALUES ('LOT-005', 'TL-LBN-26-805', 'Bebuloh Inland Agri-Plot', 'No', 'Vacant', 'Leasehold', 10000.00, 45.00, 4, 2.00, 'LND-005');
+INSERT INTO Lot VALUES ('LOT-006', 'TL-LBN-26-806', 'Victoria Bay Pier A', 'Yes', 'Under Construction', 'State Land', 5000.50, 150.00, 5, 0.50, 'LND-006');
+INSERT INTO Lot VALUES ('LOT-007', 'TL-LBN-26-807', 'Layang-Layangan Zone B', 'No', 'Vacant', 'Freehold', 15000.00, 88.50, 4, 8.00, 'LND-007');
+INSERT INTO Lot VALUES ('LOT-008', 'TL-LBN-26-808', 'Bukit Kalam IT Center', 'No', 'Developed', 'Freehold', 8000.00, 120.00, 6, 12.50, 'LND-008');
+INSERT INTO Lot VALUES ('LOT-009', 'TL-LBN-26-809', 'Pohon Batu Warehouse C', 'No', 'Under Construction', 'Leasehold', 18000.75, 75.00, 8, 1.00, 'LND-009');
+INSERT INTO Lot VALUES ('LOT-010', 'TL-LBN-26-810', 'Sungai Bedaun Tract 2', 'Yes', 'On Hold', 'State Land', 11000.00, 35.00, 4, 4.50, 'LND-010');
+COMMIT;
+
+-- PENALTY
+INSERT INTO Penalty VALUES ('PEN-2026-001', TO_DATE('2026-09-01', 'YYYY-MM-DD'), 'Late Delivery', 50000.00, 'Phase 2 milestone delayed by 14 days.', 'Paid', TO_DATE('2026-09-15', 'YYYY-MM-DD'), 'CLAUSE-14.2', 'Fine Imposed', 0.00, 'C00000000000021', 'INSP-2026-001', 'TERM-2026-101');
+INSERT INTO Penalty VALUES ('PEN-2026-002', TO_DATE('2026-09-05', 'YYYY-MM-DD'), 'HSE Violation', 15000.00, 'Workers found without proper PPE on site.', 'Pending', TO_DATE('2026-09-19', 'YYYY-MM-DD'), 'OSHA-1994-S15', 'Fine Imposed', 0.00, 'C00000000000022', 'INSP-2026-002', 'TERM-2026-102');
+INSERT INTO Penalty VALUES ('PEN-2026-003', TO_DATE('2026-09-10', 'YYYY-MM-DD'), 'Environmental Breach', 250000.00, 'Illegal dumping of construction waste into nearby river.', 'Appealed', TO_DATE('2026-09-24', 'YYYY-MM-DD'), 'EQA-1974-S29', 'Suspension', 5.00, 'C00000000000023', 'INSP-2026-003', 'TERM-2026-103');
+INSERT INTO Penalty VALUES ('PEN-2026-004', TO_DATE('2026-09-12', 'YYYY-MM-DD'), 'Non-Compliance', 10000.00, 'Failure to submit monthly progress report.', 'Paid', TO_DATE('2026-09-26', 'YYYY-MM-DD'), 'CLAUSE-8.1', 'Fine Imposed', 0.00, 'C00000000000024', 'INSP-2026-004', 'TERM-2026-104');
+INSERT INTO Penalty VALUES ('PEN-2026-005', TO_DATE('2026-09-15', 'YYYY-MM-DD'), 'Contract Abandonment', 500000.00, 'Site abandoned for 30 consecutive days without notice.', 'Overdue', TO_DATE('2026-09-29', 'YYYY-MM-DD'), 'CLAUSE-21.4', 'Contract Terminated', 8.50, 'C00000000000025', 'INSP-2026-005', 'TERM-2026-105');
+INSERT INTO Penalty VALUES ('PEN-2026-006', TO_DATE('2026-09-20', 'YYYY-MM-DD'), 'HSE Violation', 0.00, 'Minor scaffolding irregularity.', 'Pending', TO_DATE('2026-10-04', 'YYYY-MM-DD'), 'OSHA-1994-S12', 'Warning', 0.00, 'C00000000000026', 'INSP-2026-006', 'TERM-2026-106');
+INSERT INTO Penalty VALUES ('PEN-2026-007', TO_DATE('2026-09-22', 'YYYY-MM-DD'), 'Late Delivery', 150000.00, 'Final handover delayed by 2 months.', 'Appealed', TO_DATE('2026-10-06', 'YYYY-MM-DD'), 'CLAUSE-14.2', 'Fine Imposed', 2.50, 'C00000000000027', 'INSP-2026-007', 'TERM-2026-107');
+INSERT INTO Penalty VALUES ('PEN-2026-008', TO_DATE('2026-09-28', 'YYYY-MM-DD'), 'Environmental Breach', 100000.00, 'Excessive noise pollution during restricted hours.', 'Paid', TO_DATE('2026-10-12', 'YYYY-MM-DD'), 'EQA-1974-S23', 'Fine Imposed', 0.00, 'C00000000000028', 'INSP-2026-008', 'TERM-2026-108');
+INSERT INTO Penalty VALUES ('PEN-2026-009', TO_DATE('2026-10-02', 'YYYY-MM-DD'), 'Non-Compliance', 50000.00, 'Using unauthorized sub-contractors.', 'Overdue', TO_DATE('2026-10-16', 'YYYY-MM-DD'), 'CLAUSE-9.3', 'Fine Imposed', 5.00, 'C00000000000029', 'INSP-2026-009', 'TERM-2026-109');
+INSERT INTO Penalty VALUES ('PEN-2026-010', TO_DATE('2026-10-10', 'YYYY-MM-DD'), 'Contract Abandonment', 200000.00, 'Financial insolvency declared, works halted.', 'Pending', TO_DATE('2026-10-24', 'YYYY-MM-DD'), 'CLAUSE-21.4', 'Suspension', 0.00, 'C00000000000030', 'INSP-2026-010', 'TERM-2026-110');
+COMMIT;
+
+-- SUSTAINABILITY_SCORE
+INSERT INTO Sustainability_Score VALUES ('ESG-2026-001', TO_DATE('2026-01-15', 'YYYY-MM-DD'), 95, 90, 92, 'Low', 'Optimized', 'Yes', 'Excellent', 'Compliant', 4.8, 'INSP-2026-001');
+INSERT INTO Sustainability_Score VALUES ('ESG-2026-002', TO_DATE('2026-02-10', 'YYYY-MM-DD'), 45, 50, 60, 'High', 'Poor', 'No', 'Poor', 'Non-Compliant', 2.1, 'INSP-2026-002');
+INSERT INTO Sustainability_Score VALUES ('ESG-2026-003', TO_DATE('2026-03-05', 'YYYY-MM-DD'), 78, 75, 80, 'Medium', 'Standard', 'Yes', 'Average', 'Pending', 3.5, 'INSP-2026-003');
+INSERT INTO Sustainability_Score VALUES ('ESG-2026-004', TO_DATE('2026-04-20', 'YYYY-MM-DD'), 88, 85, 90, 'Low', 'Optimized', 'Yes', 'Good', 'Compliant', 4.2, 'INSP-2026-004');
+INSERT INTO Sustainability_Score VALUES ('ESG-2026-005', TO_DATE('2026-05-12', 'YYYY-MM-DD'), 30, 40, 45, 'Critical', 'Critical', 'No', 'Poor', 'Non-Compliant', 1.5, 'INSP-2026-005');
+INSERT INTO Sustainability_Score VALUES ('ESG-2026-006', TO_DATE('2026-05-25', 'YYYY-MM-DD'), 92, 88, 89, 'Low', 'Optimized', 'Yes', 'Excellent', 'Compliant', 4.6, 'INSP-2026-006');
+INSERT INTO Sustainability_Score VALUES ('ESG-2026-007', TO_DATE('2026-06-10', 'YYYY-MM-DD'), 60, 65, 70, 'Medium', 'Standard', 'Yes', 'Average', 'Pending', 3.0, 'INSP-2026-007');
+INSERT INTO Sustainability_Score VALUES ('ESG-2026-008', TO_DATE('2026-06-22', 'YYYY-MM-DD'), 25, 35, 40, 'Critical', 'Critical', 'No', 'Poor', 'Non-Compliant', 1.2, 'INSP-2026-008');
+INSERT INTO Sustainability_Score VALUES ('ESG-2026-009', TO_DATE('2026-07-05', 'YYYY-MM-DD'), 80, 82, 85, 'Low', 'Optimized', 'Yes', 'Good', 'Compliant', 4.0, 'INSP-2026-009');
+INSERT INTO Sustainability_Score VALUES ('ESG-2026-010', TO_DATE('2026-07-18', 'YYYY-MM-DD'), 55, 58, 62, 'High', 'Poor', 'No', 'Average', 'Non-Compliant', 2.5, 'INSP-2026-010');
+COMMIT;
+
+
+-- =====================================================================
+-- LEVEL 10
+-- =====================================================================
+
+-- PAYMENT
+INSERT INTO Payment VALUES ('PAY-2026-001', 'TXN-FPX-998811', 'REC-LBN-26-001', 'Maybank', '1122334455', TO_DATE('2026-06-01', 'YYYY-MM-DD'), 500.00, TO_DATE('2026-01-05', 'YYYY-MM-DD'), 'FPX', 'Ahmad Faiz', TO_DATE('2026-06-02', 'YYYY-MM-DD'), 'C00000000000021', 'EMP001', 'AGR-2026-001', 'PEN-2026-001', 'APP-2026-8001', 'DEPT-LBN-001');
+INSERT INTO Payment VALUES ('PAY-2026-002', 'TXN-CC-554433', 'REC-LBN-26-002', 'CIMB Bank', '9876543210', TO_DATE('2026-06-02', 'YYYY-MM-DD'), 1200.50, TO_DATE('2026-01-12', 'YYYY-MM-DD'), 'Credit Card', 'Sarah Lee', TO_DATE('2026-06-02', 'YYYY-MM-DD'), 'C00000000000022', 'EMP002', 'AGR-2026-002', 'PEN-2026-002', 'APP-2026-8002', 'DEPT-LBN-002');
+INSERT INTO Payment VALUES ('PAY-2026-003', 'TXN-BT-889977', 'REC-LBN-26-003', 'RHB Bank', '5566778899', TO_DATE('2026-06-05', 'YYYY-MM-DD'), 850.00, TO_DATE('2026-01-19', 'YYYY-MM-DD'), 'Bank Transfer', NULL, NULL, 'C00000000000023', 'EMP003', 'AGR-2026-003', 'PEN-2026-003', 'APP-2026-8003', 'DEPT-LBN-003');
+INSERT INTO Payment VALUES ('PAY-2026-004', 'TXN-FPX-998812', 'REC-LBN-26-004', 'Public Bank', '3344556677', TO_DATE('2026-06-08', 'YYYY-MM-DD'), 250.00, TO_DATE('2026-01-26', 'YYYY-MM-DD'), 'FPX', 'Ahmad Faiz', TO_DATE('2026-06-09', 'YYYY-MM-DD'), 'C00000000000024', 'EMP004', 'AGR-2026-004', 'PEN-2026-004', 'APP-2026-8004', 'DEPT-LBN-004');
+INSERT INTO Payment VALUES ('PAY-2026-005', 'TXN-CHQ-112233', 'REC-LBN-26-005', 'AmBank', '8899001122', TO_DATE('2026-06-10', 'YYYY-MM-DD'), 15000.00, TO_DATE('2026-02-02', 'YYYY-MM-DD'), 'Cheque', 'Sarah Lee', TO_DATE('2026-06-12', 'YYYY-MM-DD'), 'C00000000000025', 'EMP005', 'AGR-2026-005', 'PEN-2026-005', 'APP-2026-8005', 'DEPT-LBN-005');
+INSERT INTO Payment VALUES ('PAY-2026-006', 'TXN-FPX-998813', 'REC-LBN-26-006', 'Maybank', '1122334455', TO_DATE('2026-06-12', 'YYYY-MM-DD'), 750.00, TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'FPX', 'Ahmad Faiz', TO_DATE('2026-06-13', 'YYYY-MM-DD'), 'C00000000000026', 'EMP006', 'AGR-2026-006', 'PEN-2026-006', 'APP-2026-8006', 'DEPT-LBN-006');
+INSERT INTO Payment VALUES ('PAY-2026-007', 'TXN-CC-554434', 'REC-LBN-26-007', 'CIMB Bank', '9876543210', TO_DATE('2026-06-15', 'YYYY-MM-DD'), 3000.00, TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Credit Card', 'Sarah Lee', TO_DATE('2026-06-16', 'YYYY-MM-DD'), 'C00000000000027', 'EMP007', 'AGR-2026-007', 'PEN-2026-007', 'APP-2026-8007', 'DEPT-LBN-007');
+INSERT INTO Payment VALUES ('PAY-2026-008', 'TXN-BT-889978', 'REC-LBN-26-008', 'RHB Bank', '5566778899', TO_DATE('2026-06-18', 'YYYY-MM-DD'), 1250.00, TO_DATE('2026-03-10', 'YYYY-MM-DD'), 'Bank Transfer', NULL, NULL, 'C00000000000028', 'EMP008', 'AGR-2026-008', 'PEN-2026-008', 'APP-2026-8008', 'DEPT-LBN-008');
+INSERT INTO Payment VALUES ('PAY-2026-009', 'TXN-FPX-998814', 'REC-LBN-26-009', 'Public Bank', '3344556677', TO_DATE('2026-06-20', 'YYYY-MM-DD'), 450.00, TO_DATE('2026-03-25', 'YYYY-MM-DD'), 'FPX', 'Ahmad Faiz', TO_DATE('2026-06-21', 'YYYY-MM-DD'), 'C00000000000029', 'EMP009', 'AGR-2026-009', 'PEN-2026-009', 'APP-2026-8009', 'DEPT-LBN-009');
+INSERT INTO Payment VALUES ('PAY-2026-010', 'TXN-CHQ-112234', 'REC-LBN-26-010', 'AmBank', '8899001122', TO_DATE('2026-06-25', 'YYYY-MM-DD'), 25000.00, TO_DATE('2026-04-05', 'YYYY-MM-DD'), 'Cheque', 'Sarah Lee', TO_DATE('2026-06-27', 'YYYY-MM-DD'), 'C00000000000030', 'EMP010', 'AGR-2026-010', 'PEN-2026-010', 'APP-2026-8010', 'DEPT-LBN-010');
+COMMIT;
+
+-- DOCUMENT
+INSERT INTO Document VALUES ('DOC000000000001', 'FLD2026LBN00001', 'PDF', 'Labuan_Commercial_Proposal_v2.pdf', '/storage/proposals/lbn_001/', 12.45, 'Verified', TO_DATE('2026-05-12', 'YYYY-MM-DD'), 'Complies with offshore tax zones.', 'Ahmad Zaidi', 'Land_Proposals_2026', 'LOT-001', 'LND-001', 'PRP-ECO-001', 'MEET-2026-001', 'TERM-2026-101', 'AGR-2026-001', 'APV-2026-9001', 'PEN-2026-001', 'INSP-2026-001');
+INSERT INTO Document VALUES ('DOC000000000002', 'FLD2026LBN00001', 'XLSX', 'Financial_Feasibility_Model.xlsx', '/storage/proposals/lbn_001/', 4.20, 'Verified', TO_DATE('2026-05-13', 'YYYY-MM-DD'), 'ROI matches land utilization yield.', 'Ahmad Zaidi', 'Land_Proposals_2026', 'LOT-002', 'LND-002', 'PRP-ECO-002', 'MEET-2026-002', 'TERM-2026-102', 'AGR-2026-002', 'APV-2026-9002', 'PEN-2026-002', 'INSP-2026-002');
+INSERT INTO Document VALUES ('DOC000000000003', 'FLD2026LBN00002', 'PDF', 'EIA_Clearance_Report_Papan.pdf', '/storage/environment/reports/', 8.50, 'Verified', TO_DATE('2026-05-20', 'YYYY-MM-DD'), 'DOE signed clearance attached.', 'John Wong', 'Environment_Reports', 'LOT-003', 'LND-003', 'PRP-ECO-003', 'MEET-2026-003', 'TERM-2026-103', 'AGR-2026-003', 'APV-2026-9003', 'PEN-2026-003', 'INSP-2026-003');
+INSERT INTO Document VALUES ('DOC000000000004', 'FLD2026LBN00002', 'DOCX', 'Lease_Agreement_Draft_v1.docx', '/storage/legal/drafts/', 2.10, 'Pending', NULL, 'Awaiting final legal review.', NULL, 'Legal_Drafts', 'LOT-004', 'LND-004', 'PRP-ECO-004', 'MEET-2026-004', 'TERM-2026-104', 'AGR-2026-004', 'APV-2026-9004', 'PEN-2026-004', 'INSP-2026-004');
+INSERT INTO Document VALUES ('DOC000000000005', 'FLD2026LBN00003', 'JPG', 'Site_Inspection_Photo_01.jpg', '/storage/inspections/photos/', 5.50, 'Verified', TO_DATE('2026-06-01', 'YYYY-MM-DD'), 'Foundation phase complete.', 'Ahmad Zaidi', 'Inspection_Photos', 'LOT-005', 'LND-005', 'PRP-ECO-005', 'MEET-2026-005', 'TERM-2026-105', 'AGR-2026-005', 'APV-2026-9005', 'PEN-2026-005', 'INSP-2026-005');
+INSERT INTO Document VALUES ('DOC000000000006', 'FLD2026LBN00004', 'PNG', 'Site_Survey_Aerial_Map.png', '/storage/site_surveys/lbn_maps/', 18.75, 'Verified', TO_DATE('2026-06-10', 'YYYY-MM-DD'), 'High-resolution satellite view.', 'John Wong', 'Site_Surveys', 'LOT-006', 'LND-006', 'PRP-ECO-006', 'MEET-2026-006', 'TERM-2026-106', 'AGR-2026-006', 'APV-2026-9006', 'PEN-2026-006', 'INSP-2026-006');
+INSERT INTO Document VALUES ('DOC000000000007', 'FLD2026LBN00005', 'PDF', 'Corporate_Profile_MegaStructure.pdf', '/storage/partners/profiles/', 5.40, 'Verified', TO_DATE('2026-06-11', 'YYYY-MM-DD'), 'CIDB Grade G7 verified.', 'Ahmad Zaidi', 'Partner_Profiles', 'LOT-007', 'LND-007', 'PRP-ECO-007', 'MEET-2026-007', 'TERM-2026-107', 'AGR-2026-007', 'APV-2026-9007', 'PEN-2026-007', 'INSP-2026-007');
+INSERT INTO Document VALUES ('DOC000000000008', 'FLD2026LBN00005', 'ZIP', 'Engineering_Blueprints.zip', '/storage/engineering/plans/', 45.00, 'Pending', NULL, 'Requires decompression and CAD check.', NULL, 'Engineering_Plans', 'LOT-008', 'LND-008', 'PRP-ECO-008', 'MEET-2026-008', 'TERM-2026-108', 'AGR-2026-008', 'APV-2026-9008', 'PEN-2026-008', 'INSP-2026-008');
+INSERT INTO Document VALUES ('DOC000000000009', 'FLD2026LBN00006', 'PDF', 'Board_Resolution_Approval.pdf', '/storage/legal/resolutions/', 1.80, 'Verified', TO_DATE('2026-06-15', 'YYYY-MM-DD'), 'Officially signed and stamped.', 'John Wong', 'Legal_Resolutions', 'LOT-009', 'LND-009', 'PRP-ECO-009', 'MEET-2026-009', 'TERM-2026-109', 'AGR-2026-009', 'APV-2026-9009', 'PEN-2026-009', 'INSP-2026-009');
+INSERT INTO Document VALUES ('DOC000000000010', 'FLD2026LBN00006', 'XLSX', 'Bill_of_Quantities_Q3.xlsx', '/storage/finance/boq/', 3.20, 'Rejected', TO_DATE('2026-06-18', 'YYYY-MM-DD'), 'Calculations do not match standard rates.', 'Ahmad Zaidi', 'Finance_BOQ', 'LOT-010', 'LND-010', 'PRP-ECO-010', 'MEET-2026-010', 'TERM-2026-110', 'AGR-2026-010', 'APV-2026-9010', 'PEN-2026-010', 'INSP-2026-010');
+COMMIT;
