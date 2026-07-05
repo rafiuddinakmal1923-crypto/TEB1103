@@ -724,71 +724,70 @@ CREATE TABLE Investor_Advertisement (
     Investor_ID VARCHAR2(15) NOT NULL,
     MIDA_Registration_Ref VARCHAR2(30) NOT NULL,
     Advertisement_ID VARCHAR2(15) NOT NULL,
-    Advertisement_Type VARCHAR2(30) NOT NULL,
+    Advertisement_StartDate DATE NOT NULL,
     
     -- Primary Key Constraint (Composite Key)
-    CONSTRAINT pk_investor_adv PRIMARY KEY (Advertisement_ID, Investor_ID, MIDA_Registration_Ref),
-    
-    -- Check Constraints
-    CONSTRAINT chk_adv_type CHECK (Advertisement_Type IN ('Job Vacancy', 'Land Tender', 'Commercial Lease', 'Service Contract')),
+    CONSTRAINT pk_investor_adv PRIMARY KEY (Advertisement_ID, Advertisement_StartDate, Investor_ID, MIDA_Registration_Ref),
     
     -- Foreign Key Constraints
-    CONSTRAINT fk_adv_investor FOREIGN KEY (Investor_ID) REFERENCES Investor(Investor_ID)
+    CONSTRAINT fk_adv_advertisement FOREIGN KEY (Advertisement_ID, Advertisement_StartDate) REFERENCES Advertisement(Advertisement_ID, Advertisement_StartDate),
+    CONSTRAINT fk_adv_investor FOREIGN KEY (Investor_ID, MIDA_Registration_Ref) REFERENCES Investor(Investor_ID, MIDA_Registration_Ref)
 );
 
 CREATE TABLE Employee_Advertisement (
     Employee_ID VARCHAR2(15) NOT NULL,
     Employee_Contract_No VARCHAR2(30) NOT NULL,
     Advertisement_ID VARCHAR2(15) NOT NULL,
-    Advertisement_Date DATE NOT NULL,
+    Advertisement_StartDate DATE NOT NULL,
     
     -- Primary Key Constraint (Composite Key)
-    CONSTRAINT pk_emp_adv PRIMARY KEY (Employee_ID, Employee_Contract_No, Advertisement_ID),
+    CONSTRAINT pk_emp_adv PRIMARY KEY (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate),
     
     -- Foreign Key Constraints
-    CONSTRAINT fk_emp_adv_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID)
+    CONSTRAINT fk_emp_adv_advertisement FOREIGN KEY (Advertisement_ID, Advertisement_StartDate) REFERENCES Advertisement(Advertisement_ID, Advertisement_StartDate),
+    CONSTRAINT fk_emp_adv_employee FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No)
 );
 
 CREATE TABLE Employee_JobDescription (
     Employee_ID VARCHAR2(15) NOT NULL,
     Employee_Contract_No VARCHAR2(30) NOT NULL,
     Job_ID VARCHAR2(15) NOT NULL,
-    Job_Publish_Date DATE NOT NULL,
+    Job_PublishDate DATE NOT NULL,
     
     -- Primary Key Constraint (Composite Key)
-    CONSTRAINT pk_emp_jobdesc PRIMARY KEY (Employee_ID, Employee_Contract_No, Job_ID),
+    CONSTRAINT pk_emp_jobdesc PRIMARY KEY (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate),
     
     -- Foreign Key Constraints
-    CONSTRAINT fk_ejd_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
-    CONSTRAINT fk_ejd_job FOREIGN KEY (Job_ID) REFERENCES Job_Description(Job_ID)
+    CONSTRAINT fk_ejd_employee FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No),
+    CONSTRAINT fk_ejd_job FOREIGN KEY (Job_ID, Job_PublishDate) REFERENCES Job_Description(Job_ID, Job_PublishDate)
 );
 
 CREATE TABLE Employee_Agreement (
     Employee_ID VARCHAR2(15) NOT NULL,
     Employee_Contract_No VARCHAR2(30) NOT NULL,
     Agreement_ID VARCHAR2(15) NOT NULL,
-    Agreement_Stamp_Duty_ID VARCHAR2(30) NOT NULL,
+    Agreement_StampDutyID VARCHAR2(30) NOT NULL,
     
     -- Primary Key Constraint (Composite Key)
-    CONSTRAINT pk_emp_agreement PRIMARY KEY (Employee_ID, Employee_Contract_No, Agreement_ID),
+    CONSTRAINT pk_emp_agreement PRIMARY KEY (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID),
     
     -- Foreign Key Constraints
-    CONSTRAINT fk_ea_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
-    CONSTRAINT fk_ea_agreement FOREIGN KEY (Agreement_ID) REFERENCES Agreement(Agreement_ID)
+    CONSTRAINT fk_ea_employee FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No),
+    CONSTRAINT fk_ea_agreement FOREIGN KEY (Agreement_ID, Agreement_StampDutyID) REFERENCES Agreement(Agreement_ID, Agreement_StampDutyID)
 );
 
-CREATE TABLE Employee_Document (
+CREATE TABLE Person_Document (
     Person_ID VARCHAR2(15) NOT NULL,
     Person_IC VARCHAR2(20) NOT NULL,
     Doc_ID VARCHAR2(15) NOT NULL,
     Folder_ID VARCHAR2(15) NOT NULL,
     
     -- Primary Key Constraint (Composite Key)
-    CONSTRAINT pk_emp_document PRIMARY KEY (Person_ID, Person_IC, Doc_ID, Folder_ID),
+    CONSTRAINT pk_per_document PRIMARY KEY (Person_ID, Person_IC, Doc_ID, Folder_ID),
     
     -- Foreign Key Constraints
-    CONSTRAINT fk_ed_person FOREIGN KEY (Person_ID, Person_IC) REFERENCES Person(Person_ID, Person_IC),
-    CONSTRAINT fk_ed_document FOREIGN KEY (Doc_ID, Folder_ID) REFERENCES Document(Doc_ID, Folder_ID)
+    CONSTRAINT fk_pd_person FOREIGN KEY (Person_ID, Person_IC) REFERENCES Person(Person_ID, Person_IC),
+    CONSTRAINT fk_pd_document FOREIGN KEY (Doc_ID, Folder_ID) REFERENCES Document(Doc_ID, Folder_ID)
 );
 
 CREATE TABLE Employee_Penalty (
@@ -801,7 +800,7 @@ CREATE TABLE Employee_Penalty (
     CONSTRAINT pk_emp_penalty PRIMARY KEY (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate),
     
     -- Foreign Key Constraints
-    CONSTRAINT fk_ep_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
+    CONSTRAINT fk_ep_employee FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No),
     CONSTRAINT fk_ep_penalty FOREIGN KEY (Penalty_ID, Penalty_IssueDate) REFERENCES Penalty(Penalty_ID, Penalty_IssueDate)
 );
 
@@ -815,7 +814,7 @@ CREATE TABLE Employee_Termination (
     CONSTRAINT pk_emp_termination PRIMARY KEY (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date),
     
     -- Foreign Key Constraints
-    CONSTRAINT fk_et_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
+    CONSTRAINT fk_et_employee FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No),
     CONSTRAINT fk_et_termination FOREIGN KEY (Termination_ID, Termination_Date) REFERENCES Termination(Termination_ID, Termination_Date)
 );
 
@@ -826,11 +825,11 @@ CREATE TABLE Employee_JobApplication (
     Job_Application_TimeStamp TIMESTAMP NOT NULL,
     
     -- Primary Key Constraint (Composite Key)
-    CONSTRAINT pk_emp_jobapp PRIMARY KEY (Employee_ID, Employee_Contract_No, Job_Application_ID),
+    CONSTRAINT pk_emp_jobapp PRIMARY KEY (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp),
     
     -- Foreign Key Constraints
-    CONSTRAINT fk_eja_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
-    CONSTRAINT fk_eja_application FOREIGN KEY (Job_Application_ID) REFERENCES Job_Application(Job_Application_ID)
+    CONSTRAINT fk_eja_employee FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No),
+    CONSTRAINT fk_eja_application FOREIGN KEY (Job_Application_ID, Job_Application_TimeStamp) REFERENCES Job_Application(Job_Application_ID, Job_Application_TimeStamp)
 );
 
 CREATE TABLE Inspector_Land (
@@ -1165,12 +1164,12 @@ CREATE TABLE Advertisement_JobApplication (
 CREATE TABLE Advertisement_InvestmentApp (
     Advertisement_ID VARCHAR2(15) NOT NULL,
     Advertisement_StartDate DATE NOT NULL,
-    Committee_ID VARCHAR2(15) NOT NULL,
-    Committee_TermSessionCode VARCHAR2(20) NOT NULL,
+    Application_ID VARCHAR2(15) NOT NULL,
+    Application_Submission_Date DATE NOT NULL,
     
-    CONSTRAINT pk_adv_invapp PRIMARY KEY (Advertisement_ID, Advertisement_StartDate, Committee_ID, Committee_TermSessionCode),
+    CONSTRAINT pk_adv_invapp PRIMARY KEY (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date),
     CONSTRAINT fk_advia_adv FOREIGN KEY (Advertisement_ID, Advertisement_StartDate) REFERENCES Advertisement(Advertisement_ID, Advertisement_StartDate),
-    CONSTRAINT fk_advia_ic FOREIGN KEY (Committee_ID, Committee_TermSessionCode) REFERENCES Investment_Committee(Committee_ID, Committee_TermSessionCode)
+    CONSTRAINT fk_advia_app FOREIGN KEY (Application_ID, Application_Submission_Date) REFERENCES Investment_Application(Application_ID, Application_Submission_Date)
 );
 
 -- 37. Representative_ProposalContent

@@ -210,11 +210,11 @@ INSERT INTO Job_Application VALUES ('APP-2026-002', TO_TIMESTAMP('2026-03-01 10:
 INSERT INTO Job_Application VALUES ('APP-2026-003', TO_TIMESTAMP('2026-03-02 14:30:00', 'YYYY-MM-DD HH24:MI:SS'), 0, 3000.00, 'Recruitment Agency', 45, NULL, NULL, 'Rejected', 'Lacks required experience in Flutter.', 'APP-2026-003');
 INSERT INTO Job_Application VALUES ('APP-2026-004', TO_TIMESTAMP('2026-03-05 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 14, 5500.00, 'Company Website', 78.5, TO_DATE('2026-03-20', 'YYYY-MM-DD'), 'Yes', 'Offered', 'Good cultural fit. Strong communication.', 'APP-2026-004');
 INSERT INTO Job_Application VALUES ('APP-2026-005', TO_TIMESTAMP('2026-03-06 16:20:00', 'YYYY-MM-DD HH24:MI:SS'), 90, 12000.00, 'Employee Referral', 95, TO_DATE('2026-03-25', 'YYYY-MM-DD'), 'Yes', 'Offered', 'Exceptional leadership qualities. Make offer ASAP.', 'APP-2026-005');
-INSERT INTO Job_Application VALUES ('APP-2026-006', TO_TIMESTAMP('2026-03-10 11:15:00', 'YYYY-MM-DD HH24:MI:SS'), 30, 6000.00, 'Facebook Jobs', 88, TO_DATE('2026-03-22', 'YYYY-MM-DD'), NULL, 'Interviewing', 'Awaiting final technical assessment.', 'APP-2026-006');
+INSERT INTO Job_Application VALUES ('APP-2026-006', TO_TIMESTAMP('2026-03-10 11:10:00', 'YYYY-MM-DD HH24:MI:SS'), 30, 6000.00, 'Facebook Jobs', 88, TO_DATE('2026-03-22', 'YYYY-MM-DD'), NULL, 'Interviewing', 'Awaiting final technical assessment.', 'APP-2026-006');
 INSERT INTO Job_Application VALUES ('APP-2026-007', TO_TIMESTAMP('2026-03-12 15:45:00', 'YYYY-MM-DD HH24:MI:SS'), 0, 3500.00, 'Career Fair', 55, NULL, NULL, 'Rejected', 'Not a fit for this seniority level.', 'APP-2026-007');
 INSERT INTO Job_Application VALUES ('APP-2026-008', TO_TIMESTAMP('2026-03-15 09:05:00', 'YYYY-MM-DD HH24:MI:SS'), 60, 7500.00, 'Recruitment Agency', NULL, NULL, NULL, 'Applied', NULL, 'APP-2026-008');
 INSERT INTO Job_Application VALUES ('APP-2026-009', TO_TIMESTAMP('2026-03-18 13:20:00', 'YYYY-MM-DD HH24:MI:SS'), 30, 4800.00, 'Walk-in Application', 72, TO_DATE('2026-03-28', 'YYYY-MM-DD'), NULL, 'Interviewing', 'Follow up on notice period flexibility.', 'APP-2026-009');
-INSERT INTO Job_Application VALUES ('APP-2026-010', TO_TIMESTAMP('2026-03-20 17:50:00', 'YYYY-MM-DD HH24:MI:SS'), 14, 5000.00, 'University Career Portal', NULL, NULL, NULL, 'Applied', NULL, 'APP-2026-010');
+INSERT INTO Job_Application VALUES ('APP-2026-010', TO_TIMESTAMP('2026-03-20 17:55:00', 'YYYY-MM-DD HH24:MI:SS'), 14, 5000.00, 'University Career Portal', NULL, NULL, NULL, 'Applied', NULL, 'APP-2026-010');
 COMMIT;
 
 -- =====================================================================
@@ -410,16 +410,16 @@ INSERT INTO Approval VALUES ('APV-2026-9010', 'LC/INV/APP-2026-010', TO_DATE('20
 COMMIT;
 
 --PROJECT_TIMELINE
-INSERT INTO Project_Timeline VALUES ('MLS-001', 'TL-2026-001', 'Phase 1: Project Initiation & Mapping', TO_DATE('2026-06-30', 'YYYY-MM-DD'), 1, 'Initial site clearing, zoning boundaries verification, and architectural drafting approvals.', 45, 'Initiation', 'Initiation Phase', 100.00, 'PRP-ECO-001');
-INSERT INTO Project_Timeline VALUES ('MLS-002', 'TL-2026-002', 'Phase 1: Structural Foundation Design', TO_DATE('2026-07-15', 'YYYY-MM-DD'), 1, 'Soil stability testing and underground piling reinforcement works.', 60, 'Initiation', 'Initiation Phase', 85.00, 'PRP-ECO-002');
-INSERT INTO Project_Timeline VALUES ('MLS-003', 'TL-2026-003', 'Phase 1: Environment Baseline Setup', TO_DATE('2026-06-15', 'YYYY-MM-DD'), 1, 'EIA equipment setup and environmental monitoring post installation.', 30, 'Initiation', 'Initiation Phase', 100.00, 'PRP-ENV-001');
-INSERT INTO Project_Timeline VALUES ('MLS-004', 'TL-2026-004', 'Phase 1: Tech Architecture Blueprint', TO_DATE('2026-05-20', 'YYYY-MM-DD'), 1, 'Cloud host provisioning and core application server stack design configuration.', 45, 'Initiation', 'Initiation Phase', 100.00, 'PRP-DIG-001');
-INSERT INTO Project_Timeline VALUES ('MLS-005', 'TL-2026-005', 'Phase 1: Structural Engineering Draft', TO_DATE('2026-04-30', 'YYYY-MM-DD'), 1, 'Civil structure blue print submission to BEM for official validation.', 90, 'Initiation', 'Initiation Phase', 100.00, 'PRP-INF-001');
-INSERT INTO Project_Timeline VALUES ('MLS-006', 'TL-2026-006', 'Phase 1: Financial Viability Model', TO_DATE('2026-05-01', 'YYYY-MM-DD'), 1, 'Capital asset valuation review and micro-economic risk tracking setup.', 30, 'Initiation', 'Initiation Phase', 90.00, 'PRP-IVB-001');
-INSERT INTO Project_Timeline VALUES ('MLS-007', 'TL-2026-007', 'Phase 1: Strategic Stakeholder Scoping', TO_DATE('2026-03-15', 'YYYY-MM-DD'), 1, 'Corporate partnership draft negotiations and master timeline signing.', 40, 'Initiation', 'Initiation Phase', 100.00, 'PRP-PLN-001');
-INSERT INTO Project_Timeline VALUES ('MLS-008', 'TL-2026-008', 'Phase 1: Commercial Lease Audit', TO_DATE('2026-04-10', 'YYYY-MM-DD'), 1, 'Corporate asset review and initial tenant background validations.', 30, 'Initiation', 'Initiation Phase', 100.00, 'PRP-MTM-001');
-INSERT INTO Project_Timeline VALUES ('MLS-009', 'TL-2026-009', 'Phase 2: Project Resource Deployment', TO_DATE('2026-08-30', 'YYYY-MM-DD'), 2, 'Procurement of heavy machinery and mobilization of localized work staff.', 60, 'Planning', 'Planning Phase', 25.00, 'PRP-ECO-003');
-INSERT INTO Project_Timeline VALUES ('MLS-010', 'TL-2026-010', 'Phase 2: Core Network Cable Routing', TO_DATE('2026-07-20', 'YYYY-MM-DD'), 2, 'Fiber-optic ground cabling installation across inner sector pathways.', 45, 'Planning', 'Planning Phase', 40.00, 'PRP-DIG-002');
+INSERT INTO Project_Timeline VALUES ('MLS-001', 'TL-ECO-101', 'Geotechnical & Land Survey Completion', TO_DATE('2026-08-15', 'YYYY-MM-DD'), 1, 'Detailed topographic map and soil stability certification document from structural engineer', 45, 'Initiation', 'Feasibility & Site Analysis', 100.00, 'PRP-TL-001');
+INSERT INTO Project_Timeline VALUES ('MLS-002', 'TL-ECO-101', 'Environmental Impact Assessment Approval', TO_DATE('2026-11-30', 'YYYY-MM-DD'), 2, 'Official EIA clearance report signed by Sabah Department of Environment (DOE)', 90, 'Planning', 'Regulatory Approvals Phase', 45.00, 'PRP-TL-002');
+INSERT INTO Project_Timeline VALUES ('MLS-003', 'TL-HYD-202', 'Front-End Engineering Design (FEED) Signoff', TO_DATE('2026-10-01', 'YYYY-MM-DD'), 1, 'Finalized process flow diagrams and layout blue prints for green hydrogen storage tank yards', 60, 'Planning', 'Engineering Design Phase', 80.00, 'PRP-TL-003');
+INSERT INTO Project_Timeline VALUES ('MLS-004', 'TL-HYD-202', 'Heavy Equipment Procurement & Logistics', TO_DATE('2027-04-15', 'YYYY-MM-DD'), 2, 'Receipt of import permits and shipping manifests at Labuan deepwater port terminals', 120, 'Execution', 'Procurement & Supply Chain', 15.00, 'PRP-TL-004');
+INSERT INTO Project_Timeline VALUES ('MLS-005', 'TL-PRT-303', 'Piling Works & Berth Foundation Laying', TO_DATE('2026-12-20', 'YYYY-MM-DD'), 3, 'Civil engineering sign-off on marine foundation piling load tests', 150, 'Execution', 'Substructure Civil Construction', 60.00, 'PRP-TL-005');
+INSERT INTO Project_Timeline VALUES ('MLS-006', 'TL-FIN-404', 'Zoning Structural Clearance Board Review', TO_DATE('2026-07-30', 'YYYY-MM-DD'), 1, 'Submission of corporate lease layout to Labuan Local Authority Board', 30, 'Initiation', 'Preliminary Board Approval', 95.00, 'PRP-TL-006');
+INSERT INTO Project_Timeline VALUES ('MLS-007', 'TL-AGR-505', 'Automated Irrigation Framework Grid Setup', TO_DATE('2026-09-10', 'YYYY-MM-DD'), 2, 'Assembled smart water control piping layout across vertical farming zones', 40, 'Execution', 'Infrastructure Assembly', 100.00, 'PRP-TL-007');
+INSERT INTO Project_Timeline VALUES ('MLS-008', 'TL-RTL-606', 'Retail Tenant Fit-Out Auditing Checks', TO_DATE('2027-02-28', 'YYYY-MM-DD'), 4, 'Fire safety code inspection compliance certificates issued by Bomba Sabah', 60, 'Monitoring', 'Tenant Handover Readiness', 0.00, 'PRP-TL-008');
+INSERT INTO Project_Timeline VALUES ('MLS-009', 'TL-DAT-707', 'Mainframe Server HVAC Testing & Balancing', TO_DATE('2026-10-15', 'YYYY-MM-DD'), 3, 'Climate control validation logs demonstrating continuous 24-hour heat dissipation load stability', 25, 'Monitoring', 'Critical Facility Validation', 30.00, 'PRP-TL-009');
+INSERT INTO Project_Timeline VALUES ('MLS-010', 'TL-MAR-808', 'Strategic Land Handover & Lease Closure', TO_DATE('2027-06-01', 'YYYY-MM-DD'), 5, 'Final legal execution document transferring operational keys back to investment firm asset head', 15, 'Closure', 'Contractual Demobilization', 0.00, 'PRP-TL-010');
 COMMIT;
 
 --INFRASTRUCTURE
@@ -670,575 +670,519 @@ COMMIT;
 INSERT INTO Document VALUES ('DOC000000000001', 'FLD2026LBN00001', 'PDF', 'Labuan_Commercial_Proposal_v2.pdf', '/storage/proposals/lbn_001/', 12.45, 'Verified', TO_DATE('2026-05-12', 'YYYY-MM-DD'), 'Complies with offshore tax zones.', 'Ahmad Zaidi', 'Land_Proposals_2026', 'LOT-001', 'LND-001', 'PRP-ECO-001', 'MEET-2026-001', 'TERM-2026-101', 'AGR-2026-001', 'APV-2026-9001', 'PEN-2026-001', 'INSP-2026-001');
 INSERT INTO Document VALUES ('DOC000000000002', 'FLD2026LBN00001', 'XLSX', 'Financial_Feasibility_Model.xlsx', '/storage/proposals/lbn_001/', 4.20, 'Verified', TO_DATE('2026-05-13', 'YYYY-MM-DD'), 'ROI matches land utilization yield.', 'Ahmad Zaidi', 'Land_Proposals_2026', 'LOT-002', 'LND-002', 'PRP-ECO-002', 'MEET-2026-002', 'TERM-2026-102', 'AGR-2026-002', 'APV-2026-9002', 'PEN-2026-002', 'INSP-2026-002');
 INSERT INTO Document VALUES ('DOC000000000003', 'FLD2026LBN00002', 'PDF', 'EIA_Clearance_Report_Papan.pdf', '/storage/environment/reports/', 8.50, 'Verified', TO_DATE('2026-05-20', 'YYYY-MM-DD'), 'DOE signed clearance attached.', 'John Wong', 'Environment_Reports', 'LOT-003', 'LND-003', 'PRP-ECO-003', 'MEET-2026-003', 'TERM-2026-103', 'AGR-2026-003', 'APV-2026-9003', 'PEN-2026-003', 'INSP-2026-003');
-INSERT INTO Document VALUES ('DOC000000000004', 'FLD2026LBN00002', 'DOCX', 'Lease_Agreement_Draft_v1.docx', '/storage/legal/drafts/', 2.10, 'Pending', NULL, 'Awaiting final legal review.', NULL, 'Legal_Drafts', 'LOT-004', 'LND-004', 'PRP-ECO-004', 'MEET-2026-004', 'TERM-2026-104', 'AGR-2026-004', 'APV-2026-9004', 'PEN-2026-004', 'INSP-2026-004');
+INSERT INTO Document VALUES ('DOC000000000004', 'FLD2026LBN00003', 'DOCX', 'Lease_Agreement_Draft_v1.docx', '/storage/legal/drafts/', 2.10, 'Pending', NULL, 'Awaiting final legal review.', NULL, 'Legal_Drafts', 'LOT-004', 'LND-004', 'PRP-ECO-004', 'MEET-2026-004', 'TERM-2026-104', 'AGR-2026-004', 'APV-2026-9004', 'PEN-2026-004', 'INSP-2026-004');
 INSERT INTO Document VALUES ('DOC000000000005', 'FLD2026LBN00003', 'JPG', 'Site_Inspection_Photo_01.jpg', '/storage/inspections/photos/', 5.50, 'Verified', TO_DATE('2026-06-01', 'YYYY-MM-DD'), 'Foundation phase complete.', 'Ahmad Zaidi', 'Inspection_Photos', 'LOT-005', 'LND-005', 'PRP-ECO-005', 'MEET-2026-005', 'TERM-2026-105', 'AGR-2026-005', 'APV-2026-9005', 'PEN-2026-005', 'INSP-2026-005');
 INSERT INTO Document VALUES ('DOC000000000006', 'FLD2026LBN00004', 'PNG', 'Site_Survey_Aerial_Map.png', '/storage/site_surveys/lbn_maps/', 18.75, 'Verified', TO_DATE('2026-06-10', 'YYYY-MM-DD'), 'High-resolution satellite view.', 'John Wong', 'Site_Surveys', 'LOT-006', 'LND-006', 'PRP-ECO-006', 'MEET-2026-006', 'TERM-2026-106', 'AGR-2026-006', 'APV-2026-9006', 'PEN-2026-006', 'INSP-2026-006');
 INSERT INTO Document VALUES ('DOC000000000007', 'FLD2026LBN00005', 'PDF', 'Corporate_Profile_MegaStructure.pdf', '/storage/partners/profiles/', 5.40, 'Verified', TO_DATE('2026-06-11', 'YYYY-MM-DD'), 'CIDB Grade G7 verified.', 'Ahmad Zaidi', 'Partner_Profiles', 'LOT-007', 'LND-007', 'PRP-ECO-007', 'MEET-2026-007', 'TERM-2026-107', 'AGR-2026-007', 'APV-2026-9007', 'PEN-2026-007', 'INSP-2026-007');
-INSERT INTO Document VALUES ('DOC000000000008', 'FLD2026LBN00005', 'ZIP', 'Engineering_Blueprints.zip', '/storage/engineering/plans/', 45.00, 'Pending', NULL, 'Requires decompression and CAD check.', NULL, 'Engineering_Plans', 'LOT-008', 'LND-008', 'PRP-ECO-008', 'MEET-2026-008', 'TERM-2026-108', 'AGR-2026-008', 'APV-2026-9008', 'PEN-2026-008', 'INSP-2026-008');
-INSERT INTO Document VALUES ('DOC000000000009', 'FLD2026LBN00006', 'PDF', 'Board_Resolution_Approval.pdf', '/storage/legal/resolutions/', 1.80, 'Verified', TO_DATE('2026-06-15', 'YYYY-MM-DD'), 'Officially signed and stamped.', 'John Wong', 'Legal_Resolutions', 'LOT-009', 'LND-009', 'PRP-ECO-009', 'MEET-2026-009', 'TERM-2026-109', 'AGR-2026-009', 'APV-2026-9009', 'PEN-2026-009', 'INSP-2026-009');
-INSERT INTO Document VALUES ('DOC000000000010', 'FLD2026LBN00006', 'XLSX', 'Bill_of_Quantities_Q3.xlsx', '/storage/finance/boq/', 3.20, 'Rejected', TO_DATE('2026-06-18', 'YYYY-MM-DD'), 'Calculations do not match standard rates.', 'Ahmad Zaidi', 'Finance_BOQ', 'LOT-010', 'LND-010', 'PRP-ECO-010', 'MEET-2026-010', 'TERM-2026-110', 'AGR-2026-010', 'APV-2026-9010', 'PEN-2026-010', 'INSP-2026-010');
+INSERT INTO Document VALUES ('DOC000000000008', 'FLD2026LBN00006', 'ZIP', 'Engineering_Blueprints.zip', '/storage/engineering/plans/', 45.00, 'Pending', NULL, 'Requires decompression and CAD check.', NULL, 'Engineering_Plans', 'LOT-008', 'LND-008', 'PRP-ECO-008', 'MEET-2026-008', 'TERM-2026-108', 'AGR-2026-008', 'APV-2026-9008', 'PEN-2026-008', 'INSP-2026-008');
+INSERT INTO Document VALUES ('DOC000000000009', 'FLD2026LBN00007', 'PDF', 'Board_Resolution_Approval.pdf', '/storage/legal/resolutions/', 1.80, 'Verified', TO_DATE('2026-06-15', 'YYYY-MM-DD'), 'Officially signed and stamped.', 'John Wong', 'Legal_Resolutions', 'LOT-009', 'LND-009', 'PRP-ECO-009', 'MEET-2026-009', 'TERM-2026-109', 'AGR-2026-009', 'APV-2026-9009', 'PEN-2026-009', 'INSP-2026-009');
+INSERT INTO Document VALUES ('DOC000000000010', 'FLD2026LBN00007', 'XLSX', 'Bill_of_Quantities_Q3.xlsx', '/storage/finance/boq/', 3.20, 'Rejected', TO_DATE('2026-06-18', 'YYYY-MM-DD'), 'Calculations do not match standard rates.', 'Ahmad Zaidi', 'Finance_BOQ', 'LOT-010', 'LND-010', 'PRP-ECO-010', 'MEET-2026-010', 'TERM-2026-110', 'AGR-2026-010', 'APV-2026-9010', 'PEN-2026-010', 'INSP-2026-010');
 COMMIT;
 
-INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES
-('C00000000000021', 'MIDA/LBN/2026/INV-21', 'ADV-1001', '2026-07-01'),
-('C00000000000022', 'MIDA/INT/2026/INV-22', 'ADV-1002', '2026-08-01'),
-('C00000000000023', 'MIDA/LBN/2026/INV-23', 'ADV-1003', '2026-07-15'),
-('C00000000000024', 'MIDA/INT/2026/INV-24', 'ADV-1004', '2026-06-20'),
-('C00000000000025', 'MIDA/LBN/2026/INV-25', 'ADV-1005', '2026-09-01'),
-('C00000000000026', 'MIDA/LBN/2026/INV-26', 'ADV-1006', '2026-07-10'),
-('C00000000000027', 'MIDA/INT/2026/INV-27', 'ADV-1007', '2026-08-15'),
-('C00000000000028', 'MIDA/LBN/2026/INV-28', 'ADV-1008', '2026-10-01'),
-('C00000000000029', 'MIDA/LBN/2026/INV-29', 'ADV-1009', '2026-06-25'),
-('C00000000000030', 'MIDA/SAB/2026/INV-30', 'ADV-1010', '2026-07-05');
+INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES ('INV000000000001', 'MIDA/LBN/2026/INV-21', 'ADV-1001', TO_DATE('2026-07-01', 'YYYY-MM-DD'));
+INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES ('INV000000000002', 'MIDA/INT/2026/INV-22', 'ADV-1002', TO_DATE('2026-08-01', 'YYYY-MM-DD'));
+INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES ('INV000000000003', 'MIDA/LBN/2026/INV-23', 'ADV-1003', TO_DATE('2026-07-15', 'YYYY-MM-DD'));
+INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES ('INV000000000004', 'MIDA/INT/2026/INV-24', 'ADV-1004', TO_DATE('2026-06-20', 'YYYY-MM-DD'));
+INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES ('INV000000000005', 'MIDA/LBN/2026/INV-25', 'ADV-1005', TO_DATE('2026-09-01', 'YYYY-MM-DD'));
+INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES ('INV000000000006', 'MIDA/LBN/2026/INV-26', 'ADV-1006', TO_DATE('2026-07-10', 'YYYY-MM-DD'));
+INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES ('INV000000000007', 'MIDA/INT/2026/INV-27', 'ADV-1007', TO_DATE('2026-08-15', 'YYYY-MM-DD'));
+INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES ('INV000000000008', 'MIDA/LBN/2026/INV-28', 'ADV-1008', TO_DATE('2026-10-01', 'YYYY-MM-DD'));
+INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES ('INV000000000009', 'MIDA/LBN/2026/INV-29', 'ADV-1009', TO_DATE('2026-06-25', 'YYYY-MM-DD'));
+INSERT INTO Investor_Advertisement (Investor_ID, MIDA_Registration_Ref, Advertisement_ID, Advertisement_StartDate) VALUES ('INV000000000010', 'MIDA/SAB/2026/INV-30', 'ADV-1010', TO_DATE('2026-07-05', 'YYYY-MM-DD'));
 
-INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES
-('EMP001', 'LBN-2021-001A', 'ADV-1001', '2026-07-01'),
-('EMP002', 'LBN-2021-002A', 'ADV-1002', '2026-08-01'),
-('EMP003', 'LBN-2022-014B', 'ADV-1003', '2026-07-15'),
-('EMP004', 'LBN-2022-019A', 'ADV-1004', '2026-06-20'),
-('EMP005', 'LBN-2023-005A', 'ADV-1005', '2026-09-01'),
-('EMP006', 'LBN-2023-011A', 'ADV-1006', '2026-07-10'),
-('EMP007', 'LBN-2023-044B', 'ADV-1007', '2026-08-15'),
-('EMP008', 'LBN-2024-002A', 'ADV-1008', '2026-10-01'),
-('EMP009', 'LBN-2024-015B', 'ADV-1009', '2026-06-25'),
-('EMP010', 'LBN-2024-033A', 'ADV-1010', '2026-07-05');
+INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES ('EMP001', 'LBN-2021-001A', 'ADV-1001', TO_DATE('2026-07-01', 'YYYY-MM-DD'));
+INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES ('EMP002', 'LBN-2021-002A', 'ADV-1002', TO_DATE('2026-08-01', 'YYYY-MM-DD'));
+INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES ('EMP003', 'LBN-2022-014B', 'ADV-1003', TO_DATE('2026-07-15', 'YYYY-MM-DD'));
+INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES ('EMP004', 'LBN-2022-019A', 'ADV-1004', TO_DATE('2026-06-20', 'YYYY-MM-DD'));
+INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES ('EMP005', 'LBN-2023-005A', 'ADV-1005', TO_DATE('2026-09-01', 'YYYY-MM-DD'));
+INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES ('EMP006', 'LBN-2023-011A', 'ADV-1006', TO_DATE('2026-07-10', 'YYYY-MM-DD'));
+INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES ('EMP007', 'LBN-2023-044B', 'ADV-1007', TO_DATE('2026-08-15', 'YYYY-MM-DD'));
+INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES ('EMP008', 'LBN-2024-002A', 'ADV-1008', TO_DATE('2026-10-01', 'YYYY-MM-DD'));
+INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES ('EMP009', 'LBN-2024-015B', 'ADV-1009', TO_DATE('2026-06-25', 'YYYY-MM-DD'));
+INSERT INTO Employee_Advertisement (Employee_ID, Employee_Contract_No, Advertisement_ID, Advertisement_StartDate) VALUES ('EMP010', 'LBN-2024-033A', 'ADV-1010', TO_DATE('2026-07-05', 'YYYY-MM-DD'));
 
-INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_Publish_Date) VALUES
-('EMP001', 'LBN-2021-001A', 'JOB-2026-001', '2026-05-01'),
-('EMP002', 'LBN-2021-002A', 'JOB-2026-002', '2026-05-05'),
-('EMP003', 'LBN-2022-014B', 'JOB-2026-003', '2026-05-10'),
-('EMP004', 'LBN-2022-019A', 'JOB-2026-004', '2026-05-12'),
-('EMP005', 'LBN-2023-005A', 'JOB-2026-005', '2026-05-15'),
-('EMP006', 'LBN-2023-011A', 'JOB-2026-006', '2026-05-18'),
-('EMP007', 'LBN-2023-044B', 'JOB-2026-007', '2026-05-20'),
-('EMP008', 'LBN-2024-002A', 'JOB-2026-008', '2026-05-22'),
-('EMP009', 'LBN-2024-015B', 'JOB-2026-009', '2026-05-25'),
-('EMP010', 'LBN-2024-033A', 'JOB-2026-010', '2026-05-28');
+INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate) VALUES ('EMP001', 'LBN-2021-001A', 'JOB-2026-001', TO_DATE('2026-05-01', 'YYYY-MM-DD'));
+INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate) VALUES ('EMP002', 'LBN-2021-002A', 'JOB-2026-002', TO_DATE('2026-05-05', 'YYYY-MM-DD'));
+INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate) VALUES ('EMP003', 'LBN-2022-014B', 'JOB-2026-003', TO_DATE('2026-05-10', 'YYYY-MM-DD'));
+INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate) VALUES ('EMP004', 'LBN-2022-019A', 'JOB-2026-004', TO_DATE('2026-05-12', 'YYYY-MM-DD'));
+INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate) VALUES ('EMP005', 'LBN-2023-005A', 'JOB-2026-005', TO_DATE('2026-05-15', 'YYYY-MM-DD'));
+INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate) VALUES ('EMP006', 'LBN-2023-011A', 'JOB-2026-006', TO_DATE('2026-05-18', 'YYYY-MM-DD'));
+INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate) VALUES ('EMP007', 'LBN-2023-044B', 'JOB-2026-007', TO_DATE('2026-05-20', 'YYYY-MM-DD'));
+INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate) VALUES ('EMP008', 'LBN-2024-002A', 'JOB-2026-008', TO_DATE('2026-05-22', 'YYYY-MM-DD'));
+INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate) VALUES ('EMP009', 'LBN-2024-015B', 'JOB-2026-009', TO_DATE('2026-05-25', 'YYYY-MM-DD'));
+INSERT INTO Employee_JobDescription (Employee_ID, Employee_Contract_No, Job_ID, Job_PublishDate) VALUES ('EMP010', 'LBN-2024-033A', 'JOB-2026-010', TO_DATE('2026-05-28', 'YYYY-MM-DD'));
 
-INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_Stamp_Duty_ID) VALUES
-('EMP001', 'LBN-2021-001A', 'AGR-2026-001', 'SD-2026-8801'),
-('EMP002', 'LBN-2021-002A', 'AGR-2026-002', 'SD-2026-8802'),
-('EMP003', 'LBN-2022-014B', 'AGR-2026-003', 'SD-2026-8803'),
-('EMP004', 'LBN-2022-019A', 'AGR-2026-004', 'SD-2026-8804'),
-('EMP005', 'LBN-2023-005A', 'AGR-2026-005', 'SD-2026-8805'),
-('EMP006', 'LBN-2023-011A', 'AGR-2026-006', 'SD-2026-8806'),
-('EMP007', 'LBN-2023-044B', 'AGR-2026-007', 'SD-2026-8807'),
-('EMP008', 'LBN-2024-002A', 'AGR-2026-008', 'SD-2026-8808'),
-('EMP009', 'LBN-2024-015B', 'AGR-2026-009', 'SD-2026-8809'),
-('EMP010', 'LBN-2024-033A', 'AGR-2026-010', 'SD-2026-8810');
+INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID) VALUES ('EMP001', 'LBN-2021-001A', 'AGR-2026-001', 'SD-2026-8801');
+INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID) VALUES ('EMP002', 'LBN-2021-002A', 'AGR-2026-002', 'SD-2026-8802');
+INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID) VALUES ('EMP003', 'LBN-2022-014B', 'AGR-2026-003', 'SD-2026-8803');
+INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID) VALUES ('EMP004', 'LBN-2022-019A', 'AGR-2026-004', 'SD-2026-8804');
+INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID) VALUES ('EMP005', 'LBN-2023-005A', 'AGR-2026-005', 'SD-2026-8805');
+INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID) VALUES ('EMP006', 'LBN-2023-011A', 'AGR-2026-006', 'SD-2026-8806');
+INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID) VALUES ('EMP007', 'LBN-2023-044B', 'AGR-2026-007', 'SD-2026-8807');
+INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID) VALUES ('EMP008', 'LBN-2024-002A', 'AGR-2026-008', 'SD-2026-8808');
+INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID) VALUES ('EMP009', 'LBN-2024-015B', 'AGR-2026-009', 'SD-2026-8809');
+INSERT INTO Employee_Agreement (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID) VALUES ('EMP010', 'LBN-2024-033A', 'AGR-2026-010', 'SD-2026-8810');
 
-INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES
-('PER-001', '731210-13-1269', 'DOC000000000001', 'FLD2026LBN00001'),
-('PER-002', '810601-16-8949', 'DOC000000000002', 'FLD2026LBN00001'),
-('PER-003', '950308-12-9050', 'DOC000000000003', 'FLD2026LBN00002'),
-('PER-004', '910106-16-1013', 'DOC000000000004', 'FLD2026LBN00003'),
-('PER-005', '840928-10-5266', 'DOC000000000005', 'FLD2026LBN00003'),
-('PER-006', '700606-16-4019', 'DOC000000000006', 'FLD2026LBN00004'),
-('PER-007', '860628-16-2607', 'DOC000000000007', 'FLD2026LBN00005'),
-('PER-008', '850114-16-7863', 'DOC000000000008', 'FLD2026LBN00006'),
-('PER-009', '791209-13-4685', 'DOC000000000009', 'FLD2026LBN00007'),
-('PER-010', '860315-12-5366', 'DOC000000000010', 'FLD2026LBN00007');
+INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES ('PER-001', '731210-13-1269', 'DOC000000000001', 'FLD2026LBN00001');
+INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES ('PER-002', '810601-16-8949', 'DOC000000000002', 'FLD2026LBN00001');
+INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES ('PER-003', '950308-12-9050', 'DOC000000000003', 'FLD2026LBN00002');
+INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES ('PER-004', '910106-16-1013', 'DOC000000000004', 'FLD2026LBN00003');
+INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES ('PER-005', '840928-10-5266', 'DOC000000000005', 'FLD2026LBN00003');
+INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES ('PER-006', '700606-16-4019', 'DOC000000000006', 'FLD2026LBN00004');
+INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES ('PER-007', '860628-16-2607', 'DOC000000000007', 'FLD2026LBN00005');
+INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES ('PER-008', '850114-16-7863', 'DOC000000000008', 'FLD2026LBN00006');
+INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES ('PER-009', '791209-13-4685', 'DOC000000000009', 'FLD2026LBN00007');
+INSERT INTO Person_Document (Person_ID, Person_IC, Doc_ID, Folder_ID) VALUES ('PER-010', '860315-12-5366', 'DOC000000000010', 'FLD2026LBN00007');
 
-INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssuedDate) VALUES
-('EMP001', 'LBN-2021-001A', 'PEN-2026-001', '2026-09-01'),
-('EMP002', 'LBN-2021-002A', 'PEN-2026-002', '2026-09-05'),
-('EMP003', 'LBN-2022-014B', 'PEN-2026-003', '2026-09-10'),
-('EMP004', 'LBN-2022-019A', 'PEN-2026-004', '2026-09-12'),
-('EMP005', 'LBN-2023-005A', 'PEN-2026-005', '2026-09-15'),
-('EMP006', 'LBN-2023-011A', 'PEN-2026-006', '2026-09-20'),
-('EMP007', 'LBN-2023-044B', 'PEN-2026-007', '2026-09-22'),
-('EMP008', 'LBN-2024-002A', 'PEN-2026-008', '2026-09-25'),
-('EMP009', 'LBN-2024-015B', 'PEN-2026-009', '2026-10-01'),
-('EMP010', 'LBN-2024-033A', 'PEN-2026-010', '2026-10-05');
+INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate) VALUES ('EMP001', 'LBN-2021-001A', 'PEN-2026-001', TO_DATE('2026-09-01', 'YYYY-MM-DD'));
+INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate) VALUES ('EMP002', 'LBN-2021-002A', 'PEN-2026-002', TO_DATE('2026-09-05', 'YYYY-MM-DD'));
+INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate) VALUES ('EMP003', 'LBN-2022-014B', 'PEN-2026-003', TO_DATE('2026-09-10', 'YYYY-MM-DD'));
+INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate) VALUES ('EMP004', 'LBN-2022-019A', 'PEN-2026-004', TO_DATE('2026-09-12', 'YYYY-MM-DD'));
+INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate) VALUES ('EMP005', 'LBN-2023-005A', 'PEN-2026-005', TO_DATE('2026-09-15', 'YYYY-MM-DD'));
+INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate) VALUES ('EMP006', 'LBN-2023-011A', 'PEN-2026-006', TO_DATE('2026-09-20', 'YYYY-MM-DD'));
+INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate) VALUES ('EMP007', 'LBN-2023-044B', 'PEN-2026-007', TO_DATE('2026-09-22', 'YYYY-MM-DD'));
+INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate) VALUES ('EMP008', 'LBN-2024-002A', 'PEN-2026-008', TO_DATE('2026-09-28', 'YYYY-MM-DD'));
+INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate) VALUES ('EMP009', 'LBN-2024-015B', 'PEN-2026-009', TO_DATE('2026-10-02', 'YYYY-MM-DD'));
+INSERT INTO Employee_Penalty (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate) VALUES ('EMP010', 'LBN-2024-033A', 'PEN-2026-010', TO_DATE('2026-10-10', 'YYYY-MM-DD'));
 
-INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES
-('EMP001', 'LBN-2021-001A', 'TERM-2026-101', '2026-10-01'),
-('EMP002', 'LBN-2021-002A', 'TERM-2026-102', '2026-10-05'),
-('EMP003', 'LBN-2022-014B', 'TERM-2026-103', '2026-10-12'),
-('EMP004', 'LBN-2022-019A', 'TERM-2026-104', '2026-10-15'),
-('EMP005', 'LBN-2023-005A', 'TERM-2026-105', '2026-10-20'),
-('EMP006', 'LBN-2023-011A', 'TERM-2026-106', '2026-10-22'),
-('EMP007', 'LBN-2023-044B', 'TERM-2026-107', '2026-10-25'),
-('EMP008', 'LBN-2024-002A', 'TERM-2026-108', '2026-11-02'),
-('EMP009', 'LBN-2024-015B', 'TERM-2026-109', '2026-11-05'),
-('EMP010', 'LBN-2024-033A', 'TERM-2026-110', '2026-11-10');
+INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES ('EMP001', 'LBN-2021-001A', 'TERM-2026-101', TO_DATE('2026-10-01', 'YYYY-MM-DD'));
+INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES ('EMP002', 'LBN-2021-002A', 'TERM-2026-102', TO_DATE('2026-10-05', 'YYYY-MM-DD'));
+INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES ('EMP003', 'LBN-2022-014B', 'TERM-2026-103', TO_DATE('2026-10-12', 'YYYY-MM-DD'));
+INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES ('EMP004', 'LBN-2022-019A', 'TERM-2026-104', TO_DATE('2026-10-15', 'YYYY-MM-DD'));
+INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES ('EMP005', 'LBN-2023-005A', 'TERM-2026-105', TO_DATE('2026-10-20', 'YYYY-MM-DD'));
+INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES ('EMP006', 'LBN-2023-011A', 'TERM-2026-106', TO_DATE('2026-10-22', 'YYYY-MM-DD'));
+INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES ('EMP007', 'LBN-2023-044B', 'TERM-2026-107', TO_DATE('2026-10-25', 'YYYY-MM-DD'));
+INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES ('EMP008', 'LBN-2024-002A', 'TERM-2026-108', TO_DATE('2026-11-02', 'YYYY-MM-DD'));
+INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES ('EMP009', 'LBN-2024-015B', 'TERM-2026-109', TO_DATE('2026-11-05', 'YYYY-MM-DD'));
+INSERT INTO Employee_Termination (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date) VALUES ('EMP010', 'LBN-2024-033A', 'TERM-2026-110', TO_DATE('2026-11-10', 'YYYY-MM-DD'));
 
-INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES
-('EMP001', 'LBN-2021-001A', 'APP-2026-001', '2026-03-01 9:15:22'),
-('EMP002', 'LBN-2021-002A', 'APP-2026-002', '2026-03-01 10:45:00'),
-('EMP003', 'LBN-2022-014B', 'APP-2026-003', '2026-03-02 14:30:10'),
-('EMP004', 'LBN-2022-019A', 'APP-2026-004', '2026-03-05 8:00:55'),
-('EMP005', 'LBN-2023-005A', 'APP-2026-005', '2026-03-06 16:20:30'),
-('EMP006', 'LBN-2023-011A', 'APP-2026-006', '2026-03-10 11:10:00'),
-('EMP007', 'LBN-2023-044B', 'APP-2026-007', '2026-03-12 15:45:45'),
-('EMP008', 'LBN-2024-002A', 'APP-2026-008', '2026-03-15 9:05:00'),
-('EMP009', 'LBN-2024-015B', 'APP-2026-009', '2026-03-18 13:20:15'),
-('EMP010', 'LBN-2024-033A', 'APP-2026-010', '2026-03-20 17:55:50');
+INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES ('EMP001', 'LBN-2021-001A', 'APP-2026-001', TO_TIMESTAMP('2026-03-01 09:15:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES ('EMP002', 'LBN-2021-002A', 'APP-2026-002', TO_TIMESTAMP('2026-03-01 10:45:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES ('EMP003', 'LBN-2022-014B', 'APP-2026-003', TO_TIMESTAMP('2026-03-02 14:30:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES ('EMP004', 'LBN-2022-019A', 'APP-2026-004', TO_TIMESTAMP('2026-03-05 08:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES ('EMP005', 'LBN-2023-005A', 'APP-2026-005', TO_TIMESTAMP('2026-03-06 16:20:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES ('EMP006', 'LBN-2023-011A', 'APP-2026-006', TO_TIMESTAMP('2026-03-10 11:10:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES ('EMP007', 'LBN-2023-044B', 'APP-2026-007', TO_TIMESTAMP('2026-03-12 15:45:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES ('EMP008', 'LBN-2024-002A', 'APP-2026-008', TO_TIMESTAMP('2026-03-15 09:05:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES ('EMP009', 'LBN-2024-015B', 'APP-2026-009', TO_TIMESTAMP('2026-03-18 13:20:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Employee_JobApplication (Employee_ID, Employee_Contract_No, Job_Application_ID, Job_Application_TimeStamp) VALUES ('EMP010', 'LBN-2024-033A', 'APP-2026-010', TO_TIMESTAMP('2026-03-20 17:55:00', 'YYYY-MM-DD HH24:MI:SS'));
 
-INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES
-('INS-2026-001', 'DOSH/LBN/2021/089', 'LND-001', 'MSP-LBN-2026-001'),
-('INS-2026-002', 'DOSH/SBH/2023/142', 'LND-002', 'MSP-LBN-2026-005'),
-('INS-2026-003', 'DOSH/LBN/2020/011', 'LND-003', 'MSP-LBN-2026-012'),
-('INS-2026-004', 'DOSH/SBH/2024/301', 'LND-004', 'MSP-LBN-2026-018'),
-('INS-2026-005', 'DOSH/LBN/2022/224', 'LND-005', 'MSP-LBN-2026-022'),
-('INS-2026-006', 'DOSH/LBN/2025/005', 'LND-006', 'MSP-LBN-2026-030'),
-('INS-2026-007', 'DOSH/SBH/2019/512', 'LND-007', 'MSP-LBN-2026-035'),
-('INS-2026-008', 'DOSH/LBN/2023/055', 'LND-008', 'MSP-LBN-2026-042'),
-('INS-2026-009', 'DOSH/SBH/2021/119', 'LND-009', 'MSP-LBN-2026-050'),
-('INS-2026-010', 'DOSH/LBN/2024/094', 'LND-010', 'MSP-LBN-2026-055');
+INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('INS-2026-001', 'DOSH/LBN/2021/089', 'LND-001', 'MSP-LBN-2026-001');
+INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('INS-2026-002', 'DOSH/SBH/2023/142', 'LND-002', 'MSP-LBN-2026-005');
+INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('INS-2026-003', 'DOSH/LBN/2020/011', 'LND-003', 'MSP-LBN-2026-012');
+INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('INS-2026-004', 'DOSH/SBH/2024/301', 'LND-004', 'MSP-LBN-2026-018');
+INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('INS-2026-005', 'DOSH/LBN/2022/224', 'LND-005', 'MSP-LBN-2026-022');
+INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('INS-2026-006', 'DOSH/LBN/2025/005', 'LND-006', 'MSP-LBN-2026-030');
+INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('INS-2026-007', 'DOSH/SBH/2019/512', 'LND-007', 'MSP-LBN-2026-035');
+INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('INS-2026-008', 'DOSH/LBN/2023/055', 'LND-008', 'MSP-LBN-2026-042');
+INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('INS-2026-009', 'DOSH/SBH/2021/119', 'LND-009', 'MSP-LBN-2026-050');
+INSERT INTO Inspector_Land (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('INS-2026-010', 'DOSH/LBN/2024/094', 'LND-010', 'MSP-LBN-2026-061');
 
-INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES
-('INS-2026-001', 'DOSH/LBN/2021/089', 'LOT-001', 'TL-LBN-26-801'),
-('INS-2026-002', 'DOSH/SBH/2023/142', 'LOT-002', 'TL-LBN-26-802'),
-('INS-2026-003', 'DOSH/LBN/2020/011', 'LOT-003', 'TL-LBN-26-803'),
-('INS-2026-004', 'DOSH/SBH/2024/301', 'LOT-004', 'TL-LBN-26-804'),
-('INS-2026-005', 'DOSH/LBN/2022/224', 'LOT-005', 'TL-LBN-26-805'),
-('INS-2026-006', 'DOSH/LBN/2025/005', 'LOT-006', 'TL-LBN-26-806'),
-('INS-2026-007', 'DOSH/SBH/2019/512', 'LOT-007', 'TL-LBN-26-807'),
-('INS-2026-008', 'DOSH/LBN/2023/055', 'LOT-008', 'TL-LBN-26-808'),
-('INS-2026-009', 'DOSH/SBH/2021/119', 'LOT-009', 'TL-LBN-26-809'),
-('INS-2026-010', 'DOSH/LBN/2024/094', 'LOT-010', 'TL-LBN-26-810');
+INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES ('INS-2026-001', 'DOSH/LBN/2021/089', 'LOT-001', 'TL-LBN-26-801');
+INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES ('INS-2026-002', 'DOSH/SBH/2023/142', 'LOT-002', 'TL-LBN-26-802');
+INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES ('INS-2026-003', 'DOSH/LBN/2020/011', 'LOT-003', 'TL-LBN-26-803');
+INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES ('INS-2026-004', 'DOSH/SBH/2024/301', 'LOT-004', 'TL-LBN-26-804');
+INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES ('INS-2026-005', 'DOSH/LBN/2022/224', 'LOT-005', 'TL-LBN-26-805');
+INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES ('INS-2026-006', 'DOSH/LBN/2025/005', 'LOT-006', 'TL-LBN-26-806');
+INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES ('INS-2026-007', 'DOSH/SBH/2019/512', 'LOT-007', 'TL-LBN-26-807');
+INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES ('INS-2026-008', 'DOSH/LBN/2023/055', 'LOT-008', 'TL-LBN-26-808');
+INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES ('INS-2026-009', 'DOSH/SBH/2021/119', 'LOT-009', 'TL-LBN-26-809');
+INSERT INTO Inspector_Lot (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo) VALUES ('INS-2026-010', 'DOSH/LBN/2024/094', 'LOT-010', 'TL-LBN-26-810');
 
-INSERT INTO InvestmentCommittee_ProposalScreening (Committee_ID, Committee_TermSessionCode, Screening_Meeting_ID, Screening_MOM_ID) VALUES
-('COM000000000001', 'TERM-2026-S1', 'MEET-2026-001', 'MOM-26-08-01'),
-('COM000000000002', 'TERM-2026-S1', 'MEET-2026-002', 'MOM-26-08-02'),
-('COM000000000003', 'TERM-2026-S1', 'MEET-2026-003', 'MOM-26-08-03'),
-('COM000000000004', 'TERM-2026-S1', 'MEET-2026-004', 'MOM-26-08-04'),
-('COM000000000005', 'TERM-2026-S1', 'MEET-2026-005', 'MOM-26-08-05'),
-('COM000000000006', 'TERM-2026-S2', 'MEET-2026-006', 'MOM-26-08-06'),
-('COM000000000007', 'TERM-2026-S1', 'MEET-2026-007', 'MOM-26-08-07'),
-('COM000000000008', 'TERM-2026-S1', 'MEET-2026-008', 'MOM-26-08-08'),
-('COM000000000009', 'TERM-2026-S1', 'MEET-2026-009', 'MOM-26-08-09'),
-('COM000000000010', 'TERM-2026-S1', 'MEET-2026-010', 'MOM-26-08-10');
+INSERT INTO InvestmentCommittee_Screening (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID) VALUES ('COM000000000001', 'TERM-2026-S1', 'MEET-2026-001', 'MOM-26-08-01');
+INSERT INTO InvestmentCommittee_Screening (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID) VALUES ('COM000000000002', 'TERM-2026-S1', 'MEET-2026-002', 'MOM-26-08-02');
+INSERT INTO InvestmentCommittee_Screening (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID) VALUES ('COM000000000003', 'TERM-2026-S1', 'MEET-2026-003', 'MOM-26-08-03');
+INSERT INTO InvestmentCommittee_Screening (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID) VALUES ('COM000000000004', 'TERM-2026-S1', 'MEET-2026-004', 'MOM-26-08-04');
+INSERT INTO InvestmentCommittee_Screening (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID) VALUES ('COM000000000005', 'TERM-2026-S1', 'MEET-2026-005', 'MOM-26-08-05');
+INSERT INTO InvestmentCommittee_Screening (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID) VALUES ('COM000000000006', 'TERM-2026-S2', 'MEET-2026-006', 'MOM-26-08-06');
+INSERT INTO InvestmentCommittee_Screening (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID) VALUES ('COM000000000007', 'TERM-2026-S1', 'MEET-2026-007', 'MOM-26-08-07');
+INSERT INTO InvestmentCommittee_Screening (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID) VALUES ('COM000000000008', 'TERM-2026-S1', 'MEET-2026-008', 'MOM-26-08-08');
+INSERT INTO InvestmentCommittee_Screening (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID) VALUES ('COM000000000009', 'TERM-2026-S1', 'MEET-2026-009', 'MOM-26-08-09');
+INSERT INTO InvestmentCommittee_Screening (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID) VALUES ('COM000000000010', 'TERM-2026-S1', 'MEET-2026-010', 'MOM-26-08-10');
 
-INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES
-('COM000000000001', 'TERM-2026-S1', 'APV-2026-9001', 'LC/INV/APP-2026-001'),
-('COM000000000002', 'TERM-2026-S1', 'APV-2026-9002', 'LC/INV/APP-2026-002'),
-('COM000000000003', 'TERM-2026-S1', 'APV-2026-9003', 'LC/INV/APP-2026-003'),
-('COM000000000004', 'TERM-2026-S1', 'APV-2026-9004', 'LC/INV/APP-2026-004'),
-('COM000000000005', 'TERM-2026-S1', 'APV-2026-9005', 'LC/INV/APP-2026-005'),
-('COM000000000006', 'TERM-2026-S2', 'APV-2026-9006', 'LC/INV/APP-2026-006'),
-('COM000000000007', 'TERM-2026-S1', 'APV-2026-9007', 'LC/INV/APP-2026-007'),
-('COM000000000008', 'TERM-2026-S1', 'APV-2026-9008', 'LC/INV/APP-2026-008'),
-('COM000000000009', 'TERM-2026-S1', 'APV-2026-9009', 'LC/INV/APP-2026-009'),
-('COM000000000010', 'TERM-2026-S1', 'APV-2026-9010', 'LC/INV/APP-2026-010');
+INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES ('COM000000000001', 'TERM-2026-S1', 'APV-2026-9001', 'LC/INV/APP-2026-001');
+INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES ('COM000000000002', 'TERM-2026-S1', 'APV-2026-9002', 'LC/INV/APP-2026-002');
+INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES ('COM000000000003', 'TERM-2026-S1', 'APV-2026-9003', 'LC/INV/APP-2026-003');
+INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES ('COM000000000004', 'TERM-2026-S1', 'APV-2026-9004', 'LC/INV/APP-2026-004');
+INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES ('COM000000000005', 'TERM-2026-S1', 'APV-2026-9005', 'LC/INV/APP-2026-005');
+INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES ('COM000000000006', 'TERM-2026-S2', 'APV-2026-9006', 'LC/INV/APP-2026-006');
+INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES ('COM000000000007', 'TERM-2026-S1', 'APV-2026-9007', 'LC/INV/APP-2026-007');
+INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES ('COM000000000008', 'TERM-2026-S1', 'APV-2026-9008', 'LC/INV/APP-2026-008');
+INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES ('COM000000000009', 'TERM-2026-S1', 'APV-2026-9009', 'LC/INV/APP-2026-009');
+INSERT INTO InvestmentCommittee_Approval (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID) VALUES ('COM000000000010', 'TERM-2026-S1', 'APV-2026-9010', 'LC/INV/APP-2026-010');
 
-INSERT INTO InvestmentCommittee_ProposalContent (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES
-('COM000000000001', 'TERM-2026-S1', 'PRP-ECO-001', 'ECO000000000001'),
-('COM000000000002', 'TERM-2026-S1', 'PRP-ECO-002', 'ECO000000000002'),
-('COM000000000003', 'TERM-2026-S1', 'PRP-ECO-003', 'ECO000000000003'),
-('COM000000000004', 'TERM-2026-S1', 'PRP-ECO-004', 'ECO000000000004'),
-('COM000000000005', 'TERM-2026-S1', 'PRP-ECO-005', 'ECO000000000005'),
-('COM000000000006', 'TERM-2026-S2', 'PRP-ECO-006', 'ECO000000000006'),
-('COM000000000007', 'TERM-2026-S1', 'PRP-ECO-007', 'ECO000000000007'),
-('COM000000000008', 'TERM-2026-S1', 'PRP-ECO-008', 'ECO000000000008'),
-('COM000000000009', 'TERM-2026-S1', 'PRP-ECO-009', 'ECO000000000009'),
-('COM000000000010', 'TERM-2026-S1', 'PRP-ECO-010', 'ECO000000000010');
+INSERT INTO InvestmentCommittee_Proposal (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES ('COM000000000001', 'TERM-2026-S1', 'PRP-ECO-001', 'ECO000000000001');
+INSERT INTO InvestmentCommittee_Proposal (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES ('COM000000000002', 'TERM-2026-S1', 'PRP-ECO-002', 'ECO000000000002');
+INSERT INTO InvestmentCommittee_Proposal (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES ('COM000000000003', 'TERM-2026-S1', 'PRP-ECO-003', 'ECO000000000003');
+INSERT INTO InvestmentCommittee_Proposal (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES ('COM000000000004', 'TERM-2026-S1', 'PRP-ECO-004', 'ECO000000000004');
+INSERT INTO InvestmentCommittee_Proposal (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES ('COM000000000005', 'TERM-2026-S1', 'PRP-ECO-005', 'ECO000000000005');
+INSERT INTO InvestmentCommittee_Proposal (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES ('COM000000000006', 'TERM-2026-S2', 'PRP-ECO-006', 'ECO000000000006');
+INSERT INTO InvestmentCommittee_Proposal (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES ('COM000000000007', 'TERM-2026-S1', 'PRP-ECO-007', 'ECO000000000007');
+INSERT INTO InvestmentCommittee_Proposal (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES ('COM000000000008', 'TERM-2026-S1', 'PRP-ECO-008', 'ECO000000000008');
+INSERT INTO InvestmentCommittee_Proposal (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES ('COM000000000009', 'TERM-2026-S1', 'PRP-ECO-009', 'ECO000000000009');
+INSERT INTO InvestmentCommittee_Proposal (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID) VALUES ('COM000000000010', 'TERM-2026-S1', 'PRP-ECO-010', 'ECO000000000010');
 
-INSERT INTO InvestmentCommittee_Termination (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES
-('COM000000000001', 'TERM-2026-S1', 'TERM-2026-101', '2026-10-01'),
-('COM000000000002', 'TERM-2026-S1', 'TERM-2026-102', '2026-10-05'),
-('COM000000000003', 'TERM-2026-S1', 'TERM-2026-103', '2026-10-12'),
-('COM000000000004', 'TERM-2026-S1', 'TERM-2026-104', '2026-10-15'),
-('COM000000000005', 'TERM-2026-S1', 'TERM-2026-105', '2026-10-20'),
-('COM000000000006', 'TERM-2026-S2', 'TERM-2026-106', '2026-10-22'),
-('COM000000000007', 'TERM-2026-S1', 'TERM-2026-107', '2026-10-25'),
-('COM000000000008', 'TERM-2026-S1', 'TERM-2026-108', '2026-11-02'),
-('COM000000000009', 'TERM-2026-S1', 'TERM-2026-109', '2026-11-05'),
-('COM000000000010', 'TERM-2026-S1', 'TERM-2026-110', '2026-11-10');
+INSERT INTO InvestmentCommittee_Terminate (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES ('COM000000000001', 'TERM-2026-S1', 'TERM-2026-101', TO_DATE('2026-10-01', 'YYYY-MM-DD'));
+INSERT INTO InvestmentCommittee_Terminate (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES ('COM000000000002', 'TERM-2026-S1', 'TERM-2026-102', TO_DATE('2026-10-05', 'YYYY-MM-DD'));
+INSERT INTO InvestmentCommittee_Terminate (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES ('COM000000000003', 'TERM-2026-S1', 'TERM-2026-103', TO_DATE('2026-10-12', 'YYYY-MM-DD'));
+INSERT INTO InvestmentCommittee_Terminate (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES ('COM000000000004', 'TERM-2026-S1', 'TERM-2026-104', TO_DATE('2026-10-15', 'YYYY-MM-DD'));
+INSERT INTO InvestmentCommittee_Terminate (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES ('COM000000000005', 'TERM-2026-S1', 'TERM-2026-105', TO_DATE('2026-10-20', 'YYYY-MM-DD'));
+INSERT INTO InvestmentCommittee_Terminate (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES ('COM000000000006', 'TERM-2026-S2', 'TERM-2026-106', TO_DATE('2026-10-22', 'YYYY-MM-DD'));
+INSERT INTO InvestmentCommittee_Terminate (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES ('COM000000000007', 'TERM-2026-S1', 'TERM-2026-107', TO_DATE('2026-10-25', 'YYYY-MM-DD'));
+INSERT INTO InvestmentCommittee_Terminate (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES ('COM000000000008', 'TERM-2026-S1', 'TERM-2026-108', TO_DATE('2026-11-02', 'YYYY-MM-DD'));
+INSERT INTO InvestmentCommittee_Terminate (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES ('COM000000000009', 'TERM-2026-S1', 'TERM-2026-109', TO_DATE('2026-11-05', 'YYYY-MM-DD'));
+INSERT INTO InvestmentCommittee_Terminate(Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date) VALUES ('COM000000000010', 'TERM-2026-S1', 'TERM-2026-110', TO_DATE('2026-11-10', 'YYYY-MM-DD'));
 
-INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES
-('REP-001', 'RES-LBN-2026-101', 'AGR-2026-001', 'SD-2026-8801'),
-('REP-002', 'RES-LBN-2026-102', 'AGR-2026-002', 'SD-2026-8802'),
-('REP-003', 'RES-LBN-2026-103', 'AGR-2026-003', 'SD-2026-8803'),
-('REP-004', 'RES-LBN-2026-104', 'AGR-2026-004', 'SD-2026-8804'),
-('REP-005', 'RES-LBN-2026-105', 'AGR-2026-005', 'SD-2026-8805'),
-('REP-006', 'RES-LBN-2026-106', 'AGR-2026-006', 'SD-2026-8806'),
-('REP-007', 'RES-LBN-2026-107', 'AGR-2026-007', 'SD-2026-8807'),
-('REP-008', 'RES-LBN-2026-108', 'AGR-2026-008', 'SD-2026-8808'),
-('REP-009', 'RES-LBN-2026-109', 'AGR-2026-009', 'SD-2026-8809'),
-('REP-010', 'RES-LBN-2026-110', 'AGR-2026-010', 'SD-2026-8810');
+INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES ('REP-001', 'RES-LBN-2026-101', 'AGR-2026-001', 'SD-2026-8801');
+INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES ('REP-002', 'RES-LBN-2026-102', 'AGR-2026-002', 'SD-2026-8802');
+INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES ('REP-003', 'RES-LBN-2026-103', 'AGR-2026-003', 'SD-2026-8803');
+INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES ('REP-004', 'RES-LBN-2026-104', 'AGR-2026-004', 'SD-2026-8804');
+INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES ('REP-005', 'RES-LBN-2026-105', 'AGR-2026-005', 'SD-2026-8805');
+INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES ('REP-006', 'RES-LBN-2026-106', 'AGR-2026-006', 'SD-2026-8806');
+INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES ('REP-007', 'RES-LBN-2026-107', 'AGR-2026-007', 'SD-2026-8807');
+INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES ('REP-008', 'RES-LBN-2026-108', 'AGR-2026-008', 'SD-2026-8808');
+INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES ('REP-009', 'RES-LBN-2026-109', 'AGR-2026-009', 'SD-2026-8809');
+INSERT INTO Representative_Agreement (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID) VALUES ('REP-010', 'RES-LBN-2026-110', 'AGR-2026-010', 'SD-2026-8810');
 
-INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES
-('REP-001', 'RES-LBN-2026-101', 'EMP001', 'LBN-2021-001A'),
-('REP-002', 'RES-LBN-2026-102', 'EMP002', 'LBN-2021-002A'),
-('REP-003', 'RES-LBN-2026-103', 'EMP003', 'LBN-2022-014B'),
-('REP-004', 'RES-LBN-2026-104', 'EMP004', 'LBN-2022-019A'),
-('REP-005', 'RES-LBN-2026-105', 'EMP005', 'LBN-2023-005A'),
-('REP-006', 'RES-LBN-2026-106', 'EMP006', 'LBN-2023-011A'),
-('REP-007', 'RES-LBN-2026-107', 'EMP007', 'LBN-2023-044B'),
-('REP-008', 'RES-LBN-2026-108', 'EMP008', 'LBN-2024-002A'),
-('REP-009', 'RES-LBN-2026-109', 'EMP009', 'LBN-2024-015B'),
-('REP-010', 'RES-LBN-2026-110', 'EMP010', 'LBN-2024-033A');
+INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES ('REP-001', 'RES-LBN-2026-101', 'EMP001', 'LBN-2021-001A');
+INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES ('REP-002', 'RES-LBN-2026-102', 'EMP002', 'LBN-2021-002A');
+INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES ('REP-003', 'RES-LBN-2026-103', 'EMP003', 'LBN-2022-014B');
+INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES ('REP-004', 'RES-LBN-2026-104', 'EMP004', 'LBN-2022-019A');
+INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES ('REP-005', 'RES-LBN-2026-105', 'EMP005', 'LBN-2023-005A');
+INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES ('REP-006', 'RES-LBN-2026-106', 'EMP006', 'LBN-2023-011A');
+INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES ('REP-007', 'RES-LBN-2026-107', 'EMP007', 'LBN-2023-044B');
+INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES ('REP-008', 'RES-LBN-2026-108', 'EMP008', 'LBN-2024-002A');
+INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES ('REP-009', 'RES-LBN-2026-109', 'EMP009', 'LBN-2024-015B');
+INSERT INTO Representative_Employee (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No) VALUES ('REP-010', 'RES-LBN-2026-110', 'EMP010', 'LBN-2024-033A');
 
-INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES
-('ADV-1001', '2026-07-01', 'APP-2026-001', '2026-03-01 9:15:22'),
-('ADV-1002', '2026-08-01', 'APP-2026-002', '2026-03-01 10:45:00'),
-('ADV-1003', '2026-07-15', 'APP-2026-003', '2026-03-02 14:30:10'),
-('ADV-1004', '2026-06-20', 'APP-2026-004', '2026-03-05 8:00:55'),
-('ADV-1005', '2026-09-01', 'APP-2026-005', '2026-03-06 16:20:30'),
-('ADV-1006', '2026-07-10', 'APP-2026-006', '2026-03-10 11:10:00'),
-('ADV-1007', '2026-08-15', 'APP-2026-007', '2026-03-12 15:45:45'),
-('ADV-1008', '2026-10-01', 'APP-2026-008', '2026-03-15 9:05:00'),
-('ADV-1009', '2026-06-25', 'APP-2026-009', '2026-03-18 13:20:15'),
-('ADV-1010', '2026-07-05', 'APP-2026-010', '2026-03-20 17:55:50');
+INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES ('ADV-1001', TO_DATE('2026-07-01', 'YYYY-MM-DD'), 'JOB-2026-001', TO_DATE('2026-05-01', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES ('ADV-1002', TO_DATE('2026-08-01', 'YYYY-MM-DD'), 'JOB-2026-002', TO_DATE('2026-05-05', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES ('ADV-1003', TO_DATE('2026-07-15', 'YYYY-MM-DD'), 'JOB-2026-003', TO_DATE('2026-05-10', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES ('ADV-1004', TO_DATE('2026-06-20', 'YYYY-MM-DD'), 'JOB-2026-004', TO_DATE('2026-05-12', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES ('ADV-1005', TO_DATE('2026-09-01', 'YYYY-MM-DD'), 'JOB-2026-005', TO_DATE('2026-05-15', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES ('ADV-1006', TO_DATE('2026-07-10', 'YYYY-MM-DD'), 'JOB-2026-006', TO_DATE('2026-05-18', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES ('ADV-1007', TO_DATE('2026-08-15', 'YYYY-MM-DD'), 'JOB-2026-007', TO_DATE('2026-05-20', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES ('ADV-1008', TO_DATE('2026-10-01', 'YYYY-MM-DD'), 'JOB-2026-008', TO_DATE('2026-05-22', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES ('ADV-1009', TO_DATE('2026-06-25', 'YYYY-MM-DD'), 'JOB-2026-009', TO_DATE('2026-05-25', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_JobDescription (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate) VALUES ('ADV-1010', TO_DATE('2026-07-05', 'YYYY-MM-DD'), 'JOB-2026-010', TO_DATE('2026-05-28', 'YYYY-MM-DD'));
 
-INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES
-('LOT-001', 'TL-LBN-26-801', 'APV-2026-9001', 'LC/INV/APP-2026-001'),
-('LOT-002', 'TL-LBN-26-802', 'APV-2026-9002', 'LC/INV/APP-2026-002'),
-('LOT-003', 'TL-LBN-26-803', 'APV-2026-9003', 'LC/INV/APP-2026-003'),
-('LOT-004', 'TL-LBN-26-804', 'APV-2026-9004', 'LC/INV/APP-2026-004'),
-('LOT-005', 'TL-LBN-26-805', 'APV-2026-9005', 'LC/INV/APP-2026-005'),
-('LOT-006', 'TL-LBN-26-806', 'APV-2026-9006', 'LC/INV/APP-2026-006'),
-('LOT-007', 'TL-LBN-26-807', 'APV-2026-9007', 'LC/INV/APP-2026-007'),
-('LOT-008', 'TL-LBN-26-808', 'APV-2026-9008', 'LC/INV/APP-2026-008'),
-('LOT-009', 'TL-LBN-26-809', 'APV-2026-9009', 'LC/INV/APP-2026-009'),
-('LOT-010', 'TL-LBN-26-810', 'APV-2026-9010', 'LC/INV/APP-2026-010');
+INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES ('LOT-001', 'TL-LBN-26-801', 'APV-2026-9001', 'LC/INV/APP-2026-001');
+INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES ('LOT-002', 'TL-LBN-26-802', 'APV-2026-9002', 'LC/INV/APP-2026-002');
+INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES ('LOT-003', 'TL-LBN-26-803', 'APV-2026-9003', 'LC/INV/APP-2026-003');
+INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES ('LOT-004', 'TL-LBN-26-804', 'APV-2026-9004', 'LC/INV/APP-2026-004');
+INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES ('LOT-005', 'TL-LBN-26-805', 'APV-2026-9005', 'LC/INV/APP-2026-005');
+INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES ('LOT-006', 'TL-LBN-26-806', 'APV-2026-9006', 'LC/INV/APP-2026-006');
+INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES ('LOT-007', 'TL-LBN-26-807', 'APV-2026-9007', 'LC/INV/APP-2026-007');
+INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES ('LOT-008', 'TL-LBN-26-808', 'APV-2026-9008', 'LC/INV/APP-2026-008');
+INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES ('LOT-009', 'TL-LBN-26-809', 'APV-2026-9009', 'LC/INV/APP-2026-009');
+INSERT INTO Lot_Approval (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID) VALUES ('LOT-010', 'TL-LBN-26-810', 'APV-2026-9010', 'LC/INV/APP-2026-010');
 
-INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES
-('LND-001', 'MSP-LBN-2026-001', 'APV-2026-9001', 'LC/INV/APP-2026-001'),
-('LND-002', 'MSP-LBN-2026-005', 'APV-2026-9002', 'LC/INV/APP-2026-002'),
-('LND-003', 'MSP-LBN-2026-012', 'APV-2026-9003', 'LC/INV/APP-2026-003'),
-('LND-004', 'MSP-LBN-2026-018', 'APV-2026-9004', 'LC/INV/APP-2026-004'),
-('LND-005', 'MSP-LBN-2026-022', 'APV-2026-9005', 'LC/INV/APP-2026-005'),
-('LND-006', 'MSP-LBN-2026-030', 'APV-2026-9006', 'LC/INV/APP-2026-006'),
-('LND-007', 'MSP-LBN-2026-035', 'APV-2026-9007', 'LC/INV/APP-2026-007'),
-('LND-008', 'MSP-LBN-2026-042', 'APV-2026-9008', 'LC/INV/APP-2026-008'),
-('LND-009', 'MSP-LBN-2026-050', 'APV-2026-9009', 'LC/INV/APP-2026-009'),
-('LND-010', 'MSP-LBN-2026-055', 'APV-2026-9010', 'LC/INV/APP-2026-010');
+INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES ('LND-001', 'MSP-LBN-2026-001', 'APV-2026-9001', 'LC/INV/APP-2026-001');
+INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES ('LND-002', 'MSP-LBN-2026-005', 'APV-2026-9002', 'LC/INV/APP-2026-002');
+INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES ('LND-003', 'MSP-LBN-2026-012', 'APV-2026-9003', 'LC/INV/APP-2026-003');
+INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES ('LND-004', 'MSP-LBN-2026-018', 'APV-2026-9004', 'LC/INV/APP-2026-004');
+INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES ('LND-005', 'MSP-LBN-2026-022', 'APV-2026-9005', 'LC/INV/APP-2026-005');
+INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES ('LND-006', 'MSP-LBN-2026-030', 'APV-2026-9006', 'LC/INV/APP-2026-006');
+INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES ('LND-007', 'MSP-LBN-2026-035', 'APV-2026-9007', 'LC/INV/APP-2026-007');
+INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES ('LND-008', 'MSP-LBN-2026-042', 'APV-2026-9008', 'LC/INV/APP-2026-008');
+INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES ('LND-009', 'MSP-LBN-2026-050', 'APV-2026-9009', 'LC/INV/APP-2026-009');
+INSERT INTO Land_Approval (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID) VALUES ('LND-010', 'MSP-LBN-2026-061', 'APV-2026-9010', 'LC/INV/APP-2026-010');
 
-INSERT INTO Impact_QualityRecord (Assessment_ID, Assessment_RevisionNo, Inspection_ID, Inspection_Date) VALUES
-('ECO000000000001', '2026-03-15', 'INSP-2026-001', '2026-07-01'),
-('ECO000000000002', '2026-03-18', 'INSP-2026-002', '2026-07-05'),
-('ECO000000000003', '2026-04-02', 'INSP-2026-003', '2026-07-12'),
-('ECO000000000004', '2026-04-10', 'INSP-2026-004', '2026-07-15'),
-('ECO000000000005', '2026-04-15', 'INSP-2026-005', '2026-07-22'),
-('ECO000000000006', '2026-04-22', 'INSP-2026-006', '2026-08-05'),
-('ECO000000000007', '2026-05-02', 'INSP-2026-007', '2026-08-10'),
-('ECO000000000008', '2026-05-05', 'INSP-2026-008', '2026-08-18'),
-('ECO000000000009', '2026-05-12', 'INSP-2026-009', '2026-08-25'),
-('ECO000000000010', '2026-05-20', 'INSP-2026-010', '2026-09-02');
+INSERT INTO Impact_QualityRecord (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date) VALUES ('ECO000000000001', TO_DATE('2026-03-15', 'YYYY-MM-DD'), 'INSP-2026-001', TO_DATE('2026-07-01', 'YYYY-MM-DD'));
+INSERT INTO Impact_QualityRecord (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date) VALUES ('ECO000000000002', TO_DATE('2026-03-18', 'YYYY-MM-DD'), 'INSP-2026-002', TO_DATE('2026-07-05', 'YYYY-MM-DD'));
+INSERT INTO Impact_QualityRecord (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date) VALUES ('ECO000000000003', TO_DATE('2026-04-02', 'YYYY-MM-DD'), 'INSP-2026-003', TO_DATE('2026-07-12', 'YYYY-MM-DD'));
+INSERT INTO Impact_QualityRecord (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date) VALUES ('ECO000000000004', TO_DATE('2026-04-10', 'YYYY-MM-DD'), 'INSP-2026-004', TO_DATE('2026-07-15', 'YYYY-MM-DD'));
+INSERT INTO Impact_QualityRecord (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date) VALUES ('ECO000000000005', TO_DATE('2026-04-15', 'YYYY-MM-DD'), 'INSP-2026-005', TO_DATE('2026-07-22', 'YYYY-MM-DD'));
+INSERT INTO Impact_QualityRecord (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date) VALUES ('ECO000000000006', TO_DATE('2026-04-22', 'YYYY-MM-DD'), 'INSP-2026-006', TO_DATE('2026-08-05', 'YYYY-MM-DD'));
+INSERT INTO Impact_QualityRecord (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date) VALUES ('ECO000000000007', TO_DATE('2026-05-02', 'YYYY-MM-DD'), 'INSP-2026-007', TO_DATE('2026-08-10', 'YYYY-MM-DD'));
+INSERT INTO Impact_QualityRecord (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date) VALUES ('ECO000000000008', TO_DATE('2026-05-05', 'YYYY-MM-DD'), 'INSP-2026-008', TO_DATE('2026-08-18', 'YYYY-MM-DD'));
+INSERT INTO Impact_QualityRecord (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date) VALUES ('ECO000000000009', TO_DATE('2026-05-12', 'YYYY-MM-DD'), 'INSP-2026-009', TO_DATE('2026-08-25', 'YYYY-MM-DD'));
+INSERT INTO Impact_QualityRecord (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date) VALUES ('ECO000000000010', TO_DATE('2026-05-20', 'YYYY-MM-DD'), 'INSP-2026-010', TO_DATE('2026-09-02', 'YYYY-MM-DD'));
 
-INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES
-('C0000003000000021', 'LLP0098112-LBN', 'AGR-2026-001', 'SD-2026-8801'),
-('C00000000000022', '201501099812', 'AGR-2026-002', 'SD-2026-8802'),
-('C00000000000023', '202101034512', 'AGR-2026-003', 'SD-2026-8803'),
-('C00000000000024', 'LLP0044551-LBN', 'AGR-2026-004', 'SD-2026-8804'),
-('C00000000000025', '201001022314', 'AGR-2026-005', 'SD-2026-8805'),
-('C00000000000026', '202303991245', 'AGR-2026-006', 'SD-2026-8806'),
-('C00000000000027', '201801088712', 'AGR-2026-007', 'SD-2026-8807'),
-('C00000000000028', '201901044231', 'AGR-2026-008', 'SD-2026-8808'),
-('C00000000000029', 'LLP0033118-LBN', 'AGR-2026-009', 'SD-2026-8809'),
-('C00000000000030', '202201044556', 'AGR-2026-010', 'SD-2026-8810');
+INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES ('C00000000000021', 'LLP0098112-LBN', 'AGR-2026-001', 'SD-2026-8801');
+INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES ('C00000000000022', '201501099812', 'AGR-2026-002', 'SD-2026-8802');
+INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES ('C00000000000023', '202101034512', 'AGR-2026-003', 'SD-2026-8803');
+INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES ('C00000000000024', 'LLP0044551-LBN', 'AGR-2026-004', 'SD-2026-8804');
+INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES ('C00000000000025', '201001022314', 'AGR-2026-005', 'SD-2026-8805');
+INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES ('C00000000000026', '202303991245', 'AGR-2026-006', 'SD-2026-8806');
+INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES ('C00000000000027', '201801088712', 'AGR-2026-007', 'SD-2026-8807');
+INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES ('C00000000000028', '201901044231', 'AGR-2026-008', 'SD-2026-8808');
+INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES ('C00000000000029', 'LLP0033118-LBN', 'AGR-2026-009', 'SD-2026-8809');
+INSERT INTO Company_Agreement (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID) VALUES ('C00000000000030', '202201044556', 'AGR-2026-010', 'SD-2026-8810');
 
-INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES
-('LND-001', 'MSP-LBN-2026-001', 'ADV-1001', '2026-07-01'),
-('LND-002', 'MSP-LBN-2026-005', 'ADV-1002', '2026-08-01'),
-('LND-003', 'MSP-LBN-2026-012', 'ADV-1003', '2026-07-15'),
-('LND-004', 'MSP-LBN-2026-018', 'ADV-1004', '2026-06-20'),
-('LND-005', 'MSP-LBN-2026-022', 'ADV-1005', '2026-09-01'),
-('LND-006', 'MSP-LBN-2026-030', 'ADV-1006', '2026-07-10'),
-('LND-007', 'MSP-LBN-2026-035', 'ADV-1007', '2026-08-15'),
-('LND-008', 'MSP-LBN-2026-042', 'ADV-1008', '2026-10-01'),
-('LND-009', 'MSP-LBN-2026-050', 'ADV-1009', '2026-06-25'),
-('LND-010', 'MSP-LBN-2026-055', 'ADV-1010', '2026-07-05');
+INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES ('LND-001', 'MSP-LBN-2026-001', 'ADV-1001', TO_DATE('2026-07-01', 'YYYY-MM-DD'));
+INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES ('LND-002', 'MSP-LBN-2026-005', 'ADV-1002', TO_DATE('2026-08-01', 'YYYY-MM-DD'));
+INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES ('LND-003', 'MSP-LBN-2026-012', 'ADV-1003', TO_DATE('2026-07-15', 'YYYY-MM-DD'));
+INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES ('LND-004', 'MSP-LBN-2026-018', 'ADV-1004', TO_DATE('2026-06-20', 'YYYY-MM-DD'));
+INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES ('LND-005', 'MSP-LBN-2026-022', 'ADV-1005', TO_DATE('2026-09-01', 'YYYY-MM-DD'));
+INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES ('LND-006', 'MSP-LBN-2026-030', 'ADV-1006', TO_DATE('2026-07-10', 'YYYY-MM-DD'));
+INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES ('LND-007', 'MSP-LBN-2026-035', 'ADV-1007', TO_DATE('2026-08-15', 'YYYY-MM-DD'));
+INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES ('LND-008', 'MSP-LBN-2026-042', 'ADV-1008', TO_DATE('2026-10-01', 'YYYY-MM-DD'));
+INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES ('LND-009', 'MSP-LBN-2026-050', 'ADV-1009', TO_DATE('2026-06-25', 'YYYY-MM-DD'));
+INSERT INTO Land_Advertisement (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate) VALUES ('LND-010', 'MSP-LBN-2026-061', 'ADV-1010', TO_DATE('2026-07-05', 'YYYY-MM-DD'));
 
-INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES
-('LOT-001', 'TL-LBN-26-801', 'ADV-1001', '2026-07-01'),
-('LOT-002', 'TL-LBN-26-802', 'ADV-1002', '2026-08-01'),
-('LOT-003', 'TL-LBN-26-803', 'ADV-1003', '2026-07-15'),
-('LOT-004', 'TL-LBN-26-804', 'ADV-1004', '2026-06-20'),
-('LOT-005', 'TL-LBN-26-805', 'ADV-1005', '2026-09-01'),
-('LOT-006', 'TL-LBN-26-806', 'ADV-1006', '2026-07-10'),
-('LOT-007', 'TL-LBN-26-807', 'ADV-1007', '2026-08-15'),
-('LOT-008', 'TL-LBN-26-808', 'ADV-1008', '2026-10-01'),
-('LOT-009', 'TL-LBN-26-809', 'ADV-1009', '2026-06-25'),
-('LOT-010', 'TL-LBN-26-810', 'ADV-1010', '2026-07-05');
+INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES ('LOT-001', 'TL-LBN-26-801', 'ADV-1001', TO_DATE('2026-07-01', 'YYYY-MM-DD'));
+INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES ('LOT-002', 'TL-LBN-26-802', 'ADV-1002', TO_DATE('2026-08-01', 'YYYY-MM-DD'));
+INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES ('LOT-003', 'TL-LBN-26-803', 'ADV-1003', TO_DATE('2026-07-15', 'YYYY-MM-DD'));
+INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES ('LOT-004', 'TL-LBN-26-804', 'ADV-1004', TO_DATE('2026-06-20', 'YYYY-MM-DD'));
+INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES ('LOT-005', 'TL-LBN-26-805', 'ADV-1005', TO_DATE('2026-09-01', 'YYYY-MM-DD'));
+INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES ('LOT-006', 'TL-LBN-26-806', 'ADV-1006', TO_DATE('2026-07-10', 'YYYY-MM-DD'));
+INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES ('LOT-007', 'TL-LBN-26-807', 'ADV-1007', TO_DATE('2026-08-15', 'YYYY-MM-DD'));
+INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES ('LOT-008', 'TL-LBN-26-808', 'ADV-1008', TO_DATE('2026-10-01', 'YYYY-MM-DD'));
+INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES ('LOT-009', 'TL-LBN-26-809', 'ADV-1009', TO_DATE('2026-06-25', 'YYYY-MM-DD'));
+INSERT INTO Lot_Advertisement (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate) VALUES ('LOT-010', 'TL-LBN-26-810', 'ADV-1010', TO_DATE('2026-07-05', 'YYYY-MM-DD'));
 
-INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES
-('INS-2026-001', 'DOSH/LBN/2021/089', 'INF000000000001', 'SITE-LBN-001'),
-('INS-2026-002', 'DOSH/SBH/2023/142', 'INF000000000002', 'SITE-LBN-002'),
-('INS-2026-003', 'DOSH/LBN/2020/011', 'INF000000000003', 'SITE-SAB-011'),
-('INS-2026-004', 'DOSH/SBH/2024/301', 'INF000000000004', 'SITE-LBN-004'),
-('INS-2026-005', 'DOSH/LBN/2022/224', 'INF000000000005', 'SITE-SAB-015'),
-('INS-2026-006', 'DOSH/LBN/2025/005', 'INF000000000006', 'SITE-LBN-006'),
-('INS-2026-007', 'DOSH/SBH/2019/512', 'INF000000000007', 'SITE-LBN-007'),
-('INS-2026-008', 'DOSH/LBN/2023/055', 'INF000000000008', 'SITE-SAB-022'),
-('INS-2026-009', 'DOSH/SBH/2021/119', 'INF000000000009', 'SITE-LBN-009'),
-('INS-2026-010', 'DOSH/LBN/2024/094', 'INF000000000010', 'SITE-SAB-030');
+INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES ('INS-2026-001', 'DOSH/LBN/2021/089', 'INF000000000001', 'SITE-LBN-001');
+INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES ('INS-2026-002', 'DOSH/SBH/2023/142', 'INF000000000002', 'SITE-LBN-002');
+INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES ('INS-2026-003', 'DOSH/LBN/2020/011', 'INF000000000003', 'SITE-SAB-011');
+INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES ('INS-2026-004', 'DOSH/SBH/2024/301', 'INF000000000004', 'SITE-LBN-004');
+INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES ('INS-2026-005', 'DOSH/LBN/2022/224', 'INF000000000005', 'SITE-SAB-015');
+INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES ('INS-2026-006', 'DOSH/LBN/2025/005', 'INF000000000006', 'SITE-LBN-006');
+INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES ('INS-2026-007', 'DOSH/SBH/2019/512', 'INF000000000007', 'SITE-LBN-007');
+INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES ('INS-2026-008', 'DOSH/LBN/2023/055', 'INF000000000008', 'SITE-SAB-022');
+INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES ('INS-2026-009', 'DOSH/SBH/2021/119', 'INF000000000009', 'SITE-LBN-009');
+INSERT INTO Inspector_Infrastructure (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo) VALUES ('INS-2026-010', 'DOSH/LBN/2024/094', 'INF000000000010', 'SITE-SAB-030');
 
-INSERT INTO Company_Relation VALUES
-('C00000000000021', 'LLP0098112-LBN', 'C00000000000031', '201201033221'),
-('C00000000000022', '201501099812', 'C00000000000032', '201601077551'),
-('C00000000000023', '202101034512', 'C00000000000033', 'LLP0077882-LBN'),
-('C00000000000024', 'LLP0044551-LBN', 'C00000000000034', '202403112245'),
-('C00000000000025', '201001022314', 'C00000000000035', '201101044321'),
-('C00000000000026', '202303991245', 'C00000000000036', '202001044112'),
-('C00000000000027', '201801088712', 'C00000000000037', 'LLP0055119-LBN'),
-('C00000000000028', '201901044231', 'C00000000000038', '201701022441'),
-('C00000000000029', 'LLP0033118-LBN', 'C00000000000039', '201401033445'),
-('C00000000000030', '202201044556', 'C00000000000040', '202301055612');
+INSERT INTO Company_Relation VALUES ('C00000000000021', 'LLP0098112-LBN', 'C00000000000031', '201201033221');
+INSERT INTO Company_Relation VALUES ('C00000000000022', '201501099812', 'C00000000000032', '201601077551');
+INSERT INTO Company_Relation VALUES ('C00000000000023', '202101034512', 'C00000000000033', 'LLP0077882-LBN');
+INSERT INTO Company_Relation VALUES ('C00000000000024', 'LLP0044551-LBN', 'C00000000000034', '202403112245');
+INSERT INTO Company_Relation VALUES ('C00000000000025', '201001022314', 'C00000000000035', '201101044321');
+INSERT INTO Company_Relation VALUES ('C00000000000026', '202303991245', 'C00000000000036', '202001044112');
+INSERT INTO Company_Relation VALUES ('C00000000000027', '201801088712', 'C00000000000037', 'LLP0055119-LBN');
+INSERT INTO Company_Relation VALUES ('C00000000000028', '201901044231', 'C00000000000038', '201701022441');
+INSERT INTO Company_Relation VALUES ('C00000000000029', 'LLP0033118-LBN', 'C00000000000039', '201401033445');
+INSERT INTO Company_Relation VALUES ('C00000000000030', '202201044556', 'C00000000000040', '202301055612');
 
-INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES
-('EMP001', 'LBN-2021-001A', 'APP-2026-001', 'azman_labuan90'),
-('EMP002', 'LBN-2021-002A', 'APP-2026-002', 'sarah_tan_prop'),
-('EMP003', 'LBN-2022-014B', 'APP-2026-003', 'devakumar_eco'),
-('EMP004', 'LBN-2022-019A', 'APP-2026-004', 'fatimah_lands'),
-('EMP005', 'LBN-2023-005A', 'APP-2026-005', 'john_doe_borneo'),
-('EMP006', 'LBN-2023-011A', 'APP-2026-006', 'elena_mp'),
-('EMP007', 'LBN-2023-044B', 'APP-2026-007', 'ling_const88'),
-('EMP008', 'LBN-2024-002A', 'APP-2026-008', 'amirul_agro26'),
-('EMP009', 'LBN-2024-015B', 'APP-2026-009', 'chong_v_capital'),
-('EMP010', 'LBN-2024-033A', 'APP-2026-010', 'nisha_s_legal');
+INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES ('EMP001', 'LBN-2021-001A', 'APP-2026-001', 'azman_labuan90');
+INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES ('EMP002', 'LBN-2021-002A', 'APP-2026-002', 'sarah_tan_prop');
+INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES ('EMP003', 'LBN-2022-014B', 'APP-2026-003', 'devakumar_eco');
+INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES ('EMP004', 'LBN-2022-019A', 'APP-2026-004', 'fatimah_lands');
+INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES ('EMP005', 'LBN-2023-005A', 'APP-2026-005', 'john_doe_borneo');
+INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES ('EMP006', 'LBN-2023-011A', 'APP-2026-006', 'elena_mp');
+INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES ('EMP007', 'LBN-2023-044B', 'APP-2026-007', 'ling_const88');
+INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES ('EMP008', 'LBN-2024-002A', 'APP-2026-008', 'amirul_agro26');
+INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES ('EMP009', 'LBN-2024-015B', 'APP-2026-009', 'chong_v_capital');
+INSERT INTO Employee_JobApplicant (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username) VALUES ('EMP010', 'LBN-2024-033A', 'APP-2026-010', 'nisha_s_legal');
 
-INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_Milestone_ID, Timeline_ID) VALUES
-('INS-2026-001', 'DOSH/LBN/2021/089', 'MLS-001', 'TL-ECO-101'),
-('INS-2026-002', 'DOSH/SBH/2023/142', 'MLS-002', 'TL-ECO-101'),
-('INS-2026-003', 'DOSH/LBN/2020/011', 'MLS-003', 'TL-HYD-202'),
-('INS-2026-004', 'DOSH/SBH/2024/301', 'MLS-004', 'TL-HYD-202'),
-('INS-2026-005', 'DOSH/LBN/2022/224', 'MLS-005', 'TL-PRT-303'),
-('INS-2026-006', 'DOSH/LBN/2025/005', 'MLS-006', 'TL-FIN-404'),
-('INS-2026-007', 'DOSH/SBH/2019/512', 'MLS-007', 'TL-AGR-505'),
-('INS-2026-008', 'DOSH/LBN/2023/055', 'MLS-008', 'TL-RTL-606'),
-('INS-2026-009', 'DOSH/SBH/2021/119', 'MLS-009', 'TL-DAT-707'),
-('INS-2026-010', 'DOSH/LBN/2024/094', 'MLS-010', 'TL-MAR-808');
+INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID) VALUES ('INS-2026-001', 'DOSH/LBN/2021/089', 'MLS-001', 'TL-ECO-101');
+INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID) VALUES ('INS-2026-002', 'DOSH/SBH/2023/142', 'MLS-002', 'TL-ECO-101');
+INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID) VALUES ('INS-2026-003', 'DOSH/LBN/2020/011', 'MLS-003', 'TL-HYD-202');
+INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID) VALUES ('INS-2026-004', 'DOSH/SBH/2024/301', 'MLS-004', 'TL-HYD-202');
+INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID) VALUES ('INS-2026-005', 'DOSH/LBN/2022/224', 'MLS-005', 'TL-PRT-303');
+INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID) VALUES ('INS-2026-006', 'DOSH/LBN/2025/005', 'MLS-006', 'TL-FIN-404');
+INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID) VALUES ('INS-2026-007', 'DOSH/SBH/2019/512', 'MLS-007', 'TL-AGR-505');
+INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID) VALUES ('INS-2026-008', 'DOSH/LBN/2023/055', 'MLS-008', 'TL-RTL-606');
+INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID) VALUES ('INS-2026-009', 'DOSH/SBH/2021/119', 'MLS-009', 'TL-DAT-707');
+INSERT INTO Inspector_ProjectTimeline (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID) VALUES ('INS-2026-010', 'DOSH/LBN/2024/094', 'MLS-010', 'TL-MAR-808');
 
-INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES
-('INS-2026-001', 'DOSH/LBN/2021/089', 'ECO000000000001', '2026-03-15'),
-('INS-2026-002', 'DOSH/SBH/2023/142', 'ECO000000000002', '2026-03-18'),
-('INS-2026-003', 'DOSH/LBN/2020/011', 'ECO000000000003', '2026-04-02'),
-('INS-2026-004', 'DOSH/SBH/2024/301', 'ECO000000000004', '2026-04-10'),
-('INS-2026-005', 'DOSH/LBN/2022/224', 'ECO000000000005', '2026-04-15'),
-('INS-2026-006', 'DOSH/LBN/2025/005', 'ECO000000000006', '2026-04-22'),
-('INS-2026-007', 'DOSH/SBH/2019/512', 'ECO000000000007', '2026-05-02'),
-('INS-2026-008', 'DOSH/LBN/2023/055', 'ECO000000000008', '2026-05-05'),
-('INS-2026-009', 'DOSH/SBH/2021/119', 'ECO000000000009', '2026-05-12'),
-('INS-2026-010', 'DOSH/LBN/2024/094', 'ECO000000000010', '2026-05-20');
+INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES ('INS-2026-001', 'DOSH/LBN/2021/089', 'ECO000000000001', TO_DATE('2026-03-15', 'YYYY-MM-DD'));
+INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES ('INS-2026-002', 'DOSH/SBH/2023/142', 'ECO000000000002', TO_DATE('2026-03-18', 'YYYY-MM-DD'));
+INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES ('INS-2026-003', 'DOSH/LBN/2020/011', 'ECO000000000003', TO_DATE('2026-04-02', 'YYYY-MM-DD'));
+INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES ('INS-2026-004', 'DOSH/SBH/2024/301', 'ECO000000000004', TO_DATE('2026-04-10', 'YYYY-MM-DD'));
+INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES ('INS-2026-005', 'DOSH/LBN/2022/224', 'ECO000000000005', TO_DATE('2026-04-15', 'YYYY-MM-DD'));
+INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES ('INS-2026-006', 'DOSH/LBN/2025/005', 'ECO000000000006', TO_DATE('2026-04-22', 'YYYY-MM-DD'));
+INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES ('INS-2026-007', 'DOSH/SBH/2019/512', 'ECO000000000007', TO_DATE('2026-05-02', 'YYYY-MM-DD'));
+INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES ('INS-2026-008', 'DOSH/LBN/2023/055', 'ECO000000000008', TO_DATE('2026-05-05', 'YYYY-MM-DD'));
+INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES ('INS-2026-009', 'DOSH/SBH/2021/119', 'ECO000000000009', TO_DATE('2026-05-12', 'YYYY-MM-DD'));
+INSERT INTO Inspector_Impact (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date) VALUES ('INS-2026-010', 'DOSH/LBN/2024/094', 'ECO000000000010', TO_DATE('2026-05-20', 'YYYY-MM-DD'));
 
-INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES
-('INS-2026-001', 'DOSH/LBN/2021/089', 'DIG000000000001', 'MDEC/LBN/2026/014'),
-('INS-2026-002', 'DOSH/SBH/2023/142', 'DIG000000000002', 'MDEC/SAB/2026/102'),
-('INS-2026-003', 'DOSH/LBN/2020/011', 'DIG000000000003', 'MDEC/LBN/2026/044'),
-('INS-2026-004', 'DOSH/SBH/2024/301', 'DIG000000000004', 'MDEC/SAB/2026/089'),
-('INS-2026-005', 'DOSH/LBN/2022/224', 'DIG000000000005', 'MDEC/LBN/2026/112'),
-('INS-2026-006', 'DOSH/LBN/2025/005', 'DIG000000000006', 'MDEC/LBN/2026/201'),
-('INS-2026-007', 'DOSH/SBH/2019/512', 'DIG000000000007', 'MDEC/SAB/2026/055'),
-('INS-2026-008', 'DOSH/LBN/2023/055', 'DIG000000000008', 'MDEC/LBN/2026/073'),
-('INS-2026-009', 'DOSH/SBH/2021/119', 'DIG000000000009', 'MDEC/LBN/2026/154'),
-('INS-2026-010', 'DOSH/LBN/2024/094', 'DIG000000000010', 'MDEC/SAB/2026/310');
+INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES ('INS-2026-001', 'DOSH/LBN/2021/089', 'DIG000000000001', 'MDEC/LBN/2026/014');
+INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES ('INS-2026-002', 'DOSH/SBH/2023/142', 'DIG000000000002', 'MDEC/SAB/2026/102');
+INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES ('INS-2026-003', 'DOSH/LBN/2020/011', 'DIG000000000003', 'MDEC/LBN/2026/044');
+INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES ('INS-2026-004', 'DOSH/SBH/2024/301', 'DIG000000000004', 'MDEC/SAB/2026/089');
+INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES ('INS-2026-005', 'DOSH/LBN/2022/224', 'DIG000000000005', 'MDEC/LBN/2026/112');
+INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES ('INS-2026-006', 'DOSH/LBN/2025/005', 'DIG000000000006', 'MDEC/LBN/2026/201');
+INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES ('INS-2026-007', 'DOSH/SBH/2019/512', 'DIG000000000007', 'MDEC/SAB/2026/055');
+INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES ('INS-2026-008', 'DOSH/LBN/2023/055', 'DIG000000000008', 'MDEC/LBN/2026/073');
+INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES ('INS-2026-009', 'DOSH/SBH/2021/119', 'DIG000000000009', 'MDEC/LBN/2026/154');
+INSERT INTO Inspector_Digitalization (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref) VALUES ('INS-2026-010', 'DOSH/LBN/2024/094', 'DIG000000000010', 'MDEC/SAB/2026/310');
 
-INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES
-('INS-2026-001', 'DOSH/LBN/2021/089', 'ESG-2026-001', '2026-01-15'),
-('INS-2026-002', 'DOSH/SBH/2023/142', 'ESG-2026-002', '2026-02-10'),
-('INS-2026-003', 'DOSH/LBN/2020/011', 'ESG-2026-003', '2026-03-05'),
-('INS-2026-004', 'DOSH/SBH/2024/301', 'ESG-2026-004', '2026-04-20'),
-('INS-2026-005', 'DOSH/LBN/2022/224', 'ESG-2026-005', '2026-05-12'),
-('INS-2026-006', 'DOSH/LBN/2025/005', 'ESG-2026-006', '2026-05-28'),
-('INS-2026-007', 'DOSH/SBH/2019/512', 'ESG-2026-007', '2026-06-05'),
-('INS-2026-008', 'DOSH/LBN/2023/055', 'ESG-2026-008', '2026-06-10'),
-('INS-2026-009', 'DOSH/SBH/2021/119', 'ESG-2026-009', '2026-06-15'),
-('INS-2026-010', 'DOSH/LBN/2024/094', 'ESG-2026-010', '2026-06-16');
+INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES ('INS-2026-001', 'DOSH/LBN/2021/089', 'ESG-2026-001', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
+INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES ('INS-2026-002', 'DOSH/SBH/2023/142', 'ESG-2026-002', TO_DATE('2026-02-10', 'YYYY-MM-DD'));
+INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES ('INS-2026-003', 'DOSH/LBN/2020/011', 'ESG-2026-003', TO_DATE('2026-03-05', 'YYYY-MM-DD'));
+INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES ('INS-2026-004', 'DOSH/SBH/2024/301', 'ESG-2026-004', TO_DATE('2026-04-20', 'YYYY-MM-DD'));
+INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES ('INS-2026-005', 'DOSH/LBN/2022/224', 'ESG-2026-005', TO_DATE('2026-05-12', 'YYYY-MM-DD'));
+INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES ('INS-2026-006', 'DOSH/LBN/2025/005', 'ESG-2026-006', TO_DATE('2026-05-25', 'YYYY-MM-DD'));
+INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES ('INS-2026-007', 'DOSH/SBH/2019/512', 'ESG-2026-007', TO_DATE('2026-06-10', 'YYYY-MM-DD'));
+INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES ('INS-2026-008', 'DOSH/LBN/2023/055', 'ESG-2026-008', TO_DATE('2026-06-22', 'YYYY-MM-DD'));
+INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES ('INS-2026-009', 'DOSH/SBH/2021/119', 'ESG-2026-009', TO_DATE('2026-07-05', 'YYYY-MM-DD'));
+INSERT INTO Inspector_SustainabilityScore (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date) VALUES ('INS-2026-010', 'DOSH/LBN/2024/094', 'ESG-2026-010', TO_DATE('2026-07-18', 'YYYY-MM-DD'));
 
-INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES
-('EMP001', 'LBN-2021-001A', 'APP-2026-8001', '2026-01-15'),
-('EMP002', 'LBN-2021-002A', 'APP-2026-8002', '2026-02-10'),
-('EMP003', 'LBN-2022-014B', 'APP-2026-8003', '2026-03-05'),
-('EMP004', 'LBN-2022-019A', 'APP-2026-8004', '2026-04-20'),
-('EMP005', 'LBN-2023-005A', 'APP-2026-8005', '2026-05-12'),
-('EMP006', 'LBN-2023-011A', 'APP-2026-8006', '2026-05-28'),
-('EMP007', 'LBN-2023-044B', 'APP-2026-8007', '2026-06-05'),
-('EMP008', 'LBN-2024-002A', 'APP-2026-8008', '2026-06-10'),
-('EMP009', 'LBN-2024-015B', 'APP-2026-8009', '2026-06-15'),
-('EMP010', 'LBN-2024-033A', 'APP-2026-8010', '2026-06-16');
+INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES ('EMP001', 'LBN-2021-001A', 'APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'));
+INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES ('EMP002', 'LBN-2021-002A', 'APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'));
+INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES ('EMP003', 'LBN-2022-014B', 'APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
+INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES ('EMP004', 'LBN-2022-019A', 'APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'));
+INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES ('EMP005', 'LBN-2023-005A', 'APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'));
+INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES ('EMP006', 'LBN-2023-011A', 'APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'));
+INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES ('EMP007', 'LBN-2023-044B', 'APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'));
+INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES ('EMP008', 'LBN-2024-002A', 'APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'));
+INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES ('EMP009', 'LBN-2024-015B', 'APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'));
+INSERT INTO Employee_InvestmentApplication (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate) VALUES ('EMP010', 'LBN-2024-033A', 'APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'));
 
-INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES
-('C00000000000021', 'LLP0098112-LBN', 'LOT-001', 'TL-LBN-26-801'),
-('C00000000000022', '201501099812', 'LOT-002', 'TL-LBN-26-802'),
-('C00000000000023', '202101034512', 'LOT-003', 'TL-LBN-26-803'),
-('C00000000000024', 'LLP0044551-LBN', 'LOT-004', 'TL-LBN-26-804'),
-('C00000000000025', '201001022314', 'LOT-005', 'TL-LBN-26-805'),
-('C00000000000026', '202303991245', 'LOT-006', 'TL-LBN-26-806'),
-('C00000000000027', '201801088712', 'LOT-007', 'TL-LBN-26-807'),
-('C00000000000028', '201901044231', 'LOT-008', 'TL-LBN-26-808'),
-('C00000000000029', 'LLP0033118-LBN', 'LOT-009', 'TL-LBN-26-809'),
-('C00000000000030', '202201044556', 'LOT-010', 'TL-LBN-26-810');
+INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES ('C00000000000021', 'LLP0098112-LBN', 'LOT-001', 'TL-LBN-26-801');
+INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES ('C00000000000022', '201501099812', 'LOT-002', 'TL-LBN-26-802');
+INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES ('C00000000000023', '202101034512', 'LOT-003', 'TL-LBN-26-803');
+INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES ('C00000000000024', 'LLP0044551-LBN', 'LOT-004', 'TL-LBN-26-804');
+INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES ('C00000000000025', '201001022314', 'LOT-005', 'TL-LBN-26-805');
+INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES ('C00000000000026', '202303991245', 'LOT-006', 'TL-LBN-26-806');
+INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES ('C00000000000027', '201801088712', 'LOT-007', 'TL-LBN-26-807');
+INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES ('C00000000000028', '201901044231', 'LOT-008', 'TL-LBN-26-808');
+INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES ('C00000000000029', 'LLP0033118-LBN', 'LOT-009', 'TL-LBN-26-809');
+INSERT INTO Company_Lot (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo) VALUES ('C00000000000030', '202201044556', 'LOT-010', 'TL-LBN-26-810');
 
-INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES
-('C00000000000021', 'LLP0098112-LBN', 'LND-001', 'MSP-LBN-2026-001'),
-('C00000000000022', '201501099812', 'LND-002', 'MSP-LBN-2026-005'),
-('C00000000000023', '202101034512', 'LND-003', 'MSP-LBN-2026-012'),
-('C00000000000024', 'LLP0044551-LBN', 'LND-004', 'MSP-LBN-2026-018'),
-('C00000000000025', '201001022314', 'LND-005', 'MSP-LBN-2026-022'),
-('C00000000000026', '202303991245', 'LND-006', 'MSP-LBN-2026-030'),
-('C00000000000027', '201801088712', 'LND-007', 'MSP-LBN-2026-035'),
-('C00000000000028', '201901044231', 'LND-008', 'MSP-LBN-2026-042'),
-('C00000000000029', 'LLP0033118-LBN', 'LND-009', 'MSP-LBN-2026-050'),
-('C00000000000030', '202201044556', 'LND-010', 'MSP-LBN-2026-055');
+INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('C00000000000021', 'LLP0098112-LBN', 'LND-001', 'MSP-LBN-2026-001');
+INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('C00000000000022', '201501099812', 'LND-002', 'MSP-LBN-2026-005');
+INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('C00000000000023', '202101034512', 'LND-003', 'MSP-LBN-2026-012');
+INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('C00000000000024', 'LLP0044551-LBN', 'LND-004', 'MSP-LBN-2026-018');
+INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('C00000000000025', '201001022314', 'LND-005', 'MSP-LBN-2026-022');
+INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('C00000000000026', '202303991245', 'LND-006', 'MSP-LBN-2026-030');
+INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('C00000000000027', '201801088712', 'LND-007', 'MSP-LBN-2026-035');
+INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('C00000000000028', '201901044231', 'LND-008', 'MSP-LBN-2026-042');
+INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('C00000000000029', 'LLP0033118-LBN', 'LND-009', 'MSP-LBN-2026-050');
+INSERT INTO Company_Land (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No) VALUES ('C00000000000030', '202201044556', 'LND-010', 'MSP-LBN-2026-061');
 
-INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES
-('C00000000000021', 'LLP0098112-LBN', 'PRP-ECO-001', 'ECO000000000001'),
-('C00000000000022', '201501099812', 'PRP-ECO-002', 'ECO000000000002'),
-('C00000000000023', '202101034512', 'PRP-ECO-003', 'ECO000000000003'),
-('C00000000000024', 'LLP0044551-LBN', 'PRP-ECO-004', 'ECO000000000004'),
-('C00000000000025', '201001022314', 'PRP-ECO-005', 'ECO000000000005'),
-('C00000000000026', '202303991245', 'PRP-ECO-006', 'ECO000000000006'),
-('C00000000000027', '201801088712', 'PRP-ECO-007', 'ECO000000000007'),
-('C00000000000028', '201901044231', 'PRP-ECO-008', 'ECO000000000008'),
-('C00000000000029', 'LLP0033118-LBN', 'PRP-ECO-009', 'ECO000000000009'),
-('C00000000000030', '202201044556', 'PRP-ECO-010', 'ECO000000000010');
+INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES ('C00000000000021', 'LLP0098112-LBN', 'PRP-ECO-001', 'ECO000000000001');
+INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES ('C00000000000022', '201501099812', 'PRP-ECO-002', 'ECO000000000002');
+INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES ('C00000000000023', '202101034512', 'PRP-ECO-003', 'ECO000000000003');
+INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES ('C00000000000024', 'LLP0044551-LBN', 'PRP-ECO-004', 'ECO000000000004');
+INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES ('C00000000000025', '201001022314', 'PRP-ECO-005', 'ECO000000000005');
+INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES ('C00000000000026', '202303991245', 'PRP-ECO-006', 'ECO000000000006');
+INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES ('C00000000000027', '201801088712', 'PRP-ECO-007', 'ECO000000000007');
+INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES ('C00000000000028', '201901044231', 'PRP-ECO-008', 'ECO000000000008');
+INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES ('C00000000000029', 'LLP0033118-LBN', 'PRP-ECO-009', 'ECO000000000009');
+INSERT INTO Company_ProposalContent (Company_ID, Company_SSM_No, Proposal_ID, Component_ID) VALUES ('C00000000000030', '202201044556', 'PRP-ECO-010', 'ECO000000000010');
 
-INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Proposal_ID, Component_ID) VALUES
-('ADV-1001', '2026-07-01', 'PRP-ECO-001', 'ECO000000000001'),
-('ADV-1002', '2026-08-01', 'PRP-ECO-002', 'ECO000000000002'),
-('ADV-1003', '2026-07-15', 'PRP-ECO-003', 'ECO000000000003'),
-('ADV-1004', '2026-06-20', 'PRP-ECO-004', 'ECO000000000004'),
-('ADV-1005', '2026-09-01', 'PRP-ECO-005', 'ECO000000000005'),
-('ADV-1006', '2026-07-10', 'PRP-ECO-006', 'ECO000000000006'),
-('ADV-1007', '2026-08-15', 'PRP-ECO-007', 'ECO000000000007'),
-('ADV-1008', '2026-10-01', 'PRP-ECO-008', 'ECO000000000008'),
-('ADV-1009', '2026-06-25', 'PRP-ECO-009', 'ECO000000000009'),
-('ADV-1010', '2026-07-05', 'PRP-ECO-010', 'ECO000000000010');
+INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1001', TO_DATE('2026-07-01', 'YYYY-MM-DD'), 'APP-2026-001', TO_TIMESTAMP('2026-03-01 09:15:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1002', TO_DATE('2026-08-01', 'YYYY-MM-DD'), 'APP-2026-002', TO_TIMESTAMP('2026-03-01 10:45:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1003', TO_DATE('2026-07-15', 'YYYY-MM-DD'), 'APP-2026-003', TO_TIMESTAMP('2026-03-02 14:30:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1004', TO_DATE('2026-06-20', 'YYYY-MM-DD'), 'APP-2026-004', TO_TIMESTAMP('2026-03-05 08:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1005', TO_DATE('2026-09-01', 'YYYY-MM-DD'), 'APP-2026-005', TO_TIMESTAMP('2026-03-06 16:20:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1006', TO_DATE('2026-07-10', 'YYYY-MM-DD'), 'APP-2026-006', TO_TIMESTAMP('2026-03-10 11:10:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1007', TO_DATE('2026-08-15', 'YYYY-MM-DD'), 'APP-2026-007', TO_TIMESTAMP('2026-03-12 15:45:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1008', TO_DATE('2026-10-01', 'YYYY-MM-DD'), 'APP-2026-008', TO_TIMESTAMP('2026-03-15 09:05:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1009', TO_DATE('2026-06-25', 'YYYY-MM-DD'), 'APP-2026-009', TO_TIMESTAMP('2026-03-18 13:20:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1010', TO_DATE('2026-07-05', 'YYYY-MM-DD'), 'APP-2026-010', TO_TIMESTAMP('2026-03-20 17:55:00', 'YYYY-MM-DD HH24:MI:SS'));
 
-INSERT INTO Advertisement_InvestmentApplication (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES
-('ADV-1001', '2026-07-01', 'APP-2026-8001', '2026-01-15'),
-('ADV-1002', '2026-08-01', 'APP-2026-8002', '2026-02-10'),
-('ADV-1003', '2026-07-15', 'APP-2026-8003', '2026-03-05'),
-('ADV-1004', '2026-06-20', 'APP-2026-8004', '2026-04-20'),
-('ADV-1005', '2026-09-01', 'APP-2026-8005', '2026-05-12'),
-('ADV-1006', '2026-07-10', 'APP-2026-8006', '2026-05-28'),
-('ADV-1007', '2026-08-15', 'APP-2026-8007', '2026-06-05'),
-('ADV-1008', '2026-10-01', 'APP-2026-8008', '2026-06-10'),
-('ADV-1009', '2026-06-25', 'APP-2026-8009', '2026-06-15'),
-('ADV-1010', '2026-07-05', 'APP-2026-8010', '2026-06-16');
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1001', TO_DATE('2026-07-01', 'YYYY-MM-DD'), 'APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1002', TO_DATE('2026-08-01', 'YYYY-MM-DD'), 'APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1003', TO_DATE('2026-07-15', 'YYYY-MM-DD'), 'APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1004', TO_DATE('2026-06-20', 'YYYY-MM-DD'), 'APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1005', TO_DATE('2026-09-01', 'YYYY-MM-DD'), 'APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1006', TO_DATE('2026-07-10', 'YYYY-MM-DD'), 'APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1007', TO_DATE('2026-08-15', 'YYYY-MM-DD'), 'APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1008', TO_DATE('2026-10-01', 'YYYY-MM-DD'), 'APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1009', TO_DATE('2026-06-25', 'YYYY-MM-DD'), 'APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1010', TO_DATE('2026-07-05', 'YYYY-MM-DD'), 'APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'));
 
-INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES
-('REP-001', 'RES-LBN-2026-101', 'PRP-ECO-001', 'ECO000000000001'),
-('REP-002', 'RES-LBN-2026-102', 'PRP-ECO-002', 'ECO000000000002'),
-('REP-003', 'RES-LBN-2026-103', 'PRP-ECO-003', 'ECO000000000003'),
-('REP-004', 'RES-LBN-2026-104', 'PRP-ECO-004', 'ECO000000000004'),
-('REP-005', 'RES-LBN-2026-105', 'PRP-ECO-005', 'ECO000000000005'),
-('REP-006', 'RES-LBN-2026-106', 'PRP-ECO-006', 'ECO000000000006'),
-('REP-007', 'RES-LBN-2026-107', 'PRP-ECO-007', 'ECO000000000007'),
-('REP-008', 'RES-LBN-2026-108', 'PRP-ECO-008', 'ECO000000000008'),
-('REP-009', 'RES-LBN-2026-109', 'PRP-ECO-009', 'ECO000000000009'),
-('REP-010', 'RES-LBN-2026-110', 'PRP-ECO-010', 'ECO000000000010');
+INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-001', 'RES-LBN-2026-101', 'PRP-ECO-001', 'ECO000000000001');
+INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-002', 'RES-LBN-2026-102', 'PRP-ECO-002', 'ECO000000000002');
+INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-003', 'RES-LBN-2026-103', 'PRP-ECO-003', 'ECO000000000003');
+INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-004', 'RES-LBN-2026-104', 'PRP-ECO-004', 'ECO000000000004');
+INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-005', 'RES-LBN-2026-105', 'PRP-ECO-005', 'ECO000000000005');
+INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-006', 'RES-LBN-2026-106', 'PRP-ECO-006', 'ECO000000000006');
+INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-007', 'RES-LBN-2026-107', 'PRP-ECO-007', 'ECO000000000007');
+INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-008', 'RES-LBN-2026-108', 'PRP-ECO-008', 'ECO000000000008');
+INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-009', 'RES-LBN-2026-109', 'PRP-ECO-009', 'ECO000000000009');
+INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-010', 'RES-LBN-2026-110', 'PRP-ECO-010', 'ECO000000000010');
 
-INSERT INTO Representative_ProposalScreening (Rep_ID, Board_Resolution_Ref, Screening_Meeting_ID, Screening_MOM_ID) VALUES
-('REP-001', 'RES-LBN-2026-101', 'MEET-2026-001', 'MOM-26-08-01'),
-('REP-002', 'RES-LBN-2026-102', 'MEET-2026-002', 'MOM-26-08-02'),
-('REP-003', 'RES-LBN-2026-103', 'MEET-2026-003', 'MOM-26-08-03'),
-('REP-004', 'RES-LBN-2026-104', 'MEET-2026-004', 'MOM-26-08-04'),
-('REP-005', 'RES-LBN-2026-105', 'MEET-2026-005', 'MOM-26-08-05'),
-('REP-006', 'RES-LBN-2026-106', 'MEET-2026-006', 'MOM-26-08-06'),
-('REP-007', 'RES-LBN-2026-107', 'MEET-2026-007', 'MOM-26-08-07'),
-('REP-008', 'RES-LBN-2026-108', 'MEET-2026-008', 'MOM-26-08-08'),
-('REP-009', 'RES-LBN-2026-109', 'MEET-2026-009', 'MOM-26-08-09'),
-('REP-010', 'RES-LBN-2026-110', 'MEET-2026-010', 'MOM-26-08-10');
+INSERT INTO Representative_Screening (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID) VALUES ('REP-001', 'RES-LBN-2026-101', 'MEET-2026-001', 'MOM-26-08-01');
+INSERT INTO Representative_Screening (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID) VALUES ('REP-002', 'RES-LBN-2026-102', 'MEET-2026-002', 'MOM-26-08-02');
+INSERT INTO Representative_Screening (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID) VALUES ('REP-003', 'RES-LBN-2026-103', 'MEET-2026-003', 'MOM-26-08-03');
+INSERT INTO Representative_Screening (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID) VALUES ('REP-004', 'RES-LBN-2026-104', 'MEET-2026-004', 'MOM-26-08-04');
+INSERT INTO Representative_Screening (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID) VALUES ('REP-005', 'RES-LBN-2026-105', 'MEET-2026-005', 'MOM-26-08-05');
+INSERT INTO Representative_Screening (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID) VALUES ('REP-006', 'RES-LBN-2026-106', 'MEET-2026-006', 'MOM-26-08-06');
+INSERT INTO Representative_Screening (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID) VALUES ('REP-007', 'RES-LBN-2026-107', 'MEET-2026-007', 'MOM-26-08-07');
+INSERT INTO Representative_Screening (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID) VALUES ('REP-008', 'RES-LBN-2026-108', 'MEET-2026-008', 'MOM-26-08-08');
+INSERT INTO Representative_Screening (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID) VALUES ('REP-009', 'RES-LBN-2026-109', 'MEET-2026-009', 'MOM-26-08-09');
+INSERT INTO Representative_Screening (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID) VALUES ('REP-010', 'RES-LBN-2026-110', 'MEET-2026-010', 'MOM-26-08-10');
 
-INSERT INTO Representative_ProposalScreening (Rep_ID, Board_Resolution_Ref, Screening_Meeting_ID, Screening_MOM_ID) VALUES
-('REP-001', 'RES-LBN-2026-101', 'MEET-2026-001', 'MOM-26-08-01'),
-('REP-002', 'RES-LBN-2026-102', 'MEET-2026-002', 'MOM-26-08-02'),
-('REP-003', 'RES-LBN-2026-103', 'MEET-2026-003', 'MOM-26-08-03'),
-('REP-004', 'RES-LBN-2026-104', 'MEET-2026-004', 'MOM-26-08-04'),
-('REP-005', 'RES-LBN-2026-105', 'MEET-2026-005', 'MOM-26-08-05'),
-('REP-006', 'RES-LBN-2026-106', 'MEET-2026-006', 'MOM-26-08-06'),
-('REP-007', 'RES-LBN-2026-107', 'MEET-2026-007', 'MOM-26-08-07'),
-('REP-008', 'RES-LBN-2026-108', 'MEET-2026-008', 'MOM-26-08-08'),
-('REP-009', 'RES-LBN-2026-109', 'MEET-2026-009', 'MOM-26-08-09'),
-('REP-010', 'RES-LBN-2026-110', 'MEET-2026-010', 'MOM-26-08-10');
+INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES ('EMP001', 'LBN-2021-001A', 'INSP-2026-001', TO_DATE('2026-07-01', 'YYYY-MM-DD'));
+INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES ('EMP002', 'LBN-2021-002A', 'INSP-2026-002', TO_DATE('2026-07-05', 'YYYY-MM-DD'));
+INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES ('EMP003', 'LBN-2022-014B', 'INSP-2026-003', TO_DATE('2026-07-12', 'YYYY-MM-DD'));
+INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES ('EMP004', 'LBN-2022-019A', 'INSP-2026-004', TO_DATE('2026-07-15', 'YYYY-MM-DD'));
+INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES ('EMP005', 'LBN-2023-005A', 'INSP-2026-005', TO_DATE('2026-07-22', 'YYYY-MM-DD'));
+INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES ('EMP006', 'LBN-2023-011A', 'INSP-2026-006', TO_DATE('2026-08-05', 'YYYY-MM-DD'));
+INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES ('EMP007', 'LBN-2023-044B', 'INSP-2026-007', TO_DATE('2026-08-10', 'YYYY-MM-DD'));
+INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES ('EMP008', 'LBN-2024-002A', 'INSP-2026-008', TO_DATE('2026-08-18', 'YYYY-MM-DD'));
+INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES ('EMP009', 'LBN-2024-015B', 'INSP-2026-009', TO_DATE('2026-08-25', 'YYYY-MM-DD'));
+INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES ('EMP010', 'LBN-2024-033A', 'INSP-2026-010', TO_DATE('2026-09-02', 'YYYY-MM-DD'));
 
-INSERT INTO Employee_QualityRecord (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date) VALUES
-('EMP001', 'LBN-2021-001A', 'INSP-2026-001', '2026-07-01'),
-('EMP002', 'LBN-2021-002A', 'INSP-2026-002', '2026-07-05'),
-('EMP003', 'LBN-2022-014B', 'INSP-2026-003', '2026-07-12'),
-('EMP004', 'LBN-2022-019A', 'INSP-2026-004', '2026-07-15'),
-('EMP005', 'LBN-2023-005A', 'INSP-2026-005', '2026-07-22'),
-('EMP006', 'LBN-2023-011A', 'INSP-2026-006', '2026-08-05'),
-('EMP007', 'LBN-2023-044B', 'INSP-2026-007', '2026-08-10'),
-('EMP008', 'LBN-2024-002A', 'INSP-2026-008', '2026-08-18'),
-('EMP009', 'LBN-2024-015B', 'INSP-2026-009', '2026-08-25'),
-('EMP010', 'LBN-2024-033A', 'INSP-2026-010', '2026-09-02');
+INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-001', 'TL-LBN-26-801', 'PRP-ECO-001', 'ECO000000000001');
+INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-002', 'TL-LBN-26-802', 'PRP-ECO-002', 'ECO000000000002');
+INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-003', 'TL-LBN-26-803', 'PRP-ECO-003', 'ECO000000000003');
+INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-004', 'TL-LBN-26-804', 'PRP-ECO-004', 'ECO000000000004');
+INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-005', 'TL-LBN-26-805', 'PRP-ECO-005', 'ECO000000000005');
+INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-006', 'TL-LBN-26-806', 'PRP-ECO-006', 'ECO000000000006');
+INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-007', 'TL-LBN-26-807', 'PRP-ECO-007', 'ECO000000000007');
+INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-008', 'TL-LBN-26-808', 'PRP-ECO-008', 'ECO000000000008');
+INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-009', 'TL-LBN-26-809', 'PRP-ECO-009', 'ECO000000000009');
+INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-010', 'TL-LBN-26-810', 'PRP-ECO-010', 'ECO000000000010');
 
-INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES
-('LOT-001', 'TL-LBN-26-801', 'PRP-ECO-001', 'ECO000000000001'),
-('LOT-002', 'TL-LBN-26-802', 'PRP-ECO-002', 'ECO000000000002'),
-('LOT-003', 'TL-LBN-26-803', 'PRP-ECO-003', 'ECO000000000003'),
-('LOT-004', 'TL-LBN-26-804', 'PRP-ECO-004', 'ECO000000000004'),
-('LOT-005', 'TL-LBN-26-805', 'PRP-ECO-005', 'ECO000000000005'),
-('LOT-006', 'TL-LBN-26-806', 'PRP-ECO-006', 'ECO000000000006'),
-('LOT-007', 'TL-LBN-26-807', 'PRP-ECO-007', 'ECO000000000007'),
-('LOT-008', 'TL-LBN-26-808', 'PRP-ECO-008', 'ECO000000000008'),
-('LOT-009', 'TL-LBN-26-809', 'PRP-ECO-009', 'ECO000000000009'),
-('LOT-010', 'TL-LBN-26-810', 'PRP-ECO-010', 'ECO000000000010');
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-001', 'TL-LBN-26-801', 'APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-002', 'TL-LBN-26-802', 'APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-003', 'TL-LBN-26-803', 'APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-004', 'TL-LBN-26-804', 'APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-005', 'TL-LBN-26-805', 'APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-006', 'TL-LBN-26-806', 'APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-007', 'TL-LBN-26-807', 'APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-008', 'TL-LBN-26-808', 'APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-009', 'TL-LBN-26-809', 'APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-010', 'TL-LBN-26-810', 'APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'));
 
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES
-('LOT-001', 'TL-LBN-26-801', 'APP-2026-8001', '2026-01-15'),
-('LOT-002', 'TL-LBN-26-802', 'APP-2026-8002', '2026-02-10'),
-('LOT-003', 'TL-LBN-26-803', 'APP-2026-8003', '2026-03-05'),
-('LOT-004', 'TL-LBN-26-804', 'APP-2026-8004', '2026-04-20'),
-('LOT-005', 'TL-LBN-26-805', 'APP-2026-8005', '2026-05-12'),
-('LOT-006', 'TL-LBN-26-806', 'APP-2026-8006', '2026-05-28'),
-('LOT-007', 'TL-LBN-26-807', 'APP-2026-8007', '2026-06-05'),
-('LOT-008', 'TL-LBN-26-808', 'APP-2026-8008', '2026-06-10'),
-('LOT-009', 'TL-LBN-26-809', 'APP-2026-8009', '2026-06-15'),
-('LOT-010', 'TL-LBN-26-810', 'APP-2026-8010', '2026-06-16');
+INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-001', 'MSP-LBN-2026-001', 'PRP-ECO-001', 'ECO000000000001');
+INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-002', 'MSP-LBN-2026-005', 'PRP-ECO-002', 'ECO000000000002');
+INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-003', 'MSP-LBN-2026-012', 'PRP-ECO-003', 'ECO000000000003');
+INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-004', 'MSP-LBN-2026-018', 'PRP-ECO-004', 'ECO000000000004');
+INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-005', 'MSP-LBN-2026-022', 'PRP-ECO-005', 'ECO000000000005');
+INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-006', 'MSP-LBN-2026-030', 'PRP-ECO-006', 'ECO000000000006');
+INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-007', 'MSP-LBN-2026-035', 'PRP-ECO-007', 'ECO000000000007');
+INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-008', 'MSP-LBN-2026-042', 'PRP-ECO-008', 'ECO000000000008');
+INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-009', 'MSP-LBN-2026-050', 'PRP-ECO-009', 'ECO000000000009');
+INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-010', 'MSP-LBN-2026-061', 'PRP-ECO-010', 'ECO000000000010');
 
-INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES
-('LND-001', 'MSP-LBN-2026-001', 'PRP-ECO-001', 'ECO000000000001'),
-('LND-002', 'MSP-LBN-2026-005', 'PRP-ECO-002', 'ECO000000000002'),
-('LND-003', 'MSP-LBN-2026-012', 'PRP-ECO-003', 'ECO000000000003'),
-('LND-004', 'MSP-LBN-2026-018', 'PRP-ECO-004', 'ECO000000000004'),
-('LND-005', 'MSP-LBN-2026-022', 'PRP-ECO-005', 'ECO000000000005'),
-('LND-006', 'MSP-LBN-2026-030', 'PRP-ECO-006', 'ECO000000000006'),
-('LND-007', 'MSP-LBN-2026-035', 'PRP-ECO-007', 'ECO000000000007'),
-('LND-008', 'MSP-LBN-2026-042', 'PRP-ECO-008', 'ECO000000000008'),
-('LND-009', 'MSP-LBN-2026-050', 'PRP-ECO-009', 'ECO000000000009'),
-('LND-010', 'MSP-LBN-2026-055', 'PRP-ECO-010', 'ECO000000000010');
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-001', 'MSP-LBN-2026-001', 'APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-002', 'MSP-LBN-2026-005', 'APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-003', 'MSP-LBN-2026-012', 'APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-004', 'MSP-LBN-2026-018', 'APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-005', 'MSP-LBN-2026-022', 'APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-006', 'MSP-LBN-2026-030', 'APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-007', 'MSP-LBN-2026-035', 'APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-008', 'MSP-LBN-2026-042', 'APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-009', 'MSP-LBN-2026-050', 'APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-010', 'MSP-LBN-2026-061', 'APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'));
 
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES
-('LND-001', 'MSP-LBN-2026-001', 'APP-2026-8001', '2026-01-15'),
-('LND-002', 'MSP-LBN-2026-005', 'APP-2026-8002', '2026-02-10'),
-('LND-003', 'MSP-LBN-2026-012', 'APP-2026-8003', '2026-03-05'),
-('LND-004', 'MSP-LBN-2026-018', 'APP-2026-8004', '2026-04-20'),
-('LND-005', 'MSP-LBN-2026-022', 'APP-2026-8005', '2026-05-12'),
-('LND-006', 'MSP-LBN-2026-030', 'APP-2026-8006', '2026-05-28'),
-('LND-007', 'MSP-LBN-2026-035', 'APP-2026-8007', '2026-06-05'),
-('LND-008', 'MSP-LBN-2026-042', 'APP-2026-8008', '2026-06-10'),
-('LND-009', 'MSP-LBN-2026-050', 'APP-2026-8009', '2026-06-15'),
-('LND-010', 'MSP-LBN-2026-055', 'APP-2026-8010', '2026-06-16');
+INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-001', 'DOSH/LBN/2021/089', 'PLN001', 'Labuan Eco-Tourism Resort Complex');
+INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-002', 'DOSH/SBH/2023/142', 'PLN002', 'Sabah Green Hydrogen Production Facility');
+INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-003', 'DOSH/LBN/2020/011', 'PLN003', 'Borneo Deepsea Port Logistics Hub');
+INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-004', 'DOSH/SBH/2024/301', 'PLN004', 'Labuan Smart Financial District Hub');
+INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-005', 'DOSH/LBN/2022/224', 'PLN005', 'Sabah Agro-Tech Automated Cultivation Center');
+INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-006', 'DOSH/LBN/2025/005', 'PLN006', 'Borneo Retail & Duty-Free Outlet Village');
+INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-007', 'DOSH/SBH/2019/512', 'PLN007', 'Labuan Aquaculture Hatchery & Processing Plant');
+INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-008', 'DOSH/LBN/2023/055', 'PLN008', 'Sabah Biomass Waste-to-Energy Facility');
+INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-009', 'DOSH/SBH/2021/119', 'PLN009', 'East Malaysia Cloud Data Logistics Facility');
+INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-010', 'DOSH/LBN/2024/094', 'PLN010', 'Labuan Maritime Maintenance & Drydock Yard');
 
-INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES
-('INS-2026-001', 'DOSH/LBN/2021/089', 'PLN-2026-001', 'Explosion Prevention Management Plan - Phase 1'),
-('INS-2026-002', 'DOSH/SBH/2023/142', 'PLN-2026-002', 'Hazardous Atmosphere Isolation System Strategy'),
-('INS-2026-003', 'DOSH/LBN/2020/011', 'PLN-2026-003', 'Combustible Dust Mitigation and Safety Plan'),
-('INS-2026-004', 'DOSH/SBH/2024/301', 'PLN-2026-004', 'Industrial Refinery Blast Mitigation Blueprint'),
-('INS-2026-005', 'DOSH/LBN/2022/224', 'PLN-2026-005', 'Chemical Storage Pressure Release Optimization Plan'),
-('INS-2026-006', 'DOSH/LBN/2025/005', 'PLN-2026-006', 'High-Risk Thermal Runaway Suppression Operations'),
-('INS-2026-007', 'DOSH/SBH/2019/512', 'PLN-2026-007', 'Explosion-Proof Mechanical Equipment Audit Framework'),
-('INS-2026-008', 'DOSH/LBN/2023/055', 'PLN-2026-008', 'Petrochemical Gas Detection Layout Action Protocol'),
-('INS-2026-009', 'DOSH/SBH/2021/119', 'PLN-2026-009', 'Plant Deflagration Venting System Structural Plan'),
-('INS-2026-010', 'DOSH/LBN/2024/094', 'PLN-2026-010', 'Emergency Explosion Containment Response Framework');
+INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES ('LND-001', 'MSP-LBN-2026-001', 'AGR-2026-001', 'SD-2026-8801');
+INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES ('LND-002', 'MSP-LBN-2026-005', 'AGR-2026-002', 'SD-2026-8802');
+INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES ('LND-003', 'MSP-LBN-2026-012', 'AGR-2026-003', 'SD-2026-8803');
+INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES ('LND-004', 'MSP-LBN-2026-018', 'AGR-2026-004', 'SD-2026-8804');
+INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES ('LND-005', 'MSP-LBN-2026-022', 'AGR-2026-005', 'SD-2026-8805');
+INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES ('LND-006', 'MSP-LBN-2026-030', 'AGR-2026-006', 'SD-2026-8806');
+INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES ('LND-007', 'MSP-LBN-2026-035', 'AGR-2026-007', 'SD-2026-8807');
+INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES ('LND-008', 'MSP-LBN-2026-042', 'AGR-2026-008', 'SD-2026-8808');
+INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES ('LND-009', 'MSP-LBN-2026-050', 'AGR-2026-009', 'SD-2026-8809');
+INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES ('LND-010', 'MSP-LBN-2026-061', 'AGR-2026-010', 'SD-2026-8810');
 
-INSERT INTO Land_Agreement (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID) VALUES
-('LND-001', 'MSP-LBN-2026-001', 'AGR-2026-001', 'SD-2026-8801'),
-('LND-002', 'MSP-LBN-2026-005', 'AGR-2026-002', 'SD-2026-8802'),
-('LND-003', 'MSP-LBN-2026-012', 'AGR-2026-003', 'SD-2026-8803'),
-('LND-004', 'MSP-LBN-2026-018', 'AGR-2026-004', 'SD-2026-8804'),
-('LND-005', 'MSP-LBN-2026-022', 'AGR-2026-005', 'SD-2026-8805'),
-('LND-006', 'MSP-LBN-2026-030', 'AGR-2026-006', 'SD-2026-8806'),
-('LND-007', 'MSP-LBN-2026-035', 'AGR-2026-007', 'SD-2026-8807'),
-('LND-008', 'MSP-LBN-2026-042', 'AGR-2026-008', 'SD-2026-8808'),
-('LND-009', 'MSP-LBN-2026-050', 'AGR-2026-009', 'SD-2026-8809'),
-('LND-010', 'MSP-LBN-2026-055', 'AGR-2026-010', 'SD-2026-8810');
+INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES ('LOT-001', 'TL-LBN-26-801', 'AGR-2026-001', 'SD-2026-8801');
+INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES ('LOT-002', 'TL-LBN-26-802', 'AGR-2026-002', 'SD-2026-8802');
+INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES ('LOT-003', 'TL-LBN-26-803', 'AGR-2026-003', 'SD-2026-8803');
+INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES ('LOT-004', 'TL-LBN-26-804', 'AGR-2026-004', 'SD-2026-8804');
+INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES ('LOT-005', 'TL-LBN-26-805', 'AGR-2026-005', 'SD-2026-8805');
+INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES ('LOT-006', 'TL-LBN-26-806', 'AGR-2026-006', 'SD-2026-8806');
+INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES ('LOT-007', 'TL-LBN-26-807', 'AGR-2026-007', 'SD-2026-8807');
+INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES ('LOT-008', 'TL-LBN-26-808', 'AGR-2026-008', 'SD-2026-8808');
+INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES ('LOT-009', 'TL-LBN-26-809', 'AGR-2026-009', 'SD-2026-8809');
+INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES ('LOT-010', 'TL-LBN-26-810', 'AGR-2026-010', 'SD-2026-8810');
 
-INSERT INTO Lot_Agreement (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID) VALUES
-('LOT-001', 'TL-LBN-26-801', 'AGR-2026-001', 'SD-2026-8801'),
-('LOT-002', 'TL-LBN-26-802', 'AGR-2026-002', 'SD-2026-8802'),
-('LOT-003', 'TL-LBN-26-803', 'AGR-2026-003', 'SD-2026-8803'),
-('LOT-004', 'TL-LBN-26-804', 'AGR-2026-004', 'SD-2026-8804'),
-('LOT-005', 'TL-LBN-26-805', 'AGR-2026-005', 'SD-2026-8805'),
-('LOT-006', 'TL-LBN-26-806', 'AGR-2026-006', 'SD-2026-8806'),
-('LOT-007', 'TL-LBN-26-807', 'AGR-2026-007', 'SD-2026-8807'),
-('LOT-008', 'TL-LBN-26-808', 'AGR-2026-008', 'SD-2026-8808'),
-('LOT-009', 'TL-LBN-26-809', 'AGR-2026-009', 'SD-2026-8809'),
-('LOT-010', 'TL-LBN-26-810', 'AGR-2026-010', 'SD-2026-8810');
+COMMIT;
