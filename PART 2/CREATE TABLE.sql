@@ -261,15 +261,18 @@ CREATE TABLE Developer (
 -- =====================================================================
 
 CREATE TABLE Investment_Application (
-    Application_ID               VARCHAR2(15) NOT NULL,
-    Application_Submission_Date  DATE NOT NULL,
-    Application_Review_Date      DATE,
-    Application_CurrentStatus    VARCHAR2(50) NOT NULL CHECK (Application_CurrentStatus IN ('Pending', 'Under Review', 'Approved', 'Rejected')),
-    Application_Remark           VARCHAR2(255),
-    Application_ProcessingTime   VARCHAR2(30) NOT NULL,
-    Application_Fee              NUMBER(8,2) NOT NULL,
-    Investor_ID                  VARCHAR2(15) NOT NULL,
-    Rep_ID                       VARCHAR2(15) NOT NULL,
+    Application_ID VARCHAR2(15) NOT NULL,
+    Application_Submission_Date DATE NOT NULL,
+    Application_Review_Date DATE,
+    Application_CurrentStatus VARCHAR2(50) NOT NULL CHECK (Application_CurrentStatus IN ('Pending', 'Under Review', 'Approved', 'Rejected')),
+    Application_Remark VARCHAR2(255),
+    Application_ProcessingTime VARCHAR2(30) NOT NULL,
+    Application_Fee NUMBER(8,2) NOT NULL,
+    Application_Method VARCHAR2(30) NOT NULL CHECK (Application_Method IN ('LinkedIn', 'Company Page', 'Physical Form', 'Official Email', 'Agency Referral')),
+    Application_Expiration_Date DATE,
+    Application_Description VARCHAR2(255),
+    Investor_ID VARCHAR2(20) NOT NULL,
+    Rep_ID VARCHAR2(15) NOT NULL,
     CONSTRAINT pk_investment_application PRIMARY KEY (Application_ID, Application_Submission_Date),
     CONSTRAINT chk_application_dates CHECK (Application_Review_Date >= Application_Submission_Date),
     CONSTRAINT fk_invapp_inv FOREIGN KEY (Investor_ID) REFERENCES Investor(Investor_ID),
@@ -366,7 +369,7 @@ CREATE TABLE Infrastructure (
     IS_RoadAccessSpec           VARCHAR2(30) NOT NULL CHECK (IS_RoadAccessSpec IN ('Single Lane', 'Dual Carriageway', 'Heavy Haul', 'Unpaved')),
     IS_WaterSupplyVolReq        NUMBER(10,2) NOT NULL CHECK (IS_WaterSupplyVolReq >= 0.00),
     IS_ElectricityLoadCapacity  NUMBER(10,2) NOT NULL CHECK (IS_ElectricityLoadCapacity >= 0.00),
-    IS_TelecomBandwidthReq      VARCHAR2(20) NOT NULL CHECK (IS_TelecomBandwidthReq IN ('Basic Voice/Data', 'High-Speed Fiber', 'Dedicated Leased Line')),
+    IS_TelecomBandwidthReq      VARCHAR2(25) NOT NULL CHECK (IS_TelecomBandwidthReq IN ('Basic Voice/Data', 'High-Speed Fiber', 'Dedicated Leased Line')),
     IS_MaintenanceResponsibility VARCHAR2(30) NOT NULL CHECK (IS_MaintenanceResponsibility IN ('Labuan Corp', 'Private Developer', 'Joint Sharing')),
     IS_EstimatedInfrastructureCost NUMBER(15,2) DEFAULT 0.00 CHECK (IS_EstimatedInfrastructureCost >= 0.00),
     IS_RoadLoadCapacity_Ton     NUMBER(3) NOT NULL CHECK (IS_RoadLoadCapacity_Ton > 0),
@@ -473,19 +476,19 @@ CREATE TABLE Investment_Viability (
 -- =====================================================================
 
 CREATE TABLE Agreement (
-    Agreement_ID              VARCHAR2(15) NOT NULL,
-    Agreement_StampDutyID     VARCHAR2(20) NOT NULL,
-    Agreement_Date            DATE NOT NULL,
-    Agreement_Status          VARCHAR2(20) DEFAULT 'Draft' CHECK (Agreement_Status IN ('Draft', 'Active', 'Expired', 'Terminated')),
-    Agreement_Venue           VARCHAR2(100) NOT NULL,
-    Agreement_Title           VARCHAR2(100) NOT NULL,
-    Agreement_InvestorWitnessName VARCHAR2(100) NOT NULL,
-    Agreement_EffectiveDate   DATE NOT NULL,
-    Agreement_GoverningLaw    VARCHAR2(30) DEFAULT 'Laws of Malaysia' NOT NULL,
+    Agreement_ID VARCHAR2(15) NOT NULL,
+    Agreement_StampDutyID VARCHAR2(20) NOT NULL,
+    Agreement_Date DATE NOT NULL,
+    Agreement_Status VARCHAR2(20) DEFAULT 'Draft' CHECK (Agreement_Status IN ('Draft', 'Active', 'Expired', 'Terminated')),
+    Agreement_Venue VARCHAR2(100) NOT NULL,
+    Agreement_Title VARCHAR2(100) NOT NULL,
+    Agreement_Description VARCHAR2(255),
+    Agreement_EffectiveDate DATE NOT NULL,
+    Agreement_GoverningLaw VARCHAR2(30) DEFAULT 'Laws of Malaysia' NOT NULL,
     Agreement_StampDutyReceipt VARCHAR2(30) NOT NULL,
-    Proposal_ID               VARCHAR2(20) NOT NULL,
-    Department_ID             VARCHAR2(15) NOT NULL,
-    Approval_ID               VARCHAR2(15) NOT NULL,
+    Proposal_ID VARCHAR2(20) NOT NULL,
+    Department_ID VARCHAR2(15) NOT NULL,
+    Approval_ID VARCHAR2(15) NOT NULL,
     CONSTRAINT pk_agreement PRIMARY KEY (Agreement_ID, Agreement_StampDutyID),
     CONSTRAINT chk_agreement_dates CHECK (Agreement_EffectiveDate >= Agreement_Date),
     CONSTRAINT fk_agr_prop FOREIGN KEY (Proposal_ID) REFERENCES Proposal_Content(Proposal_ID),
@@ -495,12 +498,12 @@ CREATE TABLE Agreement (
 );
 
 CREATE TABLE Social (
-    Social_ID VARCHAR2(15) NOT NULL,
+    Social_ID VARCHAR2(10) NOT NULL,
     Community_Consultation_Ref VARCHAR2(30) NOT NULL,
     Social_Score NUMBER(3) NOT NULL CHECK (Social_Score BETWEEN 0 AND 100),
     Community_Impact_Score NUMBER(3) NOT NULL CHECK (Community_Impact_Score BETWEEN 0 AND 100),
     Social_Benefit_Description VARCHAR2(255),
-    Urbanisation_Level VARCHAR2(15) NOT NULL CHECK (Urbanisation_Level IN ('Rural', 'Suburban', 'Urban', 'Highly Urbanized')),
+    Urbanisation_Level VARCHAR2(20) NOT NULL CHECK (Urbanisation_Level IN ('Rural', 'Suburban', 'Urban', 'Highly Urbanized')),
     Local_Vendor_Engagement_Target NUMBER(5,2) DEFAULT 0.00 CHECK (Local_Vendor_Engagement_Target BETWEEN 0.00 AND 100.00),
     Social_Compliance_Status VARCHAR2(20) DEFAULT 'Pending' CHECK (Social_Compliance_Status IN ('Compliant', 'Non-Compliant', 'Pending')),
     Public_Safety_Rating NUMBER(2,1) CHECK (Public_Safety_Rating BETWEEN 1.0 AND 5.0),
@@ -512,7 +515,7 @@ CREATE TABLE Social (
 );
 
 CREATE TABLE Economic (
-    Economic_ID              VARCHAR2(15) NOT NULL,
+    Economic_ID              VARCHAR2(10) NOT NULL,
     MOF_Tracking_Code        VARCHAR2(30) NOT NULL,
     Economic_Impact_Score    NUMBER(3) NOT NULL CHECK (Economic_Impact_Score BETWEEN 0 AND 100),
     Job_Creation_Multiplier  NUMBER(3,1) NOT NULL CHECK (Job_Creation_Multiplier >= 1.0),
@@ -529,7 +532,7 @@ CREATE TABLE Economic (
 );
 
 CREATE TABLE Environmental (
-    Environmental_ID              VARCHAR2(15) NOT NULL,
+    Environmental_ID              VARCHAR2(10) NOT NULL,
     DOE_Reference_Number          VARCHAR2(30) NOT NULL,
     Carbon_Emission_Target        NUMBER(5,2) NOT NULL CHECK (Carbon_Emission_Target >= 0.00),
     Renewable_Energy_Ratio        NUMBER(5,2) DEFAULT 0.00 CHECK (Renewable_Energy_Ratio BETWEEN 0.00 AND 100.00),
@@ -722,10 +725,13 @@ CREATE TABLE Investor_Advertisement (
     MIDA_Registration_Ref VARCHAR2(30) NOT NULL,
     Advertisement_ID VARCHAR2(15) NOT NULL,
     Advertisement_Type VARCHAR2(30) NOT NULL,
+    
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_investor_adv PRIMARY KEY (Advertisement_ID, Investor_ID, MIDA_Registration_Ref),
+    
     -- Check Constraints
     CONSTRAINT chk_adv_type CHECK (Advertisement_Type IN ('Job Vacancy', 'Land Tender', 'Commercial Lease', 'Service Contract')),
+    
     -- Foreign Key Constraints
     CONSTRAINT fk_adv_investor FOREIGN KEY (Investor_ID) REFERENCES Investor(Investor_ID)
 );
@@ -735,8 +741,10 @@ CREATE TABLE Employee_Advertisement (
     Employee_Contract_No VARCHAR2(30) NOT NULL,
     Advertisement_ID VARCHAR2(15) NOT NULL,
     Advertisement_Date DATE NOT NULL,
+    
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_emp_adv PRIMARY KEY (Employee_ID, Employee_Contract_No, Advertisement_ID),
+    
     -- Foreign Key Constraints
     CONSTRAINT fk_emp_adv_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID)
 );
@@ -746,8 +754,10 @@ CREATE TABLE Employee_JobDescription (
     Employee_Contract_No VARCHAR2(30) NOT NULL,
     Job_ID VARCHAR2(15) NOT NULL,
     Job_Publish_Date DATE NOT NULL,
+    
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_emp_jobdesc PRIMARY KEY (Employee_ID, Employee_Contract_No, Job_ID),
+    
     -- Foreign Key Constraints
     CONSTRAINT fk_ejd_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
     CONSTRAINT fk_ejd_job FOREIGN KEY (Job_ID) REFERENCES Job_Description(Job_ID)
@@ -758,8 +768,10 @@ CREATE TABLE Employee_Agreement (
     Employee_Contract_No VARCHAR2(30) NOT NULL,
     Agreement_ID VARCHAR2(15) NOT NULL,
     Agreement_Stamp_Duty_ID VARCHAR2(30) NOT NULL,
+    
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_emp_agreement PRIMARY KEY (Employee_ID, Employee_Contract_No, Agreement_ID),
+    
     -- Foreign Key Constraints
     CONSTRAINT fk_ea_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
     CONSTRAINT fk_ea_agreement FOREIGN KEY (Agreement_ID) REFERENCES Agreement(Agreement_ID)
@@ -770,8 +782,10 @@ CREATE TABLE Employee_Document (
     Person_IC VARCHAR2(20) NOT NULL,
     Doc_ID VARCHAR2(15) NOT NULL,
     Folder_ID VARCHAR2(15) NOT NULL,
+    
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_emp_document PRIMARY KEY (Person_ID, Person_IC, Doc_ID, Folder_ID),
+    
     -- Foreign Key Constraints
     CONSTRAINT fk_ed_person FOREIGN KEY (Person_ID, Person_IC) REFERENCES Person(Person_ID, Person_IC),
     CONSTRAINT fk_ed_document FOREIGN KEY (Doc_ID, Folder_ID) REFERENCES Document(Doc_ID, Folder_ID)
@@ -782,8 +796,10 @@ CREATE TABLE Employee_Penalty (
     Employee_Contract_No VARCHAR2(30) NOT NULL,
     Penalty_ID VARCHAR2(15) NOT NULL,
     Penalty_IssueDate DATE NOT NULL,
+    
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_emp_penalty PRIMARY KEY (Employee_ID, Employee_Contract_No, Penalty_ID, Penalty_IssueDate),
+    
     -- Foreign Key Constraints
     CONSTRAINT fk_ep_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
     CONSTRAINT fk_ep_penalty FOREIGN KEY (Penalty_ID, Penalty_IssueDate) REFERENCES Penalty(Penalty_ID, Penalty_IssueDate)
@@ -794,8 +810,10 @@ CREATE TABLE Employee_Termination (
     Employee_Contract_No VARCHAR2(30) NOT NULL,
     Termination_ID VARCHAR2(15) NOT NULL,
     Termination_Date DATE NOT NULL,
+    
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_emp_termination PRIMARY KEY (Employee_ID, Employee_Contract_No, Termination_ID, Termination_Date),
+    
     -- Foreign Key Constraints
     CONSTRAINT fk_et_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
     CONSTRAINT fk_et_termination FOREIGN KEY (Termination_ID, Termination_Date) REFERENCES Termination(Termination_ID, Termination_Date)
@@ -806,8 +824,10 @@ CREATE TABLE Employee_JobApplication (
     Employee_Contract_No VARCHAR2(30) NOT NULL,
     Job_Application_ID VARCHAR2(15) NOT NULL,
     Job_Application_TimeStamp TIMESTAMP NOT NULL,
+    
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_emp_jobapp PRIMARY KEY (Employee_ID, Employee_Contract_No, Job_Application_ID),
+    
     -- Foreign Key Constraints
     CONSTRAINT fk_eja_employee FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
     CONSTRAINT fk_eja_application FOREIGN KEY (Job_Application_ID) REFERENCES Job_Application(Job_Application_ID)
@@ -818,8 +838,10 @@ CREATE TABLE Inspector_Land (
     DOSH_Registration_No VARCHAR2(30) NOT NULL,
     Land_ID VARCHAR2(15) NOT NULL,
     Land_Master_Survey_Plan_No VARCHAR2(30) NOT NULL,
+    
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_inspector_land PRIMARY KEY (Inspector_ID, DOSH_Registration_No, Land_ID, Land_Master_Survey_Plan_No),
+    
     -- Foreign Key Constraints
     CONSTRAINT fk_il_inspector FOREIGN KEY (Inspector_ID, DOSH_Registration_No) REFERENCES Inspector(Inspector_ID, DOSH_Registration_No),
     CONSTRAINT fk_il_land FOREIGN KEY (Land_ID, Land_Master_Survey_Plan_No) REFERENCES Land(Land_ID, Land_Master_Survey_Plan_No)
@@ -830,8 +852,10 @@ CREATE TABLE Inspector_Lot (
     DOSH_Registration_No VARCHAR2(30) NOT NULL,
     Lot_ID VARCHAR2(15) NOT NULL,
     Lot_TitleNo VARCHAR2(30) NOT NULL,
+    
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_inspector_lot PRIMARY KEY (Inspector_ID, DOSH_Registration_No, Lot_ID, Lot_TitleNo),
+    
     -- Foreign Key Constraints
     CONSTRAINT fk_ilot_inspector FOREIGN KEY (Inspector_ID, DOSH_Registration_No) REFERENCES Inspector(Inspector_ID, DOSH_Registration_No),
     CONSTRAINT fk_ilot_lot FOREIGN KEY (Lot_ID, Lot_TitleNo) REFERENCES Lot(Lot_ID, Lot_TitleNo)
@@ -843,6 +867,7 @@ CREATE TABLE InvestmentCommittee_Screening (
     Committee_TermSessionCode VARCHAR2(20) NOT NULL,
     Screening_MeetingID VARCHAR2(20) NOT NULL,
     Screening_MOM_ID VARCHAR2(25) NOT NULL,
+    
     CONSTRAINT pk_ic_propscreen PRIMARY KEY (Committee_ID, Committee_TermSessionCode, Screening_MeetingID, Screening_MOM_ID),
     CONSTRAINT fk_icps_committee FOREIGN KEY (Committee_ID, Committee_TermSessionCode) REFERENCES Investment_Committee(Committee_ID, Committee_TermSessionCode),
     CONSTRAINT fk_icps_screening FOREIGN KEY (Screening_MeetingID, Screening_MOM_ID) REFERENCES Proposal_Screening(Screening_MeetingID, Screening_MOM_ID)
@@ -854,6 +879,7 @@ CREATE TABLE InvestmentCommittee_Approval (
     Committee_TermSessionCode VARCHAR2(20) NOT NULL,
     Approval_ID VARCHAR2(15) NOT NULL,
     Approval_LetterID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_ic_approval PRIMARY KEY (Committee_ID, Committee_TermSessionCode, Approval_ID, Approval_LetterID),
     CONSTRAINT fk_icapp_committee FOREIGN KEY (Committee_ID, Committee_TermSessionCode) REFERENCES Investment_Committee(Committee_ID, Committee_TermSessionCode),
     CONSTRAINT fk_icapp_approval FOREIGN KEY (Approval_ID, Approval_LetterID) REFERENCES Approval(Approval_ID, Approval_LetterID)
@@ -865,6 +891,7 @@ CREATE TABLE InvestmentCommittee_Proposal (
     Committee_TermSessionCode VARCHAR2(20) NOT NULL,
     Proposal_ID VARCHAR2(20) NOT NULL,
     Component_ID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_ic_propcontent PRIMARY KEY (Committee_ID, Committee_TermSessionCode, Proposal_ID, Component_ID),
     CONSTRAINT fk_icpc_committee FOREIGN KEY (Committee_ID, Committee_TermSessionCode) REFERENCES Investment_Committee(Committee_ID, Committee_TermSessionCode),
     CONSTRAINT fk_icpc_proposal FOREIGN KEY (Proposal_ID, Component_ID) REFERENCES Proposal_Content(Proposal_ID, Component_ID)
@@ -876,6 +903,7 @@ CREATE TABLE InvestmentCommittee_Terminate (
     Committee_TermSessionCode VARCHAR2(20) NOT NULL,
     Termination_ID VARCHAR2(15) NOT NULL,
     Termination_Date DATE NOT NULL,
+    
     CONSTRAINT pk_ic_termination PRIMARY KEY (Committee_ID, Committee_TermSessionCode, Termination_ID, Termination_Date),
     CONSTRAINT fk_icterm_committee FOREIGN KEY (Committee_ID, Committee_TermSessionCode) REFERENCES Investment_Committee(Committee_ID, Committee_TermSessionCode),
     CONSTRAINT fk_icterm_term FOREIGN KEY (Termination_ID, Termination_Date) REFERENCES Termination(Termination_ID, Termination_Date)
@@ -887,6 +915,7 @@ CREATE TABLE Representative_Agreement (
     Board_Resolution_Ref VARCHAR2(30) NOT NULL,
     Agreement_ID VARCHAR2(15) NOT NULL,
     Agreement_StampDutyID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_rep_agreement PRIMARY KEY (Rep_ID, Board_Resolution_Ref, Agreement_ID, Agreement_StampDutyID),
     CONSTRAINT fk_repagr_rep FOREIGN KEY (Rep_ID, Board_Resolution_Ref) REFERENCES Representative(Rep_ID, Board_Resolution_Ref),
     CONSTRAINT fk_repagr_agr FOREIGN KEY (Agreement_ID, Agreement_StampDutyID) REFERENCES Agreement(Agreement_ID, Agreement_StampDutyID)
@@ -898,6 +927,7 @@ CREATE TABLE Representative_Employee (
     Board_Resolution_Ref VARCHAR2(30) NOT NULL,
     Employee_ID VARCHAR2(15) NOT NULL,
     Employee_Contract_No VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_rep_employee PRIMARY KEY (Rep_ID, Board_Resolution_Ref, Employee_ID, Employee_Contract_No),
     CONSTRAINT fk_repemp_rep FOREIGN KEY (Rep_ID, Board_Resolution_Ref) REFERENCES Representative(Rep_ID, Board_Resolution_Ref),
     CONSTRAINT fk_repemp_emp FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No)
@@ -909,6 +939,7 @@ CREATE TABLE Advertisement_JobDescription (
     Advertisement_StartDate DATE NOT NULL,
     Job_ID VARCHAR2(15) NOT NULL,
     Job_PublishDate DATE NOT NULL,
+    
     CONSTRAINT pk_adv_jobdesc PRIMARY KEY (Advertisement_ID, Advertisement_StartDate, Job_ID, Job_PublishDate),
     CONSTRAINT fk_advjd_adv FOREIGN KEY (Advertisement_ID, Advertisement_StartDate) REFERENCES Advertisement(Advertisement_ID, Advertisement_StartDate),
     CONSTRAINT fk_advjd_job FOREIGN KEY (Job_ID, Job_PublishDate) REFERENCES Job_Description(Job_ID, Job_PublishDate)
@@ -920,6 +951,7 @@ CREATE TABLE Lot_Approval (
     Lot_TitleNo VARCHAR2(30) NOT NULL,
     Approval_ID VARCHAR2(15) NOT NULL,
     Approval_LetterID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_lot_approval PRIMARY KEY (Lot_ID, Lot_TitleNo, Approval_ID, Approval_LetterID),
     CONSTRAINT fk_lotapp_lot FOREIGN KEY (Lot_ID, Lot_TitleNo) REFERENCES Lot(Lot_ID, Lot_TitleNo),
     CONSTRAINT fk_lotapp_appr FOREIGN KEY (Approval_ID, Approval_LetterID) REFERENCES Approval(Approval_ID, Approval_LetterID)
@@ -931,6 +963,7 @@ CREATE TABLE Land_Approval (
     Land_Master_Survey_Plan_No VARCHAR2(30) NOT NULL,
     Approval_ID VARCHAR2(15) NOT NULL,
     Approval_LetterID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_land_approval PRIMARY KEY (Land_ID, Land_Master_Survey_Plan_No, Approval_ID, Approval_LetterID),
     CONSTRAINT fk_landapp_land FOREIGN KEY (Land_ID, Land_Master_Survey_Plan_No) REFERENCES Land(Land_ID, Land_Master_Survey_Plan_No),
     CONSTRAINT fk_landapp_appr FOREIGN KEY (Approval_ID, Approval_LetterID) REFERENCES Approval(Approval_ID, Approval_LetterID)
@@ -942,6 +975,7 @@ CREATE TABLE Impact_QualityRecord (
     Impact_Assessment_Date DATE NOT NULL,
     Inspection_ID VARCHAR2(15) NOT NULL,
     Inspection_Date DATE NOT NULL,
+    
     CONSTRAINT pk_impact_quality PRIMARY KEY (Assessment_ID, Impact_Assessment_Date, Inspection_ID, Inspection_Date),
     CONSTRAINT fk_impqual_impact FOREIGN KEY (Assessment_ID, Impact_Assessment_Date) REFERENCES Impact(Assessment_ID, Impact_Assessment_Date),
     CONSTRAINT fk_impqual_insp FOREIGN KEY (Inspection_ID, Inspection_Date) REFERENCES Quality_Record(Inspection_ID, Inspection_Date)
@@ -953,6 +987,7 @@ CREATE TABLE Company_Agreement (
     Company_SSM_No VARCHAR2(20) NOT NULL,
     Agreement_ID VARCHAR2(15) NOT NULL,
     Agreement_StampDutyID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_comp_agreement PRIMARY KEY (Company_ID, Company_SSM_No, Agreement_ID, Agreement_StampDutyID),
     CONSTRAINT fk_cagr_company FOREIGN KEY (Company_ID, Company_SSM_No) REFERENCES Company(Company_ID, Company_SSM_No),
     CONSTRAINT fk_cagr_agreement FOREIGN KEY (Agreement_ID, Agreement_StampDutyID) REFERENCES Agreement(Agreement_ID, Agreement_StampDutyID)
@@ -964,6 +999,7 @@ CREATE TABLE Land_Advertisement (
     Land_Master_Survey_Plan_No VARCHAR2(30) NOT NULL,
     Advertisement_ID VARCHAR2(15) NOT NULL,
     Advertisement_StartDate DATE NOT NULL,
+    
     CONSTRAINT pk_land_advertisement PRIMARY KEY (Land_ID, Land_Master_Survey_Plan_No, Advertisement_ID, Advertisement_StartDate),
     CONSTRAINT fk_ladv_land FOREIGN KEY (Land_ID, Land_Master_Survey_Plan_No) REFERENCES Land(Land_ID, Land_Master_Survey_Plan_No),
     CONSTRAINT fk_landadv_adv FOREIGN KEY (Advertisement_ID, Advertisement_StartDate) REFERENCES Advertisement(Advertisement_ID, Advertisement_StartDate)
@@ -975,6 +1011,7 @@ CREATE TABLE Lot_Advertisement (
     Lot_TitleNo VARCHAR2(30) NOT NULL,
     Advertisement_ID VARCHAR2(15) NOT NULL,
     Advertisement_StartDate DATE NOT NULL,
+    
     CONSTRAINT pk_lot_advertisement PRIMARY KEY (Lot_ID, Lot_TitleNo, Advertisement_ID, Advertisement_StartDate),
     CONSTRAINT fk_ladv_lot FOREIGN KEY (Lot_ID, Lot_TitleNo) REFERENCES Lot(Lot_ID, Lot_TitleNo),
     CONSTRAINT fk_lotadv_adv FOREIGN KEY (Advertisement_ID, Advertisement_StartDate) REFERENCES Advertisement(Advertisement_ID, Advertisement_StartDate)
@@ -986,6 +1023,7 @@ CREATE TABLE Inspector_Infrastructure (
     DOSH_Registration_No VARCHAR2(30) NOT NULL,
     IS_ID VARCHAR2(15) NOT NULL,
     IS_SiteNo VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_inspector_infra PRIMARY KEY (Inspector_ID, DOSH_Registration_No, IS_ID, IS_SiteNo),
     CONSTRAINT fk_iinfra_inspector FOREIGN KEY (Inspector_ID, DOSH_Registration_No) REFERENCES Inspector(Inspector_ID, DOSH_Registration_No),
     CONSTRAINT fk_iinfra_infra FOREIGN KEY (IS_ID, IS_SiteNo) REFERENCES Infrastructure(IS_ID, IS_SiteNo)
@@ -997,6 +1035,7 @@ CREATE TABLE Company_Relation (
     Company_SSM_No VARCHAR2(20) NOT NULL,
     Related_Company_ID VARCHAR2(15) NOT NULL,
     Related_Company_SSM_No VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_company_relation PRIMARY KEY (Company_ID, Company_SSM_No, Related_Company_ID, Related_Company_SSM_No),
     CONSTRAINT fk_crel_company1 FOREIGN KEY (Company_ID, Company_SSM_No) REFERENCES Company(Company_ID, Company_SSM_No),
     CONSTRAINT fk_crel_company2 FOREIGN KEY (Related_Company_ID, Related_Company_SSM_No) REFERENCES Company(Company_ID, Company_SSM_No)
@@ -1008,6 +1047,7 @@ CREATE TABLE Employee_JobApplicant (
     Employee_Contract_No VARCHAR2(20) NOT NULL,
     Applicant_ID VARCHAR2(15) NOT NULL,
     Applicant_Portal_Username VARCHAR2(30) NOT NULL,
+    
     CONSTRAINT pk_emp_jobapplicant PRIMARY KEY (Employee_ID, Employee_Contract_No, Applicant_ID, Applicant_Portal_Username),
     CONSTRAINT fk_ejat_employee FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No),
     CONSTRAINT fk_ejat_applicant FOREIGN KEY (Applicant_ID, Applicant_Portal_Username) REFERENCES Job_Applicant(Applicant_ID, Applicant_Portal_Username)
@@ -1019,6 +1059,7 @@ CREATE TABLE Inspector_ProjectTimeline (
     DOSH_Registration_No VARCHAR2(30) NOT NULL,
     Timeline_MilestoneID VARCHAR2(20) NOT NULL,
     Timeline_ID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_inspector_timeline PRIMARY KEY (Inspector_ID, DOSH_Registration_No, Timeline_MilestoneID, Timeline_ID),
     CONSTRAINT fk_itime_inspector FOREIGN KEY (Inspector_ID, DOSH_Registration_No) REFERENCES Inspector(Inspector_ID, DOSH_Registration_No),
     CONSTRAINT fk_itime_timeline FOREIGN KEY (Timeline_MilestoneID, Timeline_ID) REFERENCES Project_Timeline(Timeline_MilestoneID, Timeline_ID)
@@ -1030,6 +1071,7 @@ CREATE TABLE Inspector_Impact (
     DOSH_Registration_No VARCHAR2(30) NOT NULL,
     Assessment_ID VARCHAR2(15) NOT NULL,
     Impact_Assessment_Date DATE NOT NULL,
+    
     CONSTRAINT pk_inspector_impact PRIMARY KEY (Inspector_ID, DOSH_Registration_No, Assessment_ID, Impact_Assessment_Date),
     CONSTRAINT fk_iimp_inspector FOREIGN KEY (Inspector_ID, DOSH_Registration_No) REFERENCES Inspector(Inspector_ID, DOSH_Registration_No),
     CONSTRAINT fk_iimp_impact FOREIGN KEY (Assessment_ID, Impact_Assessment_Date) REFERENCES Impact(Assessment_ID, Impact_Assessment_Date)
@@ -1041,6 +1083,7 @@ CREATE TABLE Inspector_Digitalization (
     DOSH_Registration_No VARCHAR2(30) NOT NULL,
     Digital_ID VARCHAR2(15) NOT NULL,
     MDEC_Approval_Ref VARCHAR2(30) NOT NULL,
+    
     CONSTRAINT pk_inspector_digital PRIMARY KEY (Inspector_ID, DOSH_Registration_No, Digital_ID, MDEC_Approval_Ref),
     CONSTRAINT fk_idig_inspector FOREIGN KEY (Inspector_ID, DOSH_Registration_No) REFERENCES Inspector(Inspector_ID, DOSH_Registration_No),
     CONSTRAINT fk_idig_digital FOREIGN KEY (Digital_ID, MDEC_Approval_Ref) REFERENCES Digitalisation(Digital_ID, MDEC_Approval_Ref)
@@ -1052,6 +1095,7 @@ CREATE TABLE Inspector_SustainabilityScore (
     DOSH_Registration_No VARCHAR2(30) NOT NULL,
     ESG_ID VARCHAR2(15) NOT NULL,
     Revision_Date DATE NOT NULL,
+    
     CONSTRAINT pk_inspector_esg PRIMARY KEY (Inspector_ID, DOSH_Registration_No, ESG_ID, Revision_Date),
     CONSTRAINT fk_iesg_inspector FOREIGN KEY (Inspector_ID, DOSH_Registration_No) REFERENCES Inspector(Inspector_ID, DOSH_Registration_No),
     CONSTRAINT fk_iesg_score FOREIGN KEY (ESG_ID, Revision_Date) REFERENCES Sustainability_Score(ESG_ID, Revision_Date)
@@ -1063,6 +1107,7 @@ CREATE TABLE Employee_InvestmentApplication (
     Employee_Contract_No VARCHAR2(20) NOT NULL,
     Application_ID VARCHAR2(15) NOT NULL,
     Application_SubmissionDate DATE NOT NULL,
+    
     CONSTRAINT pk_emp_invapp PRIMARY KEY (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate),
     CONSTRAINT fk_eia_employee FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No),
     CONSTRAINT fk_eia_application FOREIGN KEY (Application_ID, Application_SubmissionDate) REFERENCES Investment_Application(Application_ID, Application_Submission_Date)
@@ -1074,6 +1119,7 @@ CREATE TABLE Company_Lot (
     Company_SSM_No VARCHAR2(20) NOT NULL,
     Lot_ID VARCHAR2(15) NOT NULL,
     Lot_TitleNo VARCHAR2(30) NOT NULL,
+    
     CONSTRAINT pk_company_lot PRIMARY KEY (Company_ID, Company_SSM_No, Lot_ID, Lot_TitleNo),
     CONSTRAINT fk_clot_company FOREIGN KEY (Company_ID, Company_SSM_No) REFERENCES Company(Company_ID, Company_SSM_No),
     CONSTRAINT fk_clot_lot FOREIGN KEY (Lot_ID, Lot_TitleNo) REFERENCES Lot(Lot_ID, Lot_TitleNo)
@@ -1085,6 +1131,7 @@ CREATE TABLE Company_Land (
     Company_SSM_No VARCHAR2(20) NOT NULL,
     Land_ID VARCHAR2(15) NOT NULL,
     Land_Master_Survey_Plan_No VARCHAR2(30) NOT NULL,
+    
     CONSTRAINT pk_company_land PRIMARY KEY (Company_ID, Company_SSM_No, Land_ID, Land_Master_Survey_Plan_No),
     CONSTRAINT fk_cland_comp FOREIGN KEY (Company_ID, Company_SSM_No) REFERENCES Company(Company_ID, Company_SSM_No),
     CONSTRAINT fk_cland_land FOREIGN KEY (Land_ID, Land_Master_Survey_Plan_No) REFERENCES Land(Land_ID, Land_Master_Survey_Plan_No)
@@ -1096,6 +1143,7 @@ CREATE TABLE Company_ProposalContent (
     Company_SSM_No VARCHAR2(20) NOT NULL,
     Proposal_ID VARCHAR2(20) NOT NULL,
     Component_ID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_company_prop PRIMARY KEY (Company_ID, Company_SSM_No, Proposal_ID, Component_ID),
     CONSTRAINT fk_cprop_comp FOREIGN KEY (Company_ID, Company_SSM_No) REFERENCES Company(Company_ID, Company_SSM_No),
     CONSTRAINT fk_cprop_prop FOREIGN KEY (Proposal_ID, Component_ID) REFERENCES Proposal_Content(Proposal_ID, Component_ID)
@@ -1107,6 +1155,7 @@ CREATE TABLE Advertisement_JobApplication (
     Advertisement_StartDate DATE NOT NULL,
     Job_Application_ID VARCHAR2(15) NOT NULL,
     Job_Application_TimeStamp TIMESTAMP NOT NULL,
+    
     CONSTRAINT pk_adv_jobapp PRIMARY KEY (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_TimeStamp),
     CONSTRAINT fk_advja_adv FOREIGN KEY (Advertisement_ID, Advertisement_StartDate) REFERENCES Advertisement(Advertisement_ID, Advertisement_StartDate),
     CONSTRAINT fk_advja_jobapp FOREIGN KEY (Job_Application_ID, Job_Application_TimeStamp) REFERENCES Job_Application(Job_Application_ID, Job_Application_Timestamp)
@@ -1118,6 +1167,7 @@ CREATE TABLE Advertisement_InvestmentApp (
     Advertisement_StartDate DATE NOT NULL,
     Committee_ID VARCHAR2(15) NOT NULL,
     Committee_TermSessionCode VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_adv_invapp PRIMARY KEY (Advertisement_ID, Advertisement_StartDate, Committee_ID, Committee_TermSessionCode),
     CONSTRAINT fk_advia_adv FOREIGN KEY (Advertisement_ID, Advertisement_StartDate) REFERENCES Advertisement(Advertisement_ID, Advertisement_StartDate),
     CONSTRAINT fk_advia_ic FOREIGN KEY (Committee_ID, Committee_TermSessionCode) REFERENCES Investment_Committee(Committee_ID, Committee_TermSessionCode)
@@ -1129,6 +1179,7 @@ CREATE TABLE Representative_ProposalContent (
     Board_Resolution_Ref VARCHAR2(30) NOT NULL,
     Proposal_ID VARCHAR2(20) NOT NULL,
     Component_ID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_rep_propcont PRIMARY KEY (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID),
     CONSTRAINT fk_rprop_rep FOREIGN KEY (Rep_ID, Board_Resolution_Ref) REFERENCES Representative(Rep_ID, Board_Resolution_Ref),
     CONSTRAINT fk_rprop_prop FOREIGN KEY (Proposal_ID, Component_ID) REFERENCES Proposal_Content(Proposal_ID, Component_ID)
@@ -1140,6 +1191,7 @@ CREATE TABLE Representative_Screening (
     Board_Resolution_Ref VARCHAR2(30) NOT NULL,
     Screening_MeetingID VARCHAR2(20) NOT NULL,
     Screening_MOM_ID VARCHAR2(25) NOT NULL,
+    
     CONSTRAINT pk_rep_propscreen PRIMARY KEY (Rep_ID, Board_Resolution_Ref, Screening_MeetingID, Screening_MOM_ID),
     CONSTRAINT fk_rscr_rep FOREIGN KEY (Rep_ID, Board_Resolution_Ref) REFERENCES Representative(Rep_ID, Board_Resolution_Ref),
     CONSTRAINT fk_rscr_screen FOREIGN KEY (Screening_MeetingID, Screening_MOM_ID) REFERENCES Proposal_Screening(Screening_MeetingID, Screening_MOM_ID)
@@ -1151,6 +1203,7 @@ CREATE TABLE Employee_QualityRecord (
     Employee_Contract_No VARCHAR2(20) NOT NULL,
     Inspection_ID VARCHAR2(15) NOT NULL,
     Inspection_Date DATE NOT NULL,
+    
     CONSTRAINT pk_emp_qualrec PRIMARY KEY (Employee_ID, Employee_Contract_No, Inspection_ID, Inspection_Date),
     CONSTRAINT fk_eqr_emp FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No),
     CONSTRAINT fk_eqr_qual FOREIGN KEY (Inspection_ID, Inspection_Date) REFERENCES Quality_Record(Inspection_ID, Inspection_Date)
@@ -1161,7 +1214,8 @@ CREATE TABLE Lot_ProposalContent (
     Lot_ID VARCHAR2(15) NOT NULL,
     Lot_TitleNo VARCHAR2(30) NOT NULL,
     Proposal_ID VARCHAR2(20) NOT NULL,
-    Component_ID VARCHAR2(20) NOT NULL,    
+    Component_ID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_lot_propcont PRIMARY KEY (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID),
     CONSTRAINT fk_lpc_lot FOREIGN KEY (Lot_ID, Lot_TitleNo) REFERENCES Lot(Lot_ID, Lot_TitleNo),
     CONSTRAINT fk_lpc_prop FOREIGN KEY (Proposal_ID, Component_ID) REFERENCES Proposal_Content(Proposal_ID, Component_ID)
@@ -1173,6 +1227,7 @@ CREATE TABLE Lot_InvestmentApplication (
     Lot_TitleNo VARCHAR2(30) NOT NULL,
     Application_ID VARCHAR2(15) NOT NULL,
     Application_Submission_Date DATE NOT NULL,
+    
     CONSTRAINT pk_lot_invapp PRIMARY KEY (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date),
     CONSTRAINT fk_lia_lot FOREIGN KEY (Lot_ID, Lot_TitleNo) REFERENCES Lot(Lot_ID, Lot_TitleNo),
     CONSTRAINT fk_lia_app FOREIGN KEY (Application_ID, Application_Submission_Date) REFERENCES Investment_Application(Application_ID, Application_Submission_Date)
@@ -1184,6 +1239,7 @@ CREATE TABLE Land_ProposalContent (
     Land_Master_Survey_Plan_No VARCHAR2(30) NOT NULL,
     Proposal_ID VARCHAR2(20) NOT NULL,
     Component_ID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_land_propcont PRIMARY KEY (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID),
     CONSTRAINT fk_ldpc_land FOREIGN KEY (Land_ID, Land_Master_Survey_Plan_No) REFERENCES Land(Land_ID, Land_Master_Survey_Plan_No),
     CONSTRAINT fk_ldpc_prop FOREIGN KEY (Proposal_ID, Component_ID) REFERENCES Proposal_Content(Proposal_ID, Component_ID)
@@ -1195,6 +1251,7 @@ CREATE TABLE Land_InvestmentApplication (
     Land_Master_Survey_Plan_No VARCHAR2(30) NOT NULL,
     Application_ID VARCHAR2(15) NOT NULL,
     Application_Submission_Date DATE NOT NULL,
+    
     CONSTRAINT pk_land_invapp PRIMARY KEY (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date),
     CONSTRAINT fk_ldia_land FOREIGN KEY (Land_ID, Land_Master_Survey_Plan_No) REFERENCES Land(Land_ID, Land_Master_Survey_Plan_No),
     CONSTRAINT fk_ldia_app FOREIGN KEY (Application_ID, Application_Submission_Date) REFERENCES Investment_Application(Application_ID, Application_Submission_Date)
@@ -1206,6 +1263,7 @@ CREATE TABLE Inspector_BusinessPlan (
     DOSH_Registration_No VARCHAR2(30) NOT NULL,
     Plan_ID VARCHAR2(15) NOT NULL,
     Project_Title VARCHAR2(100) NOT NULL,
+    
     CONSTRAINT pk_insp_bizplan PRIMARY KEY (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title),
     CONSTRAINT fk_ibp_insp FOREIGN KEY (Inspector_ID, DOSH_Registration_No) REFERENCES Inspector(Inspector_ID, DOSH_Registration_No),
     CONSTRAINT fk_ibp_plan FOREIGN KEY (Plan_ID, Project_Title) REFERENCES Business_Plan(Plan_ID, Project_Title)
@@ -1217,6 +1275,7 @@ CREATE TABLE Land_Agreement (
     Land_Master_Survey_Plan_No VARCHAR2(30) NOT NULL,
     Agreement_ID VARCHAR2(15) NOT NULL,
     Agreement_StampDutyID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_land_agreement PRIMARY KEY (Land_ID, Land_Master_Survey_Plan_No, Agreement_ID, Agreement_StampDutyID),
     CONSTRAINT fk_lagr_land FOREIGN KEY (Land_ID, Land_Master_Survey_Plan_No) REFERENCES Land(Land_ID, Land_Master_Survey_Plan_No),
     CONSTRAINT fk_lagr_agr FOREIGN KEY (Agreement_ID, Agreement_StampDutyID) REFERENCES Agreement(Agreement_ID, Agreement_StampDutyID)
@@ -1228,6 +1287,7 @@ CREATE TABLE Lot_Agreement (
     Lot_TitleNo VARCHAR2(30) NOT NULL,
     Agreement_ID VARCHAR2(15) NOT NULL,
     Agreement_StampDutyID VARCHAR2(20) NOT NULL,
+    
     CONSTRAINT pk_lot_agreement PRIMARY KEY (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID),
     CONSTRAINT fk_lotagr_lot FOREIGN KEY (Lot_ID, Lot_TitleNo) REFERENCES Lot(Lot_ID, Lot_TitleNo),
     CONSTRAINT fk_lotagr_agr FOREIGN KEY (Agreement_ID, Agreement_StampDutyID) REFERENCES Agreement(Agreement_ID, Agreement_StampDutyID)
