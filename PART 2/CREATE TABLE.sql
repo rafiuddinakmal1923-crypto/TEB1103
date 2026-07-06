@@ -274,7 +274,8 @@ CREATE TABLE Investment_Application (
     Investor_ID VARCHAR2(20) NOT NULL,
     Rep_ID VARCHAR2(15) NOT NULL,
     CONSTRAINT pk_investment_application PRIMARY KEY (Application_ID, Application_Submission_Date),
-    CONSTRAINT chk_application_dates CHECK (Application_Review_Date >= Application_Submission_Date),
+    CONSTRAINT chk_application_review_date CHECK (Application_Review_Date >= Application_Submission_Date),
+    CONSTRAINT chk_application_expiry_date CHECK (Application_Expiration_Date >= Application_Submission_Date),
     CONSTRAINT fk_invapp_inv FOREIGN KEY (Investor_ID) REFERENCES Investor(Investor_ID),
     CONSTRAINT fk_invapp_rep FOREIGN KEY (Rep_ID) REFERENCES Representative(Rep_ID),
     CONSTRAINT uq_inv_application_id UNIQUE (Application_ID)
@@ -287,7 +288,7 @@ CREATE TABLE Termination (
     Termination_Settlement NUMBER(9,2) DEFAULT 0.00 CHECK (Termination_Settlement >= 0.00),
     Term_AssetHandoverStatus VARCHAR2(20) DEFAULT 'Pending' CHECK (Term_AssetHandoverStatus IN ('Pending', 'In Progress', 'Completed', 'Failed')),
     Termination_ServedDate DATE NOT NULL,
-    Termination_SiteSecuredTime DATE,
+    Termination_SiteSecuredDate DATE,
     Termination_EvictionStatus VARCHAR2(20) CHECK (Termination_EvictionStatus IN ('Not Required', 'Notice Served', 'Evicted', 'Resisting')),
     Term_BreachContractCode VARCHAR2(15) NOT NULL,
     Term_AssetHandoverPeriod INTEGER NOT NULL CHECK (Term_AssetHandoverPeriod BETWEEN 0 AND 90),
