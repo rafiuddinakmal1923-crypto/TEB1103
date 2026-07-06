@@ -157,13 +157,12 @@ CREATE TABLE Company (
     Company_Domain            VARCHAR2(100),
     Company_General_Email     VARCHAR2(100) NOT NULL,
     Company_General_ContactNo VARCHAR2(15) NOT NULL,
-    Screening_MeetingID       VARCHAR2(20) NOT NULL,
     Rep_ID                    VARCHAR2(15) NOT NULL,
     CONSTRAINT pk_company PRIMARY KEY (Company_ID, Company_SSM_No),
-    CONSTRAINT fk_comp_screen FOREIGN KEY (Screening_MeetingID) REFERENCES Proposal_Screening(Screening_MeetingID),
     CONSTRAINT fk_comp_rep FOREIGN KEY (Rep_ID) REFERENCES Representative(Rep_ID),
     CONSTRAINT uq_company_id UNIQUE (Company_ID)
 );
+
 
 CREATE TABLE Investment_Committee (
     Committee_ID                 VARCHAR2(15) NOT NULL,
