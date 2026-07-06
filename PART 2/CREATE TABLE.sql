@@ -166,7 +166,7 @@ CREATE TABLE Investment_Committee (
     Committee_ID                 VARCHAR2(15) NOT NULL,
     Committee_TermSessionCode    VARCHAR2(20) NOT NULL,
     Committee_Expertise          VARCHAR2(50) NOT NULL CHECK (Committee_Expertise IN ('Technical', 'Financial', 'Environmental', 'Legal', 'Socio-Economic')),
-    Committe_StartDate           DATE NOT NULL,
+    Committee_StartDate           DATE NOT NULL,
     Committee_EndDate            DATE NOT NULL,
     Committee_AuthorityCode      VARCHAR2(15) NOT NULL CHECK (Committee_AuthorityCode IN ('AUTH-HIGH', 'AUTH-MID', 'AUTH-LOW')),
     Committee_ReviewScopeDesc    VARCHAR2(255),
@@ -175,7 +175,7 @@ CREATE TABLE Investment_Committee (
     Voting_Power_Weight          NUMBER(3,2) DEFAULT 1.00 CHECK (Voting_Power_Weight > 0.00),
     Employee_ID                  VARCHAR2(15) NOT NULL,
     CONSTRAINT pk_investment_committee PRIMARY KEY (Committee_ID, Committee_TermSessionCode),
-    CONSTRAINT chk_committee_dates CHECK (Committee_EndDate >= Committe_StartDate),
+    CONSTRAINT chk_committee_dates CHECK (Committee_EndDate >= Committee_StartDate),
     CONSTRAINT fk_invcom_emp FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
     CONSTRAINT uq_committee_id UNIQUE (Committee_ID)
 );
@@ -255,7 +255,7 @@ CREATE TABLE Developer (
 -- =====================================================================
 CREATE TABLE Investment_Application (
     Application_ID VARCHAR2(15) NOT NULL,
-    Application_Submission_Date DATE NOT NULL,
+    Application_SubmissionDate DATE NOT NULL,
     Application_Review_Date DATE,
     Application_CurrentStatus VARCHAR2(50) NOT NULL CHECK (Application_CurrentStatus IN ('Pending', 'Under Review', 'Approved', 'Rejected')),
     Application_Remark VARCHAR2(255),
@@ -266,9 +266,9 @@ CREATE TABLE Investment_Application (
     Application_Description VARCHAR2(255),
     Investor_ID VARCHAR2(20) NOT NULL,
     Rep_ID VARCHAR2(15) NOT NULL,
-    CONSTRAINT pk_investment_application PRIMARY KEY (Application_ID, Application_Submission_Date),
-    CONSTRAINT chk_application_review_date CHECK (Application_Review_Date >= Application_Submission_Date),
-    CONSTRAINT chk_application_expiry_date CHECK (Application_Expiration_Date >= Application_Submission_Date),
+    CONSTRAINT pk_investment_application PRIMARY KEY (Application_ID, Application_SubmissionDate),
+    CONSTRAINT chk_application_review_date CHECK (Application_Review_Date >= Application_SubmissionDate),
+    CONSTRAINT chk_application_expiry_date CHECK (Application_Expiration_Date >= Application_SubmissionDate),
     CONSTRAINT fk_invapp_inv FOREIGN KEY (Investor_ID) REFERENCES Investor(Investor_ID),
     CONSTRAINT fk_invapp_rep FOREIGN KEY (Rep_ID) REFERENCES Representative(Rep_ID),
     CONSTRAINT uq_inv_application_id UNIQUE (Application_ID)
@@ -735,7 +735,7 @@ CREATE TABLE Investor_Advertisement (
 
 CREATE TABLE Employee_Advertisement (
     Employee_ID VARCHAR2(15) NOT NULL,
-    Employee_Contract_No VARCHAR2(30) NOT NULL,
+    Employee_Contract_No VARCHAR2(20) NOT NULL,
     Advertisement_ID VARCHAR2(15) NOT NULL,
     Advertisement_StartDate DATE NOT NULL,
     
@@ -749,7 +749,7 @@ CREATE TABLE Employee_Advertisement (
 
 CREATE TABLE Employee_JobDescription (
     Employee_ID VARCHAR2(15) NOT NULL,
-    Employee_Contract_No VARCHAR2(30) NOT NULL,
+    Employee_Contract_No VARCHAR2(20) NOT NULL,
     Job_ID VARCHAR2(15) NOT NULL,
     Job_PublishDate DATE NOT NULL,
     
@@ -763,9 +763,9 @@ CREATE TABLE Employee_JobDescription (
 
 CREATE TABLE Employee_Agreement (
     Employee_ID VARCHAR2(15) NOT NULL,
-    Employee_Contract_No VARCHAR2(30) NOT NULL,
+    Employee_Contract_No VARCHAR2(20) NOT NULL,
     Agreement_ID VARCHAR2(15) NOT NULL,
-    Agreement_StampDutyID VARCHAR2(30) NOT NULL,
+    Agreement_StampDutyID VARCHAR2(20) NOT NULL,
     
     -- Primary Key Constraint (Composite Key)
     CONSTRAINT pk_emp_agreement PRIMARY KEY (Employee_ID, Employee_Contract_No, Agreement_ID, Agreement_StampDutyID),
@@ -791,7 +791,7 @@ CREATE TABLE Person_Document (
 
 CREATE TABLE Employee_Penalty (
     Employee_ID VARCHAR2(15) NOT NULL,
-    Employee_Contract_No VARCHAR2(30) NOT NULL,
+    Employee_Contract_No VARCHAR2(20) NOT NULL,
     Penalty_ID VARCHAR2(15) NOT NULL,
     Penalty_IssueDate DATE NOT NULL,
     
@@ -805,7 +805,7 @@ CREATE TABLE Employee_Penalty (
 
 CREATE TABLE Employee_Termination (
     Employee_ID VARCHAR2(15) NOT NULL,
-    Employee_Contract_No VARCHAR2(30) NOT NULL,
+    Employee_Contract_No VARCHAR2(20) NOT NULL,
     Termination_ID VARCHAR2(15) NOT NULL,
     Termination_Date DATE NOT NULL,
     
@@ -819,7 +819,7 @@ CREATE TABLE Employee_Termination (
 
 CREATE TABLE Employee_JobApplication (
     Employee_ID VARCHAR2(15) NOT NULL,
-    Employee_Contract_No VARCHAR2(30) NOT NULL,
+    Employee_Contract_No VARCHAR2(20) NOT NULL,
     Job_Application_ID VARCHAR2(15) NOT NULL,
     Job_Application_TimeStamp TIMESTAMP NOT NULL,
     
@@ -1108,7 +1108,7 @@ CREATE TABLE Employee_InvestmentApplication (
     
     CONSTRAINT pk_emp_invapp PRIMARY KEY (Employee_ID, Employee_Contract_No, Application_ID, Application_SubmissionDate),
     CONSTRAINT fk_eia_employee FOREIGN KEY (Employee_ID, Employee_Contract_No) REFERENCES Employee(Employee_ID, Employee_Contract_No),
-    CONSTRAINT fk_eia_application FOREIGN KEY (Application_ID, Application_SubmissionDate) REFERENCES Investment_Application(Application_ID, Application_Submission_Date)
+    CONSTRAINT fk_eia_application FOREIGN KEY (Application_ID, Application_SubmissionDate) REFERENCES Investment_Application(Application_ID, Application_SubmissionDate)
 );
 
 -- 32. Company_Lot
@@ -1164,11 +1164,11 @@ CREATE TABLE Advertisement_InvestmentApp (
     Advertisement_ID VARCHAR2(15) NOT NULL,
     Advertisement_StartDate DATE NOT NULL,
     Application_ID VARCHAR2(15) NOT NULL,
-    Application_Submission_Date DATE NOT NULL,
+    Application_SubmissionDate DATE NOT NULL,
     
-    CONSTRAINT pk_adv_invapp PRIMARY KEY (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date),
+    CONSTRAINT pk_adv_invapp PRIMARY KEY (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate),
     CONSTRAINT fk_advia_adv FOREIGN KEY (Advertisement_ID, Advertisement_StartDate) REFERENCES Advertisement(Advertisement_ID, Advertisement_StartDate),
-    CONSTRAINT fk_advia_app FOREIGN KEY (Application_ID, Application_Submission_Date) REFERENCES Investment_Application(Application_ID, Application_Submission_Date)
+    CONSTRAINT fk_advia_app FOREIGN KEY (Application_ID, Application_SubmissionDate) REFERENCES Investment_Application(Application_ID, Application_SubmissionDate)
 );
 
 -- 37. Representative_ProposalContent
@@ -1224,11 +1224,11 @@ CREATE TABLE Lot_InvestmentApplication (
     Lot_ID VARCHAR2(15) NOT NULL,
     Lot_TitleNo VARCHAR2(30) NOT NULL,
     Application_ID VARCHAR2(15) NOT NULL,
-    Application_Submission_Date DATE NOT NULL,
+    Application_SubmissionDate DATE NOT NULL,
     
-    CONSTRAINT pk_lot_invapp PRIMARY KEY (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date),
+    CONSTRAINT pk_lot_invapp PRIMARY KEY (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate),
     CONSTRAINT fk_lia_lot FOREIGN KEY (Lot_ID, Lot_TitleNo) REFERENCES Lot(Lot_ID, Lot_TitleNo),
-    CONSTRAINT fk_lia_app FOREIGN KEY (Application_ID, Application_Submission_Date) REFERENCES Investment_Application(Application_ID, Application_Submission_Date)
+    CONSTRAINT fk_lia_app FOREIGN KEY (Application_ID, Application_SubmissionDate) REFERENCES Investment_Application(Application_ID, Application_SubmissionDate)
 );
 
 -- 42. Land_ProposalContent
@@ -1248,11 +1248,11 @@ CREATE TABLE Land_InvestmentApplication (
     Land_ID VARCHAR2(15) NOT NULL,
     Land_Master_Survey_Plan_No VARCHAR2(30) NOT NULL,
     Application_ID VARCHAR2(15) NOT NULL,
-    Application_Submission_Date DATE NOT NULL,
+    Application_SubmissionDate DATE NOT NULL,
     
-    CONSTRAINT pk_land_invapp PRIMARY KEY (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date),
+    CONSTRAINT pk_land_invapp PRIMARY KEY (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate),
     CONSTRAINT fk_ldia_land FOREIGN KEY (Land_ID, Land_Master_Survey_Plan_No) REFERENCES Land(Land_ID, Land_Master_Survey_Plan_No),
-    CONSTRAINT fk_ldia_app FOREIGN KEY (Application_ID, Application_Submission_Date) REFERENCES Investment_Application(Application_ID, Application_Submission_Date)
+    CONSTRAINT fk_ldia_app FOREIGN KEY (Application_ID, Application_SubmissionDate) REFERENCES Investment_Application(Application_ID, Application_SubmissionDate)
 );
 
 -- 44. Inspector_BusinessPlan
