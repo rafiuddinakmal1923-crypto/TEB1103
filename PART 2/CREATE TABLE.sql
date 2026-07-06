@@ -157,13 +157,12 @@ CREATE TABLE Company (
     Company_Domain            VARCHAR2(100),
     Company_General_Email     VARCHAR2(100) NOT NULL,
     Company_General_ContactNo VARCHAR2(15) NOT NULL,
-    Screening_MeetingID       VARCHAR2(20) NOT NULL,
     Rep_ID                    VARCHAR2(15) NOT NULL,
     CONSTRAINT pk_company PRIMARY KEY (Company_ID, Company_SSM_No),
-    CONSTRAINT fk_comp_screen FOREIGN KEY (Screening_MeetingID) REFERENCES Proposal_Screening(Screening_MeetingID),
     CONSTRAINT fk_comp_rep FOREIGN KEY (Rep_ID) REFERENCES Representative(Rep_ID),
     CONSTRAINT uq_company_id UNIQUE (Company_ID)
 );
+
 
 CREATE TABLE Investment_Committee (
     Committee_ID                 VARCHAR2(15) NOT NULL,
@@ -698,16 +697,16 @@ CREATE TABLE Document (
     Doc_VerificationDate       DATE,
     Doc_Remark                 VARCHAR2(255),
     Doc_VerifiedBy             VARCHAR2(100),
-    Doc_FolderName             VARCHAR2(50) NOT NULL,
-    Lot_ID                     VARCHAR2(15) NOT NULL,
-    Land_ID                    VARCHAR2(15) NOT NULL,
-    Proposal_ID                VARCHAR2(20) NOT NULL,
-    Screening_MeetingID        VARCHAR2(20) NOT NULL,
-    Termination_ID             VARCHAR2(15) NOT NULL,
-    Agreement_ID               VARCHAR2(15) NOT NULL,
-    Approval_ID                VARCHAR2(15) NOT NULL,
-    Penalty_ID                 VARCHAR2(15) NOT NULL,
-    Inspection_ID              VARCHAR2(15) NOT NULL,
+    Doc_FolderName             VARCHAR2(50) ,
+    Lot_ID                     VARCHAR2(15) ,
+    Land_ID                    VARCHAR2(15) ,
+    Proposal_ID                VARCHAR2(20) ,
+    Screening_MeetingID        VARCHAR2(20) ,
+    Termination_ID             VARCHAR2(15) ,
+    Agreement_ID               VARCHAR2(15) ,
+    Approval_ID                VARCHAR2(15) ,
+    Penalty_ID                 VARCHAR2(15) ,
+    Inspection_ID              VARCHAR2(15) ,
     CONSTRAINT pk_document PRIMARY KEY (Doc_ID, Folder_ID),
     CONSTRAINT fk_doc_lot FOREIGN KEY (Lot_ID) REFERENCES Lot(Lot_ID),
     CONSTRAINT fk_doc_land FOREIGN KEY (Land_ID) REFERENCES Land(Land_ID),
@@ -1291,4 +1290,16 @@ CREATE TABLE Lot_Agreement (
     CONSTRAINT pk_lot_agreement PRIMARY KEY (Lot_ID, Lot_TitleNo, Agreement_ID, Agreement_StampDutyID),
     CONSTRAINT fk_lotagr_lot FOREIGN KEY (Lot_ID, Lot_TitleNo) REFERENCES Lot(Lot_ID, Lot_TitleNo),
     CONSTRAINT fk_lotagr_agr FOREIGN KEY (Agreement_ID, Agreement_StampDutyID) REFERENCES Agreement(Agreement_ID, Agreement_StampDutyID)
+);
+
+CREATE TABLE Company_Screening (
+    Company_ID VARCHAR2(15) NOT NULL,
+    Company_SSM_No VARCHAR2(20) NOT NULL,
+    Screening_MeetingID VARCHAR2(20) NOT NULL,
+    Screening_MOM_ID VARCHAR2(25) NOT NULL,
+    
+    -- Primary Key Constraint (Composite Key)
+    CONSTRAINT pk_company_screening PRIMARY KEY (Company_ID, Company_SSM_No, Screening_MeetingID, Screening_MOM_ID),
+    CONSTRAINT fk_cscreen_company FOREIGN KEY (Company_ID, Company_SSM_No) REFERENCES Company(Company_ID, Company_SSM_No),
+    CONSTRAINT fk_cscreen_screening FOREIGN KEY (Screening_MeetingID, Screening_MOM_ID) REFERENCES Proposal_Screening(Screening_MeetingID, Screening_MOM_ID)
 );
