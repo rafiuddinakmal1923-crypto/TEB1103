@@ -1061,16 +1061,16 @@ INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartD
 INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1009', TO_DATE('2026-06-25', 'YYYY-MM-DD'), 'APP-2026-009', TO_TIMESTAMP('2026-03-18 13:20:00', 'YYYY-MM-DD HH24:MI:SS'));
 INSERT INTO Advertisement_JobApplication (Advertisement_ID, Advertisement_StartDate, Job_Application_ID, Job_Application_Timestamp) VALUES ('ADV-1010', TO_DATE('2026-07-05', 'YYYY-MM-DD'), 'APP-2026-010', TO_TIMESTAMP('2026-03-20 17:55:00', 'YYYY-MM-DD HH24:MI:SS'));
 
-INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1001', TO_DATE('2026-07-01', 'YYYY-MM-DD'), 'APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'));
-INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1002', TO_DATE('2026-08-01', 'YYYY-MM-DD'), 'APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'));
-INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1003', TO_DATE('2026-07-15', 'YYYY-MM-DD'), 'APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
-INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1004', TO_DATE('2026-06-20', 'YYYY-MM-DD'), 'APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'));
-INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1005', TO_DATE('2026-09-01', 'YYYY-MM-DD'), 'APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'));
-INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1006', TO_DATE('2026-07-10', 'YYYY-MM-DD'), 'APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'));
-INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1007', TO_DATE('2026-08-15', 'YYYY-MM-DD'), 'APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'));
-INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1008', TO_DATE('2026-10-01', 'YYYY-MM-DD'), 'APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'));
-INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1009', TO_DATE('2026-06-25', 'YYYY-MM-DD'), 'APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'));
-INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_Submission_Date) VALUES ('ADV-1010', TO_DATE('2026-07-05', 'YYYY-MM-DD'), 'APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES ('ADV-1001', TO_DATE('2026-07-01', 'YYYY-MM-DD'), 'APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES ('ADV-1002', TO_DATE('2026-08-01', 'YYYY-MM-DD'), 'APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES ('ADV-1003', TO_DATE('2026-07-15', 'YYYY-MM-DD'), 'APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES ('ADV-1004', TO_DATE('2026-06-20', 'YYYY-MM-DD'), 'APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES ('ADV-1005', TO_DATE('2026-09-01', 'YYYY-MM-DD'), 'APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES ('ADV-1006', TO_DATE('2026-07-10', 'YYYY-MM-DD'), 'APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES ('ADV-1007', TO_DATE('2026-08-15', 'YYYY-MM-DD'), 'APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES ('ADV-1008', TO_DATE('2026-10-01', 'YYYY-MM-DD'), 'APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES ('ADV-1009', TO_DATE('2026-06-25', 'YYYY-MM-DD'), 'APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'));
+INSERT INTO Advertisement_InvestmentApp (Advertisement_ID, Advertisement_StartDate, Application_ID, Application_SubmissionDate) VALUES ('ADV-1010', TO_DATE('2026-07-05', 'YYYY-MM-DD'), 'APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'));
 
 INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-001', 'RES-LBN-2026-101', 'PRP-ECO-001', 'ECO000000000001');
 INSERT INTO Representative_ProposalContent (Rep_ID, Board_Resolution_Ref, Proposal_ID, Component_ID) VALUES ('REP-002', 'RES-LBN-2026-102', 'PRP-ECO-002', 'ECO000000000002');
@@ -1116,16 +1116,16 @@ INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID)
 INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-009', 'TL-LBN-26-809', 'PRP-ECO-009', 'ECO000000000009');
 INSERT INTO Lot_ProposalContent (Lot_ID, Lot_TitleNo, Proposal_ID, Component_ID) VALUES ('LOT-010', 'TL-LBN-26-810', 'PRP-ECO-010', 'ECO000000000010');
 
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-001', 'TL-LBN-26-801', 'APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'));
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-002', 'TL-LBN-26-802', 'APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'));
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-003', 'TL-LBN-26-803', 'APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-004', 'TL-LBN-26-804', 'APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'));
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-005', 'TL-LBN-26-805', 'APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'));
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-006', 'TL-LBN-26-806', 'APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'));
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-007', 'TL-LBN-26-807', 'APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'));
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-008', 'TL-LBN-26-808', 'APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'));
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-009', 'TL-LBN-26-809', 'APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'));
-INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_Submission_Date) VALUES ('LOT-010', 'TL-LBN-26-810', 'APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES ('LOT-001', 'TL-LBN-26-801', 'APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES ('LOT-002', 'TL-LBN-26-802', 'APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES ('LOT-003', 'TL-LBN-26-803', 'APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES ('LOT-004', 'TL-LBN-26-804', 'APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES ('LOT-005', 'TL-LBN-26-805', 'APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES ('LOT-006', 'TL-LBN-26-806', 'APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES ('LOT-007', 'TL-LBN-26-807', 'APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES ('LOT-008', 'TL-LBN-26-808', 'APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES ('LOT-009', 'TL-LBN-26-809', 'APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'));
+INSERT INTO Lot_InvestmentApplication (Lot_ID, Lot_TitleNo, Application_ID, Application_SubmissionDate) VALUES ('LOT-010', 'TL-LBN-26-810', 'APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'));
 
 INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-001', 'MSP-LBN-2026-001', 'PRP-ECO-001', 'ECO000000000001');
 INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-002', 'MSP-LBN-2026-005', 'PRP-ECO-002', 'ECO000000000002');
@@ -1138,16 +1138,16 @@ INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_
 INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-009', 'MSP-LBN-2026-050', 'PRP-ECO-009', 'ECO000000000009');
 INSERT INTO Land_ProposalContent (Land_ID, Land_Master_Survey_Plan_No, Proposal_ID, Component_ID) VALUES ('LND-010', 'MSP-LBN-2026-061', 'PRP-ECO-010', 'ECO000000000010');
 
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-001', 'MSP-LBN-2026-001', 'APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'));
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-002', 'MSP-LBN-2026-005', 'APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'));
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-003', 'MSP-LBN-2026-012', 'APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-004', 'MSP-LBN-2026-018', 'APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'));
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-005', 'MSP-LBN-2026-022', 'APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'));
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-006', 'MSP-LBN-2026-030', 'APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'));
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-007', 'MSP-LBN-2026-035', 'APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'));
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-008', 'MSP-LBN-2026-042', 'APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'));
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-009', 'MSP-LBN-2026-050', 'APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'));
-INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_Submission_Date) VALUES ('LND-010', 'MSP-LBN-2026-061', 'APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES ('LND-001', 'MSP-LBN-2026-001', 'APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES ('LND-002', 'MSP-LBN-2026-005', 'APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES ('LND-003', 'MSP-LBN-2026-012', 'APP-2026-8003', TO_DATE('2026-01-15', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES ('LND-004', 'MSP-LBN-2026-018', 'APP-2026-8004', TO_DATE('2026-01-20', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES ('LND-005', 'MSP-LBN-2026-022', 'APP-2026-8005', TO_DATE('2026-01-22', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES ('LND-006', 'MSP-LBN-2026-030', 'APP-2026-8006', TO_DATE('2026-02-01', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES ('LND-007', 'MSP-LBN-2026-035', 'APP-2026-8007', TO_DATE('2026-02-07', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES ('LND-008', 'MSP-LBN-2026-042', 'APP-2026-8008', TO_DATE('2026-02-12', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES ('LND-009', 'MSP-LBN-2026-050', 'APP-2026-8009', TO_DATE('2026-02-18', 'YYYY-MM-DD'));
+INSERT INTO Land_InvestmentApplication (Land_ID, Land_Master_Survey_Plan_No, Application_ID, Application_SubmissionDate) VALUES ('LND-010', 'MSP-LBN-2026-061', 'APP-2026-8010', TO_DATE('2026-02-25', 'YYYY-MM-DD'));
 
 INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-001', 'DOSH/LBN/2021/089', 'PLN001', 'Labuan Eco-Tourism Resort Complex');
 INSERT INTO Inspector_BusinessPlan (Inspector_ID, DOSH_Registration_No, Plan_ID, Project_Title) VALUES ('INS-2026-002', 'DOSH/SBH/2023/142', 'PLN002', 'Sabah Green Hydrogen Production Facility');
