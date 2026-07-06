@@ -2,21 +2,6 @@
 -- LEVEL 0: No FK dependencies 
 -- =====================================================================
 
-CREATE TABLE Person (
-    Person_ID VARCHAR2(15) NOT NULL,
-    Person_IC VARCHAR2(20) NOT NULL UNIQUE,
-    Person_Type VARCHAR2(20) NOT NULL CHECK (Person_Type IN ('Employee', 'Applicant', 'Representative', 'Inspector', 'Investment Committee')),
-    Person_Name VARCHAR2(100) NOT NULL,
-    Person_Nationality VARCHAR2(50) NOT NULL,
-    Person_Email VARCHAR2(100) NOT NULL,
-    Person_ContactNo VARCHAR2(15) NOT NULL,
-    Person_Address VARCHAR2(255) NOT NULL,
-    Person_DateOfBirth DATE NOT NULL,
-    Person_Race VARCHAR2(20) NOT NULL CHECK (Person_Race IN ('Malay', 'Chinese', 'Indian', 'Bumiputera Sabah', 'Bumiputera Sarawak', 'Others')),
-    CONSTRAINT pk_person PRIMARY KEY (Person_ID, Person_IC),
-    CONSTRAINT uq_person_id UNIQUE (Person_ID)
-);
-
 CREATE TABLE Invest_Labuan (
     Department_ID               VARCHAR2(15) NOT NULL,
     Department_Code             VARCHAR2(10) NOT NULL,
@@ -30,6 +15,21 @@ CREATE TABLE Invest_Labuan (
     Department_Routing_No       VARCHAR2(10) NOT NULL,
     CONSTRAINT pk_invest_labuan PRIMARY KEY (Department_ID, Department_Code),
     CONSTRAINT uq_invest_labuan_id UNIQUE (Department_ID)
+);
+
+CREATE TABLE Person (
+    Person_ID VARCHAR2(15) NOT NULL,
+    Person_IC VARCHAR2(20) NOT NULL UNIQUE,
+    Person_Type VARCHAR2(20) NOT NULL CHECK (Person_Type IN ('Employee', 'Applicant', 'Representative', 'Inspector', 'Investment Committee')),
+    Person_Name VARCHAR2(100) NOT NULL,
+    Person_Nationality VARCHAR2(50) NOT NULL,
+    Person_Email VARCHAR2(100) NOT NULL,
+    Person_ContactNo VARCHAR2(15) NOT NULL,
+    Person_Address VARCHAR2(255) NOT NULL,
+    Person_DateOfBirth DATE NOT NULL,
+    Person_Race VARCHAR2(20) NOT NULL CHECK (Person_Race IN ('Malay', 'Chinese', 'Indian', 'Bumiputera Sabah', 'Bumiputera Sarawak', 'Others')),
+    CONSTRAINT pk_person PRIMARY KEY (Person_ID, Person_IC),
+    CONSTRAINT uq_person_id UNIQUE (Person_ID)
 );
 
 CREATE TABLE Proposal_Screening (
@@ -66,6 +66,20 @@ CREATE TABLE Job_Description (
 -- =====================================================================
 -- LEVEL 1: Depends on Level 0
 -- =====================================================================
+CREATE TABLE Company (
+    Company_ID                VARCHAR2(15) NOT NULL,
+    Company_SSM_No            VARCHAR2(20) NOT NULL,
+    Company_Name              VARCHAR2(100) NOT NULL,
+    Company_Entity_Type       VARCHAR2(30) NOT NULL CHECK (Company_Entity_Type IN ('Sdn Bhd', 'Bhd', 'LLP', 'Sole Proprietorship')),
+    Company_Origin            VARCHAR2(15) NOT NULL CHECK (Company_Origin IN ('Local', 'Foreign')),
+    Company_PaidUpCapital     NUMBER(15,2) NOT NULL CHECK (Company_PaidUpCapital > 0.00),
+    Company_HQ_Address        VARCHAR2(255) NOT NULL,
+    Company_Domain            VARCHAR2(100),
+    Company_General_Email     VARCHAR2(100) NOT NULL,
+    Company_General_ContactNo VARCHAR2(15) NOT NULL,
+    CONSTRAINT pk_company PRIMARY KEY (Company_ID, Company_SSM_No),
+    CONSTRAINT uq_company_id UNIQUE (Company_ID)
+);
 
 CREATE TABLE Representative (
     Rep_ID VARCHAR2(15) NOT NULL,
@@ -78,12 +92,14 @@ CREATE TABLE Representative (
     Rep_Authorization_Expiry_Date DATE,
     Rep_Primary_Signatory_Flag VARCHAR2(3) DEFAULT 'No' CHECK (Rep_Primary_Signatory_Flag IN ('Yes', 'No')),
     Rep_ReportingLevel VARCHAR2(30) NOT NULL CHECK (Rep_ReportingLevel IN ('L1 - Executive Board', 'L2 - Senior Management', 'L3 - Middle Management', 'L4 - Operational Staff')),
-    Department_ID VARCHAR2(15) NOT NULL,
+    Department_ID VARCHAR2(15),
     Person_ID VARCHAR2(15) NOT NULL,
+    Company_ID VARCHAR2(15),
     CHECK (Rep_Authorization_Expiry_Date > Rep_AppointedDate),
     CONSTRAINT pk_representative PRIMARY KEY (Rep_ID, Board_Resolution_Ref),
     CONSTRAINT fk_rep_dept FOREIGN KEY (Department_ID) REFERENCES Invest_Labuan(Department_ID),
     CONSTRAINT fk_rep_person FOREIGN KEY (Person_ID) REFERENCES Person(Person_ID),
+    CONSTRAINT fk_rep_company FOREIGN KEY (Company_ID) REFERENCES Company(Company_ID),
     CONSTRAINT uq_rep_id UNIQUE (Rep_ID)
 );
 
@@ -142,28 +158,10 @@ CREATE TABLE Advertisement (
     CONSTRAINT uq_advertisement_id UNIQUE (Advertisement_ID)
 );
 
+
 -- =====================================================================
 -- LEVEL 2: Depends on Level 1
 -- =====================================================================
-
-CREATE TABLE Company (
-    Company_ID                VARCHAR2(15) NOT NULL,
-    Company_SSM_No            VARCHAR2(20) NOT NULL,
-    Company_Name              VARCHAR2(100) NOT NULL,
-    Company_Entity_Type       VARCHAR2(30) NOT NULL CHECK (Company_Entity_Type IN ('Sdn Bhd', 'Bhd', 'LLP', 'Sole Proprietorship')),
-    Company_Origin            VARCHAR2(15) NOT NULL CHECK (Company_Origin IN ('Local', 'Foreign')),
-    Company_PaidUpCapital     NUMBER(15,2) NOT NULL CHECK (Company_PaidUpCapital > 0.00),
-    Company_HQ_Address        VARCHAR2(255) NOT NULL,
-    Company_Domain            VARCHAR2(100),
-    Company_General_Email     VARCHAR2(100) NOT NULL,
-    Company_General_ContactNo VARCHAR2(15) NOT NULL,
-    Rep_ID                    VARCHAR2(15) NOT NULL,
-    CONSTRAINT pk_company PRIMARY KEY (Company_ID, Company_SSM_No),
-    CONSTRAINT fk_comp_rep FOREIGN KEY (Rep_ID) REFERENCES Representative(Rep_ID),
-    CONSTRAINT uq_company_id UNIQUE (Company_ID)
-);
-
-
 CREATE TABLE Investment_Committee (
     Committee_ID                 VARCHAR2(15) NOT NULL,
     Committee_TermSessionCode    VARCHAR2(20) NOT NULL,
@@ -217,10 +215,6 @@ CREATE TABLE Job_Application (
     CONSTRAINT uq_job_app_id UNIQUE (Job_Application_ID)
 );
 
--- =====================================================================
--- LEVEL 3: Depends on Level 2
--- =====================================================================
-
 CREATE TABLE Investor (
     MIDA_Registration_Ref       VARCHAR2(30) NOT NULL,
     Investor_ID                 VARCHAR2(15) NOT NULL,
@@ -255,10 +249,10 @@ CREATE TABLE Developer (
     CONSTRAINT uq_developer_id UNIQUE (Developer_ID)
 );
 
--- =====================================================================
--- LEVEL 4: Depends on Level 3
--- =====================================================================
 
+-- =====================================================================
+-- LEVEL 3: Depends on Level 2
+-- =====================================================================
 CREATE TABLE Investment_Application (
     Application_ID VARCHAR2(15) NOT NULL,
     Application_Submission_Date DATE NOT NULL,
@@ -297,10 +291,10 @@ CREATE TABLE Termination (
     CONSTRAINT uq_termination_id UNIQUE (Termination_ID)
 );
 
--- =====================================================================
--- LEVEL 5: Proposal_Content (The Superclass)
--- =====================================================================
 
+-- =====================================================================
+-- LEVEL 4: Proposal Super Class
+-- =====================================================================
 CREATE TABLE Proposal_Content (
     Proposal_ID VARCHAR2(20) NOT NULL,
     Component_ID VARCHAR2(20) NOT NULL,
@@ -320,10 +314,11 @@ CREATE TABLE Proposal_Content (
     CONSTRAINT uq_proposal_id UNIQUE (Proposal_ID)
 );
 
--- =====================================================================
--- LEVEL 6: Depends on Proposal_Content
--- =====================================================================
 
+
+-- =====================================================================
+-- LEVEL 5: Proposal_Content (The Child Class)
+-- =====================================================================
 CREATE TABLE Approval (
     Approval_ID               VARCHAR2(15) NOT NULL,
     Approval_LetterID         VARCHAR2(20) NOT NULL,
@@ -472,30 +467,8 @@ CREATE TABLE Investment_Viability (
 );
 
 -- =====================================================================
--- LEVEL 7: Depends on Level 6
+-- LEVEL 6: Depends on Level 5
 -- =====================================================================
-
-CREATE TABLE Agreement (
-    Agreement_ID VARCHAR2(15) NOT NULL,
-    Agreement_StampDutyID VARCHAR2(20) NOT NULL,
-    Agreement_Date DATE NOT NULL,
-    Agreement_Status VARCHAR2(20) DEFAULT 'Draft' CHECK (Agreement_Status IN ('Draft', 'Active', 'Expired', 'Terminated')),
-    Agreement_Venue VARCHAR2(100) NOT NULL,
-    Agreement_Title VARCHAR2(100) NOT NULL,
-    Agreement_Description VARCHAR2(255),
-    Agreement_EffectiveDate DATE NOT NULL,
-    Agreement_GoverningLaw VARCHAR2(30) DEFAULT 'Laws of Malaysia' NOT NULL,
-    Agreement_StampDutyReceipt VARCHAR2(30) NOT NULL,
-    Proposal_ID VARCHAR2(20) NOT NULL,
-    Department_ID VARCHAR2(15) NOT NULL,
-    Approval_ID VARCHAR2(15) NOT NULL,
-    CONSTRAINT pk_agreement PRIMARY KEY (Agreement_ID, Agreement_StampDutyID),
-    CONSTRAINT chk_agreement_dates CHECK (Agreement_EffectiveDate >= Agreement_Date),
-    CONSTRAINT fk_agr_prop FOREIGN KEY (Proposal_ID) REFERENCES Proposal_Content(Proposal_ID),
-    CONSTRAINT fk_agr_dept FOREIGN KEY (Department_ID) REFERENCES Invest_Labuan(Department_ID),
-    CONSTRAINT fk_agr_appr FOREIGN KEY (Approval_ID) REFERENCES Approval(Approval_ID),
-    CONSTRAINT uq_agreement_id UNIQUE (Agreement_ID)
-);
 
 CREATE TABLE Social (
     Social_ID VARCHAR2(10) NOT NULL,
@@ -549,9 +522,35 @@ CREATE TABLE Environmental (
 );
 
 -- =====================================================================
--- LEVEL 8: Depends on Level 7
+-- LEVEL 7: Depends on Level 6
 -- =====================================================================
 
+CREATE TABLE Agreement (
+    Agreement_ID VARCHAR2(15) NOT NULL,
+    Agreement_StampDutyID VARCHAR2(20) NOT NULL,
+    Agreement_Date DATE NOT NULL,
+    Agreement_Status VARCHAR2(20) DEFAULT 'Draft' CHECK (Agreement_Status IN ('Draft', 'Active', 'Expired', 'Terminated')),
+    Agreement_Venue VARCHAR2(100) NOT NULL,
+    Agreement_Title VARCHAR2(100) NOT NULL,
+    Agreement_Description VARCHAR2(255),
+    Agreement_EffectiveDate DATE NOT NULL,
+    Agreement_GoverningLaw VARCHAR2(30) DEFAULT 'Laws of Malaysia' NOT NULL,
+    Agreement_StampDutyReceipt VARCHAR2(30) NOT NULL,
+    Proposal_ID VARCHAR2(20) NOT NULL,
+    Department_ID VARCHAR2(15) NOT NULL,
+    Approval_ID VARCHAR2(15) NOT NULL,
+    CONSTRAINT pk_agreement PRIMARY KEY (Agreement_ID, Agreement_StampDutyID),
+    CONSTRAINT chk_agreement_dates CHECK (Agreement_EffectiveDate >= Agreement_Date),
+    CONSTRAINT fk_agr_prop FOREIGN KEY (Proposal_ID) REFERENCES Proposal_Content(Proposal_ID),
+    CONSTRAINT fk_agr_dept FOREIGN KEY (Department_ID) REFERENCES Invest_Labuan(Department_ID),
+    CONSTRAINT fk_agr_appr FOREIGN KEY (Approval_ID) REFERENCES Approval(Approval_ID),
+    CONSTRAINT uq_agreement_id UNIQUE (Agreement_ID)
+);
+
+
+-- =====================================================================
+-- LEVEL 8: Depends on Level 7
+-- =====================================================================
 CREATE TABLE Land (
     Land_ID                     VARCHAR2(15) NOT NULL,
     Land_Master_Survey_Plan_No  VARCHAR2(30) NOT NULL,
@@ -596,7 +595,6 @@ CREATE TABLE Quality_Record (
 -- =====================================================================
 -- LEVEL 9: Depends on Level 8
 -- =====================================================================
-
 CREATE TABLE Lot (
     Lot_ID VARCHAR2(15) NOT NULL,
     Lot_TitleNo VARCHAR2(30) NOT NULL,
@@ -613,6 +611,7 @@ CREATE TABLE Lot (
     CONSTRAINT fk_lot_land FOREIGN KEY (Land_ID) REFERENCES Land(Land_ID),
     CONSTRAINT uq_lot_id UNIQUE (Lot_ID)
 );
+
 
 CREATE TABLE Penalty (
     Penalty_ID VARCHAR2(15) NOT NULL,
