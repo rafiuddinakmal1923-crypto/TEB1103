@@ -88,18 +88,40 @@ COMMIT;
 -- =====================================================================
 -- LEVEL 1: Depends on Level 0
 -- =====================================================================
+--COMPANY
+INSERT INTO Company VALUES ('C00000000000021', 'LLP0098112-LBN', 'Borneo Alpha Capital LLP', 'LLP', 'Local', 12500000.00, 'Level 3, Financial Park Labuan, Complex Main Office, 87000 Labuan, Malaysia', 'borneoalpha.com', 'invest@borneoalpha.com', '6087411221');
+INSERT INTO Company VALUES ('C00000000000022', '201501099812', 'Pacific Rim Ventures Bhd', 'Bhd', 'Foreign', 45000000.00, 'Lot 15, Federal Avenue, Financial Park Towers, 87000 Labuan, Malaysia', 'pacrimventures.co', 'deals@pacrimventures.co', '6087422334');
+INSERT INTO Company VALUES ('C00000000000023', '202101034512', 'Nusantara Land Holdings Sdn Bhd', 'Sdn Bhd', 'Local', 5000000.00, 'Suite 5A, Lazenda Commercial Centre, Phase 3, 87000 Labuan, Malaysia', 'nusantaraland.my', 'admin@nusantaraland.my', '6087466123');
+INSERT INTO Company VALUES ('C00000000000024', 'LLP0044551-LBN', 'Equator Green Fund LLP', 'LLP', 'Foreign', 18000000.00, 'Level 7(B), Main Office Tower, Financial Park Complex, 87000 Labuan, Malaysia', 'equatorgreen.com', 'funding@equatorgreen.com', '6087415599');
+INSERT INTO Company VALUES ('C00000000000025', '201001022314', 'Labuan Global Trust Berhad', 'Bhd', 'Local', 25000000.00, 'Kensington House, Jalan OKK Awang Besar, 87000 Labuan, Malaysia', 'labuantrust.com.my', 'trustee@labuantrust.com.my', '6087413344');
+INSERT INTO Company VALUES ('C00000000000026', '202303991245', 'Kinabalu Wealth Partners', 'Sole Proprietorship', 'Local', 250000.00, 'No. 42, Taman Perumahan Lazenda, Jalan Kerma, 87000 Labuan, Malaysia', NULL, 'kwpartners@yahoo.com', '60198734412');
+INSERT INTO Company VALUES ('C00000000000027', '201801088712', 'Asean Real Estate Fund Bhd', 'Bhd', 'Foreign', 60000000.00, 'Level 11, Energy Complex, Financial Park Labuan, 87000 Labuan, Malaysia', 'aseanrefund.com', 'contact@aseanrefund.com', '6087499211');
+INSERT INTO Company VALUES ('C00000000000028', '201901044231', 'EcoTerra Agri-Invest Sdn Bhd', 'Sdn Bhd', 'Local', 3500000.00, 'Lot 8, Industrial Zone, Kampung Rancha-Rancha, 87000 Labuan, Malaysia', 'ecoterrainvest.my', 'proposals@ecoterrainvest.my', '6087511662');
+INSERT INTO Company VALUES ('C00000000000029', 'LLP0033118-LBN', 'Oceanic Yield Solutions LLP', 'LLP', 'Foreign', 8500000.00, 'Unit 1C, Brumby House, Jalan Kiansam, 87000 Labuan, Malaysia', 'oceanicyield.com', 'info@oceanicyield.com', '6087421155');
+INSERT INTO Company VALUES ('C00000000000030', '202201044556', 'Bayview Horizon Capital Sdn Bhd', 'Sdn Bhd', 'Local', 12000000.00, 'Level 4, Financial Park Complex, Block 4, 87000 Labuan, Malaysia', 'bayviewhorizon.com', 'investment@bayviewhorizon.com', '6087418822');
+INSERT INTO Company VALUES ('C00000000000031', '201201033221', 'Mega Structure Builders Sdn Bhd', 'Sdn Bhd', 'Local', 15000000.00, 'Lot 102, Lazenda Warehouse Phase 2, Jalan Papan, 87000 Labuan, Malaysia', 'megastructure.my', 'tender@megastructure.my', '6087433211');
+INSERT INTO Company VALUES ('C00000000000032', '201601077551', 'Borneo Infra Development Bhd', 'Bhd', 'Local', 35000000.00, 'Level 8, Tower A, Financial Park Complex, 87000 Labuan, Malaysia', 'borneoinfra.com.my', 'projects@borneoinfra.com.my', '6087455881');
+INSERT INTO Company VALUES ('C00000000000033', 'LLP0077882-LBN', 'Apex Eco-Constructors LLP', 'LLP', 'Local', 2000000.00, 'Suite 3, Block C, Lazenda Centre, Jalan Tun Mustapha, 87000 Labuan, Malaysia', 'apexconstruct.my', 'bizdev@apexconstruct.my', '6087466551');
+INSERT INTO Company VALUES ('C00000000000034', '202403112245', 'Sinar Utama Builders', 'Sole Proprietorship', 'Local', 180000.00, 'Kampung Sungai Bedaun, Jalan Kiansam, 87000 Labuan, Malaysia', NULL, 'sinarutamabn@gmail.com', '60138765431');
+INSERT INTO Company VALUES ('C00000000000035', '201101044321', 'Pacific Coastal Property Bhd', 'Bhd', 'Foreign', 50000000.00, 'Level 14, Main Office Tower, Financial Park Labuan, 87000 Labuan, Malaysia', 'pacificcoastal.com', 'procurement@pacificcoastal.com', '6087412288');
+INSERT INTO Company VALUES ('C00000000000036', '202001044112', 'Island View Engineering Sdn Bhd', 'Sdn Bhd', 'Local', 4500000.00, 'No. 18, Lazenda Industrial Park, Jalan Saguking, 87000 Labuan, Malaysia', 'islandvieweng.my', 'engineering@islandvieweng.my', '6087488339');
+INSERT INTO Company VALUES ('C00000000000037', 'LLP0055119-LBN', 'Global Port & Infra Design LLP', 'LLP', 'Foreign', 15000000.00, 'Unit E-2, Level 2, Financial Park Complex, 87000 Labuan, Malaysia', 'globalportdesign.com', 'tender_my@globalportdesign.com', '6087451122');
+INSERT INTO Company VALUES ('C00000000000038', '201701022441', 'Labuan Marine & Civil Sdn Bhd', 'Sdn Bhd', 'Local', 8000000.00, 'Lot 25, Rancha-Rancha Industrial Estate, 87000 Labuan, Malaysia', 'labuanmarine.com', 'ops@labuanmarine.com', '6087512233');
+INSERT INTO Company VALUES ('C00000000000039', '201401033445', 'Zenith Property Developers Bhd', 'Bhd', 'Local', 22000000.00, 'Suite 12, Level 2, Lazenda Commercial Centre, 87000 Labuan, Malaysia', 'zenithproperty.my', 'proposal@zenithproperty.my', '6087441166');
+INSERT INTO Company VALUES ('C00000000000040', '202301055612', 'EcoHorizon Urban Green Sdn Bhd', 'Sdn Bhd', 'Foreign', 11000000.00, 'Level 6, Main Office Tower, Financial Park Labuan, 87000 Labuan, Malaysia', 'ecohorizon.sg', 'landproposals@ecohorizon.sg', '6087419955');
+COMMIT;
 
 --REPRESENTATIVE
-INSERT INTO Representative VALUES ('REP-001', 'RES-LBN-2026-101', 'Head of Legal Affairs', 'Lead Bidder', TO_DATE('1/1/2026', 'MM/DD/YYYY'), 'Active', 'Full Power of Attorney', TO_DATE('1/1/2027', 'MM/DD/YYYY'), 'Yes', 'L1 - Executive Board', 'DEPT-LBN-001', 'PER-001');
-INSERT INTO Representative VALUES ('REP-002', 'RES-LBN-2026-102', 'Chief Technical Officer', 'Technical Liaison', TO_DATE('1/16/2026', 'MM/DD/YYYY'), 'Active', 'Liaison Only', TO_DATE('1/31/2027', 'MM/DD/YYYY'), 'No', 'L2 - Senior Management', 'DEPT-LBN-002', 'PER-002');
-INSERT INTO Representative VALUES ('REP-003', 'RES-LBN-2026-103', 'Senior Financial Analyst', 'Financial Officer', TO_DATE('1/31/2026', 'MM/DD/YYYY'), 'Suspended', 'Limited Signing Rights', TO_DATE('3/2/2027', 'MM/DD/YYYY'), 'No', 'L3 - Middle Management', 'DEPT-LBN-003', 'PER-003');
-INSERT INTO Representative VALUES ('REP-004', 'RES-LBN-2026-104', 'Operations Director', 'Lead Bidder', TO_DATE('2/15/2026', 'MM/DD/YYYY'), 'Active', 'Full Power of Attorney', TO_DATE('4/1/2027', 'MM/DD/YYYY'), 'Yes', 'L1 - Executive Board', 'DEPT-LBN-004', 'PER-004');
-INSERT INTO Representative VALUES ('REP-005', 'RES-LBN-2026-105', 'Compliance Manager', 'Legal Counsel', TO_DATE('3/2/2026', 'MM/DD/YYYY'), 'Active', 'Limited Signing Rights', TO_DATE('5/1/2027', 'MM/DD/YYYY'), 'No', 'L2 - Senior Management', 'DEPT-LBN-005', 'PER-005');
-INSERT INTO Representative VALUES ('REP-006', 'RES-LBN-2026-106', 'Project Liaison Officer', 'Technical Liaison', TO_DATE('3/17/2026', 'MM/DD/YYYY'), 'Active', 'Liaison Only', TO_DATE('5/31/2027', 'MM/DD/YYYY'), 'No', 'L3 - Middle Management', 'DEPT-LBN-006', 'PER-006');
-INSERT INTO Representative VALUES ('REP-007', 'RES-LBN-2026-107', 'Strategic Advisor', 'Financial Officer', TO_DATE('4/1/2026', 'MM/DD/YYYY'), 'Revoked', 'Liaison Only', TO_DATE('6/30/2027', 'MM/DD/YYYY'), 'No', 'L3 - Middle Management', 'DEPT-LBN-007', 'PER-007');
-INSERT INTO Representative VALUES ('REP-008', 'RES-LBN-2026-108', 'Infrastructure Lead', 'Technical Liaison', TO_DATE('4/16/2026', 'MM/DD/YYYY'), 'Active', 'Limited Signing Rights', TO_DATE('7/30/2027', 'MM/DD/YYYY'), 'No', 'L2 - Senior Management', 'DEPT-LBN-008', 'PER-008');
-INSERT INTO Representative VALUES ('REP-009', 'RES-LBN-2026-109', 'Corporate Secretary', 'Legal Counsel', TO_DATE('5/1/2026', 'MM/DD/YYYY'), 'Active', 'Limited Signing Rights', TO_DATE('8/29/2027', 'MM/DD/YYYY'), 'No', 'L2 - Senior Management', 'DEPT-LBN-009', 'PER-009');
-INSERT INTO Representative VALUES ('REP-010', 'RES-LBN-2026-110', 'Executive Coordinator', 'Lead Bidder', TO_DATE('5/16/2026', 'MM/DD/YYYY'), 'Active', 'Full Power of Attorney', TO_DATE('9/28/2027', 'MM/DD/YYYY'), 'Yes', 'L1 - Executive Board', 'DEPT-LBN-001', 'PER-010');
+INSERT INTO Representative VALUES ('REP-001', 'RES-LBN-2026-101', 'Head of Legal Affairs', 'Lead Bidder', TO_DATE('1/1/2026', 'MM/DD/YYYY'), 'Active', 'Full Power of Attorney', TO_DATE('1/1/2027', 'MM/DD/YYYY'), 'Yes', 'L1 - Executive Board', NULL, 'PER-001', 'C00000000000021');
+INSERT INTO Representative VALUES ('REP-002', 'RES-LBN-2026-102', 'Chief Technical Officer', 'Technical Liaison', TO_DATE('1/16/2026', 'MM/DD/YYYY'), 'Active', 'Liaison Only', TO_DATE('1/31/2027', 'MM/DD/YYYY'), 'No', 'L2 - Senior Management', NULL, 'PER-002', 'C00000000000022');
+INSERT INTO Representative VALUES ('REP-003', 'RES-LBN-2026-103', 'Senior Financial Analyst', 'Financial Officer', TO_DATE('1/31/2026', 'MM/DD/YYYY'), 'Suspended', 'Limited Signing Rights', TO_DATE('3/2/2027', 'MM/DD/YYYY'), 'No', 'L3 - Middle Management', NULL, 'PER-003', 'C00000000000023');
+INSERT INTO Representative VALUES ('REP-004', 'RES-LBN-2026-104', 'Operations Director', 'Lead Bidder', TO_DATE('2/15/2026', 'MM/DD/YYYY'), 'Active', 'Full Power of Attorney', TO_DATE('4/1/2027', 'MM/DD/YYYY'), 'Yes', 'L1 - Executive Board', 'DEPT-LBN-004', 'PER-004', NULL);
+INSERT INTO Representative VALUES ('REP-005', 'RES-LBN-2026-105', 'Compliance Manager', 'Legal Counsel', TO_DATE('3/2/2026', 'MM/DD/YYYY'), 'Active', 'Limited Signing Rights', TO_DATE('5/1/2027', 'MM/DD/YYYY'), 'No', 'L2 - Senior Management', NULL, 'PER-005', 'C00000000000025');
+INSERT INTO Representative VALUES ('REP-006', 'RES-LBN-2026-106', 'Project Liaison Officer', 'Technical Liaison', TO_DATE('3/17/2026', 'MM/DD/YYYY'), 'Active', 'Liaison Only', TO_DATE('5/31/2027', 'MM/DD/YYYY'), 'No', 'L3 - Middle Management', 'DEPT-LBN-006', 'PER-006', NULL);
+INSERT INTO Representative VALUES ('REP-007', 'RES-LBN-2026-107', 'Strategic Advisor', 'Financial Officer', TO_DATE('4/1/2026', 'MM/DD/YYYY'), 'Revoked', 'Liaison Only', TO_DATE('6/30/2027', 'MM/DD/YYYY'), 'No', 'L3 - Middle Management', 'DEPT-LBN-007', 'PER-007', NULL);
+INSERT INTO Representative VALUES ('REP-008', 'RES-LBN-2026-108', 'Infrastructure Lead', 'Technical Liaison', TO_DATE('4/16/2026', 'MM/DD/YYYY'), 'Active', 'Limited Signing Rights', TO_DATE('7/30/2027', 'MM/DD/YYYY'), 'No', 'L2 - Senior Management', 'DEPT-LBN-008', 'PER-008', NULL);
+INSERT INTO Representative VALUES ('REP-009', 'RES-LBN-2026-109', 'Corporate Secretary', 'Legal Counsel', TO_DATE('5/1/2026', 'MM/DD/YYYY'), 'Active', 'Limited Signing Rights', TO_DATE('8/29/2027', 'MM/DD/YYYY'), 'No', 'L2 - Senior Management', NULL, 'PER-009', 'C00000000000029');
+INSERT INTO Representative VALUES ('REP-010', 'RES-LBN-2026-110', 'Executive Coordinator', 'Lead Bidder', TO_DATE('5/16/2026', 'MM/DD/YYYY'), 'Active', 'Full Power of Attorney', TO_DATE('9/28/2027', 'MM/DD/YYYY'), 'Yes', 'L1 - Executive Board', 'DEPT-LBN-001', 'PER-010', NULL);
 COMMIT;
 
 --JOB_APPLICANT
@@ -155,30 +177,6 @@ COMMIT;
 -- LEVEL 2: Depends on Level 1
 -- =====================================================================
 
---COMPANY
-INSERT INTO Company VALUES ('C00000000000021', 'LLP0098112-LBN', 'Borneo Alpha Capital LLP', 'LLP', 'Local', 12500000.00, 'Level 3, Financial Park Labuan, Complex Main Office, 87000 Labuan, Malaysia', 'borneoalpha.com', 'invest@borneoalpha.com', '6087411221', 'REP-001');
-INSERT INTO Company VALUES ('C00000000000022', '201501099812', 'Pacific Rim Ventures Bhd', 'Bhd', 'Foreign', 45000000.00, 'Lot 15, Federal Avenue, Financial Park Towers, 87000 Labuan, Malaysia', 'pacrimventures.co', 'deals@pacrimventures.co', '6087422334', 'REP-002');
-INSERT INTO Company VALUES ('C00000000000023', '202101034512', 'Nusantara Land Holdings Sdn Bhd', 'Sdn Bhd', 'Local', 5000000.00, 'Suite 5A, Lazenda Commercial Centre, Phase 3, 87000 Labuan, Malaysia', 'nusantaraland.my', 'admin@nusantaraland.my', '6087466123', 'REP-003');
-INSERT INTO Company VALUES ('C00000000000024', 'LLP0044551-LBN', 'Equator Green Fund LLP', 'LLP', 'Foreign', 18000000.00, 'Level 7(B), Main Office Tower, Financial Park Complex, 87000 Labuan, Malaysia', 'equatorgreen.com', 'funding@equatorgreen.com', '6087415599', 'REP-004');
-INSERT INTO Company VALUES ('C00000000000025', '201001022314', 'Labuan Global Trust Berhad', 'Bhd', 'Local', 25000000.00, 'Kensington House, Jalan OKK Awang Besar, 87000 Labuan, Malaysia', 'labuantrust.com.my', 'trustee@labuantrust.com.my', '6087413344','REP-005');
-INSERT INTO Company VALUES ('C00000000000026', '202303991245', 'Kinabalu Wealth Partners', 'Sole Proprietorship', 'Local', 250000.00, 'No. 42, Taman Perumahan Lazenda, Jalan Kerma, 87000 Labuan, Malaysia', NULL, 'kwpartners@yahoo.com', '60198734412', 'REP-006');
-INSERT INTO Company VALUES ('C00000000000027', '201801088712', 'Asean Real Estate Fund Bhd', 'Bhd', 'Foreign', 60000000.00, 'Level 11, Energy Complex, Financial Park Labuan, 87000 Labuan, Malaysia', 'aseanrefund.com', 'contact@aseanrefund.com', '6087499211', 'REP-007');
-INSERT INTO Company VALUES ('C00000000000028', '201901044231', 'EcoTerra Agri-Invest Sdn Bhd', 'Sdn Bhd', 'Local', 3500000.00, 'Lot 8, Industrial Zone, Kampung Rancha-Rancha, 87000 Labuan, Malaysia', 'ecoterrainvest.my', 'proposals@ecoterrainvest.my', '6087511662', 'REP-008');
-INSERT INTO Company VALUES ('C00000000000029', 'LLP0033118-LBN', 'Oceanic Yield Solutions LLP', 'LLP', 'Foreign', 8500000.00, 'Unit 1C, Brumby House, Jalan Kiansam, 87000 Labuan, Malaysia', 'oceanicyield.com', 'info@oceanicyield.com', '6087421155',  'REP-009');
-INSERT INTO Company VALUES ('C00000000000030', '202201044556', 'Bayview Horizon Capital Sdn Bhd', 'Sdn Bhd', 'Local', 12000000.00, 'Level 4, Financial Park Complex, Block 4, 87000 Labuan, Malaysia', 'bayviewhorizon.com', 'investment@bayviewhorizon.com', '6087418822', 'REP-010');
-INSERT INTO Company VALUES ('C00000000000031', '201201033221', 'Mega Structure Builders Sdn Bhd', 'Sdn Bhd', 'Local', 15000000.00, 'Lot 102, Lazenda Warehouse Phase 2, Jalan Papan, 87000 Labuan, Malaysia', 'megastructure.my', 'tender@megastructure.my', '6087433211', 'REP-001');
-INSERT INTO Company VALUES ('C00000000000032', '201601077551', 'Borneo Infra Development Bhd', 'Bhd', 'Local', 35000000.00, 'Level 8, Tower A, Financial Park Complex, 87000 Labuan, Malaysia', 'borneoinfra.com.my', 'projects@borneoinfra.com.my', '6087455881','REP-002');
-INSERT INTO Company VALUES ('C00000000000033', 'LLP0077882-LBN', 'Apex Eco-Constructors LLP', 'LLP', 'Local', 2000000.00, 'Suite 3, Block C, Lazenda Centre, Jalan Tun Mustapha, 87000 Labuan, Malaysia', 'apexconstruct.my', 'bizdev@apexconstruct.my', '6087466551','REP-003');
-INSERT INTO Company VALUES ('C00000000000034', '202403112245', 'Sinar Utama Builders', 'Sole Proprietorship', 'Local', 180000.00, 'Kampung Sungai Bedaun, Jalan Kiansam, 87000 Labuan, Malaysia', NULL, 'sinarutamabn@gmail.com', '60138765431', 'REP-004');
-INSERT INTO Company VALUES ('C00000000000035', '201101044321', 'Pacific Coastal Property Bhd', 'Bhd', 'Foreign', 50000000.00, 'Level 14, Main Office Tower, Financial Park Labuan, 87000 Labuan, Malaysia', 'pacificcoastal.com', 'procurement@pacificcoastal.com', '6087412288', 'REP-005');
-INSERT INTO Company VALUES ('C00000000000036', '202001044112', 'Island View Engineering Sdn Bhd', 'Sdn Bhd', 'Local', 4500000.00, 'No. 18, Lazenda Industrial Park, Jalan Saguking, 87000 Labuan, Malaysia', 'islandvieweng.my', 'engineering@islandvieweng.my', '6087488339','REP-006');
-INSERT INTO Company VALUES ('C00000000000037', 'LLP0055119-LBN', 'Global Port & Infra Design LLP', 'LLP', 'Foreign', 15000000.00, 'Unit E-2, Level 2, Financial Park Complex, 87000 Labuan, Malaysia', 'globalportdesign.com', 'tender_my@globalportdesign.com', '6087451122','REP-007');
-INSERT INTO Company VALUES ('C00000000000038', '201701022441', 'Labuan Marine & Civil Sdn Bhd', 'Sdn Bhd', 'Local', 8000000.00, 'Lot 25, Rancha-Rancha Industrial Estate, 87000 Labuan, Malaysia', 'labuanmarine.com', 'ops@labuanmarine.com', '6087512233', 'REP-008');
-INSERT INTO Company VALUES ('C00000000000039', '201401033445', 'Zenith Property Developers Bhd', 'Bhd', 'Local', 22000000.00, 'Suite 12, Level 2, Lazenda Commercial Centre, 87000 Labuan, Malaysia', 'zenithproperty.my', 'proposal@zenithproperty.my', '6087441166','REP-009');
-INSERT INTO Company VALUES ('C00000000000040', '202301055612', 'EcoHorizon Urban Green Sdn Bhd', 'Sdn Bhd', 'Foreign', 11000000.00, 'Level 6, Main Office Tower, Financial Park Labuan, 87000 Labuan, Malaysia', 'ecohorizon.sg', 'landproposals@ecohorizon.sg', '6087419955','REP-010');
-COMMIT;
-
-
 --INVESTMENT_COMMITTEE
 INSERT INTO Investment_Committee VALUES ('COM000000000001', 'TERM-2026-S1', 'Technical', TO_DATE('2026-01-01', 'YYYY-MM-DD'), TO_DATE('2026-06-30', 'YYYY-MM-DD'), 'AUTH-HIGH', 'Review engineering, physical mapping, and zoning feasibility of Labuan land lease proposals.', 98.5, 'Weekly', 1.5, 'EMP011');
 INSERT INTO Investment_Committee VALUES ('COM000000000002', 'TERM-2026-S1', 'Financial', TO_DATE('2026-01-01', 'YYYY-MM-DD'), TO_DATE('2026-12-31', 'YYYY-MM-DD'), 'AUTH-HIGH', 'Evaluate ROI, rental yield, and financial capability of outer company proposal submittals.', 100, 'Bi-Weekly', 2, 'EMP012');
@@ -218,10 +216,6 @@ INSERT INTO Job_Application VALUES ('APP-2026-009', TO_TIMESTAMP('2026-03-18 13:
 INSERT INTO Job_Application VALUES ('APP-2026-010', TO_TIMESTAMP('2026-03-20 17:55:00', 'YYYY-MM-DD HH24:MI:SS'), 14, 5000.00, 'University Career Portal', NULL, NULL, NULL, 'Applied', NULL, 'APP-2026-010');
 COMMIT;
 
--- =====================================================================
--- LEVEL 3: Depends on Level 2
--- =====================================================================
-
 --INVESTOR
 INSERT INTO Investor VALUES ('MIDA/LBN/2026/INV-21', 'INV000000000001', 'Infrastructure', 'Institutional', 12500000.00, 3, 'Conservative', 12, 'Yes', 'AA', 'C00000000000021');
 INSERT INTO Investor VALUES ('MIDA/INT/2026/INV-22', 'INV000000000002', 'Digital Tech', 'Venture Capital', 45000000.00, 8, 'Aggressive', 7, 'No', 'A', 'C00000000000022');
@@ -247,11 +241,9 @@ INSERT INTO Developer VALUES ('DEV000000000008', 'CIDB/LBN/G6/02241-17', '9 Year
 INSERT INTO Developer VALUES ('DEV000000000009', 'CIDB/SAB/G7/03344-14', '12 Years', 31, 195000000.00, 12, 'Excellent', 160, 'Mixed-use Commercial Townships & Modern Retails', 4.7, 'C00000000000039');
 INSERT INTO Developer VALUES ('DEV000000000010', 'CIDB/SGP/G7/05561-23', '3 Years', 5, 45000000.00, 3, 'Audited', 28, 'Green Building Commercial Solar Farm Developments', 4.3, 'C00000000000040');
 COMMIT;
-
 -- =====================================================================
--- LEVEL 4: Depends on Level 3
+-- LEVEL 3: Depends on Level 2
 -- =====================================================================
-
 --INVESTMENT_APPLICATION
 INSERT INTO Investment_Application VALUES ('APP-2026-8001', TO_DATE('2026-01-05', 'YYYY-MM-DD'), TO_DATE('2026-01-08', 'YYYY-MM-DD'), 'Approved', 'Strong networking background.', '5 days', 0.00, 'LinkedIn', TO_DATE('2026-11-01', 'YYYY-MM-DD'), 'Series A Tech Startup', 'INV000000000001', 'REP-001');
 INSERT INTO Investment_Application VALUES ('APP-2026-8002', TO_DATE('2026-01-10', 'YYYY-MM-DD'), TO_DATE('2026-01-12', 'YYYY-MM-DD'), 'Rejected', 'Lacks required experience.', '6 days', 0.00, 'Company Page', TO_DATE('2026-11-02', 'YYYY-MM-DD'), 'Real Estate Fund II', 'INV000000000002', 'REP-002');
@@ -279,9 +271,8 @@ INSERT INTO Termination VALUES ('TERM-2026-110', TO_DATE('2026-11-10', 'YYYY-MM-
 COMMIT;
 
 -- =====================================================================
--- LEVEL 5: Proposal_Content (The Superclass)
+-- LEVEL 4: Proposal Superclass
 -- =====================================================================
-
 --PROPOSAL_CONTENT
 -- Economic Sub-Proposal Blocks
 INSERT INTO Proposal_Content VALUES ('PRP-ECO-001', 'ECO000000000001', TO_DATE('2026-03-15', 'YYYY-MM-DD'), 'Approved', 'Verified', 'Certified Financial Economist (Sabah)', 'DEV000000000001', 'REP-001', 'MEET-2026-001', 'APP-2026-8001');
@@ -393,10 +384,10 @@ INSERT INTO Proposal_Content VALUES ('PRP-TL-010', 'MLS-010', TO_DATE('2026-05-1
 COMMIT;
 
 
--- =====================================================================
--- LEVEL 6: Depends on Proposal_Content
--- =====================================================================
 
+-- =====================================================================
+-- LEVEL 5: Proposal_Content (The Childclass)
+-- =====================================================================
 --APPROVAL
 INSERT INTO Approval VALUES ('APV-2026-9001', 'LC/INV/APP-2026-001', TO_DATE('2026-08-01', 'YYYY-MM-DD'), 'None', 'Approved', '30 days', 'Strategic alignment with Labuan tourism.', TO_DATE('2026-08-31', 'YYYY-MM-DD'), 'No', 'Unanimous (7-0)', 'PRP-ECO-001', 'MEET-2026-001', 'C00000000000021');
 INSERT INTO Approval VALUES ('APV-2026-9002', 'LC/INV/APP-2026-002', TO_DATE('2026-08-05', 'YYYY-MM-DD'), 'Subject to RM50,000 security deposit clearance', 'Conditional Approval', '60 days', 'Good financials, but missing initial deposit.', TO_DATE('2026-10-04', 'YYYY-MM-DD'), 'Yes', 'Majority (5-2)', 'PRP-ECO-002', 'MEET-2026-002', 'C00000000000022');
@@ -523,22 +514,8 @@ COMMIT;
 
 
 -- =====================================================================
--- LEVEL 7: Depends on Level 6
+-- LEVEL 6: Depends on Level 5
 -- =====================================================================
-
--- AGREEMENT
-INSERT INTO Agreement VALUES ('AGR-2026-001', 'SD-2026-8801', TO_DATE('2026-01-10', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Labuan Port Commercial Land Lease', 'JV for Project Alpha', TO_DATE('2026-01-15', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890112A', 'PRP-ECO-001', 'DEPT-LBN-001', 'APV-2026-9001');
-INSERT INTO Agreement VALUES ('AGR-2026-002', 'SD-2026-8802', TO_DATE('2026-01-18', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Victoria Bay Agro-Tech Plot Permit', NULL, TO_DATE('2026-01-18', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890113B', 'PRP-ECO-002', 'DEPT-LBN-002', 'APV-2026-9002');
-INSERT INTO Agreement VALUES ('AGR-2026-003', 'SD-2026-8803', TO_DATE('2026-02-02', 'YYYY-MM-DD'), 'Draft', 'Menara Kinabalu, Kota Kinabalu', 'Kimanis Solar Farm Development Proposal', 'Equity distribution terms', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Sabah Land Ordinance (Cap. 68)', 'REC-Pending', 'PRP-ECO-003', 'DEPT-LBN-003', 'APV-2026-9003');
-INSERT INTO Agreement VALUES ('AGR-2026-004', 'SD-2026-8804', TO_DATE('2026-02-14', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Labuan High-Tech Industrial Park Site C', 'Terminated due to breach', TO_DATE('2026-02-20', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890115D', 'PRP-ECO-004', 'DEPT-LBN-004', 'APV-2026-9004');
-INSERT INTO Agreement VALUES ('AGR-2026-005', 'SD-2026-8805', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Expired', 'Financial Park Labuan, HQ Office', 'Temporary Eco-Tourism Hub Permit (Reno)', 'Seed round funding details', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Contracts Act 1950', 'REC-8890116E', 'PRP-ECO-005', 'DEPT-LBN-005', 'APV-2026-9005');
-INSERT INTO Agreement VALUES ('AGR-2026-006', 'SD-2026-8806', TO_DATE('2026-03-12', 'YYYY-MM-DD'), 'Active', 'Menara Kinabalu, Kota Kinabalu', 'Sandakan Biomass Plant Land Lease Agreement', 'Pending partner review', TO_DATE('2026-03-15', 'YYYY-MM-DD'), 'Sabah Land Ordinance (Cap. 68)', 'REC-8890117F', 'PRP-ECO-006', 'DEPT-LBN-006', 'APV-2026-9006');
-INSERT INTO Agreement VALUES ('AGR-2026-007', 'SD-2026-8807', TO_DATE('2026-04-05', 'YYYY-MM-DD'), 'Terminated', 'Financial Park Labuan, HQ Office', 'Kansai Logistics Warehousing Site Deed', 'Expired loan terms', TO_DATE('2026-04-10', 'YYYY-MM-DD'), 'Contracts Act 1950', 'REC-8890118G', 'PRP-ECO-007', 'DEPT-LBN-007', 'APV-2026-9007');
-INSERT INTO Agreement VALUES ('AGR-2026-008', 'SD-2026-8808', TO_DATE('2026-04-22', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Pataratan Maritime Warehouse Development', 'Acquisition of property', TO_DATE('2026-05-01', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890119H', 'PRP-ECO-008', 'DEPT-LBN-008', 'APV-2026-9008');
-INSERT INTO Agreement VALUES ('AGR-2026-009', 'SD-2026-8809', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Draft', 'Financial Park Labuan, HQ Office', 'Labuan Smart Aquaculture Facility Lease', NULL, TO_DATE('2026-06-01', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-Pending', 'PRP-ECO-009', 'DEPT-LBN-009', 'APV-2026-9009');
-INSERT INTO Agreement VALUES ('AGR-2026-010', 'SD-2026-8810', TO_DATE('2026-06-01', 'YYYY-MM-DD'), 'Active', 'Menara Kinabalu, Kota Kinabalu', 'Tuaran Kelp Farming Coastal Permit', 'Expansion in Klang Valley', TO_DATE('2026-06-15', 'YYYY-MM-DD'), 'Sabah Land Ordinance (Cap. 68)', 'REC-8890121K', 'PRP-ECO-010', 'DEPT-LBN-010', 'APV-2026-9010');
-COMMIT;
-
 -- SOCIAL
 INSERT INTO Social VALUES ('SOC0000001', 'REF/LBN/COM/2026/01', 85, 90, 'Creates over 200 local construction jobs and establishes community clinic.', 'Urban', 45.50, 'Compliant', 4.5, 'Medium', 'SOC000000000001');
 INSERT INTO Social VALUES ('SOC0000002', 'REF/LBN/COM/2026/02', 92, 88, 'Funds primary school expansion and public park rejuvenation project.', 'Suburban', 60.00, 'Compliant', 4.8, 'Low', 'SOC000000000002');
@@ -577,6 +554,25 @@ INSERT INTO Environmental VALUES ('ENV0000008', 'DOE/LBN/EIA/2026/008', 210.00, 
 INSERT INTO Environmental VALUES ('ENV0000009', 'DOE/LBN/EIA/2026/009', 35.00, 20.00, 78, 'Low', 'Sedimentation control and active replanting of indigenous trees.', '3-Star', 'Yes', 'Compliant', 'ENV000000000009');
 INSERT INTO Environmental VALUES ('EN00000010', 'DOE/LBN/EIA/2026/010', 12.00, 60.00, 90, 'Low', 'Mangrove preservation zone with strict zero-waste construction protocols.', '4-Star', 'Yes', 'Compliant', 'ENV000000000010');
 COMMIT;
+
+
+-- =====================================================================
+-- LEVEL 7: Depends on Level 6
+-- =====================================================================
+
+-- AGREEMENT
+INSERT INTO Agreement VALUES ('AGR-2026-001', 'SD-2026-8801', TO_DATE('2026-01-10', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Labuan Port Commercial Land Lease', 'JV for Project Alpha', TO_DATE('2026-01-15', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890112A', 'PRP-ECO-001', 'DEPT-LBN-001', 'APV-2026-9001');
+INSERT INTO Agreement VALUES ('AGR-2026-002', 'SD-2026-8802', TO_DATE('2026-01-18', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Victoria Bay Agro-Tech Plot Permit', NULL, TO_DATE('2026-01-18', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890113B', 'PRP-ECO-002', 'DEPT-LBN-002', 'APV-2026-9002');
+INSERT INTO Agreement VALUES ('AGR-2026-003', 'SD-2026-8803', TO_DATE('2026-02-02', 'YYYY-MM-DD'), 'Draft', 'Menara Kinabalu, Kota Kinabalu', 'Kimanis Solar Farm Development Proposal', 'Equity distribution terms', TO_DATE('2026-02-15', 'YYYY-MM-DD'), 'Sabah Land Ordinance (Cap. 68)', 'REC-Pending', 'PRP-ECO-003', 'DEPT-LBN-003', 'APV-2026-9003');
+INSERT INTO Agreement VALUES ('AGR-2026-004', 'SD-2026-8804', TO_DATE('2026-02-14', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Labuan High-Tech Industrial Park Site C', 'Terminated due to breach', TO_DATE('2026-02-20', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890115D', 'PRP-ECO-004', 'DEPT-LBN-004', 'APV-2026-9004');
+INSERT INTO Agreement VALUES ('AGR-2026-005', 'SD-2026-8805', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Expired', 'Financial Park Labuan, HQ Office', 'Temporary Eco-Tourism Hub Permit (Reno)', 'Seed round funding details', TO_DATE('2026-03-01', 'YYYY-MM-DD'), 'Contracts Act 1950', 'REC-8890116E', 'PRP-ECO-005', 'DEPT-LBN-005', 'APV-2026-9005');
+INSERT INTO Agreement VALUES ('AGR-2026-006', 'SD-2026-8806', TO_DATE('2026-03-12', 'YYYY-MM-DD'), 'Active', 'Menara Kinabalu, Kota Kinabalu', 'Sandakan Biomass Plant Land Lease Agreement', 'Pending partner review', TO_DATE('2026-03-15', 'YYYY-MM-DD'), 'Sabah Land Ordinance (Cap. 68)', 'REC-8890117F', 'PRP-ECO-006', 'DEPT-LBN-006', 'APV-2026-9006');
+INSERT INTO Agreement VALUES ('AGR-2026-007', 'SD-2026-8807', TO_DATE('2026-04-05', 'YYYY-MM-DD'), 'Terminated', 'Financial Park Labuan, HQ Office', 'Kansai Logistics Warehousing Site Deed', 'Expired loan terms', TO_DATE('2026-04-10', 'YYYY-MM-DD'), 'Contracts Act 1950', 'REC-8890118G', 'PRP-ECO-007', 'DEPT-LBN-007', 'APV-2026-9007');
+INSERT INTO Agreement VALUES ('AGR-2026-008', 'SD-2026-8808', TO_DATE('2026-04-22', 'YYYY-MM-DD'), 'Active', 'Financial Park Labuan, HQ Office', 'Pataratan Maritime Warehouse Development', 'Acquisition of property', TO_DATE('2026-05-01', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-8890119H', 'PRP-ECO-008', 'DEPT-LBN-008', 'APV-2026-9008');
+INSERT INTO Agreement VALUES ('AGR-2026-009', 'SD-2026-8809', TO_DATE('2026-05-10', 'YYYY-MM-DD'), 'Draft', 'Financial Park Labuan, HQ Office', 'Labuan Smart Aquaculture Facility Lease', NULL, TO_DATE('2026-06-01', 'YYYY-MM-DD'), 'National Land Code (Act 828)', 'REC-Pending', 'PRP-ECO-009', 'DEPT-LBN-009', 'APV-2026-9009');
+INSERT INTO Agreement VALUES ('AGR-2026-010', 'SD-2026-8810', TO_DATE('2026-06-01', 'YYYY-MM-DD'), 'Active', 'Menara Kinabalu, Kota Kinabalu', 'Tuaran Kelp Farming Coastal Permit', 'Expansion in Klang Valley', TO_DATE('2026-06-15', 'YYYY-MM-DD'), 'Sabah Land Ordinance (Cap. 68)', 'REC-8890121K', 'PRP-ECO-010', 'DEPT-LBN-010', 'APV-2026-9010');
+COMMIT;
+
 
 -- =====================================================================
 -- LEVEL 8: Depends on Level 7
