@@ -137,27 +137,27 @@ INSERT INTO Job_Applicant VALUES ('APP-2026-009', 'chong_v_capital', 'PhD', 18, 
 INSERT INTO Job_Applicant VALUES ('APP-2026-010', 'nisha_s_legal', 'Master', 5, 'Self-Employed', 'linkedin.com/in/nisha-sabahlegal', 'Law', 'Yes', 'Master of Laws (LLM)', '6012-8889900', 'PER-020');
 COMMIT;
 
---EMPLOYEE
-INSERT INTO Employee VALUES ('EMP001', 'LBN-2021-001A', 'Permanent', 'Active', TO_DATE('2021-03-15', 'YYYY-MM-DD'), 8500.00, 'Yes', 'Senior Land Inspector', 12000.00, 88.5, 'Staff', 'DEPT-LBN-001', 'PER-021');
-INSERT INTO Employee VALUES ('EMP002', 'LBN-2021-002A', 'Permanent', 'Active', TO_DATE('2021-04-12', 'YYYY-MM-DD'), 14500.00, 'Yes', 'Investment Committee Chair', 3500.00, 92, 'Manager', 'DEPT-LBN-002', 'PER-022');
-INSERT INTO Employee VALUES ('EMP003', 'LBN-2022-014B', 'Contract', 'Active', TO_DATE('2022-01-10', 'YYYY-MM-DD'), 5200.00, 'Yes', 'Field Site Inspector', 0.00, 79.25, 'Staff', 'DEPT-LBN-003', 'PER-023');
-INSERT INTO Employee VALUES ('EMP004', 'LBN-2022-019A', 'Permanent', 'Active', TO_DATE('2022-06-01', 'YYYY-MM-DD'), 11000.00, 'Yes', 'Investment Committee Member', 2200.00, 85, 'Manager', 'DEPT-LBN-004', 'PER-024');
-INSERT INTO Employee VALUES ('EMP005', 'LBN-2023-005A', 'Permanent', 'Resigned', TO_DATE('2023-02-15', 'YYYY-MM-DD'), 6000.00, 'No', 'Junior Land Inspector', 0.00, NULL, 'Staff', 'DEPT-LBN-005', 'PER-025');
-INSERT INTO Employee VALUES ('EMP006', 'LBN-2023-011A', 'Permanent', 'Active', TO_DATE('2023-05-18', 'YYYY-MM-DD'), 12500.00, 'Yes', 'Risk Valuation Specialist (IC)', 2800.00, 90.1, 'Manager', 'DEPT-LBN-006', 'PER-026');
-INSERT INTO Employee VALUES ('EMP007', 'LBN-2023-044B', 'Contract', 'Active', TO_DATE('2023-09-01', 'YYYY-MM-DD'), 5500.00, 'Yes', 'Environmental Compliance Inspector', 500.00, 82, 'Staff', 'DEPT-LBN-007', 'PER-027');
-INSERT INTO Employee VALUES ('EMP008', 'LBN-2024-002A', 'Permanent', 'Active', TO_DATE('2024-01-08', 'YYYY-MM-DD'), 11500.00, 'Yes', 'Portfolio Asset Analyst (IC)', 1800.00, 86.4, 'Staff', 'DEPT-LBN-008', 'PER-028');
-INSERT INTO Employee VALUES ('EMP009', 'LBN-2024-015B', 'Contract', 'Suspended', TO_DATE('2024-03-22', 'YYYY-MM-DD'), 5200.00, 'No', 'Technical Zoning Inspector', 0.00, 45, 'Viewer', 'DEPT-LBN-009', 'PER-029');
-INSERT INTO Employee VALUES ('EMP010', 'LBN-2024-033A', 'Permanent', 'Active', TO_DATE('2024-07-11', 'YYYY-MM-DD'), 13000.00, 'Yes', 'Legal Framework Specialist (IC)', 3000.00, 94.5, 'Manager', 'DEPT-LBN-010', 'PER-030');
-INSERT INTO Employee VALUES ('EMP011', 'LBN-2025-001C', 'Intern', 'Resigned', TO_DATE('2025-01-05', 'YYYY-MM-DD'), 2000.00, 'No', 'Trainee Land Inspector', 0.00, NULL, 'Viewer', 'DEPT-LBN-001', 'PER-031');
-INSERT INTO Employee VALUES ('EMP012', 'LBN-2025-009A', 'Permanent', 'Active', TO_DATE('2025-02-14', 'YYYY-MM-DD'), 10500.00, 'Yes', 'Infrastructure Strategy Advisor (IC)', 1500.00, 81.2, 'Staff', 'DEPT-LBN-002', 'PER-032');
-INSERT INTO Employee VALUES ('EMP013', 'LBN-2025-012B', 'Contract', 'Active', TO_DATE('2025-04-01', 'YYYY-MM-DD'), 5800.00, 'Yes', 'Agricultural Land Inspector', 600.00, 78.9, 'Staff', 'DEPT-LBN-003', 'PER-033');
-INSERT INTO Employee VALUES ('EMP014', 'LBN-2025-022A', 'Permanent', 'Active', TO_DATE('2025-06-18', 'YYYY-MM-DD'), 12000.00, 'Yes', 'Financial Proposal Evaluator (IC)', 2500.00, 89, 'Manager', 'DEPT-LBN-004', 'PER-034');
-INSERT INTO Employee VALUES ('EMP015', 'LBN-2025-040B', 'Contract', 'Active', TO_DATE('2025-10-01', 'YYYY-MM-DD'), 6200.00, 'Yes', 'Commercial Property Inspector', 0.00, 83.15, 'Staff', 'DEPT-LBN-005', 'PER-035');
-INSERT INTO Employee VALUES ('EMP016', 'LBN-2026-002A', 'Permanent', 'Active', TO_DATE('2026-01-12', 'YYYY-MM-DD'), 11800.00, 'Yes', 'Joint-Venture Structuring Expert (IC)', 0.00, 75, 'Staff', 'DEPT-LBN-006', 'PER-036');
-INSERT INTO Employee VALUES ('EMP017', 'LBN-2026-005C', 'Intern', 'Active', TO_DATE('2026-03-02', 'YYYY-MM-DD'), 2200.00, 'No', 'Investment Committee Coordinator', 0.00, NULL, 'Viewer', 'DEPT-LBN-007', 'PER-037');
-INSERT INTO Employee VALUES ('EMP018', 'LBN-2026-011B', 'Contract', 'Active', TO_DATE('2026-04-15', 'YYYY-MM-DD'), 6500.00, 'Yes', 'Senior Boundaries Inspector', 0.00, 80, 'Staff', 'DEPT-LBN-008', 'PER-038');
-INSERT INTO Employee VALUES ('EMP019', 'LBN-2026-014A', 'Permanent', 'Active', TO_DATE('2026-05-02', 'YYYY-MM-DD'), 16000.00, 'Yes', 'Chief Investment Officer (IC)', 5000.00, 96.8, 'Admin', 'DEPT-LBN-009', 'PER-039');
-INSERT INTO Employee VALUES ('EMP020', 'LBN-2026-018C', 'Intern', 'Active', TO_DATE('2026-06-01', 'YYYY-MM-DD'), 1800.00, 'No', 'Land Surveying Intern (Inspector)', 0.00, NULL, 'Viewer', 'DEPT-LBN-010', 'PER-040');
+--EMPLOYEE (Corrected: Department_ID removed)
+INSERT INTO Employee VALUES ('EMP001', 'LBN-2021-001A', 'Permanent', 'Active', TO_DATE('2021-03-15', 'YYYY-MM-DD'), 8500.00, 'Yes', 'Senior Land Inspector', 12000.00, 88.5, 'Staff', 'PER-021');
+INSERT INTO Employee VALUES ('EMP002', 'LBN-2021-002A', 'Permanent', 'Active', TO_DATE('2021-04-12', 'YYYY-MM-DD'), 14500.00, 'Yes', 'Investment Committee Chair', 3500.00, 92, 'Manager', 'PER-022');
+INSERT INTO Employee VALUES ('EMP003', 'LBN-2022-014B', 'Contract', 'Active', TO_DATE('2022-01-10', 'YYYY-MM-DD'), 5200.00, 'Yes', 'Field Site Inspector', 0.00, 79.25, 'Staff', 'PER-023');
+INSERT INTO Employee VALUES ('EMP004', 'LBN-2022-019A', 'Permanent', 'Active', TO_DATE('2022-06-01', 'YYYY-MM-DD'), 11000.00, 'Yes', 'Investment Committee Member', 2200.00, 85, 'Manager', 'PER-024');
+INSERT INTO Employee VALUES ('EMP005', 'LBN-2023-005A', 'Permanent', 'Resigned', TO_DATE('2023-02-15', 'YYYY-MM-DD'), 6000.00, 'No', 'Junior Land Inspector', 0.00, NULL, 'Staff', 'PER-025');
+INSERT INTO Employee VALUES ('EMP006', 'LBN-2023-011A', 'Permanent', 'Active', TO_DATE('2023-05-18', 'YYYY-MM-DD'), 12500.00, 'Yes', 'Risk Valuation Specialist (IC)', 2800.00, 90.1, 'Manager', 'PER-026');
+INSERT INTO Employee VALUES ('EMP007', 'LBN-2023-044B', 'Contract', 'Active', TO_DATE('2023-09-01', 'YYYY-MM-DD'), 5500.00, 'Yes', 'Environmental Compliance Inspector', 500.00, 82, 'Staff', 'PER-027');
+INSERT INTO Employee VALUES ('EMP008', 'LBN-2024-002A', 'Permanent', 'Active', TO_DATE('2024-01-08', 'YYYY-MM-DD'), 11500.00, 'Yes', 'Portfolio Asset Analyst (IC)', 1800.00, 86.4, 'Staff', 'PER-028');
+INSERT INTO Employee VALUES ('EMP009', 'LBN-2024-015B', 'Contract', 'Suspended', TO_DATE('2024-03-22', 'YYYY-MM-DD'), 5200.00, 'No', 'Technical Zoning Inspector', 0.00, 45, 'Viewer', 'PER-029');
+INSERT INTO Employee VALUES ('EMP010', 'LBN-2024-033A', 'Permanent', 'Active', TO_DATE('2024-07-11', 'YYYY-MM-DD'), 13000.00, 'Yes', 'Legal Framework Specialist (IC)', 3000.00, 94.5, 'Manager', 'PER-030');
+INSERT INTO Employee VALUES ('EMP011', 'LBN-2025-001C', 'Intern', 'Resigned', TO_DATE('2025-01-05', 'YYYY-MM-DD'), 2000.00, 'No', 'Trainee Land Inspector', 0.00, NULL, 'Viewer', 'PER-031');
+INSERT INTO Employee VALUES ('EMP012', 'LBN-2025-009A', 'Permanent', 'Active', TO_DATE('2025-02-14', 'YYYY-MM-DD'), 10500.00, 'Yes', 'Infrastructure Strategy Advisor (IC)', 1500.00, 81.2, 'Staff', 'PER-032');
+INSERT INTO Employee VALUES ('EMP013', 'LBN-2025-012B', 'Contract', 'Active', TO_DATE('2025-04-01', 'YYYY-MM-DD'), 5800.00, 'Yes', 'Agricultural Land Inspector', 600.00, 78.9, 'Staff', 'PER-033');
+INSERT INTO Employee VALUES ('EMP014', 'LBN-2025-022A', 'Permanent', 'Active', TO_DATE('2025-06-18', 'YYYY-MM-DD'), 12000.00, 'Yes', 'Financial Proposal Evaluator (IC)', 2500.00, 89, 'Manager', 'PER-034');
+INSERT INTO Employee VALUES ('EMP015', 'LBN-2025-040B', 'Contract', 'Active', TO_DATE('2025-10-01', 'YYYY-MM-DD'), 6200.00, 'Yes', 'Commercial Property Inspector', 0.00, 83.15, 'Staff', 'PER-035');
+INSERT INTO Employee VALUES ('EMP016', 'LBN-2026-002A', 'Permanent', 'Active', TO_DATE('2026-01-12', 'YYYY-MM-DD'), 11800.00, 'Yes', 'Joint-Venture Structuring Expert (IC)', 0.00, 75, 'Staff', 'PER-036');
+INSERT INTO Employee VALUES ('EMP017', 'LBN-2026-005C', 'Intern', 'Active', TO_DATE('2026-03-02', 'YYYY-MM-DD'), 2200.00, 'No', 'Investment Committee Coordinator', 0.00, NULL, 'Viewer', 'PER-037');
+INSERT INTO Employee VALUES ('EMP018', 'LBN-2026-011B', 'Contract', 'Active', TO_DATE('2026-04-15', 'YYYY-MM-DD'), 6500.00, 'Yes', 'Senior Boundaries Inspector', 0.00, 80, 'Staff', 'PER-038');
+INSERT INTO Employee VALUES ('EMP019', 'LBN-2026-014A', 'Permanent', 'Active', TO_DATE('2026-05-02', 'YYYY-MM-DD'), 16000.00, 'Yes', 'Chief Investment Officer (IC)', 5000.00, 96.8, 'Admin', 'PER-039');
+INSERT INTO Employee VALUES ('EMP020', 'LBN-2026-018C', 'Intern', 'Active', TO_DATE('2026-06-01', 'YYYY-MM-DD'), 1800.00, 'No', 'Land Surveying Intern (Inspector)', 0.00, NULL, 'Viewer', 'PER-040');
 COMMIT;
 
 --ADVERTISEMENT
@@ -1192,5 +1192,27 @@ INSERT INTO Company_Screening VALUES ('C00000000000027', '201801088712', 'MEET-2
 INSERT INTO Company_Screening VALUES ('C00000000000028', '201901044231', 'MEET-2026-008', 'MOM-26-08-08');
 INSERT INTO Company_Screening VALUES ('C00000000000029', 'LLP0033118-LBN', 'MEET-2026-009', 'MOM-26-08-09');
 INSERT INTO Company_Screening VALUES ('C00000000000030', '202201044556', 'MEET-2026-010', 'MOM-26-08-10');
+
+INSERT INTO Employee_InvestLabuan VALUES ('EMP001', 'LBN-2021-001A', 'DEPT-LBN-001', 'FDI');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP002', 'LBN-2021-002A', 'DEPT-LBN-002', 'DDI');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP003', 'LBN-2022-014B', 'DEPT-LBN-003', 'TECH');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP004', 'LBN-2022-019A', 'DEPT-LBN-004', 'ISF');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP005', 'LBN-2023-005A', 'DEPT-LBN-005', 'MAR');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP006', 'LBN-2023-011A', 'DEPT-LBN-006', 'TOUR');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP007', 'LBN-2023-044B', 'DEPT-LBN-007', 'OAG');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP008', 'LBN-2024-002A', 'DEPT-LBN-008', 'CORP');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP009', 'LBN-2024-015B', 'DEPT-LBN-009', 'LGL');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP010', 'LBN-2024-033A', 'DEPT-LBN-010', 'SCOM');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP011', 'LBN-2025-001C', 'DEPT-LBN-001', 'FDI');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP012', 'LBN-2025-009A', 'DEPT-LBN-002', 'DDI');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP013', 'LBN-2025-012B', 'DEPT-LBN-003', 'TECH');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP014', 'LBN-2025-022A', 'DEPT-LBN-004', 'ISF');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP015', 'LBN-2025-040B', 'DEPT-LBN-005', 'MAR');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP016', 'LBN-2026-002A', 'DEPT-LBN-006', 'TOUR');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP017', 'LBN-2026-005C', 'DEPT-LBN-007', 'OAG');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP018', 'LBN-2026-011B', 'DEPT-LBN-008', 'CORP');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP019', 'LBN-2026-014A', 'DEPT-LBN-009', 'LGL');
+INSERT INTO Employee_InvestLabuan VALUES ('EMP020', 'LBN-2026-018C', 'DEPT-LBN-010', 'SCOM');
+
 
 COMMIT;

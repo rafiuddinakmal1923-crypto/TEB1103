@@ -132,10 +132,8 @@ CREATE TABLE Employee (
     Employee_Bonus_Amount NUMBER(10,2) DEFAULT 0.00 CHECK (Employee_Bonus_Amount >= 0.00),
     Employee_KPI_Rating   NUMBER(5,2) CHECK (Employee_KPI_Rating BETWEEN 0.00 AND 100.00),
     Employee_Access_Level VARCHAR2(15) NOT NULL CHECK (Employee_Access_Level IN ('Admin', 'Manager', 'Staff', 'Viewer')),
-    Department_ID         VARCHAR2(15) NOT NULL,
     Person_ID             VARCHAR2(15) NOT NULL,
     CONSTRAINT pk_employee PRIMARY KEY (Employee_ID, Employee_Contract_No),
-    CONSTRAINT fk_emp_dept FOREIGN KEY (Department_ID) REFERENCES Invest_Labuan(Department_ID),
     CONSTRAINT fk_emp_person FOREIGN KEY (Person_ID) REFERENCES Person(Person_ID),
     CONSTRAINT uq_employee_id UNIQUE (Employee_ID)
 );
@@ -1301,4 +1299,20 @@ CREATE TABLE Company_Screening (
     CONSTRAINT pk_company_screening PRIMARY KEY (Company_ID, Company_SSM_No, Screening_MeetingID, Screening_MOM_ID),
     CONSTRAINT fk_cscreen_company FOREIGN KEY (Company_ID, Company_SSM_No) REFERENCES Company(Company_ID, Company_SSM_No),
     CONSTRAINT fk_cscreen_screening FOREIGN KEY (Screening_MeetingID, Screening_MOM_ID) REFERENCES Proposal_Screening(Screening_MeetingID, Screening_MOM_ID)
+);
+
+CREATE TABLE Employee_InvestLabuan (
+    Employee_ID VARCHAR2(15) NOT NULL,
+    Employee_Contract_No VARCHAR2(20) NOT NULL,
+    Department_ID VARCHAR2(15) NOT NULL,
+    Department_Code VARCHAR2(10) NOT NULL,
+    
+    -- Primary Key Constraint (Composite Key)
+    CONSTRAINT pk_emp_investlabuan PRIMARY KEY (Employee_ID, Employee_Contract_No, Department_ID, Department_Code),
+    
+    -- Foreign Key Constraints
+    CONSTRAINT fk_eil_employee FOREIGN KEY (Employee_ID, Employee_Contract_No) 
+        REFERENCES Employee(Employee_ID, Employee_Contract_No),
+    CONSTRAINT fk_eil_dept FOREIGN KEY (Department_ID, Department_Code) 
+        REFERENCES Invest_Labuan(Department_ID, Department_Code)
 );
