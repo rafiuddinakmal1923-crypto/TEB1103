@@ -2,6 +2,7 @@
 -- DROP JUNCTION / MANY-TO-MANY TABLES FIRST
 -- ==========================================================
 
+DROP TABLE Employee_InvestLabuan CASCADE CONSTRAINTS;
 DROP TABLE Investor_Advertisement CASCADE CONSTRAINTS;
 DROP TABLE Employee_Advertisement CASCADE CONSTRAINTS;
 DROP TABLE Employee_JobDescription CASCADE CONSTRAINTS;
