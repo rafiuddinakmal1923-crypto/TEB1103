@@ -26,9 +26,9 @@ JOIN Project_Timeline PT
     ON QR.Timeline_ID = PT.Timeline_MilestoneID
 JOIN Sustainability_Score SS 
     ON QR.Inspection_ID = SS.Inspection_ID
-WHERE E.Employee_Access_Level = 'Manager'            -- Constraint 1
-  AND P.Person_Nationality = 'Malaysian'             -- Constraint 2
-  AND JA.Total_Years_Experience >= 0                 -- Constraint 3
-  AND QR.Inspection_CompletionPercent >= 0.00        -- Constraint 4
-  AND PT.Timeline_PhaseNo > 0                        -- Constraint 5
+WHERE E.Employee_Access_Level = 'Manager'            
+  AND P.Person_Nationality = 'Malaysian'             
+  AND JA.Total_Years_Experience >= 0                 
+  AND QR.Inspection_CompletionPercent >= 0.00        
+  AND PT.Timeline_PhaseNo > 0                        
 ORDER BY P.Person_Name DESC;

@@ -26,7 +26,7 @@ JOIN Proposal_Content P
     ON A.Proposal_ID = P.Proposal_ID
 JOIN Developer D 
     ON P.Developer_ID = D.Developer_ID
-WHERE A.Approval_Date >= TO_DATE('2026-08-25', 'YYYY-MM-DD') -- Constraint 1 (Date)
-  AND LD.Land_Size > 0.00                                    -- Constraint 2
-  AND C.Company_PaidUpCapital > 0.00                         -- Constraint 3
-  AND D.Developer_ProjectDone >= 0;                          -- Constraint 4
+WHERE A.Approval_Date >= TO_DATE('2026-08-25', 'YYYY-MM-DD') 
+  AND LD.Land_Size > 0.00                                    
+  AND C.Company_PaidUpCapital > 0.00                         
+  AND D.Developer_ProjectDone >= 0;                          
