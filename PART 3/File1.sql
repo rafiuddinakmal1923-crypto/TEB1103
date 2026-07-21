@@ -5,4 +5,4 @@ FROM Job_Applicant A
 JOIN Job_Application B 
     ON A.Applicant_ID = B.Applicant_ID
 WHERE A.Current_Employment_Status = 'Employed'    
-  AND B.Expected_Salary > 3000.00;                
+    AND B.Expected_Salary > 3000.00;                
