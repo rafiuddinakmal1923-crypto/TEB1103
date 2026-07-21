@@ -1,16 +1,15 @@
-CREATE VIEW V_Syariah_Investors AS
+CREATE VIEW V_Syariah_Representatives AS
 SELECT 
-    I.MIDA_Registration_Ref, 
+    I.Investor_ID, 
     A.Application_ID, 
-    P.Payment_ID,
+    R.Rep_ID,
     I.Investor_Type || ' - ' || I.Investor_Risk_Appetite AS Investor_Profile,
-    P.Payment_BankName || ' via ' || P.Payment_Method AS Payment_Details
+    R.Rep_PositionTitle || ' (' || R.Rep_Corporate_Role || ')' AS Rep_Details
 FROM Investor I
 JOIN Investment_Application A 
     ON I.Investor_ID = A.Investor_ID
-JOIN Payment P 
-    ON A.Application_ID = P.Application_ID
-WHERE I.Syariah_Compliant_Status = 'Yes'; 
+JOIN Representative R 
+    ON A.Rep_ID = R.Rep_ID
+WHERE I.Syariah_Compliant_Status = 'Yes';
 
-
-SELECT * FROM V_SYARIAH_INVESTORS;
+SELECT * FROM V_Syariah_Representatives;

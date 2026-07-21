@@ -12,6 +12,10 @@ SELECT
     A.Approval_Status, 
     A.Approval_Duration
 FROM Company C
+JOIN Company_Relation CR 
+    ON C.Company_ID = CR.Company_ID AND C.Company_SSM_No = CR.Company_SSM_No
+JOIN Developer D 
+    ON CR.Related_Company_ID = D.Company_ID
 JOIN Company_Lot CL 
     ON C.Company_ID = CL.Company_ID AND C.Company_SSM_No = CL.Company_SSM_No
 JOIN Lot L 
@@ -22,11 +26,9 @@ JOIN Company_ProposalContent CPC
     ON C.Company_ID = CPC.Company_ID AND C.Company_SSM_No = CPC.Company_SSM_No
 JOIN Proposal_Content P 
     ON CPC.Proposal_ID = P.Proposal_ID AND CPC.Component_ID = P.Component_ID
-JOIN Developer D 
-    ON P.Developer_ID = D.Developer_ID
 JOIN Approval A 
     ON P.Proposal_ID = A.Proposal_ID
-WHERE C.Company_Entity_Type = 'Sdn Bhd'                              
-  AND A.Approval_Date >= TO_DATE('2026-01-01', 'YYYY-MM-DD')         
-  AND D.Developer_Experience_Year > 0                               
-  AND LD.Land_Size > 1000.00;                                        
+WHERE A.Approval_Status = 'Rejected'                              
+  AND A.Approval_Date >= TO_DATE('2026-01-01', 'YYYY-MM-DD')       
+  AND D.Developer_Experience_Year > 0                              
+  AND LD.Land_Size > 1000.00;                                                        
