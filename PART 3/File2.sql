@@ -1,15 +1,17 @@
 SELECT 
-    I.Department_Name, 
-    COUNT(A.Agreement_ID) AS Total_Active_Agreements, 
-    MAX(D.Developer_TotalProjectValue) AS Max_Project_Value
-FROM Invest_Labuan I
+    IL.Department_Name, 
+    COUNT(A.Agreement_ID) AS Total_Agreements, 
+    MAX(C.Company_PaidUpCapital) AS Max_Capital
+FROM Invest_Labuan IL
 JOIN Agreement A 
-    ON I.Department_ID = A.Department_ID
-JOIN Proposal_Content P 
-    ON A.Proposal_ID = P.Proposal_ID
-JOIN Developer D 
-    ON P.Developer_ID = D.Developer_ID
-WHERE A.Agreement_GoverningLaw = 'National Land Code (Act 828)' 
-  AND I.Department_Operation_Budget >= 1000000.00               
-  AND D.Developer_Experience_Year > 0                           
-GROUP BY I.Department_Name;
+    ON IL.Department_ID = A.Department_ID
+JOIN Company_Agreement CA 
+    ON A.Agreement_ID = CA.Agreement_ID AND A.Agreement_StampDutyID = CA.Agreement_StampDutyID
+JOIN Company C 
+    ON CA.Company_ID = C.Company_ID AND CA.Company_SSM_No = C.Company_SSM_No
+JOIN Approval APP 
+    ON A.Approval_ID = APP.Approval_ID 
+WHERE IL.Department_Operation_Budget > 8000000.00                    
+  AND C.Company_PaidUpCapital > 0.00                                 
+  AND A.Agreement_EffectiveDate >= TO_DATE('2026-01-01', 'YYYY-MM-DD') 
+GROUP BY IL.Department_Name;
