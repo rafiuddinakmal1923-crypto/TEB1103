@@ -1,10 +1,12 @@
+DROP VIEW V_Syariah_Representatives;
+
 CREATE VIEW V_Syariah_Representatives AS
 SELECT 
     I.Investor_ID, 
     A.Application_ID, 
     R.Rep_ID,
-    I.Investor_Type || ' - ' || I.Investor_Risk_Appetite AS Investor_Profile,
-    R.Rep_PositionTitle || ' (' || R.Rep_Corporate_Role || ')' AS Rep_Details
+    I.Investor_Type || ' represented by ' || R.Rep_Corporate_Role AS Investor_Representation,
+    A.Application_CurrentStatus || ' - ' || R.Rep_Authorization_Type AS Application_Auth_Status
 FROM Investor I
 JOIN Investment_Application A 
     ON I.Investor_ID = A.Investor_ID
